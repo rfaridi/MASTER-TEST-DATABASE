@@ -1801,8 +1801,22 @@ n <- phat*(1-phat)*crit.value.05^2/margin.error^2
 
 #### The video lecture mentions a news published in the Toronto Star on an opinion survey regarding Mayor Rob Ford's spending cuts. In the survey, margin of error was 3\% with  95\% confidence interval. If confidence interval has been decreased to 90\% what would be the required sample size (in nearest whole number)? 
 
+```{r rss  }
+n <- "sample.size"
+phat <- .42
+crit.value.10 <- 1.64
+variance <-phat*(1-phat)/n
+standard.error  <- sqrt(variance)
+margin.error <- crit.value.05*standard.error
+margin.error  <- 0.03
+n <- phat*(1-phat)*crit.value.10^2/margin.error^2
+```
+
+
 
 ### TEST 12 (Week 5) (assignment 8, part 1): probabile questions
+
+#### Video 1
 
 #### In the theoretical world, we have  some models, statistical, and scientific  that can be used to describe the real world. True or False? 
 True
@@ -1866,6 +1880,163 @@ True
 See lecture transcript 1
 
 
+#### In statistical testing, if we find something that is contrary to our original assumpiton then we have a statistically significant result. True or false?
+True
+False
+
+##### Answer
+True
+
+
+##### Explanation
+See lecture transcript 1
+
+
+#### In statistical testing, we need to determine whether these data have a reasonable chance of occurring or whether they are giving us evidence that our theoretical world model might not be correct. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Explanation
+See lecture transcript 1
+
+#### Video 2
+
+#### A statistical test is a little bit like a proof by contradiction in mathematics. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Explanation
+See video 2 transcript 
+
+
+#### In statistics we have to deal with the  natural variability that is associated with our data. That natural variability mainly originates from sampling variability. True or False? 
+True 
+False
+
+##### Answer
+True
+
+##### Explanation
+See video 2 transcript 
+
+
+#### Statistical tests are often called  hypothesis tests or tests of significance. True or false?
+
+##### Answer
+True
+
+##### Explanation
+See video 2 transcript 
+
+
+#### The first step of a statistical test is to formulate a hypotheses to test, and  specify an alternative to that hypotheses. True or false? 
+True
+False
+
+##### Answer
+True
+
+##### Explanation
+See video 2 transcript 
+
+
+#### If we use court case as an analogy to statistical test, then presumption of innoncence in a court case is equivalent to null hypothesis in a statistical test. True or false?
+
+##### Answer
+True
+
+##### Explanation
+See video 2 transcript 
+
+
+
+#### Which of the following is true about  null hypothesis? 
+Null hypothesis is typically written as H subscript 0, called H-naught
+Null hypothesis is called null because it may assume nothing is happening
+Null hypothesis is called null because it may assume status quo is maintained
+Null hypothesis is called null because it may assume there is no relationship
+Null hypothesis is called null because it may assume there is no difference
+all of the above
+some of the above
+none of the above
+
+##### Answer
+all of the above
+
+##### Explanation
+See video 2 transcript 
+
+
+#### Which of the following is true about alternative hypothesis?
+Sometimes the alternative hypothesis is called the research hypothesis, because it's what the research wants to show 
+The alternative hypothesis is written as  an H, with a subscript, a lower or  upper case a. 
+Some people like to write it as H, with a subscript  1, in contrast to h of 0 for the null hypothesis. 
+Alternative hypothesis  may assume that status quo is maintained
+Like the prosecutor who wants us to conclude that the defendant is guilty, we  typically want to prove that this researcher alternative hypothesis is true. 
+all of the above
+some of the above
+none of the above
+
+
+##### Answer
+some of the above
+
+
+##### Explanation
+Alternative hypothesis  may assume that status quo is maintained - this option is wrong, that is why some of the above is chosen
+
+
+
+#### In the case of facial plastic surgery example, the null hypotheis assumes that  mean perceived change in price is equal to `_____`. 
+
+0.0
+0.5
+1.0
+2.0
+none of the above
+
+
+##### Answer
+0.0
+
+
+##### Explanation
+according to the definition
+
+#### In the case of facial plastic surgery example, we are interested only whether the mean perceived change in age is positive. This is an example of alternative hypothesis where the test itself is an
+one-sided test
+two-sided test
+both of the above 
+none of the above
+
+##### Answer
+one-sided test
+
+##### Explanation
+See video 2 transcript 
+
+
+
+#### In the case of facial plastic surgery example, we are interested whether the mean perceived change in age is different that zero. This is an example of alternative hypothesis where the test itself is an
+one-sided test
+two-sided test
+both of the above 
+none of the above
+
+##### Answer
+two-sided test
+
+##### Explanation
+See video 2 transcript 
+
+
+
 ####
 
 
@@ -1873,39 +2044,13 @@ See lecture transcript 1
 
 
 ##### Explanation
-####
-
-
-##### Answer
-
-
-##### Explanation
 
 
 
-##### Answer
 
-##### Explanation
-
-```{r rss  }
-n <- "sample.size"
-phat <- .42
-crit.value.10 <- 1.64
-variance <-phat*(1-phat)/n
-standard.error  <- sqrt(variance)
-margin.error <- crit.value.05*standard.error
-margin.error  <- 0.03
-n <- phat*(1-phat)*crit.value.10^2/margin.error^2
-
-
-```
-
-
-
-*******************************************************
-*********  INTRODUCTION TO DATA SCIENCE  ***************
-*******************************************************
-
+**************************************
+********* IDSR ************************
+**********************************
 
 
 # IDSR
