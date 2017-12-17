@@ -1,0 +1,22 @@
+Question
+========
+
+Answerlist
+----------
+* To find the ISO codes of countries, which package you will use in R? 
+* If you want to find the code of Portugal, Armenia and Senegal which command you will issue?* What is the output you receive after issuing the above command?
+
+Solution
+========
+
+Answerlist
+----------
+* To find the ISO codes of countries, we would use `countrycode` package.
+* `countrycode("Portugal","Armenia","Senegal", countryname, iso2c)`
+* `[1] "PT" "AM" "SN"`
+
+Meta-information
+================
+
+extype: string
+exsolution: "descriptive"

@@ -1,0 +1,30 @@
+Question
+========
+
+The Wikipedia article [here](www.wikipedia.org) has information on the population of Canada, by province. 
+The article displays a pie chart of the population of Canada, by province and territory. What would be another appropriate graphical way to represent the same informaton? 
+
+Answerlist
+----------
+* Bar chart
+* Histogram
+* Boxplot
+* None of the answers
+
+Solution
+========
+
+Answerlist
+----------
+* True
+* False
+* False
+* False
+
+Meta-information
+================
+
+exname: wiki
+extype: schoice
+exsolution: 1000
+exshuffle: TRUE

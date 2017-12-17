@@ -1,0 +1,17 @@
+Question
+========
+Use the excel worksheet titled time_series_BB_1972-2015.xls. Now go to the worksheet titled "Average price of selected commodities". 
+- Draw a line graph of Aman rice (medium) from 1972 to 2014. 
+- Change the default background to white. 
+- Label the axes properly. 
+- On the line, make sure that corresponding to each year, there is a point. 
+- Label  the price of rice in 1990, 2000, 2010 and 2014 on top of the point  in the line.  
+- Below the point, label the corresponding year. 
+- Change the color of the line to blue and the color of the points to yellow. Make sure the graph also has a title.  
+- Write down the code of each of the instructions 
+
+Meta-information
+================
+
+extype: string
+exsolution: "descriptive"

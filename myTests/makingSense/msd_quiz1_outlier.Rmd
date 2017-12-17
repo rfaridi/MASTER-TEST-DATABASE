@@ -1,0 +1,27 @@
+Question
+========
+
+Outliers are values that are much bigger or smaller than the rest of the data. 
+
+Answerlist
+----------
+* TRUE
+* FALSE
+
+Soluton
+=======
+
+Answerlist
+----------
+* True
+* False
+
+Meta-information
+================
+
+exname: Outliers
+extype: schoice
+exsolution: 10
+exshuffle: TRUE
+
+

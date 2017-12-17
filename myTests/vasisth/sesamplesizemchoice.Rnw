@@ -1,0 +1,73 @@
+
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+mean.val<-round(rnorm(1,mean=100,sd=10),digits=0)
+sd.val<-round(abs(rnorm(1,mean=10,sd=10)),digits=0)
+n<-round(abs(rnorm(1,mean=100,sd=10)),digits=0)+1
+
+se1<-round(sd.val/sqrt(n),digits=3)
+se2<-round(sd.val/sqrt(n^2),digits=3)
+
+questions <- character(5)
+solutions <- logical(5)
+explanations <- character(5)
+
+questions[1] <- paste(se1,se2, sep = ",")
+newse1<-2.1*se1
+newse2<-13*se2
+questions[2] <- paste(newse1,newse2,sep = ",")
+newse1<-.5*se1
+newse2<-se2
+questions[3] <- paste(newse1,newse2, sep = ", ")
+newse1<-se1
+newse2<-.5*se2
+questions[4] <- paste(newse1,newse2, sep = ", ")
+newse1<-se1/2
+newse2<-2*se2
+questions[5] <- paste(newse1,newse2,sep = ", ")
+
+solutions[1] <- T
+solutions[2:5] <- F
+explanations[1] <- "Apply the formula for standard error"
+explanations[2:5] <- "See explanation"
+@
+
+\begin{question}
+Suppose we sample from a population with a normal distribution and mean \Sexpr{mean.val} and standard deviation \Sexpr{sd.val}.
+Sample size is \Sexpr{n}.
+
+What is the standard error going to be when sample size is \Sexpr{n}, and what would it be when \Sexpr{n^2}? 
+
+\begin{answerlist}
+  \item \Sexpr{questions[1]}
+  \item \Sexpr{questions[2]}
+  \item \Sexpr{questions[3]}
+  \item \Sexpr{questions[4]}
+  \item \Sexpr{questions[5]}
+\end{answerlist}
+\end{question}
+
+
+\begin{solution}
+Always start with what you know. We know the mean and standard deviation. We can therefore compute exact standard errors, with the formula:
+
+\begin{equation}
+\sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}}
+\end{equation}
+
+Now, if I increase the sample size, it's obvious that we have to simply re-calculate with a new $n$.
+
+\begin{answerlist}
+  \item \Sexpr{mchoice2text(solutions[1])}. \Sexpr{explanations[1]}
+  \item \Sexpr{mchoice2text(solutions[2])}. \Sexpr{explanations[2]}
+  \item \Sexpr{mchoice2text(solutions[3])}. \Sexpr{explanations[3]}
+  \item \Sexpr{mchoice2text(solutions[4])}. \Sexpr{explanations[4]}
+  \item \Sexpr{mchoice2text(solutions[5])}. \Sexpr{explanations[5]}
+\end{answerlist}
+
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{schoice}
+%% \exsolution{\Sexpr{mchoice2string(solutions)}}
+%% \exname{sesamplesize1}

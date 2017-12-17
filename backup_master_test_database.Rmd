@@ -1,0 +1,2492 @@
+# FDSR
+
+## week1-lec1-introduction
+
+- what is the difference between statistics and a statistic?
+- what is the difference between descriptive statistics and inferential
+  statistics?
+- what is a statistic? how context plays a role in calculating a statistic
+- what is statistics and what is the goal of statistics? 
+
+## week1-lec2-five-number-summary
+
+- Please find the five-point summary of the following numbers (odd numbers):
+- mention the R commands used to find the five-point summary
+- Instead if you were asked just to find the median of those numbers which
+  command you would have used? 
+- what is the advantage of boxplot over the five point summary? 
+- now do the same for a bunch of numbers where the total number is even
+- Explain how did you calculate quartiles when total number is odd
+- Explain how did you calculate quartiles when total number is even
+
+## week1-lec3-the-center-of-data
+
+- what is the difference between a regular boxplot and modified boxplot?
+- what is IQR? how do you calculate IQR?
+- how do you calculate the lower and higher inner fences?
+- what would be definition of a robust statistic?
+- Among mean, IQR, standard deviation and median, which is(are) robust
+  statistic?
+- what is trimmed mean? how do you calculate a trimmed mean?
+- for the following numbers, calculate the trimmed mean manually 
+- then compare it with the designated trim function. Do they match? 
+- Evaluate the following statement: trimmed mean is a more robust statistic than
+  median
+- Import the Red Bulls salary data into R. then calculate five point summary and
+  draw the boxplot
+- Is there anything unusual about the data? Describe.
+- What would you suggest about the data to get more meaningful five-point
+  summary? 
+- Compare the median,mean,IQR in original data set and trimmed data set. 
+
+## week1-lec4-spread-of-data
+
+- what is the limitation of range and IQR as a measure of spread of data?
+- how do we calculate standard deviaton? you don't have to write any formula.
+  just write down in plain words the basic idea.
+- what is degree of freedom?  what role does degree of freedom plays in finding
+  variance?
+- why variance or standard deviaton is a better measure of spread than range and
+  IQR?
+- From the NY bulls salary data, calculate the variance and standard deviation.
+- Manually calculate the mean and standard deviation and compare it with from
+  the designated functions in R. 
+- From the NY bulls salary data, evaluate the statement that variance and
+  standard deviation both are robust statistics.
+
+## week1-lec5-shape-of-data
+
+- why a histogram is useful?
+- What is the the difference between unimodal and bimodal distribution? what is
+  the implication of this difference?
+- Boxplot misses an important feature in the case of bimodal distribution.
+  Evaluate the statement. 
+- In the case of LE data, find the histogram and answer the following:
+- is it unimodal?
+- is it left-skewed, right-skewed or symmetric?
+- Let's say following is the five point summary of student's grade in a class. Are the grades symmetric or skewed? Explain your answer. 
+- In the case of skeleton data, find the histogram and answer the following:
+- is it unimodal?
+- is it left-skewed, right-skewed or symmetric?
+- In the case of NY bulls data, find the histogram and answer the following:
+- is it unimodal?
+- is it left-skewed, right-skewed or symmetric?
+- in the case of NY bulls data, check out whether empirical rule works or not
+- in the case of LE data, check out whether empirical rule works or not
+- in the case of skeleton data, check out whether empirical rule works or not
+- in left-skewed data, what would be the relationship between mode, mean and
+  median? explain your answer.
+- in right-skewed data, what would be the relationship between mode, mean and
+  median? explain your answer.
+
+## week1-lec6-categorical-vars
+
+- which are the categorical variables in LE data set?
+- which are the categorical variables in skeleton data set?
+- which are the categorical variables in NY Bulls data set?
+- What are the ways to describe categorical variables?
+- Find a bar chart for a categorical variable in LE data set.
+- Find a bar chart for a categorical variable in skeleton data set.
+- Find a bar chart for a categorical variable in NY bulls data set set.
+
+## week1-lec7-some-features-of-data
+- how do you define observational units. Cite example from LE, NY bulls,
+  skeleton data.
+- how do you define a variable. Cite example from LE, NY bulls,
+- Evaluate the statement - you can find summary statistics for ordinal variables
+- what is the difference between ordinal variable and categorical variable?
+- what is the difference between ordinal variable and numerical variable? 
+- Evaluate the statement: outliers can be discarded from the data to have
+  meaningful data analysis.
+- Evaluate the statement: missing values can be discarded from the data to have
+  meaningful data analysis. 
+
+## week2
+
+### How do experiments help a researcher with his/her research outcome?
+Experiments help to establish causal conclusion
+does vaccine helped to cause fewer infections?
+does new teaching method helped to cause more effective learning?
+
+### What is the definition of response variable?
+The outcome of interest measured on each subject participating in the study. 
+
+### What is the definition of predictor variable?
+A variable that we think will help to explain the value of response variable.
+
+### What is the key difference between observational study and experiments?
+In an experiment, the researcher can manipulate the value of predictor variable.
+
+### How a factor is defined? What are levels?
+A categorial explanatory variable in an experiment is called factor. the values of factor is called its levels.
+
+### How do you define treatment?
+Paticular combination of values for factors is called treatment. The combination comes into play when there are multiple explanatory variables: for example vaccine and amount of dose. dose: strong and weak. vaccine:yes or no. so there are already four groups. 
+
+### How do you define experimental unit?
+The smallest unit on which an experiment is implemented. 
+
+### Why do we care about extraneous factors?
+Extraneous factors are not part of current but might affect the outcome variable. So we will have to be careful so that the effect of these factors are removed.
+
+### How can we tackle the effect of extraneous factors when those factors are known to researcher?
+
+
+## TESTS
+
+### Test 1
+Find the five-point summary of following numbers: 26,91, 56,84,46,78, 67,87,72
+Now use the Life expectancy(LE) data and find the five point summary of life expectancy. How do you interpret the values of median, 1st quartile and third quartile?
+What is the difference between a regular boxplot and modified boxplot? Write down the R commands to find the both in the case of LE data. 
+What would be definition of a robust statistic?
+Among mean, IQR, standard deviation and median, which is(are) robust statistic? Why? 
+Now import the Red Bulls Soccer player's salary data into R and answer the following questions:
+Calculate Range, IQR, mean, median, standard deviation of player's salary from original data.  Now calculate Range, IQR, mean, median, standard deviation of player's salary from trimmed data. 
+Which statistics you found to be robust? Does it match with your answer in question no. 5?
+Now import the skeleton data and answer the following questions:
+Find the histogram of estimated age at death.
+Is estimated age at death variable, symmetric, left-skewed or right-skewed?
+What is the relationship between mode, median and mean? What is the implication of that relationship?
+
+### Test 2
+Import the Skeleton data into R and write down required the R commands
+Is there any difference between modified and regular boxplot in DGdifference variable? 
+(right down the commands and then answer. Answer will be in comments in your script file with # in front)
+Calculate range, mean, median, IQR and SD of DGDifference variable.
+(save those values in a separate named vector)
+Calculate range, mean, median, IQR and SD of 10% trimmed data of DGDifference.
+Combine those statistics in a data frame and create a variable showing
+percentage difference. (you will need to use data.frame() function in the following form: data.frame(orig,trim).   To find percentage changes, create a variable
+`pch=round(((orig-trim)/orig)*100,1)`
+
+### Test 3
+
+[To get full marks, don't just put the number, describe it detail how you arrived at the number including the R code you used to produce desired result. For the outputs, you can simply copy paste into the answer box of your google form]
+
+#### What is joint distribution? Find the joint distribution between Sex and BMI variables in the skeleton data set. 
+```{r }
+bmi.sex <- table(ske$BMI, ske$Sex)
+bmi.sex
+```
+we also get the result from CrossTable command from gmodels package. 
+
+```{r gm  }
+ CrossTable(ske$BMI, ske$Sex,prop.r=F,prop.c=F,prop.t=F,prop.chisq=F)
+```
+
+#### From the skeleton dataset, find the number of overweight male individuals.
+From the above joint distribution, we find that there are 59 such individuals.
+
+#### How do you define marginal distribution? Find the marginal distribution of Sex and BMI variables from their joint distribution. 
+
+Marginal distribution of BMI
+```{r md  }
+margin.table(bmi.sex,1)
+```
+we can also find the same from the CrossTable command which calculates the marginal distribution by default. 
+
+Marginal distribution of sex 
+```{r md  }
+margin.table(bmi.sex,2)
+```
+
+
+#### Find the value of relative frequency of marginal distribution of BMI=overweight from the joint distribution of BMI and Sex variables. 
+
+Relative frequency can be found in the following way:
+```{r rf  }
+prop.table(margin.table(bmi.sex,1))
+```
+In the above we find that it is `.2025`. We can find the same from CrossTable command as above but just truning on prop.r=True.
+```{r rf2  }
+CrossTable(ske$BMI, ske$Sex,prop.r=T,prop.c=F,prop.t=F,prop.chisq=F)
+```
+
+
+#### What is the value of relative frequency of joint distribtuion of a male overweight person? 
+
+```{r mw  }
+prop.table(bmi.sex)
+```
+from the result we find that it is `.1475`. We can find the same from  following code:
+```{r mw2  }
+ CrossTable(ske$BMI, ske$Sex,prop.r=F,prop.c=F,prop.t=T,prop.ch
+isq=F)
+```
+
+
+#### How do you define conditional distribution?  Find the value of conditional distribution of a BMI normal person given that sex of that person is female.
+
+conditional distributions are mainly row/column proportions.we can find these in the following way:
+here is row proportion
+```{r cf  }
+prop.table(bmi.sex,1)
+```
+here is column proportion
+```{r cf1  }
+prop.table(bmi.sex,2)
+```
+in the question, it is asking about in our case column proportion, so condition is sex=female, so we go to second column and find the relevant proportion.
+
+so we find that conditional distribution of a BMI normal given she is female is `0.496`
+
+The above can also be found in the following:
+
+```{r cf2  }
+CrossTable(ske$BMI, ske$Sex,prop.r=F,prop.c=T,prop.t=F,prop.chisq=F)
+```
+
+#### Is sex variable independent of BMI? Explain. 
+For sex variable to be independent of BMI, sex variable has to show the same distribution irrespective of the value of BMI. But we find it varies significantly. Therefore, sex variable is not independent of BMI variable. 
+
+#### What is Simpson's paradox? Explain with example. 
+
+#### Name the methods to select a random sample. Why the sample has to be random in the first place?
+
+#### Suppose you have opened a poll in Facebook to understand how people of Bangladesh think on a certain issue. Do you think the people who will respond to this poll will form a representative sample? Why or why not? What kind of biases this poll may create?
+
+### Test 3 (Google Form)
+
+#### Name the methods to select a random sample. Why the sample has to be random in the first place?
+
+#### Suppose you have opened a poll in Facebook to understand how people of Bangladesh think on a certain issue. Do you think the people who will respond to this poll will form a representative sample? Why or why not? What kind of biases this poll may create?
+
+#### What is joint distribution? Find the joint distribution between Sex and BMI variables in the skeleton data set.
+
+```{r }
+bmi.sex <- table(ske$BMI, ske$Sex)
+bmi.sex
+```
+we also get the result from CrossTable command from gmodels package. 
+
+```{r gm  }
+ CrossTable(ske$BMI, ske$Sex,prop.r=F,prop.c=F,prop.t=F,prop.chisq=F)
+```
+
+
+#### From the skeleton dataset, find the number of overweight male individuals.
+
+
+#### How do you define marginal distribution? Find the marginal distribution of Sex and BMI variables from their joint distribution
+
+#### Find the value of relative frequency of marginal distribution of BMI=overweight from the joint distribution of BMI and Sex variables.
+
+#### What is the value of relative frequency of joint distribution of a male overweight person?
+
+
+#### How do you define conditional distribution? Find the value of conditional distribution of a BMI normal person given that sex of that person is female.
+
+#### Is sex variable independent of BMI variable? Explain.
+
+#### What is Simpson's paradox? Explain with example.
+
+
+### Test 4 (Probable question)
+
+#### If experiments can establish causal relationship that why not every study is based on experiments?
+- experiments are quite expensive
+- `experiments are sometimes not ethical`
+- `experiments are sometimes not practical`
+- all of the above
+- none of the above
+
+#### What is the key difference between observational study and experiments?
+- `In an experiment, the researcher can manipulate the value of predictor variable.`
+- Observational study is more reliable than experimental study design.
+- In an experiment, the researcher can manipulate the value of response variable.
+- All of the above
+- None of the above
+
+#### In an experimental design, we care about extraneous factors because
+- these factors affect the predictor variable
+- these factors affect the response variable
+- we are not sure about the effect of these variables
+- none of the above
+
+#### How can we tackle the effect of extraneous factors when those factors are known to researcher?
+- `We can hold these extraneous factors constant`
+- `We can create blocks of experimental units of same types and apply treatments to these individual blocks`
+- We can completely ignore those extraneous factors
+- None of the above
+
+
+#### How can we tackle the effect of extraneous factors when those factors are unknown to researcher?
+- We can hold these extraneous factors constant
+- We can create blocks of experimental units of same types and apply treatments to these individual blocks
+- We can completely ignore those extraneous factors
+- `We can randomly assign experimental units to different treatment groups`
+- None of the above
+
+#### A control group will never receive any kind of treatment.
+- True
+- `False`
+
+#### Following is a possible data collection method:
+- Anecdotes
+- Observational studies
+- Experiments
+- `All of the above`
+- None of the above
+
+#### We may find that those who drink more coffee actually have a shorter life span. One of the reason is that those who drink more coffee are usually heavy smokers and as a result they die early. Smoking habit in this case is an example of 
+- common response variable
+- `confounding variable`
+- `lurking variable`
+- all of the above
+- none of the above
+
+#### A lurking variable can be 
+- a confounding variable
+- a variable of common response
+- both of the above
+- none of the above
+
+#### Controlling for lurking variable is difficult part in any statistical analysis.
+- True
+- False
+
+#### If a sample is not representative that it will produce biased statistics.
+- True
+- False
+
+
+#### A statistic is a value that describes the theorectical world or the population we are interested in.
+- True
+- False
+
+#### A parameter is a value that describes the theorectical world or the population we are interested in.
+- True
+- False
+
+
+#### A statistic is a value calculated from our observed data.
+- True
+- False
+
+#### A statistic is a value calculated from our observed data.
+
+- True
+- False
+
+#### Following are examples of methods to collect a random sample:
+- Simple random sample
+- Startified sampling
+- Cluster sampling
+- All of the above
+- None of the above
+
+#### Volunteer sampling is an example of random sampling
+- True
+- False
+
+### Test 4 (in-class quiz-1) 
+
+`/home/rushad/Dropbox/Courses/R-Training/ROUND2/FUNDA_STATS/Exams/FDSR_2017_01_quiz4.tex`
+
+### Test 5 (assignment 4:part 1) Probable questions
+this test will be based on week 4 videos
+
+#### We need probability theory to 
+concentrate on real world data analysis
+make connections between real world and theoretical world
+to just understand what is happening in theory
+all of the above
+none of the above
+
+#### In a coin-toss experiment, the probability of coming up with head is always 0.5 but in theory the probability of head can be anything between 0 and 1. True or false? 
+True
+False
+
+#### Think about an experiment of tossing soft drinks cap. Let's assume the top of the cap is silver colored and the bottom is white. Then in the theoretical world, the probability of coming up with cap is 40 percent. True or False?
+True
+False
+Uncertain
+
+#### Suppose in a coin-toss experiment, we toss a coin twice. Let's denote H as the event of coming up with Head and in the case of Tail its T.  Then which of the following statements is true?
+Possible outcomes are HH,HT,TH and TT and the probability of each outcome is 0.25
+Possible outcomes are HH,HT,TH and TT and the probability of each outcome will vary depending on the outcome
+Possible outcomes are HH and TT and the probability of each outcome is 0.50
+None of the above
+
+#### Suppose in a coin-toss experiment, we toss a coin twice. Let's denote H as the event of coming up with Head and in the case of Tail its T. What is the probability of coming up with two heads?
+0.00
+0.25
+0.50
+0.75
+1.00
+none of the above
+
+#### Suppose in a coin-toss experiment, we toss a coin twice. Let's denote H as the event of coming up with Head and in the case of Tail its T.  What is the probaility of coming up with at least one head?
+0.00
+0.25
+0.50
+0.75
+1.00
+none of the above
+
+#### Suppose in a coin-toss experiment, we toss a coin twice. Let's denote H as the event of coming up with Head and in the case of Tail its T.  What is the probability of NOT coming up with two tails?
+0.00
+0.25
+0.50
+0.75
+1.00
+none of the above
+
+#### Suppose in a coin-toss experiment, we toss a coin twice. Let's denote H as the event of coming up with Head and in the case of Tail its T. What is the probability of coming up with any of the possibilities? 
+0.00
+0.25
+0.50
+0.75
+1.00
+none of the above
+
+#### Let's x stand for number of heads in an experiment. Then the possible values for x will be as follows
+0,2,1
+0,1,2
+2,1,0
+all of the above
+none of the above
+
+#### Suppose in a coin-toss experiment, we toss a coin twice. Let's denote H as the event of coming up with Head and in the case of Tail its T.  Then the sample space of this experiment includes the following outcomes:
+HH,HT,TH and TT 
+HH and TT
+HT and TH
+none of the above
+
+#### An event can be defined as
+something not in the  sample space
+subset of sample space
+both of the above
+none of the above
+
+#### What is the probability of entire sample space from an experiment?
+0.00
+0.25
+0.50
+0.75
+1.00
+none of the above
+
+#### Let's say the A= the event of coming up with at least one head in an experiment of tossing a coin twice. Then the complement of P(A) will be
+0.00
+0.25
+0.50
+0.75
+1.00
+none of the above
+
+#### Let's say the B= the event of coming up with two heads  in an experiment of tossing a coin twice. Then the complement of P(B) will be
+0.00
+0.25
+0.50
+0.75
+1.00
+none of the above
+
+#### One of the possible interpretation of probability is that
+We have a probability model/theory which says that probability of head or tail in single coin toss is 0.5. 
+If we have repeated the coin toss experiment lots of times, then the fraction of times the head will come up is 0.5. 
+according to my opinion probability of head is 0.5
+all of the above
+None of the above
+
+### Test 5 (assignment 4:part 1) (Google Doc) 
+https://goo.gl/2a8se5
+
+
+### Test 6 (assignment 4:part 2) Probable questions
+
+####  Suppose a coin toss experiment was described as Binomial(2,1/2) distribution. It means
+A coin was tossed twice and probability of success or coming up with head is 1/2
+A coin was tossed once and probability of success or coming up with head is 1/2
+A coin was tossed twice and probability of success or coming up with head is 2
+None of the above
+
+#### Which of the following will be an example of Binomial(2,1/2) distribution?
+The distribution of number of heads in an experiment of flipping a coin twice.
+The distribution of number of heads in an experiment of flipping two coins.
+both of the above
+none of the above
+
+#### Let's say we we flip two coins and count the number of heads and call it Y. The probability distribution of Y can be termed as
+Binomial(2,1/2)
+Binomial(1/2,2)
+Bernoulli(1,1/2)
+All of the above
+None of the above
+
+#### Bernoulli distribution is a special case of Binomial distribution. True or False?
+
+#### Which of the following will be true about  Bernoulli distribution?
+Bernoulli distribution is a special case of binomial distribution. 
+In Bernoulli distribution, an experiment is done only once.
+In Bernoulli distribtuion, a random variable can have only one value.
+All of the above
+None of the above
+
+#### Let's now think about an experiment where 5 coins are being tossed. Let's count the number of heads as Y random variable. What is the probability of coming up with 2 Heads? (To solve this problem, it will be wise to use the binomial distribution formula which was not given in the video but you can find it in any standard statistics textbook or just search online)
+0.2125
+0.1562
+0.3215
+None of the above
+
+##### solution
+
+first one is direct R solution using 
+```{r sol  }
+dbinom(2,5,0.5)
+```
+now if the question was 2 heads or less, then we would be talking about cumulative distribution 
+```{r cd  }
+pbinom(2,5,0.5)
+```
+we can find it using direct formula
+
+```{r df  }
+choose(5,2)*(0.5)^2*(1-0.5)^3
+```
+we find that the above gives the exact result as the above dbinom in the above
+
+
+#### Suppose Bangladesh has 30 percent chance of winning a match against Austraila. In a 5-match one-day series, what is the probability of Bangladesh winning the series 3-2 against Australia? 
+0.1323
+0.1233
+0.2131
+None of the above
+
+##### Solution
+
+```{r ba  }
+dbinom(3,5,0.3)
+```
+
+
+#### If you roll a die, on the average, what number you expect to come up with? 
+2
+3
+3.5
+4
+None of the above
+
+##### solution
+this is not a binomial distribution. this is because for a binomial distribution, in any experiment only two outcomes will be possible. but when rolling a die, six outcomes are possible. therefore probabilies can come out as binomial distribution. here the this will be found by the expected value formula. 
+
+E(value from roll of a die) = sum of all possible values multiplies by corresponding probabilities
+
+```{r ev  }
+sum(1:6*1/6)
+```
+which is equivalent to 3.5
+
+
+
+#### In an experiment involving flipping two coins, what is the average number of heads we expect to come up with?
+0
+1
+2
+None of the above
+
+##### solution
+here we have to first catalog the possible values of head and then their corresponding probabilities
+let's denote, y as the variable which records number of heads in each flip of two coins, therefore only two possible values. 
+
+y=0,1,2
+p=0.25,0.5,0.25
+
+```{r sols  }
+y  <- c(0,1,2)
+p  <- c(0.25,0.5,0.25)
+ as.character(y %*% p)
+```
+so in the above we find that E(y) is equal to 1. It means that on the average, we may expect 1 head from such coin flipping experiment.
+
+#### The variable counting number of heads in a coin toss experiment can be considered as a Bernoulli distribution. True or false?
+
+##### solution
+True. This is because Bernoulli distribution is a special case of Binomial distribution. Bernoulli distribution where experiment is done only once where as binomial experiments are repeated many times. 
+
+#### The mean or expected value of  number of heads in a single coin toss is 
+
+##### solution
+```{r ep  }
+E_y=0*0.5 + 1*0.5
+```
+
+#### The variance  of  number of heads in a single coin toss is 
+
+`var(y)= (y-E(y))*P(y)`
+
+```{r vary  }
+(0 - 0.5)^2 * 0.5  +  (1 - 0.5)^2 * 0.5
+```
+
+
+#### In an experiment involving flipping two coins, what will be the variance of number of heads?
+0
+0.5
+1
+1.5
+none of the above
+
+
+
+### Test 7 (assignment 5): Probable questions
+
+#### The mean or expected value of a random variable satisfies the nice property of begin linear. True or false?
+
+##### Solution: True
+
+#### Let's say X is sum of two other independent random variables Y and Z. Then expected value of X is equivalent to :
+E(Y) + E(Z)
+E(X) + E(Y)
+E(X) + E(Z)
+None of the above
+
+##### Solution
+E(Y) + E(Z)
+
+#### Let's say X is sum of two other independent random variables Y and Z. Then variance of X is equivalent to :
+Var(Y) + Var(Z)
+Var(Y) + Var(X)
+Var(X) + Var(Z)
+Var(Y) + Var(Z)- 2Cov(Y,Z)
+None of the above
+
+##### Solution
+Var(Y) + Var(Z)
+
+#### Let's say X is sum of two other independent random variables aY and bZ. Then variance of X is equivalent to :
+aVar(Y) + bVar(Z)
+a^2Var(Y) + b^2Var(Z)
+a^2Var(Y) + b^2Var(Z) - 2Cov(Y,Z)
+None of the above
+
+##### Solution
+a^2Var(Y) + b^2Var(Z)
+
+#### Discrete random variable can be defined as a variable 
+whose values can be expressed as list
+whose values are infinite
+whose values are uncountable
+all of the above
+none of the above
+
+#### Continuous random variable can be defined as a variable
+whose values can be infinite
+whose valuse can be uncountable
+whose values can take any value between any interval
+all of the above
+none of the above
+
+##### Solution
+all of the above
+
+
+#### The distribution symbolized as X~Uniform[0,1]  stands for
+uniform probability distribution between the interval of 0 and 1
+normally distributed uniform probability distribution between the interval of 0 and 1
+uniformly distributed normal  probability distribution between the interval of 0 and 1
+all of the above
+none of the above
+
+##### Solution
+uniform distribution between the interval of 0 and 1
+
+#### A uniform probability distribution between the interval of 0 and 1 can be considered as
+we have a random quantity which is equally likely to be between 0 and 1
+we have a random quantity probability of which will be exactly equal to 1
+we have a random quantity probability of which will be exactly equal to 0
+None of the above
+
+##### Solution
+we have a random quantity which is equally likely to be between 0 and 1
+
+#### Suppose we have a uniform probability distribution between the interval of 0 and 1. The probability a value equal or less than half(1/2) is
+
+1/3
+1/2
+1/4
+None of the above
+
+##### Solution
+1/2
+
+
+#### Suppose we have a uniform probability distribution between the interval of 0 and 1. The probability a value equal or less than one third (1/3) is
+
+1/3
+1/2
+1/4
+None of the above
+
+##### Solution
+1/3
+
+
+
+
+#### Suppose we have a uniform probability distribution between the interval of 0 and 1. The probability a value equal or less than half(1/2) is
+
+1/3
+1/2
+1/4
+None of the above
+
+##### Solution
+1/2
+
+
+#### Suppose we have a uniform probability distribution between the interval of 0 and 1. The probability a value is equal to 1/3 is
+0
+1/2
+1/3
+none of the above
+all of the above
+
+##### Solution
+0
+this is because P(1/3) = P(1/3) - P(1/3) =0. The difference between CDF of the same number is zero. 
+
+
+
+
+#### Suppose we have a uniform probability distribution between the interval of 0 and 1. The probability between 1/3 and 1/2 will be
+
+1/6
+-1/6
+5/6
+None of the above
+
+##### Solution
+1/6
+
+#### The density function of an uniformly distributed variable between the interval 0 and 1 can be defined as a function which takes the value 1  between 0 and 1 but 0 everywhere else. True or false?
+
+
+##### Solution
+True
+
+#### Which of the following is true about density function?
+The density function of an uniformly distributed variable between the interval 0 and 1 can be defined as a function which takes the value 1  between 0 and 1 but 0 everywhere else.
+
+we can talk about probabilities as  being the area underneath the graph of  a density function. 
+both a an b
+none of the above
+
+
+##### Solution
+both a and b
+
+#### Suppose we have a random variable which is uniformly distributed between a 72 and 47. Which of the followings is/are true about this distribution?
+It would have a density which is equal to 
+1 over 25 for all numbers in between 47 
+and 72. 
+The density of any number outside the range between 47 and 72 will be zero
+Total area under the graph is 1
+all of the above
+none of the above
+
+##### Solution
+all of the above
+
+#### Exponential probability distribution is represented by a 
+discrete random variable
+continuous random variable
+discretely continuous random variable
+none of the above
+
+##### Solution
+continuous random variable
+
+#### Following of the which probability distributions is the single most important distribution?
+Uniform
+Normal
+Exponential
+None of the above
+
+##### Solution
+Normal
+
+#### Which of the following is a standard normal distribution?
+a normal distribution which is chracterized by mean 0 and standard deviation 1
+a normal distribution which is chracterized by mean 1 and standard deviation 0
+a uniform distribution which is chracterized by mean 0 and standard deviation 1
+None of the above
+
+##### Solution
+a normal distribution which is chracterized by mean 0 and standard deviation 1
+
+#### If probability distribution of a random variable is denoted as X~N(4,9) then 
+we can say that X is normally distributed with mean 4 and variance 9
+we can say that X is normally distributed with mean 4 and standard deviation 3
+both of the above
+we can say that X is normally distributed with mean 3 and standard deviation 4
+none of the above
+
+##### Solution
+both of the above
+
+
+#### If probability distribution of a random variable is denoted as X~N(4,9) then this distribution can be converted into a standard normal distribution
+by substracting 3 from every value of X and then divided each of those values by 4
+by substracting 4 from every value of X and then divided each of those values by 9
+by substracting 4 from every value of X and then divided each of those values by 3
+None of the above
+
+##### Solution
+by substracting 4 from every value of X and then divided each of those values by 3
+
+#### If probability distribution of a random variable is denoted as X~N(4,9) then mean of this distribution is 
+4
+9
+5
+none of the above
+
+##### Solution
+4
+
+#### If probability distribution of a random variable is denoted as X~N(4,9) then variance of this distribution is 
+4
+9
+5
+none of the above
+
+##### Solution
+9
+
+#### If probability distribution of a random variable is denoted as X~N(4,9) then standard deviation of this distribution is 
+4
+9
+3
+none of the above
+
+##### Solution
+3
+
+#### If we flip a coin twice what are probable fractions of time the heads may appear?
+0,.5,1
+0,1,2
+both of the above
+none of the above
+
+##### Solution
+0,0.5,1
+this is because possibilities are such: HH, HT, TH, TT
+HH refers to fraction of head being 1
+HT or TH means fraction of head being 0.5
+TT means fraction being close to zero
+
+
+#### If we flip a coin twice  and then calculate the probable fractions of time the head may appear. We will find that the following fraction appears most of the time
+0.0
+0.5
+1.0
+None of the above
+
+##### Solution
+0.5
+
+#### If we flip a coin thrice which of the following is a probable fraction of heads appearing in the experiment?
+0.00
+0.33
+0.67
+1.00
+all of the above
+none of the above
+
+##### Solution
+all of the above
+this is becuase when out of three, none is head then fraction is zero, 1 head it is 0.33, 2 heads it is .67
+
+#### If we flip a coin thrice which of the following appears to be right combination of numbers?
+Number of heads=0, fraction of heads 0.00, probability of heads=0.125
+Number of heads=1, fraction of heads 0.33, probability of heads=0.375
+Number of heads=2, fraction of heads 0.67, probability of heads=0.375
+Number of heads=3, fraction of heads 1.00, probability of heads=0.125
+all of the above
+none of the above
+
+##### Solution
+all of the above
+
+#### When we roll three dice and look at the average of three numbers that appear on the three dice, which of the following is valid observations?
+The most likely averages, when you roll three  dice, are all, between about 3 and 4.
+It is  possible we might get an  average closer to 2 or to 5 
+It's not  very likely you'll get an average near 1  or 6. 
+all of the above
+
+##### Solution
+
+
+#### Which of the following will be the correct defintion of law of large numbers?
+If you run an experiment large number of times, experimental probability will match the theoretical probability
+Non matter how many times you run an experiment, experimental probability will always match the theortical probability
+The higher the number of times you run an experiment, the closer the average from experiment will get closer to the theoretical expected value. 
+both a and c
+both b and c
+none of the above
+
+#### Suppose you tossed a coin five times. You ended up with 4 heads and one tail. Therefore, experimental proportion of head is 0.2. But theoretically it should be 0.5. The reason is 
+experimental proportion will always be different than theoretical proportion.
+if we toss the coin more than five times we will see a larger degree of difference between experimental proportion of head and theoretical proportion.
+the experiment was not repeated enough time so that Law of Large Numbers could kick in.
+none of the above
+
+##### Solution
+the experiment was not repeated enough time so that Law of Large Numbers could kick in.
+
+#### Suppose I roll a die and end of with number 5. But theoretically the expected value is 3.5. It implies that
+there is something wrong with the die
+I am expected something which is impossible since there can't be sides on the die with 3.5
+we are expecting to match with theoretical value just after one experiment which will not work due to law of large numbers
+none of the above
+
+#### Suppose we roll two dice and take the average of numbers that comes up. We expect to see most of those average of numbers are close to 3 and 4. True or False? 
+
+##### Solution
+True
+
+
+#### As number of experiments increases, the average values coming out of the experiments will move closer to becoming a normal distribution. According to which of the following law the previous statement is true?
+law of large numbers
+central limit theorem
+both of the above
+none of the above
+
+##### Solution
+central limit theorem
+
+#### As the number of experiments increases, the variance of the distribution of average values coming out those values comming out of experiments 
+gets smaller
+gets higher
+remains unchanged
+none of the higher
+
+#### According to empirical rule of data, `_______` of the data are within `________` standard deviation of the mean.
+68%,one
+68%,two
+95%,three
+none of the above
+all of the above
+
+
+#### The empirical rule mainly follows from normal distribution and normal distribution appears due to central limit theorem. True or false?
+True
+False
+
+### Test 8 (In-class quiz 2) Probable questions
+
+#### What is the expected value of the numbers that appear from the roll of a die?
+
+#### What is the variance of the numbers that appear from the roll of a die?
+
+#### What is the expected value of the number of heads that may appear in a two coin toss experiment?
+
+#### What is the variance of the number of heads that may appear in a two coin toss experiment?
+
+#### Think about an experiment of tossing soft drinks cap. Let's assume the top of the cap is silver colored and the bottom is white. Then in the theoretical world, the probability of coming up with cap is 40 percent. True or False?
+True
+False
+Uncertain
+
+#### Suppose in a coin-toss experiment, we toss a coin twice. Let's denote H as the event of coming up with Head and in the case of Tail its T.  Then which of the following statements is true?
+Possible outcomes are HH,HT,TH and TT and the probability of each outcome is 0.25
+Possible outcomes are HH,HT,TH and TT and the probability of each outcome will vary depending on the outcome
+Possible outcomes are HH and TT and the probability of each outcome is 0.50
+None of the above
+
+#### Suppose in a coin-toss experiment, we toss a coin twice. Let's denote H as the event of coming up with Head and in the case of Tail its T. What is the probability of coming up with two heads?
+0.00
+0.25
+0.50
+0.75
+1.00
+none of the above
+
+#### Suppose in a coin-toss experiment, we toss a coin twice. Let's denote H as the event of coming up with Head and in the case of Tail its T.  What is the probaility of coming up with at least one head?
+0.00
+0.25
+0.50
+0.75
+1.00
+none of the above
+
+#### An event can be defined as
+something not in the  sample space
+subset of sample space
+both of the above
+none of the above
+
+#### What is the probability of entire sample space from an experiment?
+0.00
+0.25
+0.50
+0.75
+1.00
+none of the above
+
+#### Let's say we we flip two coins and count the number of heads and call it Y. The probability distribution of Y can be termed as
+Binomial(2,1/2)
+Binomial(1/2,2)
+Bernoulli(1,1/2)
+All of the above
+None of the above
+
+
+
+
+=================================================================================
+=======  INTRODUCTION TO DATA SCIENCE WITH R ====================================
+=================================================================================
+
+
+
+#### Suppose Bangladesh has 70 percent chance of winning a match against New Zealand. In a 5-match one-day series, what is the probability of Bangladesh winning the series 4-1 against New Zeal 
+0.1323
+0.1233
+0.2131
+None of the above
+
+##### Solution
+
+```{r ba  }
+dbinom(3,5,0.3)
+```
+
+#### Discrete random variable can be defined as a variable 
+whose values can be expressed as list
+whose values are infinite
+whose values are uncountable
+all of the above
+none of the above
+
+#### Continuous random variable can be defined as a variable
+whose values can be infinite
+whose valuse can be uncountable
+whose values can take any value between any interval
+all of the above
+none of the above
+
+##### Solution
+all of the above
+
+
+#### A uniform probability distribution between the interval of 0 and 1 can be considered as
+we have a random quantity which is equally likely to be between 0 and 1
+we have a random quantity probability of which will be exactly equal to 1
+we have a random quantity probability of which will be exactly equal to 0
+None of the above
+
+##### Solution
+we have a random quantity which is equally likely to be between 0 and 1
+
+
+#### If we flip a coin twice what are probable fractions of time the heads may appear?
+0,.5,1
+0,1,2
+both of the above
+none of the above
+
+##### Solution
+0,0.5,1
+this is because possibilities are such: HH, HT, TH, TT
+HH refers to fraction of head being 1
+HT or TH means fraction of head being 0.5
+TT means fraction being close to zero
+
+
+#### When we roll three dice and look at the average of three numbers that appear on the three dice, which of the following is valid observations?
+The most likely averages, when you roll three  dice, are all, between about 3 and 4.
+It is  possible we might get an  average closer to 2 or to 5 
+It's not  very likely you'll get an average near 1  or 6. 
+all of the above
+
+##### Solution
+all of the above
+
+
+#### Suppose you tossed a coin five times. You ended up with 4 heads and one tail. Therefore, experimental proportion of head is 0.2. But theoretically it should be 0.5. The reason is 
+experimental proportion will always be different than theoretical proportion.
+if we toss the coin more than five times we will see a larger degree of difference between experimental proportion of head and theoretical proportion.
+the experiment was not repeated enough time so that Law of Large Numbers could kick in.
+none of the above
+
+##### Solution
+the experiment was not repeated enough time so that Law of Large Numbers could kick in.
+
+
+#### As number of experiments increases, the average values coming out of the experiments will move closer to becoming a normal distribution. According to which of the following law the previous statement is true?
+law of large numbers
+central limit theorem
+both of the above
+none of the above
+
+##### Solution
+central limit theorem
+
+### Test 8 (in-class quiz-2)  Actual test
+`/home/rushad/Dropbox/Courses/R-Training/ROUND2/FUNDA_STATS/Exams/FDSR_2017_01_in-class-quiz2.tex`
+
+### Test 9 (assignment 6): Probabile questions
+
+#### We have paramaters in the  theoretical world, which are features of the models or the population and typically, we  know the values of the parameters. True or False?
+True
+False
+
+##### Solution
+False
+
+#### Consider an experiment of 10 coin flips. The probability of coming up with exactly 5 tails is `________`. The probability of coming up with no tails is `__________`. 
+0.246,0.001
+0.001,0.246
+both of the above
+none of the above
+
+
+##### Solution
+0.246,0.001
+
+#### Consider the case of an experiment of 10 coin flips and calculating proportion of heads. Let's denote this proportion of heads as X. The probability distribution of X can be defined as:
+Bernoulli(10,1/2)
+Binomial(10,1/2)
+Bernoulli(10,1/4)
+Binomial(10,1/4)
+none of the above
+
+##### Solution
+Binomial(10,1/2)
+
+#### Consider the case of an experiment of 10 coin flips and calculating proportion of heads. Let's denote this proportion of heads as X. Find the mean  of probability distribution of X, P(X).
+0.5
+5.0
+10.0
+none of the above
+
+
+##### Solution
+Theoretical mean= E(x)=np=10*0.5=5
+```{r sp  }
+pv <- c()
+for(i in 0:10) {
+    j=i+1
+pv[j] <- dbinom(i,10,0.5)
+}
+
+
+mean.pv <- as.numeric(pv %*% 0:10)
+
+sqr.pv <- c()
+
+for(i in 0:10){
+    j=i+1
+sqr.pv[j] <- (i- mean.pv)^2
+}
+var.pv  <- as.numeric(sqr.pv %*% pv)
+```
+In the above we find that as expected expected value as calculated by `mean.pv` is `r mean.pv` which is equal to the population parameter 5. Because in the population, we expect 5 heads to appear out of 10 flips. Now we can express this finding both as proportion or means. For example when we express it as proportion we say instead of 0.50 is the proportion of times head will appear. When we consider mean, we just find the average of the all the possible values appearing in the coin toss. Values are number of heads appearing. These are from 0 to 10. The expected value or mean of these numbers which are binomially distributed is what we have found in `mean.pv`. This is the population parameter.
+
+In the following, we just do the above but for proportions:
+
+```{r spr  }
+pv <- c()
+props <- c()
+for(i in 0:10) {
+    j=i+1
+props[j] <- i/10
+pv[j] <- dbinom(i,10,0.5)
+}
+prop.pv <- pv %*% props
+```
+
+Now the thing is that  this population parameter/long run average should be equal to the mean of the sampling distribution of sample means. That has been established by the applet mentioned above. 
+
+
+#### Consider the case of an experiment of 10 coin flips and calculating proportion of heads. Let's denote this proportion of heads as X. Find the variance of probability distribution of X, P(X).
+0.5
+2.5
+10
+none of the above
+
+##### Solution
+Please check the code in the above code chunk titled sp where both mean and variance has been calculated. Formula for mean is $np$ where $n$ is the number of trials and $p$ is the probability of success. Formula for mean and variance are given below:
+$$E(x)=np=10*0.5=5$$
+$$ Var (x) = np(1-p)=10*0.5*0.5=2.5$$
+
+
+#### In the last video of Week 3 lectures, at some point Rossman/Chance Applet Collection of simulating coin toss was demonstrated. How many repitions of the experiment were made?
+500
+1000
+1500
+2000
+
+##### Solution
+1000
+
+#### In the last video of Week 3 lectures, at some point Rossman/Chance Applet Collection of simulating coin toss was demonstrated. How many number of times 5 appeared in that experiment? 
+0
+1
+6
+224
+255
+none of the above
+
+##### Solution
+255
+
+#### In the last video of Week 3 lectures, at some point Rossman/Chance Applet Collection of simulating coin toss was demonstrated. How many number of times 0 appeared in that experiment? 
+0
+1
+6
+224
+255
+none of the above
+
+##### Solution
+0
+
+
+#### In the last video of Week 3 lectures, at some point Rossman/Chance Applet Collection of simulating coin toss was demonstrated. How many number of times 10 appeared in that experiment? 
+0
+1
+6
+224
+255
+none of the above
+
+##### Solution
+6
+
+
+#### In the last video of Week 3 lectures, at some point Rossman/Chance Applet Collection of simulating coin toss was demonstrated. Which number appeared the highest number of times?
+4
+5
+6
+7
+none of the above
+
+##### Solution
+5
+
+#### We use hats statistics to indicate sample statistics from data. True or False?
+True
+False
+
+##### Solution
+True
+
+#### Sampling variability is the variability  we expect to see in a statistic that  we are using to estimate a theoretical world parameter.
+True
+False
+
+##### Solution
+True
+
+
+### Test 10 (Week4) (assignment 7:Part 1): Probabble questions
+
+#### Sampling distribution can be defined as probability distribution for a statistic  that we can calculate from some data, such as possibly a proportion or a mean. True or False? 
+True
+False
+
+##### Solution
+True
+
+#### In statistical inference we mainly want to know about 
+theoretical world which may have scientific models along with corresponding statistical models
+real world which may have scientific models along with corresponding statistical models
+both of the above
+none of the above
+
+##### Solution
+theoretical world which may have scientific models along with corresponding statistical models
+
+#### In the case of flipping coin experiment, what is the scientific/theoretical model?
+Head and tails are equally likely to happen
+Number of heads or tails is binomially distributed
+Flip the coins and collect number of heads
+both of the above
+none of the above
+
+##### Solution
+Head and tails are equally likely to happen
+
+
+#### In the case of flipping coin experiment, what is the statistical model?
+Head and tails are equally likely to happen
+Number of heads or tails is binomially distributed
+Flip the coins and collect number of heads
+both of the above
+none of the above
+
+##### Solution
+Number of heads or tails is binomially distributed
+
+#### In the case of flipping coin experiment, what is the sample?
+Head and tails are equally likely to happen
+Number of heads or tails is binomially distributed
+Flip the coins and collect number of heads
+both of the above
+none of the above
+
+##### Solution
+Flip the coins and collect number of heads
+
+#### In a coin toss experiment, which of the following is likely?
+We'd expect to get 50% heads or a proportion of .5.
+But 60% heads, as Jeff got in 10 flips, is reasonably likely. 
+No heads or only 10% heads, or the other extreme, 90% or 100% heads, is quite  unlikely. 
+all of the above
+none of the above
+
+##### Solution
+all of the above
+
+#### In a Beer cap flipping example, suppose you came up with 6 reds(top of the cap) out of 10 flips. Therefore is 60% is a reasonable estimate of the population proportion of red side of Beer cap where both the side of cap is equally likely to appear?
+True
+False
+
+##### Solution
+True
+
+##### Explanation
+We need to find the probability distribution of reds, that is numbers `0,1,2,.............,10` and the corresponding probabilites from `dbinom(6,10,0.5)`. Then we will find that coming up with 6 heads has quite high probability.
+
+#### In a Beer cap flipping example, suppose you came up with 6 reds(top of the cap) out of 10 flips. Therefore is 60% is a reasonable estimate of the population proportion of red side of Beer cap where both the side of cap when the probability of red side is as low as 20%?
+True
+False
+
+##### Solution
+True
+
+##### Explanation
+We need to find the probability distribution of reds, that is numbers `0,1,2,.............,10` and the corresponding probabilites from `dbinom(6,10,0.2)`. Then we will find that coming up with 6 heads has still reasonable.
+
+#### Suppose someone flipped the beer coin for 1000 times and came up with red side 583 times. Does this mean that exactly 58.3% of the time the red side will appear in the theoretical world?
+True
+False
+
+##### Solution
+False
+
+#### Suppose someone flipped the beer coin for 1000 times and came up with red side 583 times. What is the underlying scientific or theoretical model here? 
+Red side is likely to come up half of the time
+Red side is likely to come up most of the time
+Red side is likely to come up only 20% of the time
+all of the above
+it is not possible to say 
+
+##### Solution
+it is not possible to say 
+
+#### Suppose someone flipped the beer coin for 1000 times and came up with red side 583 times. What is the underlying statistical model?
+binomial(1000,.583)
+binomil(1000, $\theta$) where $\theta$ is unknown probability
+all of the above
+none of the above
+
+##### Solution
+binomil(1000, $\theta$) where $\theta$ is unknown probability
+
+
+#### Suppose a survey is undertaken by a leading newspaper in Bangladesh to understand public opinion regarding next year's national election. Around 1500 adult persons (18+) were interviewed in the survey. What is the population in this survey?
+All the 18+ adults in Bangladesh
+1500 adults in the sample
+Most of the adult in Bangladesh
+All the person of all ages in Bangladesh
+none of the above
+
+##### Solution
+All the 18+ adults in Bangladesh
+
+#### Suppose a survey is undertaken by a leading newspaper in Bangladesh to understand public opinion regarding next year's national election results. Around 1500 adult persons (18+) were interviewed in the survey. What is the possible population parameter?
+Proportion of people supporting different political parties in whole Bangaldesh
+Proportion of 18+ adults in Bangladesh supporting different political parties in whole Bangaldesh
+Proportion of people supporting different political parties in the sample
+none of the above
+
+
+##### Solution
+Proportion of 18+ adults in Bangladesh supporting different political parties in whole Bangaldesh
+
+
+#### In the first video of Week 4, a study on cosmetic surgical procedure is mentioned. Which of the following is the research question in that study? 
+How much younger a patient might look after a cosmetic surgical procedure?
+How much older a patient might look after a cosmetic surgical procedure?
+How much is the cost of a cosmetic surgical procedure?
+None of the above?
+
+##### Solution
+How much younger a patient might look after a cosmetic surgical procedure?
+
+#### In the first video of Week 4, a study on cosmetic surgical procedure is mentioned.Which of the following correcting mentions the sample size?
+10
+20
+50
+none of the above
+
+##### Solution
+none of the above
+
+##### Explanation
+Actual answer is 60 patients but that is not in the answers
+
+####  In the first video of Week 4, a study on cosmetic surgical procedure is mentioned. What is part of the sample statistics in that study?
+Average of ages from the patients' photo mentioned by 10 persons after the surgery.
+Average of ages from the patients' photo mentioned by 10 persons before the surgery.
+Average of ages of the 60 persons in the sample.
+none of the above
+
+##### Solution
+Average of ages from the patients' photo mentioned by 10 persons after the surgery.
+
+####  Confidence interval can be defined as a method
+for giving a range of plausible values  for  theoretical parameters, given the  information we have in our data from the  real world. 
+for giving a range of plausible values  for  sample statistics, given the  information we have in our data from the  real world. 
+both of the above
+none of the above
+
+##### Solution
+for giving a range of plausible values  for  theoretical parameters, given the  information we have in our data from the  real world. 
+
+####  The process of confidence interval will produce reliable results only when which of the following conditions will be met?
+Randomization
+Independence 
+both of the above
+none of the above
+
+##### Solution
+both of the above
+
+### Test 10: Google Assignment (part 1)
+`https://goo.gl/forms/oDCTjqCqV7h3MLE52`
+
+
+### Test 11 (Week4) (assignment 7:Part 2): Probabble questions
+
+#### Video 1
+
+#### Suppose you do a 10 flip coin toss experiment and count the number of heads. You designate the number of heads as X, a random variable. In the population, we expect head to come up as exactly half of the time, therefore, the probability of X in the population is 0.5.  The mean and variance of X is respectively 
+5 and 2.5
+0.5 and 0.025
+5 and 25
+none of the above
+
+##### Solution
+5 and 2.5
+
+##### Explanation
+For a count of head, mean is np and variance is np(1-p)
+
+
+#### Suppose you do a 10 flip coin toss experiment and calculate the proportion of heads. You designate the proportion of heads as phat, a random variable. In the population, we expect head to come up as exactly half of the time, therefore, the value of p in the population is 0.5.  The mean and variance of phat is respectively 
+5 and 2.5
+.5 and 0.025
+5 and 25
+none of the above
+
+##### Solution
+0.5 and 0.025 
+
+##### Explanation
+For a proportion, mean is p and variance is p(1-p)/n
+
+#### Suppose someone flipped the beer coin for 1000 times and came up with red side 583 times. Suppose we calculate the proportion of reds as phat where phat=583/1000=0.583. This phat is 
+approximately normally distributed with mean p and variance p(1-p)/n
+approximately binmially distributed with mean p and variance p(1-p)/n
+approximately normally distributed with mean np and variance np(1-p)
+none of the above
+
+##### Solution
+approximately normally distributed with mean p and variance p(1-p)/n
+
+#### Suppose someone flipped the beer coin for 1000 times and came up with red side 583 times. Suppose we calculate the proportion of reds as phat where phat=583/1000=0.583. This phat is normally distributed because of
+law of large numbers
+central limit theorem
+both of the above
+none of the above
+
+#### Solution
+central limit theorem
+
+#### Which of the following statements are valid for standard normal distribution?
+Any normal distribution can be transformed into standard normal distribution
+To convert to standard normal distribution, all you need to know is the mean and variance of a normal distribution
+The probabability value under standard normal distribution is known
+all of the above
+none of the above
+
+##### Solution
+all of the above
+
+##### Explanation
+all the statements are valid regarding standard normal distribution
+
+#### In a standard normal distribution, the area under the values -1.96 and +1.96 is 
+0.25
+0.50
+0.95
+1.00
+none of the above
+
+##### Solution
+0.95
+
+##### Explanation
+according to the definition of standard normal distribution
+
+#### In a standard normal distribution, 95% of the values are between -1.96 and +1.96. True or false?
+True
+False
+
+##### Solution
+True
+
+##### Explanation
+according to the definition of standard normal distribution
+
+#### The probability that  a variable which has approximately a  standard normal distribution will be more than absolute value of  1.96 is approximately equal to 5%. True or false?
+True
+False
+
+##### Solution
+True
+
+##### Explanation
+according to the definition of standard normal distribution
+
+#### Suppose someone flipped the beer coin for 1000 times and came up with red side 583 times. Suppose we calculate the proportion of reds as phat where phat=583/1000=0.583. p is the population proportion of reds. Which of the following statements are true?
+phat is normall distributed with mean p and variance p(1-p)/n
+(phat-p)/sqrt(p(1-p)/n) is normally distributed with mean 0 and variance 1
+phat is normall distributed with mean 0 and variance 1
+both a and b
+both b and c
+none of the above
+
+##### Solution
+both a and b
+
+##### Explanation
+according to definition
+
+#### Suppose someone flipped the beer coin for 1000 times and came up with red side 583 times. Suppose we calculate the proportion of reds as phat where phat=583/1000=0.583. p is the population proportion of reds. Which of the following will be a 95% confidence interval for p? [Consider phat as an estimator of p]
+[55.2%,61.3%]
+[55.7%,60.9%]
+[54.3%,62.3%]
+none of the above
+
+##### Solution
+[55.2%,61.3%]
+
+##### Explanation
+
+```{r cic  }
+# number of success
+x <- 583
+# number of trials
+n <- 1000
+phat <- x/n
+# phat as an estimator of p
+p <- phat
+var.phat <- p*(1-p)/n
+sd.phat <- sqrt(var.phat)
+crit.val.left <- qnorm(.025) 
+crit.val.right <- qnorm(.975) 
+# but we take the abs value
+# lower limit of the confidence interval
+ll.95 <- phat -  abs(crit.val.left)*sd.phat 
+ul.95 <- phat +  abs(crit.val.left)*sd.phat 
+
+# 90% confidence interval
+crit.val.left <- qnorm(.05) 
+crit.val.right <- qnorm(.95) 
+# but we take the abs value
+# lower limit of the confidence interval
+ll.90 <- phat -  abs(crit.val.left)*sd.phat 
+ul.90 <- phat +  abs(crit.val.left)*sd.phat 
+
+# 99% confidence interval
+crit.val.left <- qnorm(.005) 
+crit.val.right <- qnorm(.995) 
+# but we take the abs value
+# lower limit of the confidence interval
+ll.99 <- phat -  abs(crit.val.left)*sd.phat 
+ul.99 <- phat +  abs(crit.val.left)*sd.phat 
+
+
+```
+
+#### Suppose someone flipped the beer coin for 1000 times and came up with red side 583 times. Suppose we calculate the proportion of reds as phat where phat=583/1000=0.583. p is the population proportion of reds. Which of the following will be a 90% confidence interval for p? [Consider phat as an estimator of p]
+[55.2%,61.3%]
+[55.7%,60.9%]
+[54.3%,62.3%]
+none of the above
+
+
+##### Solution
+[55.7%,60.9%]
+
+##### Explanation
+See above
+
+#### Suppose someone flipped the beer coin for 1000 times and came up with red side 583 times. Suppose we calculate the proportion of reds as phat where phat=583/1000=0.583. p is the population proportion of reds. Which of the following will be a 99% confidence interval for p? [Consider phat as an estimator of p]
+[55.2%,61.3%]
+[55.7%,60.9%]
+[54.3%,62.3%]
+none of the above
+
+##### Solution
+[54.3%,62.3%]
+
+##### Explanation
+See above
+
+#### Suppose someone flipped the beer coin for 1000 times and came up with red side 583 times. Suppose we calculate the proportion of reds as phat where phat=583/1000=0.583. p is the population proportion of reds. Which of the following will be a 95% confidence interval for p? [Consider 1/2 as an estimator of p]
+[55.2%,61.4%]
+[56.3%,60.3%]
+[54.7%,61.9%]
+none of the above
+
+##### Solution
+[55.7%,60.8%]
+
+##### Explanation
+
+```{r cic  }
+# number of success
+x <- 583
+# number of trials
+n <- 1000
+phat <- x/n
+# phat as an estimator of p
+p <- 1/2 
+var.phat <- p*(1-p)/n
+sd.phat <- sqrt(var.phat)
+crit.val.left <- qnorm(.025) 
+crit.val.right <- qnorm(.975) 
+# but we take the abs value
+# lower limit of the confidence interval
+ll.95 <- phat -  abs(crit.val.left)*sd.phat 
+ul.95 <- phat +  abs(crit.val.left)*sd.phat 
+
+# 90% confidence interval
+crit.val.left <- qnorm(.05) 
+crit.val.right <- qnorm(.95) 
+# but we take the abs value
+# lower limit of the confidence interval
+ll.90 <- phat -  abs(crit.val.left)*sd.phat 
+ul.90 <- phat +  abs(crit.val.left)*sd.phat 
+
+# 99% confidence interval
+crit.val.left <- qnorm(.005) 
+crit.val.right <- qnorm(.995) 
+# but we take the abs value
+# lower limit of the confidence interval
+ll.99 <- phat -  abs(crit.val.left)*sd.phat 
+ul.99 <- phat +  abs(crit.val.left)*sd.phat 
+
+```
+
+#### Suppose someone flipped the beer coin for 1000 times and came up with red side 583 times. Suppose we calculate the proportion of reds as phat where phat=583/1000=0.583. p is the population proportion of reds. We found that a 90 percent confidence interval of p is [56.3%,60.3%]. This implies 
+we are 95% certain that population proportion of reds falls into the above mentioned range. 
+we are 95% certain that sample proportion of reds falls into the above mentioned range. 
+there are 5% chance that population proportion of reds will not fall into the above mentioned range.
+both a and b
+both a and c
+both b anc c
+none of the above
+
+##### Solution
+both a and c
+
+##### Explanation
+according to definition
+
+
+#### To deal with the problem of unknown population proportion we may
+use the sample proportion as a rough estimate of population proportion
+use 1/2 a rough estimate of population proportion
+both of the above
+none of the above
+
+##### Solution
+both of the above
+
+##### Explanation
+As per lecture video
+
+#### Suppose someone flipped the beer coin for 1000 times and came up with red side 583 times. Suppose we calculate the proportion of reds as phat where phat=583/1000=0.583. p is the population proportion of reds. What would be the margin of error in a 95% confidence interval assuming p=1/2?
+3.1%
+4.1%
+5.1%
+none of the above
+
+##### Solution
+3.1%
+
+##### Explanation
+```{r moe  }
+# number of success
+x <- 583
+# number of trials
+n <- 1000
+phat <- x/n
+# phat as an estimator of p
+p <- 1/2 
+var.phat <- p*(1-p)/n
+sd.phat <- sqrt(var.phat)
+crit.val.left <- qnorm(.025) 
+crit.val.right <- qnorm(.975) 
+# but we take the abs value
+# lower limit of the confidence interval
+ margin.error <-  abs(crit.val.left)*sd.phat 
+
+```
+
+#### Which of the following statements regarding the relationship begind confidence interval and precision of estimates is true?
+The higher the confidence interval the lower the precision of estimates
+The lower the confidence interval, the higher the precision of estimates
+The lower the confidence interval, the lower the precision of estimates
+The lower the confidence interval the higher the precision of estimates
+none of the above
+
+
+##### Solution
+The higher the confidence interval the lower the precision of estimates
+
+##### Explanation
+self-explanatory
+
+
+#### Video 3: Sample size
+
+#### Which of the following statement is true about determining sample size in a study?
+When planning any study, determining sample size is an extremely important consideration.
+If the sample size is too large we're unnecessarily wasting time and resources 
+if our sample size is too small we won't have precise enough estimates in order to be able to make meaningful conclusion. 
+all of the above
+none of the above
+
+#### The video lecture mentions a news published in the Toronto Star on an opinion survey regarding Mayor Rob Ford's spending cuts. What was the sample size in that survey?
+1064
+1046
+1036
+none of the above
+
+#### The video lecture mentions a news published in the Toronto Star on an opinion survey regarding Mayor Rob Ford's spending cuts. What was the result of the survey? 
+
+#### The video lecture mentions a news published in the Toronto Star on an opinion survey regarding Mayor Rob Ford's spending cuts. In the survey, margin or error was 3\%.  If the margin of error was increased  to 4\%, what would have been the sample size?
+
+
+##### Answer
+584
+728
+1200
+3000
+none of the above
+
+
+##### Explanation
+
+```{r exp  }
+n <- "sample.size"
+phat <- .42
+crit.value.05 <- 1.96
+variance <-phat*(1-phat)/n
+standard.error  <- sqrt(variance)
+margin.error <- crit.value.05*standard.error
+margin.error  <- 0.04
+n <- phat*(1-phat)*crit.value.05^2/margin.error^2
+
+```
+
+#### The video lecture mentions a news published in the Toronto Star on an opinion survey regarding Mayor Rob Ford's spending cuts. In the survey, margin of error was 3\% with  95\% confidence interval. If confidence interval has been decreased to 90\% what would be the required sample size (in nearest whole number)? 
+
+
+##### Answer
+
+##### Explanation
+
+```{r rss  }
+n <- "sample.size"
+phat <- .42
+crit.value.10 <- 1.64
+variance <-phat*(1-phat)/n
+standard.error  <- sqrt(variance)
+margin.error <- crit.value.05*standard.error
+margin.error  <- 0.03
+n <- phat*(1-phat)*crit.value.10^2/margin.error^2
+
+
+```
+
+
+
+*******************************************************
+*********  INTRODUCTION TO DATA SCIENCE  ***************
+*******************************************************
+
+
+
+# IDSR
+
+## IDSR_R1
+
+### The command to create a vector named x  of following numbers: 4,3,7,NA, 8, 9 is      
+
+`x <- 4 3 7 NA 8 9
+x <- c(4 3 7 NA 8 9)
+x <- c{4, 3,NA, 7, 8, 9}
+x <- c(4, 3, 7,NA, 8, 9)
+none of the above
+all of the above `
+
+### Average of the vector x mentioned in question 1 is  
+
+choose from the follwoing
+
+### Consider the following elements in a vector named gender:   male, female, female, NA, male, female. We want to find the number of females. To find that we will use __________ command and will find ___________ females. 
+
+
+### Suppose we want to find average of elements in x vector which corresponds only to males in vector gender. We will use __________ command and find the average is equal to  __________. 
+
+
+### Create a new vector named "gender2" where "male" and "female" will be relabeled to "man" and "woman" from "gender" vector.  We will use the following command: 
+
+### Create a vector named "quiz1"  with following numbers: 3,3,7,NA, 8, 9. Create another vector named "quiz2"  with following numbers: 8,3,10,4, 3, 7. Now create the following elements in a vector named "gender":   male, female, female, NA, male, female.  Now create a data frame named "quiz_grade" with the following command:
+
+   `quiz_grade <- dataframe(gender,quiz1,quiz2)
+    quiz_grade <- data.frame(gender,quiz1,quiz2)
+    quiz_grade <- data.frame(c(gender,quiz1,quiz2))
+    quiz_grade <- data.frame(quiz1,gender, quiz2)
+    all of the above
+    none of the abvoe`
+
+### Let's say we created quiz_grade data frame in the above question with the variables in the following order:
+gender,quiz1, quiz2. We can use the following command to find all the values of quiz2:
+
+quiz_grade[,3]
+quiz_grade[,"quiz2"]
+quiz_grade`$`quiz2
+none of the above
+all of the above
+
+
+
+### We can use the following command to find 2nd, 3rd and 6th element from "quiz1" variable of data frame "quiz_grade". 
+
+quiz_grade[2,3,6,2]
+quiz_grade[c(2,3,6),2]
+quiz_grade[c(2,3,6),"2"]
+quiz_grade`$`quiz1[c(2,3,6)]
+all of the above
+none of the above
+
+-------------------------------------------------
+
+### Do you think by issuing the  command - `mean(quiz_grade$quiz1)`, we can find the average of score from quiz 1?  
+
+YES
+NO
+
+### Suppose you want to create a new data frame from "quiz_grade" and name it "quiz_male". In this data frame, there will only quiz2 variable and scores of male participants. Which of the following command will work?  
+
+quiz_grade[gender==male,quiz2]
+quiz_grade[quiz_grade$gender=="male","quiz2"]
+quiz_grade[gender=="male","quiz2"]
+quiz_grade[gender=="male",3]
+all of the above
+none of the above
+
+
+### Suppose you want to create a new data frame from "quiz_grade" and name it "quiz_sub". In this data frame, there will be 2nd, 3rd and 6th element from quiz 1 scores. Which of the following commands will work?  
+
+
+quiz_grade[c(2,3,6),"quiz1"]
+quiz_grade[c(2,3,6),quiz1]
+quiz_grade[(2,3,6),"quiz1"]
+quiz_grade[(2,3,6),2]
+all of the above
+none of the above
+
+
+
+### What would be the easiest way to create average of  four vectors q1-q4 all together in page 57 of "R for Stata Users"?
+
+create a matrix named "mymatrix"  with vectors q1-q4 and then use the command "mean(mymatrix)" 
+create a data frame named "mydf"  with vectors q1-q4 and then use the command "mean(df)" 
+create a vector named "myvector"  with vectors q1-q4 and then use the command "mean(myvector)" 
+all of the above
+none of the above
+
+
+### What would be the easiest way to create average of  quiz 1 and quiz 2 scores  all together? 
+
+create a matrix named "mymatrix"  with vectors quiz 1 and quiz 2 and then use the command "mean(mymatrix)" 
+create a data frame named "mydf"  with vectors quiz 1 and quiz 2 and then use the command "mean(df)" 
+create a vector named "myvector"  with vectors   quiz 1 and quiz 2 and then use the command "mean(myvector,na.rm=TRUE)" 
+create a matrix named "mymatrix"  with vectors quiz 1 and quiz 2 and then use the command "mean(mymatrix, na.rm=TRUE)" 
+all of the above
+none of the above
+
+
+
+### What would be the easiest way to create a frequency distribution
+of all the numbers in four vectors q1-q4 in page 57 of "R for Stata Users"?
+
+
+### What would be the easiest way to create a frequency distribution
+of all the numbers in quiz1 and quiz2 scores ?
+
+### Let's try to create a frequency distribution of all the numbers in quiz1 and quiz2  scores and find the score which comes about with highest frequency. To achieve that, we will use ??? command and end up with ???
+
+table(mymatrix), 4, 3  ; mymatrix is defined in the previous question
+table(mydf), 4, 3  ; mydf is defined in the previous question
+table(myvector), 3, 4  ; myvector is defined in the previous question
+table(mymatrix), 3, 4  ; mymatrix is defined in the previous question
+all of the above
+none of the above
+
+
+
+### How to find pairwise correlation of four vectors q1-q4  in page 57 of "R for Stata Users"? 
+
+### Lets say we have q1-q4 vectors in mymatrix object. What is the quickest way to find the dimension of this object? Note: Dimension means number of rows and columns.
+
+### In the above mymatrix, create a subset of matrix which consist of  2nd,5th and 8th observations with q2 and q4 vectors.  Matrix is essentially a long vector. 
+
+TRUE
+FALSE
+
+### Data frame is also a list but with certain restrictions. 
+
+TRUE
+FALSE
+
+### List is a very flexible data structure with any type of object can be  stored. 
+TRUE
+FALSE
+
+## EXAMS
+
+### Exam 2
+1.  Use the excel worksheet titled time_series_BB_1972-2015.xls and go to the
+worksheet titled "country-wise workers' remittances". Based on that worksheet
+please answer the following questions:
+(a) Draw a line chart of  remittances of  from fiscal year 1987-88 to
+  2014-15. (5)
+(b) Name the top five countries from which Bangladesh earned highest remittances
+  in 2014-15.(5)
+(c) Find the total remittances of all other countries into a single number and call it
+  "Others". (Basically for 2014-15, you should end up with a two column data frame where
+  there will be six rows. First five rows will be countries with corresponding
+  remittance values and the last row will be categorized as "Others".)(5)
+(d) Now draw a properly labeled pie chart of remittances from six countries(Top 5 and "Others"). (5)
+
+2. Draw a colored bar diagram of "Exports of goods and services (% of GDP)"
+from WDI database for the following countries: Bangladesh, India, Pakistan and
+Sri Lanka. To answer this question properly you will have to complete
+the following steps:
+(a) Convert the country names into ISO codes. (2)
+(b) Automatically import the indicator code and save it into an object. (2)
+(c) Process the imported data for drawing diagram. (3)
+(d) Draw a properly labeled colored bar diagram. (3)
+(e) Bonus points for matching the bars with corresponding country color. (2) 
+(f) Bonus points for converting the vertical bar diagram into horizontal bar
+  diagram. (3)
+## IDSR_R2: Udaticity - Exploratory data analysis
+
+### Lecture_1_notes
+don't just understand
+where did they go?
+
+
+### Lecture_2_notes
+
+#### What was the name of R package used by Corey Nissan?
+
+#### How many tweets per day the system flag?
+
+#### What did you find the most interesting about the article?
+
+#### In RStudio, let's identify different windows by the following setup:
+1- R scripts/Files
+2- Environment/History
+3- Console
+4- Files/Plots/Packages/Help
+
+Which of the following is correct?
+
+?- Save as R script
+?- Review the log of commands entered
+?- Read help documentation
+?- Clear the workspace
+?- Run a bunch of commands from a file
+?- Look at a plot
+?- See a list of objects in memory
+?- Read the results from function or calculation
+
+#### Download and import the stateData.csv into R.  How many states and how many regions are there?
+
+#### Which state is the largest in terms of state area? 
+
+#### Which state is the smallest in terms of state area?
+
+#### Which state has the highest population?
+
+#### Which state has the lowest population?
+
+#### Which state has the highest average income?
+
+#### Which state has the lowest average income?
+
+#### Which state is performing the best in terms of literacy?
+
+#### Which state is performing the worst in terms of literacy?
+
+#### Which state has the highest life expectancy?
+
+#### Which state has the lowest life expectancy?
+
+#### Which state is the most crime-prone?
+
+#### Which state is the least crime-prone?
+
+#### Which state has the highest percentage of population who are high school graduate?
+
+#### Which state has the lowest percentage of population who are high school graduate?
+
+#### In region 2, which state is the largest in terms of state area?
+[To answer these region specific question, you will create a subset of data using the bracket notation or subset function. Then from the new subset data frame, you can find the answer to this question] 
+
+#### In region 4, which state  has the highest life expectancy?
+
+#### Which region has the highest average income? 
+[To find region specific information, it is best to use the aggregate function, please check online]
+
+#### Which region has the lowest average income? 
+
+#### Which region is the largest in terms of total state area?
+
+#### Which region is the smallest in terms of total state area?
+
+#### Which region has the highest life expectancy?
+
+#### Which region has the lowest life expectancy?
+
+#### Which region has the lowest life expectancy?
+
+#### Which region is on the average the most crime prone?
+
+#### Which region is on the average the least crime prone?
+
+#### Which region, on the average, has the highest percentage of population who are high school graduate?
+
+#### Which region, on the average, has the lowest percentage of population who are high school graduate?
+
+#### You will use the following command to show the 5th observation of population variable using the bracket notation:
+
+#### You will use the following command to show the 5th observation of population variable using the `$` notation:
+
+#### What is the main advantage of Rmd files?
+
+#### In Rmd files, the codes written in R are called `____`.
+
+#### Create a Rmd file and corresponding PDF file including the following contents: 
+- The very first code chunk will import the stateData.csv and then save it as RData file.
+- Now write a few words describing what are the few analysis you are planning to do 
+- Now create a data.frame which describes top five states in terms of life exepectanc
+- describe the data frame. 
+- Now create a bar chart of top five states in terms on income.
+
+
+
+### demistifying.R 
+
+#### The arrow-like '<-' symbol is the assignment operator in R, similar to the equal sign '=' in other programming languages. TRUE or FALSE? 
+
+#### The c() is a `_______` function that combines `_________` 
+
+#### In the demistifying.R file, in the "udacious" vector, replace YOUR_NAME with your actual name. How many elements are there now in "udacious"?
+
+by using count function, I find it is 8
+by using length function, I find it is 9
+
+#### Suppose I have vector named "numbers" which contains 1 to 10 numbers.  Now I would like to add 13, 14 and 17 to "numbers" vector and name it "nums_new". Remember it does not matter at which order the numbers are in the new vector "nums_new".  Which R code(s) should we use?
+numbers + 13 14 17
+c(numbers 13 14 17)
+c(13,numbers,14,17)
+c(c(13,14,17),numbers)
+c(13,14,17,numbers)
+
+#### I can issue the command `_______` to find how many characters are there in the following phrase "I love Bangladesh". The number of characgters in this command is `_______`.  
+
+
+####  The number of charaters in the third and seventh element of "udacious" vector is respectively
+7 and 9
+5 and 10
+
+#### Let's say you saved the number of characters in "udacious" vector in a new vector named "characs". Now if you issue the following command characs==11, you expect to get `____` TRUE and `____` FALSE values.
+
+#### Now if we issue the command `udacious[characs==11]`, we will get `____` names and each will have `___` characters. Each of them will correspond to `____` value of the vectors produced by `characs==11` command.
+
+#### mtcars data set was extracted from 1974 Motor Trend USA Magazine. True or False?  
+
+#### mtcars data set deals with how many automobiles?
+
+#### How many features of cars are considered in mtcars data set?
+
+#### To find names of the variables in mtcars data set, the following command will be issued:
+
+#### To find the structure of a data frame, the following command will be issued
+
+#### To find number of observations and number of columns in mtcars dataset, we issue the following command:
+
+#### To change the row.names of mtcars dataset to an index number, such as, 1,2,3.......... , we can issue the following command: 
+
+#### If you want to see the first 8 observations of mtcars dataset, you will issue the following command:
+
+#### If you want to see the last 12 observations of mtcars dataset, you will issue the following command:
+
+#### Suppose you want to find specifically 3rd, 15th and 17th observation of mtcars. You will issue the following command:
+
+#### To find first 10 observation of mpg variable in mtcars dataset, we will issue the following command:
+
+#### To find last 10 observation of mpg variable in mtcars dataset, we will issue the following command:
+
+####  Which car has the highest miles per gallon (mpg)?
+
+#### Which car has the lowes miles per gallon (mpg)?
+
+#### How many cars in the dataset has 8 cylinders?
+
+#### What is the average miles per gallon of all the cars in mtcars data set?
+
+#### According to data scientist Sean Taylor, good data science comes from fancy techniques not the question in hand. True or False?
+
+
+### Assignment 1
+
+##### According to data scientist Sean Taylor, good data science comes from fancy techniques not from the question in hand. True or False? Explain. 
+Its False, because at the heart of good data science, there should be question(s) which is of interest to someone. 
+ 
+#### mtcars data set was extracted from 1974 Motor Trend USA Magazine. True or False?  Explain.
+True
+
+#### mtcars data set deals with how many automobiles? How many features of cars are considered? 
+32 cars and 11 features
+
+#### To find names of the variables in mtcars data set, which command will be used?
+names(mtcars)
+
+#### If you want to see the first 8 observations of mtcars dataset, which command you will use?
+head(mtcars,8)
+
+#### If you want to see the last 12 observations of mtcars dataset, which command you will use?
+tail(mtcars,12)
+
+#### Suppose you want to find specifically 3rd, 15th and 17th observation of mtcars. You will issue the following command `___________`. 
+
+mtcars[c(3,15,17),]
+
+#### To find first 10 observation of mpg variable in mtcars dataset, which command will be used?
+
+`head(mtcars$mpg,10)`
+
+####  Which car has the highest miles per gallon (mpg)?
+mtcars[mtcars$mpg==max(mtcars$mpg),]
+Toyota corolla
+
+#### Which car has the lowest weight(wt)?
+mtcars[mtcars$wt==min(mtcars$wt),]
+Lotus Europa
+
+#### How many cars in the dataset has 8 cylinders?
+`table(mtcars$cyl)`  its 14
+
+#### What is the average miles per gallon of all the cars in mtcars data set?
+`mean(mtcars$mpg)`  20.1
+
+#### Download and import the `stateData.csv` into R.  How many states and how many regions are there?
+There are 50 states and 12 region
+
+#### Which state is the largest in terms of state area? 
+
+`statesInfo$state.full[statesInfo$state.area==max(statesInfo$state.area)]`
+Alaska
+
+#### Which state has the highest population?
+
+`statesInfo$state.full[statesInfo$population==max(statesInfo$population)]`
+California
+
+#### In region 2, which state is the largest in terms of state area?
+[To answer these region specific question, you will create a subset of data using the bracket notation or subset function. Then from the new subset data frame, you can find the answer to this question] 
+
+`reg2 <-  statesInfo[statesInfo$state.region==2 ,]`
+`reg2$state.full[reg2$state.area==max(reg2$state.area)]`
+Texas
+
+#### In region 4, which state  has the highest life expectancy?
+
+`reg4 <-  statesInfo[statesInfo$state.region==4 ,]`
+`reg4$state.full[reg4$life.exp==max(reg4$life.exp)]`
+Hawaii
+
+#### Which region has the highest  income on the average? 
+[To find region specific information, it is the best to use the aggregate function, please check online]
+`aggregate(income~state.region, data=statesInfo, mean)`
+region 4
+
+#### In the demistifying.R file, in the "udacious" vector, replace YOUR_NAME with your actual name. How many elements are there now in "udacious"?
+
+by using length function, I find it is 9
+
+#### Suppose I have vector named "numbers" which contains 1 to 10 numbers.  Now I would like to add 13, 14 and 17 to "numbers" vector and name it "nums_new". Remember it does not matter at which order the numbers are in the new vector "nums_new".  Which R code(s) should we use?
+
+`numbers <- 1:10
+nums_new <- c(numbers,c(13,14,17))`
+
+#### I can issue the command `_______` to find how many characters are there in the following phrase "I love Bangladesh". The number of characters in this command is `_______`.  
+nchar("I love Bangladesh") and 17
+
+### Inclass Quiz 1 
+
+### In-class quiz 1
+
+#### Download the data collected from a survey of reddit users and import into R. How many obserations and varialbes are there?
+```{r reddit  }
+reddit  <- read.csv("./Resources/Data/reddit.csv")
+save(reddit, file="./Resources/Data/reddit.RData")
+dim(reddit)
+```
+
+- 32574 observations and 14 variables
+- 14 observations and 32574 variables
+- 32754 observations and 14 variables
+- none of the above
+
+
+####  Among the reddit users, in terms of employment.status, highest number of users are found in `________` category.
+- students
+- Employed full time
+- Not employed and not looking for work
+- Not employed but looking for work
+- Retired
+
+#### To find reddit users in different employment status category, we will have to issue the following command:
+- table(employment.status)
+- table(reddit$employment.status)
+- table{reddit$employment.status}
+- none of the above
+
+#### How many of the reddit users have childern?
+
+- 5047
+- 5074
+- 27488
+- none of the above
+
+#### To make ordered factors, we can issue the following command:
+
+- ordered()
+- factor()
+- both of the above
+- none of the above
+
+#### How many levels of education are there among the reddit users?
+- 5
+- 6
+- 7
+- none of the above
+- all of the above
+
+#### Write down the code required to make the education variable an ordered factor in the following order:
+"Trade or Vocational degree"  "Some high school"  "High school graduate or equivalent"  "Some college" 
+"Bachelor's degree"  "Graduate or professional degree" "Associate degree"
+
+
+#### Download and import the `stateData.csv` into R.  How many states and how many regions are there?
+
+
+#### Which state has the lowest population?
+
+
+#### In region 3, which state  has the highest life expectancy?
+
+### Assignment 2 probables
+
+#### What are the possible outliers there can be ? 
+- Bad data about a non-extreme case
+- Bad data about an extreme case
+- Good data about an extreme case
+- All of the above 
+- None of the above
+
+#### In the section "Quiz: Moira's outlier", Moira faced which of the following kind of outlier?
+ - Bad data about a non-extreme case
+- Bad data about an extreme case
+- Good data about an extreme case
+- All of the above 
+- None of the above
+
+#### Exploratory data analysis is about 
+- finding surprises in the data
+- understanding the variables that are most central to the analysis
+- learning about features of data that might lead to unexpected results
+- all of the above
+- none of the above
+
+#### Pseudo Facebook user data has 
+- 9,900 observations and 15 variables
+- 15 observations and 99,000 variables
+- 15 variables and 99,000 observations
+- None of the above
+
+#### In Lesson 3, the instructors mainly used `qplot()` function from `ggplot2` package. But I would encourage you to use always the `ggplot()` function. In that spirit, which of the following will be the right command to generate the bar diagram in page 3 of `Lecture 3 Notes`? 
+-  ggplot(data=pfb,aes(x=dob_day))+geom_bar()
+
+#### In the above diagram, what are  the  noticeable attributes regarding the size of the bars?
+- All the dates are not given
+- Day 1 in a month has the tallest bar
+- Day 31 in a month has the smallest bar
+- None of the above
+
+#### In the above diagram, to have ticks label in all the days of a month on the x-axis, following command will have to be added:
+- scale_y_continuous(breaks=1:31)
+- scale_x_continuous(breaks=1:31)
+- scale_x_continuous(labels=1:31)
+- none of the above
+
+#### What is the possible explanation in the above diagram for Day 1 in a month having the tallest bar?
+- January 1 is the default date for those persons who do not set any day on their own
+- Due to privacy concern, some people might set fake birthday and choose the default which is January 1
+- Both of the above
+- None of the above
+
+
+#### What is the possible explanation in the above diagram for Day 31 in a month having the smallest bar?
+- January 31 is the default date for those persons who do not set any day on their own
+- Due to privacy concern, some people might set fake birthday and choose the default which is January 31
+- Not all the months have day 31 
+- Both of the above
+- None of the above
+
+#### Now to have the same diagram for all the months in a calendar year, which of the following commands has to be executed? 
+- ggplot(data=pfb,aes(x=dob_month))+geom_bar()+ facet_wrap(~dob_day)
+- ggplot(data=pfb,aes(x=dob_day))+geom_bar()+ facet_wrap(dob_day~dob_month)
+- ggplot(data=pfb,aes(x=dob_day))+geom_bar()+ facet_wrap(~dob_month)
+- none of the above
+
+####  What  would be the command to find how many males or females are there in the data set?
+`table(pfb$gender)`
+
+### Assignment 2 (Part 1) (final google form)
+See the google form repository
+https://goo.gl/8ZwR5K
+
+### Assignment 2 (part 2) probables
+
+#### How many males are there in pseudo Facebook data?
+
+#### How many females are there in pseudo Facebook data?
+58574
+40245
+58547
+40254[right answer]
+none of the above
+
+#### Which command can be used to find summary statistics of friend count by gender?
+
+`by(pfb$friend_count,pfb$gender, summary)`
+`by(pfb$gender,pfb$friend_count, summary)`
+`table(pfb$friend_count,pfb$gender, summary)`
+None of the above
+
+
+#### Which command can be used to find average friend count by gender?
+
+`by(pfb$friend_count,pfb$gender, mean)`
+
+#### Which command can be used to find median friend count by gender?
+
+`by(pfb$friend_count,pfb$gender, median)`
+
+#### What is the difference between the median friend count for women and men?
+52
+22
+32
+None of the above
+
+#### What do you find about the relationship between mean and median in the case of friend count?
+Mean is higher than median
+Median is higher than mean
+Mean is equal to median
+None of the above
+
+#### In general, what it usually implies if mean of a variable is much higher than median?
+Presence of unusually large values
+Presence of unusually small values
+Any of the above 
+None of the above
+
+#### Which of the following is a more robust statistics compared to other statistics?
+Mean
+Median
+Standard deviation
+Variance
+None of the above
+
+#### What is the value of 3rd quartile of friend count variable and what does it imply?
+206 and it means that 75% of the users have friend count of 206 or less
+206 and it means that 25% of the users have friend count of 206 or more
+Both of the above two
+206 and it means that 75% of the users have friend count of 206 
+None of the above
+
+
+#### Draw a bar diagram of friend count variable. What is strange about this diagram?
+
+#### Which of the following command you can use to make the bar diagram look nicer?
+
+#### To change the bin width in a bar diagram, which of the following you will use?
+
+#### Suppose you want to the change the sequence of ticks in x-axis of any ggplot diagram. Which of the following command you will use?
+In addition to required ggplot command, I will use `scale_x_continuous(breaks=-----)` function
+In addition to required ggplot command, I will use `scale_x_discrete(breaks=-----)` function
+Both of the above
+None of the above
+
+#### Suppose you want to draw several ggplot diagram based on the categories of a factor or categorical variable. Which of the following functions has to be added to standard ggplot2 commands?
+
+#### 'Tenure' variable in the data set measures how long the users are using Facebook. Around how many years or less 75% of the users are using Facebook?
+
+#### Let's plot a histogram of 'Tenure' variable with boundary in black and green bars. Which of the following command will be useful?  
+
+#### If there is extreme outliers in a variable of a data set, what are the ways to transform the variable so that the effect of outliers are greatly reduced?
+log transformation
+square root transformation
+both of the above
+none of the above
+
+#### The difference between mean and median of friend count variable is `____________`. When that variable goes through log transformation the difference boils down to `________`.
+114,.089
+.089,114
+114,.098
+None of the above
+
+
+### Assignment 3  (final google form)
+answer 1 : 40254
+answer 2 : `by(pfb$friend_count,pfb$gender, summary)`
+answer 3: 22
+answer 4: mean is higher than median
+answer 5: Presence of unusually large values 
+answer 6: Median
+answer 7: Both of the above two
+answer 8: Both of the above two
+answer 9: Both of the above 
+answer 10: 114,.098
+
+### Inclass Quiz 2 
+
+

@@ -1,0 +1,20 @@
+Question
+========
+
+What is the first quartile of the mean age of participants?
+
+Solution
+========
+
+We will issue the following command `summary(fdsr.r1$Age)`
+and find that the first quartile is `25.5`
+
+
+Meta-information
+================
+
+extype: num
+exsolution: 25.5
+extol: 0.1
+exname: First quartile of round 1 participants' age
+

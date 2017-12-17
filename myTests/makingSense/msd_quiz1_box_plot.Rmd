@@ -1,0 +1,23 @@
+Question
+========
+
+For the data presented in the modified boxplot, which statement is true?
+
+
+Answerlist
+----------
+* The mean is greater than the median
+* The mean is less than the median
+* The 8% trimmed mean is greater than the median
+* The mean is a robust measure of center
+
+
+
+Meta-information
+================
+
+exname: Boxplot info
+extype: schoice
+exsolution: 0010
+exshuffle: TRUE
+

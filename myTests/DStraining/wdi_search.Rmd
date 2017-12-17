@@ -1,0 +1,9 @@
+Question
+========
+
+- Find the GDP per capita of following countries : Bangaldesh, Bolivia, Kenya. 
+- In finding GDP per capita, you will use `WDIsearch` command.
+- You will store the indicator name directly into a new object. You can not hard-code
+  or directly write down the indicator name. 
+- For the above mentioned countries, find GDP per capita from 2010 to 2014
+- To get full score, write down every command you have used and final values of GDP per capita.

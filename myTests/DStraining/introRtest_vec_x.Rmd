@@ -1,0 +1,37 @@
+```{r setup, echo=FALSE, results='hide'  }
+vec <- c(4, 3, 7, NA, 8, 9)
+qlist <- c("x <- 4 3 7 NA 8 9",
+	   "x <- c(4 3 7 NA 8 9)",
+	   "x <- c{4, 3,NA, 7, 8, 9}",
+	   "x <- c(4, 3, 7,NA, 8, 9)",
+	    "none of the answers",
+	    "all of the answers")
+alist  <- c(FALSE,FALSE,FALSE,TRUE,FALSE,FALSE)
+```
+
+
+Question
+========
+
+The command to create a vector named x  of following numbers: 
+`r vec`
+
+```{r qlist, echo=FALSE, results='asis'  }
+answerlist(qlist, markup="markdown")
+```
+
+Solution
+========
+
+```{r alist, echo=FALSE, results='asis'}
+answerlist(ifelse(alist,"True","False"), markup="markdown")
+```
+
+
+Meta-information
+================
+
+extype: schoice
+exsolution: `r mchoice2string(alist)`
+exname: create a vector x
+exshuffle:TRUE

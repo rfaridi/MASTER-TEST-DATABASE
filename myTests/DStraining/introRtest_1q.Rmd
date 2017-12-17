@@ -1,0 +1,35 @@
+```{r dgp, echo=FALSE, results="hide"  }
+nums <- sample(seq(15),5)
+sol <- as.numeric(names(table(summary(nums)))[2])
+# error generation
+err <- as.numeric(names(table(summary(nums)))[-2])
+#rng <- c(min(nums),max(nums))
+#sc  <- num_to_schoice(sol,
+#		      wrong=err)
+questionlist <- sample(c(err,sol),6)
+solutionlist <- questionlist==sol
+```
+
+Question
+========
+
+Find the first quartile of following numbers:
+`r nums`
+
+```{r qs, echo=FALSE, results='asis'  }
+answerlist(questionlist, markup="markdown")
+```
+
+Solution
+========
+
+```{r sl, echo=FALSE, results="asis"  }
+answerlist(ifelse(solutionlist,"True","False"), markup="markdown")
+```
+
+
+Meta-information
+================
+extype: schoice
+exsolution: `r mchoice2string(solutionlist)`
+xname: First quartile

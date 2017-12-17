@@ -1,0 +1,30 @@
+Question
+========
+
+What is the sample variance of {-4,2,4,-2,1,6,-3,-8,7,3} to the nearest first decimal?
+
+Answerlist
+----------
+* 20.4
+* 4.8
+* 0.6
+* 22.7
+
+Solution
+========
+
+Answerlist
+----------
+* False
+* False
+* False
+* True
+
+Meta-information
+================
+
+exname: variance
+extype: schoice
+exsolution:0001
+exshuffle: TRUE
+

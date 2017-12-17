@@ -1,0 +1,28 @@
+
+\documentclass[a4paper]{article}
+
+\usepackage{a4wide,color,Sweave,url,amsmath,booktabs,longtable}
+\newenvironment{question}{\item \textbf{Problem}\newline}{}
+\newenvironment{solution}{\textbf{Solution}\newline}{}
+
+%% horizontal {answerlist} based on:
+%% https://tex.stackexchange.com/questions/146306/how-to-make-horizontal-lists
+
+%% via multicols
+\usepackage{multicol}
+\newenvironment{answerlist}{\renewcommand{\labelenumi}{(\alph{enumi})}\begin{multicols}{5}\begin{enumerate}}{\end{enumerate}\end{multicols}}
+
+%% %% via paralist
+%% \usepackage{paralist}
+%% \newenvironment{answerlist}{\renewcommand{\labelenumi}{(\alph{enumi})}\begin{inparaenum}}{\end{inparaenum}}
+
+%% %% via enumitem
+%% \usepackage[inline]{enumitem}
+%% \newenvironment{answerlist}{\renewcommand{\labelenumi}{(\alph{enumi})}\begin{enumerate*}}{\end{enumerate*}}
+
+
+\begin{document}
+\begin{enumerate}
+%% \exinput{exercises}
+\end{enumerate}
+\end{document}

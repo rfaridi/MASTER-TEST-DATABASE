@@ -1,0 +1,35 @@
+<<echo=FALSE, results=hide>>=
+## DATA GENERATION
+mean.val<-round(rnorm(1,mean=100,sd=100),digits=0)
+sd.val<-round(rnorm(1,mean=100,sd=10),digits=0)
+
+upper<-round(rnorm(1,mean=100,sd=100)+50,digits=0)
+lower<-round(rnorm(1,mean=100,sd=100)-100,digits=0)
+
+sol<-pnorm(upper,mean=abs(mean.val),sd=abs(sd.val))-pnorm(lower,mean=abs(mean.val),sd=abs(sd.val))
+sol<-round(sol,digits=3)
+@
+
+\begin{question}
+Given a normal distribution with mean \Sexpr{abs(mean.val)} and standard deviation \Sexpr{abs(sd.val)}, use the \texttt{pnorm} function to calculate the probability of obtaining values between $\Sexpr{format(lower)}$ and $\Sexpr{format(upper)}$ from this distribution.
+\end{question}
+
+\begin{solution}
+
+\begin{verbatim}
+sol<-pnorm(upper,
+           mean=abs(mean.val),
+           sd=abs(sd.val))-
+  pnorm(lower,mean=abs(mean.val),
+        sd=abs(sd.val))
+(sol<-round(sol,digits=3))
+\end{verbatim}
+
+\Sexpr{sol}
+\end{solution}
+
+%% META-INFORMATION
+%% \extype{string}
+%% \exsolution{\Sexpr{sol}}
+%% \exname{pnorm1}
+%% \extol{0.0}

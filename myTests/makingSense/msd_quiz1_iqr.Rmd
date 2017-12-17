@@ -1,0 +1,29 @@
+Question
+========
+
+What is the interquartile range of {1,16,12,1,16,20,12,12,4,7,1,0,21}? 
+
+Answerlist
+----------
+* 1
+* 12
+* 15
+* 16
+
+Solution
+========
+
+Answerlist
+----------
+* False
+* True
+* False
+* False
+
+Meta-information
+================
+
+exname: iqr
+extype: schoice
+exsolution: 0100
+exshuffle: TRUE

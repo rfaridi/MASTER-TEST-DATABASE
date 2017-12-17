@@ -1,0 +1,30 @@
+```{r setup, echo=FALSE, results='hide'}
+vec <- c(4, 3, 7, NA, 8, 9)
+qlist <- c(2.6,2.9,6.2,2.4,6.1)
+slist  <- qlist %in% 6.2
+```
+
+Question
+========
+
+Average of the vector x defined as `c(4, 3, 7, NA, 8, 9)` is
+
+```{r qlist,echo=FALSE, results='asis'  }
+answerlist(qlist, markup="markdown")
+```
+
+Solution
+========
+
+```{r slist,echo=FALSE, results='asis'  }
+answerlist(ifelse(slist,"True","False"), markup="markdown")
+
+```
+
+Meta-information
+================
+
+extype: schoice
+exsolution: `r mchoice2string(slist)`
+exname: mean of vector
+exshuffle: TRUE

@@ -1,0 +1,26 @@
+Question
+========
+
+In a left-skewed distribution, the mode is greater than the mean.
+
+Answerlist
+----------
+* TRUE
+* FALSE
+
+Solution
+========
+
+Answerlist
+----------
+* True
+* False
+
+Meta-information
+================
+
+exname: left-skewed
+extype: schoice
+exsolution: 10
+exshuffle: TRUE
+

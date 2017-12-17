@@ -1,0 +1,29 @@
+Question
+========
+
+The practice of statistics involves
+
+Answerlist
+----------
+* collecting data
+* summarising data
+* analysing data
+* all of the above
+
+Solution
+========
+
+Answerlist
+----------
+* False
+* False
+* False
+* True
+
+Meta-information
+================
+
+exname: About stats
+extype: schoice
+exsolution: 0001
+exshuffle: TRUE

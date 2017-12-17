@@ -1,0 +1,33 @@
+Question
+========
+Use the data from the question where you have extracted the data of GDP per capita of Bangaladesh, Bolivia and Kenya for the last year in the data.
+
+Answerlist
+----------
+* Draw a bar diagram of this GDP data with different colors for each country (particularly "green" for Bangladesh, "red" for Bolivia and "blue" for Kenya).
+* Bonus point for those who can come up with a horizontal Bar diagram. 
+* More bonus points for those who can come up with pie chart from the same data.
+
+Solution
+========
+
+(a)  A subset of the data has to be created for the year the bar diagram will be drawn. The following code will do that 
+```r{eval=FALSE,echo=TRUE}
+dat.sub <- subset(data=dat, 
+		  subset=year==2014, 
+		  filter=c("countries","gdppc"))  
+```
+ Then following command will create the bar plot
+```
+p <- ggplot(dat.sub,aes(x=countries,y=gdppc))+
+		geom_bar(stat="identity")
+```
+
+Meta-information
+================
+
+exname:  wdi_gg
+extype: string
+exsolution: "descriptive"
+
+

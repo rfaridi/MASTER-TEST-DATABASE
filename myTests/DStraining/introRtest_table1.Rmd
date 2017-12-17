@@ -1,0 +1,36 @@
+```{r setup, echo=FALSE, results="hide"}
+gender <- c("male", "female", "female", NA, "male", "female")
+```
+
+Question
+========
+
+Consider the following elements in a vector named gender: male, female, female, NA, male, female. We want to find the number of females. To find that we will use \ldots{} command and will find \ldots{} 
+
+Answerlist
+----------
+* table(gender) and 2 females
+* table gender and 2 females
+* table{gender} and 2 females
+* table(gender) and 3 females
+* none of the answers   
+
+Solution
+========
+
+Answerlist
+----------
+* False
+* False
+* False
+* True
+* False
+
+
+Meta-information
+================
+
+exname: introRtest_tabl1
+extype: schoice
+exsolution: 00010
+exshuffle: TRUE
