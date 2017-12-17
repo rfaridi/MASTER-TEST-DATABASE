@@ -1802,6 +1802,87 @@ n <- phat*(1-phat)*crit.value.05^2/margin.error^2
 #### The video lecture mentions a news published in the Toronto Star on an opinion survey regarding Mayor Rob Ford's spending cuts. In the survey, margin of error was 3\% with  95\% confidence interval. If confidence interval has been decreased to 90\% what would be the required sample size (in nearest whole number)? 
 
 
+### TEST 12 (Week 5) (assignment 8, part 1): probabile questions
+
+#### In the theoretical world, we have  some models, statistical, and scientific  that can be used to describe the real world. True or False? 
+True
+False
+
+##### Answer
+True
+
+##### Explanation
+See lecture transcript 1
+
+####  Statistical tests are used to answer specific questions about the values of our population or theoretical parameters. True or false?
+
+##### Answer
+True
+
+##### Explanation
+See lecture transcript 1
+
+
+
+#### Which of the following is a legitimate question regarding statistical tests?
+If we observe something in our real world  data, could it just be due to chance? 
+If we observe something in our real world  data, could it telling us something stronger about our theoretical world? 
+both of the above
+none of the above
+
+
+##### Answer
+both of the above
+
+
+##### Explanation
+See lecture transcript 1
+
+
+#### Let's try to remind ourselves about observations regarding life expectancy data from week 1. The box plots show that life expectancies  in almost all countries in East Asia and  the Pacific region are higher than life expectancies in almost every country in Sub-Saharan Africa. Which of the following is a legitimate observation in this contexts?
+Could this difference happen just by chance? 
+Could this difference  happen just because of the  natural variability that there is in the  measurements of life expectancy from country to country? 
+both of the above
+none of the above
+
+##### Answer
+both of the above
+
+
+##### Explanation
+See lecture transcript 1
+
+
+
+#### In hypothesis testing, we are investigating whether our real world data support what we are assuming or hypothesizing about the theoretical world. True or false?
+True
+False
+
+##### Answer
+True
+
+
+##### Explanation
+See lecture transcript 1
+
+
+####
+
+
+##### Answer
+
+
+##### Explanation
+####
+
+
+##### Answer
+
+
+##### Explanation
+
+
+
 ##### Answer
 
 ##### Explanation
