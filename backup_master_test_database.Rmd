@@ -2037,15 +2037,223 @@ See video 2 transcript
 
 
 
-####
+#### In our beer cap experiment if we're interested in  probability of getting reds is 0.50, we will  be interested in whether the chance of getting reds is as greater than a half or if it's less than a half. This is an example of 
+one-tailed test
+two-tailed test
+both of the above
+none of the above
 
 
 ##### Answer
+two-tailed test
 
+
+##### Explanation
+by definition
+
+
+#### Which of the followings are true about statistical tests? 
+In most situations, two-tailed tests are appropriate 
+Whenever in doubt, use two-tailed tests
+both of the above
+none of the above
+
+##### Answer
+both of the above
+
+##### Explanation
+by definition
+
+
+#### The second step in statistical test is to put together evidence in the form of test statistics. True or false?
+True
+False
+
+##### Answer
+True
+
+
+##### Explanation
+by defintion
+
+
+
+#### Which of the following is true about test statistic?
+In order to make the data useful, we have to summarize into a statistic called the test statistic. 
+Like you need statistic, the test statistic is a numerical summary of the data.
+What differentiates a test statistic from just any statistic, is that it is formulated assuming that the null hypothesis holds. 
+all of the above
+none of the above
+
+##### Answer
+all of the above
+
+##### Explanation
+see video 2 transcript
+
+
+#### This is important to remember in  statistical testing, we make an  assumption, H_0, our null hypothesis. We then work, as if it is true. Is this statement true or false?
+True
+False
+
+##### Answer
+True
+
+##### Explanation
+by definition
+
+
+
+#### In a court case, once the evidence has been collected and summarized for the judge and jury, they have responsibility of careful deliberation. They need to decide if the evidence is overwhelming enough to reject the presumption of innocence, beyond a reasonable doubt. In statistics, the tool for deliberation is a P-value.Do you agree with this analogy of p-value with legal procedure? 
+Yes
+No
+
+##### Answer
+Yes
+
+##### Explanation
+see video 2 transcript
+
+
+#### Which of the following is true about p-vale?
+A p-value transforms a test statistic into a probabilistic scale. 
+It is a number between 0 and 1, that quantifies how strong the evidence is against the null hypothesis. 
+It is a numerical summary of data
+both a and b
+both a and c
+none of the above
+
+##### Answer
+both a and b
+
+##### Explanation
+see video 2 transcript
+
+#### If the null hypothesis is really true, how likely would it be to observe a test statistic, or summary of our data of this magnitude or even larger? The numerical answer to this question is
+test statistic
+p-value
+both of the above
+none of the above
+
+##### Answer
+p-value
+
+##### Explanation
+by definition
+
+
+#### The smaller the P-value, the more unlikely it is that we observe our data, assuming the null hypothesis is true. 
+True
+Value
+
+##### Answer
+True
+
+
+##### Explanation
+by definition
+
+
+#### The smaller the p-value, the stronger the evidence we have against the null hypothesis. 
+True
+False
+
+##### Answer
+True
+
+##### Explanation
+by definiton
+
+
+#### A p-value is a measurement of how likely it is that the null hypothesis is true. 
+True
+False
+
+##### Answer
+False
+
+
+##### Explanation
+The null hypothesis either is true or isn't true. We may not know which it is, but we can't put a probability value on it, because it's not random. What a P-value does tell you, is how likely the observed data would be, if an null hypothesis were true. 
+
+
+#### p-value is  a measure of the strength of the evidence against the null hypothesis, and  the smaller the p-value, the stronger the evidence. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Explanation
+See transcript of video 2
+
+
+
+
+#### In statistics, not strong enough evidence against the null hypothesis means the p-value was not small, and we conclude that our data are consistent with the null hypothesis. True or false? 
+True
+False
+
+##### Answer
+True
+
+
+
+##### Explanation
+by definition
+
+
+
+#### Statistically significant result is found when we reject the null hypothesis. True or false?
+True 
+False
+
+
+##### Answer
+True
+
+
+##### Explanation
+By defintion
+
+
+#### Which of the following is true regarding the values of p-value?
+If we get a p-value less than .001, that can be considered strong evidence against the null hypothesis. 
+Larger than that, but less than .01 is still pretty good evidence against a null hypothesis, and after that it starts to get a little bit gray. 
+Between .01 and .05 is considered small enough evidence to say the null hypothesis is not true, in many situations. 
+all of the above
+none of the above
+
+
+##### Answer
+all of the above
 
 ##### Explanation
 
 
+#### Depending on the context of the problem, you might be willing to accept a larger or a smaller P-value. True or false? 
+True
+False
+
+##### Answer
+True
+
+
+##### Explanation
+by definition
+
+
+#### If concluding that you have a statistically significant result is going to incur a lot of expense, or possible discomfort for people, then you'll want a smaller P-value.
+True
+False
+
+
+##### Answer
+True
+
+
+##### Explanation
+by definition
 
 
 **************************************
