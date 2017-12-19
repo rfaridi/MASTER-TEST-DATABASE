@@ -131,6 +131,8 @@ Extraneous factors are not part of current but might affect the outcome variable
 
 ### How can we tackle the effect of extraneous factors when those factors are known to researcher?
 
+## Rest of weeks
+I have switched to the following TESTS sections for the rest of the weeks questions
 
 ## TESTS
 
@@ -1282,7 +1284,7 @@ False
 True
 
 
-### Test 10 (Week4) (assignment 7:Part 1): Probabble questions
+### Test 10 (Week4) (assignment 7:Part 1): Probable questions
 
 #### Sampling distribution can be defined as probability distribution for a statistic  that we can calculate from some data, such as possibly a proportion or a mean. True or False? 
 True
@@ -1838,7 +1840,7 @@ See lecture transcript 1
 
 
 
-#### Which of the following is a legitimate question regarding statistical tests?
+#### Which of the following is a legitimate question in a statistical test?
 If we observe something in our real world  data, could it just be due to chance? 
 If we observe something in our real world  data, could it telling us something stronger about our theoretical world? 
 both of the above
@@ -1946,7 +1948,7 @@ True
 See video 2 transcript 
 
 
-#### If we use court case as an analogy to statistical test, then presumption of innoncence in a court case is equivalent to null hypothesis in a statistical test. True or false?
+#### If we use court case as an analogy to statistical test, then presumption of innocence in a court case is equivalent to null hypothesis in a statistical test. True or false?
 
 ##### Answer
 True
@@ -1976,7 +1978,7 @@ See video 2 transcript
 #### Which of the following is true about alternative hypothesis?
 Sometimes the alternative hypothesis is called the research hypothesis, because it's what the research wants to show 
 The alternative hypothesis is written as  an H, with a subscript, a lower or  upper case a. 
-Some people like to write it as H, with a subscript  1, in contrast to h of 0 for the null hypothesis. 
+Some people like to write it as H, with a subscript  1, in contrast to H of 0 for the null hypothesis. 
 Alternative hypothesis  may assume that status quo is maintained
 Like the prosecutor who wants us to conclude that the defendant is guilty, we  typically want to prove that this researcher alternative hypothesis is true. 
 all of the above
@@ -1993,7 +1995,7 @@ Alternative hypothesis  may assume that status quo is maintained - this option i
 
 
 
-#### In the case of facial plastic surgery example, the null hypotheis assumes that  mean perceived change in price is equal to `_____`. 
+#### In the case of facial plastic surgery example, the null hypothesis assumes that  mean perceived change in price is equal to `_____`. 
 
 0.0
 0.5
@@ -2115,7 +2117,7 @@ Yes
 see video 2 transcript
 
 
-#### Which of the following is true about p-vale?
+#### Which of the following is true about p-value?
 A p-value transforms a test statistic into a probabilistic scale. 
 It is a number between 0 and 1, that quantifies how strong the evidence is against the null hypothesis. 
 It is a numerical summary of data
@@ -2144,7 +2146,7 @@ by definition
 
 #### The smaller the P-value, the more unlikely it is that we observe our data, assuming the null hypothesis is true. 
 True
-Value
+False
 
 ##### Answer
 True
@@ -2254,6 +2256,139 @@ True
 
 ##### Explanation
 by definition
+
+
+### TEST 12 (Week 5): Google form (Online assignment 6, part 1)
+https://goo.gl/forms/wFV2kIJ5tDuPlwah1
+
+### TEST 12 (Week 5) (assignment 8, part 2): probabile questions
+
+#### The video lecture mentions a news published in the Toronto Star on an opinion survey regarding Mayor Rob Ford's spending cuts. What was the sample size in that survey?
+1064
+1046
+1036
+none of the above
+
+##### Answer
+1046
+
+##### Explanation
+See week 5 video 3 transcript
+
+#### In the above mentioned opinion survey,what was the percetange of support for Mayor?
+32%
+42%
+52%
+none of the above
+
+##### Answer
+42%
+
+##### Explanation
+See week 5 video 3 transcript
+
+
+#### In the above mentioned opinion survey,which could be one of the possible null hypothesis?
+the true probability  of people supporting the mayor is  less than 50% 
+the true probability  of people supporting the mayor is  equal to 50% 
+the true probability  of people supporting the mayor is  greater than 50% 
+all of the above
+none of the above
+
+##### Answer
+all of the above
+
+##### Explanation
+Sounds like all of them are possible
+
+
+#### In the above mentioned opinion survey,which could be one of the possible alternative hypothesis?
+the true probability  of people supporting the mayor is  less than 50% 
+the true probability  of people supporting the mayor is  equal to 50% 
+the true probability  of people supporting the mayor is  greater than 50% 
+all of the above
+none of the above
+
+##### Answer
+all of the above
+
+##### Explanation
+Sounds like all of them are possible
+
+
+#### In the above mentioned opinion survey, suppose the alternative hypothes is as follows: true probability of people supporting the mayor is less 50%. Then which of the following is the most likely null hypothesis? 
+the true probability  of people supporting the mayor is  less than 50% 
+the true probability  of people supporting the mayor is  more than 50% 
+the true probability  of people supporting the mayor is  equal to  50% 
+both a and c
+both b anc c
+none of the above
+
+
+##### Answer
+none of the above
+
+##### Explanation
+by definition
+
+
+#### 
+
+##### Answer
+
+##### Explanation
+#### 
+
+##### Answer
+
+##### Explanation
+#### 
+
+##### Answer
+
+##### Explanation
+#### 
+
+##### Answer
+
+##### Explanation
+
+#### 
+
+##### Answer
+
+##### Explanation
+
+#### 
+
+##### Answer
+
+##### Explanation
+
+#### 
+
+##### Answer
+
+##### Explanation
+#### 
+
+##### Answer
+
+##### Explanation
+#### 
+
+##### Answer
+
+##### Explanation
+#### 
+
+##### Answer
+
+##### Explanation
+
+
+## -------------------------
+
 
 
 **************************************
