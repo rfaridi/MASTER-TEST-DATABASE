@@ -2261,7 +2261,7 @@ by definition
 ### TEST 12 (Week 5): Google form (Online assignment 6, part 1)
 https://goo.gl/forms/wFV2kIJ5tDuPlwah1
 
-### TEST 12 (Week 5) (assignment 8, part 2): probabile questions
+### TEST 12 (Week 5) (assignment 8, part 2): probable questions
 
 #### The video lecture mentions a news published in the Toronto Star on an opinion survey regarding Mayor Rob Ford's spending cuts. What was the sample size in that survey?
 1064
@@ -2275,7 +2275,7 @@ none of the above
 ##### Explanation
 See week 5 video 3 transcript
 
-#### In the above mentioned opinion survey,what was the percetange of support for Mayor?
+#### The video lecture mentions a news published in the Toronto Star on an opinion survey regarding Mayor Rob Ford's spending cuts. In the above mentioned opinion survey,what was the percetange of support for Mayor?
 32%
 42%
 52%
@@ -2288,7 +2288,7 @@ none of the above
 See week 5 video 3 transcript
 
 
-#### In the above mentioned opinion survey,which could be one of the possible null hypothesis?
+#### The video lecture mentions a news published in the Toronto Star on an opinion survey regarding Mayor Rob Ford's spending cuts. In the above mentioned opinion survey,which could be one of the possible null hypothesis?
 the true probability  of people supporting the mayor is  less than 50% 
 the true probability  of people supporting the mayor is  equal to 50% 
 the true probability  of people supporting the mayor is  greater than 50% 
@@ -2316,7 +2316,7 @@ all of the above
 Sounds like all of them are possible
 
 
-#### In the above mentioned opinion survey, suppose the alternative hypothes is as follows: true probability of people supporting the mayor is less 50%. Then which of the following is the most likely null hypothesis? 
+#### In the above mentioned opinion survey, suppose the alternative hypotheses is as follows: true probability of people supporting the mayor is less than 50%. Then which of the following is the  likely null hypothesis?
 the true probability  of people supporting the mayor is  less than 50% 
 the true probability  of people supporting the mayor is  more than 50% 
 the true probability  of people supporting the mayor is  equal to  50% 
@@ -2326,65 +2326,452 @@ none of the above
 
 
 ##### Answer
-none of the above
+both b anc c
 
 ##### Explanation
 by definition
 
 
-#### 
+#### The video lecture mentions a news published in the Toronto Star on an opinion survey regarding Mayor Rob Ford's spending cuts. In the above mentioned opinion survey, suppose the null hypotheses is as follows: true probability of people supporting the mayor is equal to 50%. Then what is the value of test statistics?
+-2.54
+-5.24
+5.24
+-5.42
+none of the above
+
+##### Answer
+-5.24
+
+##### Explanation
+```{r ts  }
+phat  <- 0.42 # from the survey
+p <- phat # substitute population unknown var with sample variance
+n  <- 1046 # from survey
+var <- p*(1-p)/n
+sd  <- sqrt(var)
+# now set the value of p under null hypothesis
+p_0 <- 0.5
+test.stat <-(phat-p_0)/sd 
+```
+
+
+#### To compute a p-value, we want to compute the probability of observing a value that is extreme or more extreme under the null hypothesis. True or false? 
+True
+False
+
+##### Answer
+True
+
+##### Explanation
+by definition
+
+#### In the above mentioned opinion survey, suppose the null hypotheses is as follows: true probability of people supporting the mayor is equal to 50%. What is the p-value of test statistics in this case?
+0.000
+0.001
+0.002
+0.050
+none of the above
+
+##### Answer
+0.000
+
+##### Explanation
+```{r pval  }
+pnorm(-5.24)
+```
+you might have noticed that -5.24 is the value of test statistics calculated in the previous question. all the p-value is doing here find the probability of a value as extreme or more extreme than the value we got here. another interpretation of null hypothesis is that the lowest level of significance at which the null could be rejected.
+
+#### In the above mentioned opinion survey, suppose the null hypotheses is as follows: true probability of people supporting the mayor is equal to 50%. Suppose you have come up with a p-value of extremely small, say smaller than 1%. Which of the following will be a possible conclusion from such small p-value? 
+null hypothesis is rejected that is true probability of people supporting the mayor is not equal to 50%
+null hypothesis is not rejected that is true probability of people supporting the mayor is actually equal to 50%
+null hypothesis is not rejected that is true probability of people supporting the mayor is not equal to 50%
+null hypothesis is rejected that is true probability of people supporting the mayor is less than 50%
+all of the above
+both a and b
+both a and c
+both a and d
+none of the above
+
+##### Answer
+both a and d
+
+##### Explanation
+The sample would only find 42% support is so small that we can reject the null hypothesis and we can say that no its not true that the mayor's support is 50% it's indeed true that its less than 50%. 
+
+
+#### In the above mentioned opinion survey, suppose the null hypotheses is as follows: true probability of people supporting the mayor is equal to 50%. Suppose you have come up with a p-value of extremely small value, say smaller than 1%. From this extremely small value you reached the conclusion that   the sample would only find 42% support is so small that we can reject the null hypothesis and conclude that its not true that the mayor's support is 50%, rather it's indeed true that its less than 50%. Do you agree with the conclusion drawn from the above statement? 
+Yes
+No
+
+
+##### Answer
+Yes
+
+##### Explanation
+According to the definition of p-value
+
+#### In the above mentioned opinion survey, suppose the alternative hypotheses is as follows: true probability of people supporting the mayor is less than 38%. Then which of the following is the most likely null hypothesis?
+the true probability  of people supporting the mayor is  more than 38% 
+the true probability  of people supporting the mayor is  less than 50% 
+the true probability  of people supporting the mayor is  equal to  38% 
+both a and c
+both b anc c
+none of the above
+
+##### Answer
+both a anc c
+
+##### Explanation
+by definition
+
+
+#### The video lecture mentions a news published in the Toronto Star on an opinion survey regarding Mayor Rob Ford's spending cuts. In the above mentioned opinion survey, suppose the null hypotheses is as follows: true probability of people supporting the mayor is equal to 40%. Then what is the value of test statistics?
+-2.04
+1.31
+-1.31
+5.24
+none of the above
+
+##### Answer
+1.31
+
+##### Explanation
+```{r ts  }
+phat  <- 0.42 # from the survey
+p <- phat # substitute population unknown var with sample variance
+n  <- 1046 # from survey
+var <- p*(1-p)/n
+sd  <- sqrt(var)
+# now set the value of p under null hypothesis
+p_0 <- 0.40
+test.stat <-(phat-p_0)/sd 
+test.stat
+```
+
+#### The video lecture mentions a news published in the Toronto Star on an opinion survey regarding Mayor Rob Ford's spending cuts. In the above mentioned opinion survey, suppose the null hypotheses is as follows: true probability of people supporting the mayor is equal to 40%. What is the p-value of test statistics in this case?
+0.000
+0.001
+0.002
+0.095
+none of the above
+
+##### Answer
+0.000
+
+##### Explanation
+```{r pval  }
+pnorm(1.31,lower.tail=FALSE)
+```
+you might have noticed that 1.31 is the value of test statistics calculated in the previous question. all the p-value is doing here find the probability of a value as extreme or more extreme than the value we got here. another interpretation of null hypothesis is that the lowest level of significance at which the null could be rejected.
+
+#### In the above mentioned opinion survey, suppose the null hypotheses is as follows: true probability of people supporting the mayor is equal to 40%. Suppose you have come up with a p-value of reasonably large value. Which of the following will be a possible conclusion from such large p-value? 
+null hypothesis is rejected that is true probability of people supporting the mayor is not equal to 40%
+null hypothesis is not rejected that is true probability of people supporting the mayor is actually equal to 40%
+null hypothesis is not rejected that is true probability of people supporting the mayor is not equal to 40%
+null hypothesis is rejected that is true probability of people supporting the mayor is less than 40%
+all of the above
+both a and b
+both a and c
+both a and d
+none of the above
+
+##### Answer
+null hypothesis is not rejected that is true probability of people supporting the mayor is actually equal to 40%
+
+##### Explanation
+Probability that the sample would only find 42% support when true support is 40% is reasonably large. That means that we can not reject the null hypothesis and we can say that   mayor's support is 40.
+
+
+####  Let's go back to the experiment of tossing beer cap. Suppose we assume that the null hypothesis is probability of coming up with the red side is 50%.  Now a thousand times the beer cap is flipped and we got 576 red out of that 1000 flips. What is the value of test statistics here?
+
+##### Answer
+1.86
+-1.86
+4.86
+-4.86
+none of the above
+
+##### Explanation
+
+##### Explanation
+```{r ts  }
+n <- 1000
+reds <- 576
+phat  <- reds/n # from the survey
+p <- phat # substitute population unknown var with sample variance
+var <- p*(1-p)/n
+sd  <- sqrt(var)
+# now set the value of p under null hypothesis
+p_0 <- 0.50
+test.stat <-(phat-p_0)/sd 
+test.stat
+```
+
+#### Let's go back to the experiment of tossing beer cap. Suppose we assume that the null hypothesis is probability of coming up with the red side is 50%.  Now a thousand times the beer cap is flipped and we got 576 red out of that 1000 flips. What is the value of p-value here?
+0.000
+0.001
+0.002
+0.095
+none of the above
+
+##### Answer
+0.000
+
+##### Explanation
+```{r bcp  }
+pnorm(4.86,lower.tail=FALSE)
+```
+Since this is a two-tailed test, it can be considered as , 4.86 as the absolute value
+
+#### Let's go back to the experiment of tossing beer cap. Suppose we assume that the null hypothesis is probability of coming up with the red side is 50%.  Now a thousand times the beer cap is flipped and we got 576 red out of that 1000 flips. After that test, suppose we came up with an extremely low p-value. What we will conclude from that test?
+null hypothesis is rejected that is true probability of coming up with red side of beer cap is not equal to 50%
+null hypothesis is not rejected that is true probability of coming up with red side of beer cap is actually 50%
+null hypothesis is not rejected that is true probability of coming up with red side of beer cap is not actually 50%
+all of the above
+both a and b
+both a and c
+both a and d
+none of the above
+
+##### Answer
+null hypothesis is rejected that is true probability of coming up with red side of beer cap is not equal to 50%
+
+##### Explanation
+by definition
+
+#### Consider the face lift example. Use the data provided and we find that number of observations is `_____`.
+40
+60
+80
+none of the above
+
+##### Answer
+60
+
+##### Explanation
+see video
+
+#### Consider the face lift example. Use the data provided and we find that average perceived change in years  is `_____`.
+1.77 years
+7.17 years
+6.17 years
+none of the above
+
+##### Answer
+7.17 years
+
+##### Explanation
+```{r csd  }
+load("./Resources/Data/age_change.RData")
+mean(csd$age.change)
+```
+
+#### Consider the face lift example. Use the data provided and we find that standard deviation of  perceived change in years  is `_____`.
+2.948
+7.176
+2.498
+none of the above
+
+##### Answer
+2.948
+
+##### Explanation
+```{r csd  }
+load("./Resources/Data/age_change.RData")
+sd(csd$age.change)
+```
+
+#### Consider the face lift example. Suppose our null hypothesis is that there is no perceived changes in age. In that case what would be the value of test statistics?
+7.171
+2.434
+0.381
+18.85
+none of the above
+
+##### Answer
+18.85
+
+##### Explanation
+```{r ts  }
+load("./Resources/Data/age_change.RData")
+n <- 60 
+x_bar <- mean(csd$age.change)
+sd  <- sd(csd$age.change)
+var_xbar <- sd^2/n 
+sd_xbar  <- sqrt(var_xbar)
+# now set the value of p under null hypothesis
+mu <- 0
+test.stat <-(x_bar-mu)/sd_xbar
+test.stat
+```
+
+
+#### Consider the face lift example. Suppose our null hypothesis is that there is no perceived changes in age. In that case what would be the critical value of t-distribution at 5% level of significance with one-sided test?
+1.761
+-1.671
+2.100
+-2.001
+none of the above
+
+##### Answer
+-1.671
+
+##### Explanation
+```{r fle  }
+qt(.05,df=59)
+```
+
+#### Consider the face lift example. Suppose our null hypothesis is that there is no perceived changes in age. In that case what would be the absolute value of critical value of t-distribution at 5% level of significance with two-sided test?
+1.761
+-1.671
+2.001
+-2.001
+none of the above
+
+##### Answer
+2.001
+
+##### Explanation
+```{r fle  }
+qt(.025,df=59)
+```
+
+
+#### Consider the face lift example. Suppose our null hypothesis is that there is no perceived changes in age. In that case what would be the value of p-value?
+0.000
+0.001
+0.002
+0.095
+none of the above
+
+##### Answer
+0.000
+
+
+
+##### Explanation
+```{r pv  }
+test.stat <- 18.856 # test statistics calculated earlier
+pt(18.856,df=59,lower.tail=FALSE)
+```
+
+
+
+#### In the above question, given the p-value which of the following conclusions you can draw?
+Given the null hypothesis of no changes in perceived age, we find that probability of coming up with sample statistics that we got is very low. Therefore, we reject the null hypothesis.
+Given the null hypothesis of no changes in perceived age, we find that probability of coming up with sample statistics that we got is very high. Therefore, we can not reject the null hypothesis.
+Given the null hypothesis of no changes in perceived age, we find that probability of coming up with sample statistics that we got is neither high nor low. Therefore, we can not conclude about what we should do regarding  the null hypothesis.
+none of the above
+
+
+##### Answer
+Given the null hypothesis of no changes in perceived age, we find that probability of coming up with sample statistics that we got is very low. Therefore, we reject the null hypothesis.
+
+
+##### Explanation
+by definition
+
+#### A test is said to have high power if it does not reject the null when it is true. True or false?
+True
+False
+
+##### Answer
+False
+
+
+##### Explanation
+by definition
+
+
+#### A test is said to have high power if it rejects the null when it is false. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Explanation
+by definition
+
+
+#### Which of the following is true? 
+The significance level gives a cut off for how small is small for a p value. 
+The significance level is  typically denoted by alpha. 
+The p value is  the smallest level of significance at which the data are statistically significant 
+all of the above
+both a and b
+both b and c
+none of the above
+
+##### Answer
+all of the above
+
+##### Explanation
+By definition
+
+
+#### The higher the power of a test, the more sensitive it is in detecting a false null hypothesis. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Explanation
+By definition
+
+
+#### Which of the following can increase the power of a test?
+setting the null value significantly different than alternative value
+increasing the sample size
+increasing the type I error
+all of the above
+both a and b
+both a an c
+none of the above
+
+##### Answer
+all of the above
+
+
+##### Explanation
+by definition
+
+
+#### If in a test, type I error increases, it will also increase the type II error. True or false?
+True
+False
+
+##### Answer
+False
+
+##### Explanation
+if type I error increases, then the probability of rejecting null when it is true increases. that means we will reject null more than previously. Therefore we will accept less null when it is false. So Type II error which is the probability of accepting null when it is false decreases. Therefore, the power which is 1 - type II error increases.
+
+#### If in a test, type II error increases, it will also increase the power of a test.
+True
+False
+
+##### Answer
+False
+
+##### Explanation
+if type I error increases, then the probability of rejecting null when it is true increases. that means we will reject null more than previously. Therefore we will accept less null when it is false. So Type II error which is the probability of accepting null when it is false decreases. Therefore, the power which is 1 - type II error increases.
+
+
+
+
+####
+
+
 
 ##### Answer
 
-##### Explanation
-#### 
 
-##### Answer
-
-##### Explanation
-#### 
-
-##### Answer
-
-##### Explanation
-#### 
-
-##### Answer
 
 ##### Explanation
 
-#### 
 
-##### Answer
-
-##### Explanation
-
-#### 
-
-##### Answer
-
-##### Explanation
-
-#### 
-
-##### Answer
-
-##### Explanation
-#### 
-
-##### Answer
-
-##### Explanation
-#### 
-
-##### Answer
-
-##### Explanation
-#### 
-
-##### Answer
-
-##### Explanation
 
 
 ## -------------------------
