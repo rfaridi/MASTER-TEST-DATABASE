@@ -136,8 +136,11 @@ I have switched to the following TESTS sections for the rest of the weeks questi
 
 ## TESTS
 
+### WEEK 1: Summarizing Data
+
 ### Test 1
-Find the five-point summary of following numbers: 26,91, 56,84,46,78, 67,87,72
+
+#### Find the five-point summary of following numbers: 26,91, 56,84,46,78, 67,87,72
 Now use the Life expectancy(LE) data and find the five point summary of life expectancy. How do you interpret the values of median, 1st quartile and third quartile?
 What is the difference between a regular boxplot and modified boxplot? Write down the R commands to find the both in the case of LE data. 
 What would be definition of a robust statistic?
@@ -150,6 +153,8 @@ Find the histogram of estimated age at death.
 Is estimated age at death variable, symmetric, left-skewed or right-skewed?
 What is the relationship between mode, median and mean? What is the implication of that relationship?
 
+### WEEK 2: Relationship between variables
+
 ### Test 2
 Import the Skeleton data into R and write down required the R commands
 Is there any difference between modified and regular boxplot in DGdifference variable? 
@@ -160,6 +165,8 @@ Calculate range, mean, median, IQR and SD of 10% trimmed data of DGDifference.
 Combine those statistics in a data frame and create a variable showing
 percentage difference. (you will need to use data.frame() function in the following form: data.frame(orig,trim).   To find percentage changes, create a variable
 `pch=round(((orig-trim)/orig)*100,1)`
+
+### WEEK 3: Probability theory
 
 ### Test 3
 
@@ -384,6 +391,7 @@ we also get the result from CrossTable command from gmodels package.
 ### Test 4 (in-class quiz-1) 
 
 `/home/rushad/Dropbox/Courses/R-Training/ROUND2/FUNDA_STATS/Exams/FDSR_2017_01_quiz4.tex`
+
 
 ### Test 5 (assignment 4:part 1) Probable questions
 this test will be based on week 4 videos
@@ -1284,6 +1292,8 @@ False
 True
 
 
+### WEEK 4: Confidence Interval
+
 ### Test 10 (Week4) (assignment 7:Part 1): Probable questions
 
 #### Sampling distribution can be defined as probability distribution for a statistic  that we can calculate from some data, such as possibly a proportion or a mean. True or False? 
@@ -1363,14 +1373,14 @@ True
 ##### Explanation
 We need to find the probability distribution of reds, that is numbers `0,1,2,.............,10` and the corresponding probabilites from `dbinom(6,10,0.2)`. Then we will find that coming up with 6 heads has still reasonable.
 
-#### Suppose someone flipped the beer coin for 1000 times and came up with red side 583 times. Does this mean that exactly 58.3% of the time the red side will appear in the theoretical world?
+#### Suppose someone flipped the beer cap for 1000 times and came up with red side 583 times. Does this mean that exactly 58.3% of the time the red side will appear in the theoretical world?
 True
 False
 
 ##### Solution
 False
 
-#### Suppose someone flipped the beer coin for 1000 times and came up with red side 583 times. What is the underlying scientific or theoretical model here? 
+#### Suppose someone flipped the beer cap for 1000 times and came up with red side 583 times. What is the underlying scientific or theoretical model here? 
 Red side is likely to come up half of the time
 Red side is likely to come up most of the time
 Red side is likely to come up only 20% of the time
@@ -1380,9 +1390,9 @@ it is not possible to say
 ##### Solution
 it is not possible to say 
 
-#### Suppose someone flipped the beer coin for 1000 times and came up with red side 583 times. What is the underlying statistical model?
+#### Suppose someone flipped the beer cap for 1000 times and came up with red side 583 times. What is the underlying statistical model?
 binomial(1000,.583)
-binomil(1000, $\theta$) where $\theta$ is unknown probability
+binomial(1000, $\theta$) where $\theta$ is unknown probability
 all of the above
 none of the above
 
@@ -1557,7 +1567,7 @@ True
 according to the definition of standard normal distribution
 
 #### Suppose someone flipped the beer coin for 1000 times and came up with red side 583 times. Suppose we calculate the proportion of reds as phat where phat=583/1000=0.583. p is the population proportion of reds. Which of the following statements are true?
-phat is normall distributed with mean p and variance p(1-p)/n
+phat is normally distributed with mean p and variance p(1-p)/n
 (phat-p)/sqrt(p(1-p)/n) is normally distributed with mean 0 and variance 1
 phat is normall distributed with mean 0 and variance 1
 both a and b
@@ -1579,7 +1589,7 @@ none of the above
 ##### Solution
 [55.2%,61.3%]
 
-##### Explanation
+##### Explanation (manual)
 
 ```{r cic  }
 # number of success
@@ -1597,6 +1607,7 @@ crit.val.right <- qnorm(.975)
 # lower limit of the confidence interval
 ll.95 <- phat -  abs(crit.val.left)*sd.phat 
 ul.95 <- phat +  abs(crit.val.left)*sd.phat 
+
 
 # 90% confidence interval
 crit.val.left <- qnorm(.05) 
@@ -1616,6 +1627,44 @@ ul.99 <- phat +  abs(crit.val.left)*sd.phat
 
 
 ```
+
+##### Explanation (using package)
+first use the binom.test from base function
+```{r exup  }
+test.result <- binom.test(583,1000,p=0.5,conf.level=0.95, alternative="two.sided")
+names(test.result)
+```
+We find that above produces quite a bit of results
+
+```{r val  }
+test.result$statistic
+test.result$parameter
+test.result$p.value
+test.result$conf.int
+test.result$estimate
+test.result$null.value
+test.result$alternative
+test.result$method
+test.result$data.name
+```
+
+We can also use BinomCI package from DescTools package
+
+```{r dt  }
+DescTools::BinomCI(583,1000,conf.level=0.95)
+```
+It also can find CI for both success and failure in one step
+
+```{r dt2  }
+DescTools::BinomCI(c(583,417),1000,conf.level=0.95)
+```
+Then propCI package can also do the same
+
+```{r pc  }
+PropCIs::exactci(583,1000,conf.level=0.95)
+```
+
+
 
 #### Suppose someone flipped the beer coin for 1000 times and came up with red side 583 times. Suppose we calculate the proportion of reds as phat where phat=583/1000=0.583. p is the population proportion of reds. Which of the following will be a 90% confidence interval for p? [Consider phat as an estimator of p]
 [55.2%,61.3%]
@@ -1815,6 +1864,7 @@ n <- phat*(1-phat)*crit.value.10^2/margin.error^2
 ```
 
 
+### WEEK 5: Hypothesis Testing
 
 ### TEST 12 (Week 5) (assignment 8, part 1): probabile questions
 
@@ -2218,6 +2268,105 @@ True
 ##### Explanation
 By defintion
 
+#### In skeleton data set we are testing whether the population mean of age is 50
+
+##### Answer
+
+##### Solution
+
+```{r sol  }
+load("./Resources/Data/ske.RData")
+#H_0=50
+#H_a >= 50
+mu=50
+n=dim(ske)[1]
+xbar=mean(ske$Age)
+variance=var(ske$Age)
+s=sd(ske$Age)
+var.mean=variance/n
+se.mean=sqrt(var.mean)
+se.mean=s/sqrt(n)
+test.stat=(xbar-50)/se.mean
+p.value=pt(test.stat,df=n-1,lower.tail=FALSE)
+
+```
+we can do the above testing using packages just as we did in the case of confidence interval
+
+now just using t.test from base package
+```{r conf.int  }
+test.result <- t.test(ske$Age,conf.level=0.95,mu=50)
+```
+
+```{r val  }
+test.result$statistic
+test.result$parameter
+test.result$p.value
+test.result$conf.int
+test.result$estimate
+test.result$null.value
+test.result$alternative
+test.result$method
+test.result$data.name
+```
+
+now using MeanCI from DescTools package
+
+```{r mc  }
+MeanCI(ske$Age,conf.level=0.95)
+```
+So the above is just giving confidence interval no test results
+
+In the same manner Rmisc gives confidence interval
+
+```{r rm  }
+CI(ske$Age,ci=0.95)
+```
+
+But it seems that t.test is the only thing to find p-values directly which is a bit strange 
+
+
+
+calculation of power of a test. 
+
+```{r pt  }
+mu=52
+n=dim(ske)[1]
+sample.evi= qnorm(.05,mean=mu,sd=se.mean,lower.tail=FALSE)
+# the above sample evidence is the critical value of original distribution at certain (usually 5) percent level of significance. 
+variance=var(ske$Age)
+s=sd(ske$Age)
+var.mean=variance/n
+se.mean=sqrt(var.mean)
+se.mean=s/sqrt(n)
+test.stat=(sample.evi-mu)/se.mean
+p.value=pnorm(test.stat)
+```
+in the above what I have done is that used the critical value in the original test as some sort of sample evidence. The objective is  trying to  set the alternative hypothesis as the null hypothesisis. In the origininal situation alternative hypothesis was mu is greater than 50. But greater than 50 is many values. Which value we will choose then? We will choose 52 which is the sample average. Now based on what eveidence we will decided whether we will reject the null or not? 
+the evidence comes in the form of critical value of original test which is 51
+what does it mean? the critical value from the original test says that the value as or more extreme than that will result in rejection of null hypothesis.
+
+we are asking, what is probability of coming up with a value beyond which we reject a true null hypothesis in the original test is if we assume the alternative is greater than 50 in orginal test and equal to 52 in the new test. 
+
+rejecting null in original test = accepting hull in new test = accepting alternative in original test
+
+new situation: accepting the null (mu is greater than 50, i.e equal to 52)
+equaivalent to 
+original situation: rejecting the null (mu is not equal to 50, in fabor of alternative greater than 50)
+
+new situation: p- value
+the lowest level of significance at which the null could be rejected
+the probability of type I error
+
+new situation : the probability of rejecting null when null is true (p-value of new situation)
+equivalent to 
+original situation: the probability of accepting null when null is false (type II error in original situation)
+therefore to find the probability of type II error in original test, we calculate the p-value in the new test. 
+then we deduct the p-value from 1 (1- p.value) and then we get the power of the test.
+
+
+
+
+
 
 #### Which of the following is true regarding the values of p-value?
 If we get a p-value less than .001, that can be considered strong evidence against the null hypothesis. 
@@ -2332,6 +2481,22 @@ both b anc c
 by definition
 
 
+#### In the above mentioned opinion survey, suppose the alternative hypotheses is as follows: true probability of people supporting the mayor is more than 50%. Then which of the following is the  likely null hypothesis?
+the true probability  of people supporting the mayor is  less than 50% 
+the true probability  of people supporting the mayor is  more than 50% 
+the true probability  of people supporting the mayor is  equal to  50% 
+both a and c
+both b anc c
+none of the above
+
+
+##### Answer
+both a and c
+
+##### Explanation
+by definition
+
+
 #### The video lecture mentions a news published in the Toronto Star on an opinion survey regarding Mayor Rob Ford's spending cuts. In the above mentioned opinion survey, suppose the null hypotheses is as follows: true probability of people supporting the mayor is equal to 50%. Then what is the value of test statistics?
 -2.54
 -5.24
@@ -2380,6 +2545,53 @@ none of the above
 pnorm(-5.24)
 ```
 you might have noticed that -5.24 is the value of test statistics calculated in the previous question. all the p-value is doing here find the probability of a value as extreme or more extreme than the value we got here. another interpretation of null hypothesis is that the lowest level of significance at which the null could be rejected.
+
+#### The video lecture mentions a news published in the Toronto Star on an
+opinion survey regarding Mayor Rob Ford's spending cuts. In the above mentioned
+opinion survey, suppose the sample size is 2,487 and the percentage supporting
+Mayor Rob stands at 46\%. Null hypotheses is as follows: true probability of
+people supporting the mayor is not more than 50\%. Then what is the value of test statistics?
+-2.54
+-5.24
+5.24
+-4.00
+-5.42
+none of the above
+
+##### Answer
+-4.00
+
+##### Explanation
+```{r ts2  }
+phat  <- 0.46 # from the survey
+p <- phat # substitute population unknown var with sample variance
+n  <- 2487 # from survey
+var <- p*(1-p)/n
+sd  <- sqrt(var)
+# now set the value of p under null hypothesis
+p_0 <- 0.5
+test.stat <-(phat-p_0)/sd 
+```
+
+#### In the survey settings as described in the previous question, what is the p-value?
+0.000
+0.001
+0.002
+0.050
+none of the above
+
+##### Answer
+0.000
+
+##### Solution
+```{r pn1  }
+options(scipen=999)
+pnorm(-4.00)
+```
+
+
+
+
 
 #### In the above mentioned opinion survey, suppose the null hypotheses is as follows: true probability of people supporting the mayor is equal to 50%. Suppose you have come up with a p-value of extremely small, say smaller than 1%. Which of the following will be a possible conclusion from such small p-value? 
 null hypothesis is rejected that is true probability of people supporting the mayor is not equal to 50%
@@ -2438,7 +2650,7 @@ none of the above
 ##### Explanation
 ```{r ts  }
 phat  <- 0.42 # from the survey
-p <- phat # substitute population unknown var with sample variance
+p <- 0.4 # substitute population unknown var with sample variance
 n  <- 1046 # from survey
 var <- p*(1-p)/n
 sd  <- sqrt(var)
@@ -2491,7 +2703,6 @@ Probability that the sample would only find 42% support when true support is 40%
 -4.86
 none of the above
 
-##### Explanation
 
 ##### Explanation
 ```{r ts  }
@@ -2591,7 +2802,7 @@ none of the above
 ##### Answer
 18.85
 
-##### Explanation
+##### Explanatio
 ```{r ts  }
 load("./Resources/Data/age_change.RData")
 n <- 60 
@@ -2748,6 +2959,16 @@ False
 ##### Explanation
 if type I error increases, then the probability of rejecting null when it is true increases. that means we will reject null more than previously. Therefore we will accept less null when it is false. So Type II error which is the probability of accepting null when it is false decreases. Therefore, the power which is 1 - type II error increases.
 
+#### If in a test, type I error increases, it will also decrease the type II error. True or false?
+True
+False
+
+##### Answer
+False
+
+##### Explanation
+if type I error increases, then the probability of rejecting null when it is true increases. that means we will reject null more than previously. Therefore we will accept less null when it is false. So Type II error which is the probability of accepting null when it is false decreases. Therefore, the power which is 1 - type II error increases.
+
 #### If in a test, type II error increases, it will also increase the power of a test.
 True
 False
@@ -2760,6 +2981,7 @@ if type I error increases, then the probability of rejecting null when it is tru
 
 
 
+### TEST 12 (Week 5): Google form (Online assignment 6, part 2)
 
 ####
 
@@ -2772,15 +2994,559 @@ if type I error increases, then the probability of rejecting null when it is tru
 ##### Explanation
 
 
+### TEST 13 (Week 5): (In-class quiz-3) Probable questions
+\documentclass[12pt,answers]{exam}
+\pagestyle{headandfoot}
+\firstpageheader{Fundamentals of Data Science}{\textbf{In-class Quiz 6}}{\today{}}
+\begin{document}
+\pointsinrightmargin  
+\boxedpoints  
 
+\begin{questions}
+\question[3]
+Suppose Grameen foundation initiates a study where they would like to find what
+percentage of microcredit borrowers are actually from Grameen Bank. In that
+regard, they have interviewed 1,204 households in Bangladesh. What is the size
+of population in this study? Suppose they found that 423 households are
+borrowers from Grameen Bank. What is the sample proportion of grameen bank
+borrowers?
+\begin{solution}
+Answer: Size of the population is unknown. 
+Answer: 35.1\% 
+\end{solution}
+
+\question[3]
+In the above mentioned study, what is the estimated standard deviation? 
+Suppose, in the above mentioned study, the researchers wants to test the
+hypothesis that grameen bank borrowers are 60 percent  of the total clients. 
+Does your estimation of sample standard deviation changes with this information?
+If it changes, then what is the new value of sample standard deviation?
+
+\begin{solution}
+Answer: Estimate of sample variance is p*(1-p)/n. Since population proportion is
+unknown,we can replace it with sample proportion. In that case it is
+sqrt(0.35*(1-0.35))/1204)=0.0137
+
+Answer: Yes, it does, because now the population proportion changes to the value of
+population proportion under null hypothesis. Therefore, sample standard
+deviation is now sqrt(0.60*(1-0.60))/1204)=0.0141.
+
+\end{solution}
+
+\question[3]
+Suppose, in the above mentioned study, the researchers wants to test the
+hypothesis that grameen bank borrowers are 60 percent  of the total clients. The
+alternative hypothesis is that grameen bank borrowers are less than 60 percent
+of the total clients. What will be  the test statistics in this setting? 
+What will be the corresponding p-value? How do you interprete the p-value? 
+What will be your conclusion regarding the hypothesis? 
+What will be your conclusion regarding proportion of Grameen bank borrowers?
+Suppose now the
+alternative hypothesis changes to  grameen bank borrowers can be greater than 60
+percent or less than  60 percent 
+of the total clients. How does this change affects your conclusion regarding
+proportio of Grameen bank borrowers? 
+
+\begin{solution}
+Answer: The test statistics t=  (0.35-0.60)/0.0141= -17.73. To find the p-value
+in this case, we issue the following command pnorm(-17.73), which comes up as an
+extremely low value. Therefore, we reject the null hypothesis. 
+\end{solution}
+
+
+\question[3]
+How do you interpret the relationship betweenn p-value and level of
+significance?
+
+
+\begin{solution}
+Suppose the value of true proportion under null hypothesis is 0.60. You observed
+0.65.  Do you reject the null? The thing is  that at what magnitude of
+difference will you reject the null? is the difference 0.05 large enough? That
+question is answered by level of significance. When we set alpha=0.05, we are
+setting a cut-off point. We are saying hey look if you reject the null and if it
+is indeed true than the probability of making error is 5\%. That is the
+probability of rejecting a true null is only 5 percent. 95 percent of the time
+if you remain correct than it is fine. 
+
+Now the question is what is the value corresponding to that 95 percent. In one
+tailed test, in lower tail, it is -1.645. Then I came up with a a value of
+t-statistics of 
+-1.050. Now what is the probability of coming up with a value of test statistics
+which is as or more extreme as this value? It must be the cumulative probability
+up to that point. This value is larger than the cut-off point of 5\%. That means if we
+now reject the null, the probability of making error is now definitely more than
+5\%. So we are really not okay with it.
+
+Why not okay with it? Here is another explanation. Under the true null
+hypothesis, the value of test statistics, or the standardized value is 0. The
+question is how far from the 0 we will accept? Well, if it is abs(-1.645)  and larger distance
+from 0, then we say, hey, the sample evidence suggest that the difference
+between  observed evidence and hypotheisized  value  is so large that we
+gotta reject the null. If null is indeed true then the probability of making
+error is only 5 percent. We are okay with it. 
+
+When level of significance is 5\% and p-value is 2\% what does that mean? It
+means that the lowest level of significance at which the null could be rejected
+is 2 percent. It talks about the strength of rejection. It says the probability
+of coming up with a sample as or more extreme is only 2\% given the hypothesized
+population value. Therefore we can reject the null.
+
+Also if at 5\% alpha we reject the null, when p-value is 2\% it means we will
+reject the null even if the level of significance was 4\%, or 3\%. But at 1\%,
+we can no longer reject null. so 2\% is the lowest level of significance at
+which the null could be rejected. But what is the highest level of signficance
+at which the null could be rejected? Well, it is given by alpha that is 5\%. 
+
+When p-value is .02, then it means that the probability of coming up with a
+sample as or more extreme is only 2\%. It is also saying that if we now reject a
+true null hypothesis, the probability of this thing happening is only 2\%. Is
+this fine? Yes, sure it is. This is because, we already decided that even if we
+made such error 5\% of the time we are okay with it. 
+
+
+\end{solution}
+
+\question[3]
+What is the power of the test?
+\begin{solution}
+Answer:
+Power of test is the probability of rejecting null when it is false. Therefore,
+power calculation is done under alternative hypothesis. The method to calculate
+power is as follows. Suppose you are testing a hypothesis. You just find the
+cut-off point at which the null could be rejecting. Say, at 5\% level of
+significance the cut-off point is 15. Remember, it is not the value of z or t
+statistics. It is the value from the actual distribution. Now we assume the
+alternative is true. Then we calculate the value of z  or t-stat with 15 (the
+cut-off point) as the
+current sample value, the population value is the value under alternative
+hypothesis, that is the value we got from sample. Now we calculate the t-stat.
+Power is the 1- p.value from this study. 
+\end{solution}
+
+
+\question[3]
+Suppose the manufacturer claims that the mean lifetime of a light bulb is more than 10,000 hours. Assume actual mean light bulb lifetime is 9,950 hours and the population standard deviation is 120 hours. At .05 significance level, what is the probability of having type II error for a sample size of 30 light bulb? 
+
+
+\begin{solution}
+H$_$0: mu>=10000
+H$_$a: mu<10000
+
+
+<<>>=
+n=30
+mu=10000
+xbar=9950
+sigma=120
+
+sd.mean=sigma/sqrt(30)
+
+test.stat=(xbar-mu)/sd.mean
+p.value=pnorm(test.stat)
+@
+
+
+0.01123944
+
+ so we can reject the null
+
+ but how about power of the test
+
+ to find that let's first calculate the cut-off point at 5% 
+
+<<>>=
+qnorm(.05,mean=10000,sd=sd.mean)
+@
+ it is 9964
+
+we assume that alternative is true that is mu is less than 10000, then what is
+ the hypothesized value. It is what we get from sample.
+
+H$_$0: mu=9950
+H$_$a: mu>9950
+
+
+<<>>=
+n=30
+mu=9950
+xbar=9964 # from qnorm() above
+sigma=120
+sd.mean=sigma/sqrt(n)
+test.stat=(xbar-mu)/sd.mean
+
+p.value=pnorm(test.stat)
+@
+
+\end{solution}
+
+\end{questions}
+\end{document}
+
+
+
+### WEEK 6: Matched pairs, comparing means/proportions
+
+### TEST 14 (Week 6) (assignment 9, part 1): probable questions
+
+#### video 1
+
+#### There is no connection between hypothesis testing and confidence intervals. True or False?
+True
+False
+
+##### Answer
+True
+
+##### Explanation
+see video 1
+
+
+#### Two-sided confidence intervals and two-sided hypothesis testings are related. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Explanation
+see video 1
+
+#### Consider the beer cap experiment where after 1000 flips 576 times red side comes up. Suppose you want to test the hypothesis that probabiity of coming up with red side is exactly half against that it is greater than half. What will be your conclusion? 
+We can not find sufficient evidence against the hypothesis that probability of coming up with red side is exactly half
+We find sufficient evidence for  the hypothesis that probability of coming up with red side is greater than half
+We can not find sufficient evidence to conclude anything
+None of the above
+
+##### Answer
+We find sufficient evidence for  the hypothesis that probability of coming up with red side is greater than half
+
+##### Solution
+
+```{r bt  }
+test.result <- binom.test(576,1000,p=0.5,alternative="greater", conf.level=0.95)
+names(test.result)
+options(scipen=999)
+test.result$p.value
+```
+We find that p-value is extremely small. Therefore we reject the null hypothesis.
+
+#### Consider the beer cap experiment where after 1000 flips 576 times red side comes up. Suppose you want to test the hypothesis that probability of coming up with red side is exactly half against that it is not equal to half. What will be your conclusion? 
+We can not find sufficient evidence against the hypothesis that probability of coming up with red side is exactly half
+We can  find sufficient evidence against the hypothesis that probability of coming up with red side is exactly half
+We find sufficient evidence for  the hypothesis that probability of coming up with red side is greater than half
+We can not find sufficient evidence to conclude anything
+None of the above
+
+##### Answer
+We find sufficient evidence for  the hypothesis that probability of coming up with red side is greater than half
+
+##### Solution
+
+```{r bt  }
+test.result <- binom.test(576,1000,p=0.5,alternative="two.sided", conf.level=0.95)
+test.result$p.value
+test.result$conf.int
+```
+We find that p-value is extremely small. Therefore we reject the null hypothesis. At the same time, we also find that 95% confidence interval does not contain the null hypothesis value of 1/2 or 0.5. 
+
+#### Consider the beer cap experiment where after 2000 flips 931 times red side comes up. Suppose you want to test the hypothesis that probability of coming up with red side is exactly half against that it is not equal to half. What is the confidence interval for population parameter? Does your conclusion from hypothesis testing matches with the confidence interval ? 
+Confidence interval is 0.545, 0.607 and our conclusion from hypothesis testing does not matche with confidence interval
+Confidence interval is 0.443, 0.488 and our conclusion from hypothesis testing matches with confidence interval
+Confidence interval is 0.343, 0.848 and our conclusion from hypothesis testing matches with confidence interval
+none of the above
+
+##### Answer
+Confidence interval is 0.443, 0.488
+
+##### Solution
+
+```{r bt  }
+test.result <- binom.test(931,2000,p=0.5,alternative="two.sided", conf.level=0.95)
+test.result$p.value
+test.result$conf.int
+```
+We find that p-value is extremely small. Therefore we reject the null hypothesis. At the same time, we also find that 95% confidence interval does not contain the null hypothesis value of 1/2 or 0.5. 
+
+#### Consider the human body temperature data. What do you conclude about the hypothesis claiming the average body temperature to be exactly 37 degree Celsius? 
+
+We do not sufficient evidence against the hypothesis, therefore could not reject it. 
+We found sufficient evidence against the hypothesis, therefore we rejected it. 
+We are uncertain about what should be done in this case.
+none of the above
+
+##### Answer
+We found sufficient evidence against the hypothesis, therefore we rejected it. 
+
+
+##### Solution
+
+```{r body temp  }
+human.temp <- read.table("./Resources/Data/Data_TempData.txt")
+names(human.temp) <- "temp"
+save(human.temp,file="./Resources/Data/human_temp.RData")
+```
+Now let's use the t.test function
+
+```{r ttest  }
+temp.test <- t.test(human.temp$temp,mu=37)
+#names(temp.test)
+temp.test$p.value
+temp.test$conf.int
+```
+
+
+#### Consider the human body temperature data. What is the confidence interval for average human body temperature?
+
+36.734, 36.876
+37.634, 38.676
+all of the above
+none of the above
+
+##### Answer
+36.734 36.876
+
+##### Solution
+
+```{r body temp  }
+human.temp <- read.table("./Resources/Data/Data_TempData.txt")
+names(human.temp) <- "temp"
+save(human.temp,file="./Resources/Data/human_temp.RData")
+```
+Now let's use the t.test function
+
+```{r ttest  }
+temp.test <- t.test(human.temp$temp,mu=37)
+#names(temp.test)
+temp.test$p.value
+temp.test$conf.int
+```
+
+#### Video 2
+
+#### Consider the skeleton data. Which of the following is true about Di Gangi method of estimating age of the skeletons?
+It underestimates the age of around 75% of skeletons by 5 or more years
+On the average, it underestimates the age of  skeletons by 14 years
+The maximum underestimation stands at 60 years
+All of the above
+None of the above
+
+##### Answer
+All of the above
+
+##### Solution
+See video 2
+
+#### Consider the skeleton data. Which of the following is true about Suchey-Brooks method of estimating age of the skeletons?
+It underestimates the age of around 50% of skeletons by 6 or more years
+On the average, it underestimates the age of  skeletons by 7 years
+The maximum underestimation stands at 36 years
+All of the above
+None of the above
+
+##### Answer
+All of the above
+
+##### Solution
+See video 2
+
+#### Suppose we plot a side-by-side boxplot of Di Ganji and Suchey-Brooks method of estimating age of skeleton, that is the difference between actual age and estimated age. What is the main problem with this side-by-side boxplot?
+Boxplot is not drawn from the same skeletons for each measure
+Boxplot is not drawn from matched pairs
+all of the above
+none of the above
+
+##### Answer
+all of the above
+
+##### Solution
+See video 2
+
+#### In matched pairs, two conditions are compared between the same or two very similar observational or experimental units. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Solution
+See video 2
+
+#### Which of the following is an example of matched pairs?
+Two age estimates using different methods on the same skeleton
+Pre- and post-test scores on the same person
+Measurement in pairs at the same time or place
+all of the above
+none of the above
+
+##### Answer
+all of the above
+
+##### Solution
+
+
+#### Suppose we are trying to compare two different sales outlet of a footwear commpany. We are comparing the sales revenue of these two outlets in the same week. This is an example of matched pairs. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Solution
+See video 2
+
+#### In an experimental design using matched pairs, it is important 
+to randomize which experimental unit in the pairs gets which treatment
+to randomize the treatment order if both treatments are being compared on the same experimental unit
+both of the above
+none of the above
+
+##### Answer
+both of the above
+
+##### Solution
+see video 2
+
+
+#### Using matched pairs allows the researcher to control for the variables that differ among independent observational or experimental units. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Solution
+See video 2
+
+#### Which of the following is the main benefit of using matched pairs?
+The variation in the comparisons does not include the variation among observational or experimental units.
+Using matched pairs results in greater precision in the estimate of the difference between the treatments or conditions being compared.
+All of the above
+None of the above
+
+##### Answer
+All of the above
+
+##### Solution
+See video 2
+
+#### Matched pairs are independent observations. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Solution
+See video 2
+
+
+
+#### Suppose we are calculating the differences of error in age estimation between Suchey-Brooks and Di Gangi methods using the data set titled "Data%2FSkeletonsMatchedPairsData.txt".  The number of valid observations available are:
+400
+398
+399
+none of the above
+
+##### Answer
+398
+
+##### Solution
+
+```{r diff  }
+ske.match <- read.table("./Resources/Data/Data%2FSkeletonsMatchedPairsData.txt",header=TRUE)
+sum(!is.na(ske.match$Difference))
+```
+
+
+#### If we draw a box-plot of the difference in Di Gangi and Suchey-Brooks method, which of the following we will observe?
+Median line is drawn between 0 and 10
+Upper whisker is close to 30
+There are outliers in the observations
+all of the above
+none of the above
+
+
+##### Answer
+all of the above
+
+##### Solution
+
+```{r bp  }
+boxplot(ske.match$Difference)
+```
+
+
+#### If we draw a histogram of the difference in Di Gangi and Suchey-Brooks method, which of the following we will observe?
+The histogram is centered around some value between 0 and 10
+The histogram is quite symmetric
+both of the above
+none of the above
+
+##### Answer
+both of the above
+
+##### Solution
+```{r hist  }
+hist(ske.match$Difference)
+```
+
+
+#### Suppose we are trying to test whether there is any difference in the age estimate of Suchey-Brooks method and Di Gangi method. First we try to find 95% confidence interval for the average difference in these two methods. Which of the following will the correct confidence interval?
+7.565,9.743
+5.765,7.944
+5.675,7.494
+none of the above
+
+
+##### Answer
+5.765,7.944
+
+##### Solution
+```{r sb  }
+t.test(ske.match$Difference)
+```
+
+
+#### Suppose we are trying to test whether there is any difference in the age estimate of Suchey-Brooks method and Di Gangi method. What will be the p-value from this test and what will be the corresponding conclusion?
+The p-value is extremely small and as a result we find reasonable evidence that there are some difference in the age estimate
+The p-value is extremely small and as a result we find reasonable evidence that there are no difference in the age estimate
+The p-value is extremely large and as a result we find reasonable evidence that there are no difference in the age estimate
+none of the above
+
+##### Answer
+The p-value is extremely small and as a result we find reasonable evidence that there are some difference in the age estimate
+
+##### Solution
+```{r sb2  }
+t.test(ske.match$Difference)
+```
+
+#### In the matched pairs, the observations are not independent but the difference in error estimates between Di Gangi and Suchey-Brooks method is independent. This is because
+Pairs are independent
+Observations are independent
+Sekeletons are independent
+none of the above
+
+##### Answer
+Sekeletons are independent
+
+##### Solution
+See video 2
+
+### TEST 14 (Week 6) (assignment 9, part 2): probable questions
+
+####
 
 ## -------------------------
 
+## -------------------------
 
 
 **************************************
 ********* IDSR ************************
 **********************************
+
 
 
 # IDSR
