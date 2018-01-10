@@ -3212,7 +3212,7 @@ True
 ##### Explanation
 see video 1
 
-#### Consider the beer cap experiment where after 1000 flips 576 times red side comes up. Suppose you want to test the hypothesis that probabiity of coming up with red side is exactly half against that it is greater than half. What will be your conclusion? 
+#### Consider the beer cap experiment where after 1000 flips 576 times red side comes up. Suppose you want to test the hypothesis that probabiity of coming up with red side is exactly half against that it is greater than half. What will be your conclusion? s
 We can not find sufficient evidence against the hypothesis that probability of coming up with red side is exactly half
 We find sufficient evidence for  the hypothesis that probability of coming up with red side is greater than half
 We can not find sufficient evidence to conclude anything
@@ -3251,6 +3251,7 @@ test.result$conf.int
 We find that p-value is extremely small. Therefore we reject the null hypothesis. At the same time, we also find that 95% confidence interval does not contain the null hypothesis value of 1/2 or 0.5. 
 
 #### Consider the beer cap experiment where after 2000 flips 931 times red side comes up. Suppose you want to test the hypothesis that probability of coming up with red side is exactly half against that it is not equal to half. What is the confidence interval for population parameter? Does your conclusion from hypothesis testing matches with the confidence interval ? 
+
 Confidence interval is 0.545, 0.607 and our conclusion from hypothesis testing does not matche with confidence interval
 Confidence interval is 0.443, 0.488 and our conclusion from hypothesis testing matches with confidence interval
 Confidence interval is 0.343, 0.848 and our conclusion from hypothesis testing matches with confidence interval
@@ -3270,7 +3271,7 @@ We find that p-value is extremely small. Therefore we reject the null hypothesis
 
 #### Consider the human body temperature data. What do you conclude about the hypothesis claiming the average body temperature to be exactly 37 degree Celsius? 
 
-We do not sufficient evidence against the hypothesis, therefore could not reject it. 
+We do not find sufficient evidence against the hypothesis, therefore could not reject it. 
 We found sufficient evidence against the hypothesis, therefore we rejected it. 
 We are uncertain about what should be done in this case.
 none of the above
@@ -3317,7 +3318,7 @@ Now let's use the t.test function
 
 ```{r ttest  }
 temp.test <- t.test(human.temp$temp,mu=37)
-#names(temp.test)
+names(temp.test)
 temp.test$p.value
 temp.test$conf.int
 ```
@@ -3536,7 +3537,1620 @@ See video 2
 
 ### TEST 14 (Week 6) (assignment 9, part 2): probable questions
 
-####
+#### Video 3
+
+#### There were two polls taken on Mayor Rob Ford. In June 2011, sample size was 1050 and support for the Mayor was 57%. In September 2011, another poll was taken where sample size was 1046 and support for Mayor decreased to 42%. Try to find a confidence interval measuring by how much his true support decreased by.
+
+0.128,0.192
+0.180,0.129
+0.108,0.192
+none of the above
+
+##### Answer
+0.108,0.192
+
+##### Solution
+Let's say true support in June 2011 was p1 and in Sep 2011 it is p2. therefore the true difference is p1-p2.
+now we  call it d=p1-p2. So we will have to deal with the theoretical sampling distribution of d. what we have is dhat and there can be many dhat like that. we know that z=(dhat-d)/sd(dhat) follows standard normal distribution. 
+P(-z_alpha/2 < z < z_alpha/2) =.95
+P(-1.96 < (dhat-d)/sddhat) < 1.96) =.95
+P(-1.96*sd(dhat)< (dhat-d) < 1.96*sd(dhat)) =.95
+P(dhat-1.96*sd(dhat)< d < dhat+1.96*sd(dhat)) =.95
+dhat`+_`1.96*sd(dhat)
+
+now dhat is pretty simple, dhat= phat-p
+to find sd(dhat) we will have to first find var(dhat)
+var(dhat) = var(p1hat-p2hat)
+= var(p1hat)+var(p2hat)
+= p1(1-p1)/n1 + p2(1-p2)/n2
+since p1 and p2 is unknown we replace those by p1hat and p2hat
+var(dhat) = phat1*(1-phat1)/n1 + phat2*(1-phat2)/n2
+sd(dhat) = sqrt(p1(1-p1)/n1 + p2(1-p2)/n2)
+since p1 and p2 is unknown we replace those by p1hat and p2hat
+sd(dhat) = sqrt(p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2)
+
+```{r cal  }
+p1hat=0.57
+p2hat=0.42
+n1=1050
+n2=1046
+crit.val=abs(qnorm(.025))
+dhat = p1hat-p2hat
+var_dhat = p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2
+sd_dhat_a = sqrt(var_dhat)
+sd_dhat_b = sqrt(p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2)
+sd_dhat=sd_dhat_a
+```
+The a and b version of sd was calculated to just cross check whether it is okay
+
+```{r ul  }
+ul <- dhat + crit.val*sd_dhat
+ll <- dhat - crit.val*sd_dhat
+conf.int <- c(ll,ul)
+conf.int
+```
+So the Mayor's true support decreased by between ul and ll
+We can also do the same using different packages
+
+```{r usp  }
+library(PropCIs)
+diffscoreci(p1hat*n1,n1,p2hat*n2,n2,conf.level=0.95)
+```
+Okay great it matches with manual calculation
+
+
+#### There were two polls taken on Mayor Rob Ford. In June 2011, sample size was 1050 and support for the Mayor was 57%. In September 2011, another poll was taken where sample size was 1046 and support for Mayor decreased to 42%. Let's check whether support for Mayor has actually decreased.
+
+
+##### Answer
+
+##### Solution
+In this case we actually have a null hypothesis which assumed no change in support,meaning d= p2 - p1 =0 against the alternative that d<0, that is actually one sided test
+Here we will have to do a hypothesis testing
+```{r cal  }
+p1hat=0.57
+p2hat=0.42
+n1=1050
+n2=1046
+crit.val=abs(qnorm(.025))
+dhat = p2hat-p1hat
+var_dhat = p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2
+sd_dhat_a = sqrt(var_dhat)
+sd_dhat_b = sqrt(p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2)
+sd_dhat=sd_dhat_a
+```
+Now let's calculate the  t-statistics
+
+```{r sts  }
+d <- 0  # under null hypothesis
+t.stat <- (dhat - d)/sd_dhat
+p.val <- pnorm(t.stat)
+p.val
+```
+
+With such low p-value we can say that we can reject the null hypothesis and  Mayor's support has actually decreased.
+
+Now let's do the same with prop.test command and see what happens
+
+```{r proptest  }
+prop.test(c(p2hat*n2,p1hat*n1),c(n1,n2),alternative="less")
+```
+the result matches
+
+#### There were two polls taken on Mayor Rob Ford. In June 2011, sample size was 1050 and support for the Mayor was 57%. In September 2011, another poll was taken where sample size was 1046 and support for Mayor decreased to 42%. Let's check whether support for Mayor has changed.(Instructor's note: this is a two-tailed test compared to previous one which was one-tailed test). Which of the following actually happened?
+
+Yes the proportion of people supporting Mayor has changed and support decreased
+Yes the proportion of people supporting Mayor has changed and support increased
+No the proportion of people supporting Mayor has not changed and support remained unchanged
+none of the above
+
+##### Answer
+Yes the proportion of people supporting Mayor has changed and support decreased
+
+##### Solution
+In this case we actually have a null hypothesis which assumed no change in support,meaning d= p2 - p1 =0 against the alternative that d!=0, that is actually one sided test
+Here we will have to do a hypothesis testing
+```{r cal  }
+p1hat=0.57
+p2hat=0.42
+n1=1050
+n2=1046
+crit.val=abs(qnorm(.025))
+dhat = p2hat-p1hat
+var_dhat = p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2
+sd_dhat_a = sqrt(var_dhat)
+sd_dhat_b = sqrt(p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2)
+sd_dhat=sd_dhat_a
+```
+Now let's calculate the  t-statistics
+
+```{r sts  }
+d <- 0  # under null hypothesis
+t.stat <- (dhat - d)/sd_dhat
+p.val <- 2* pnorm(t.stat)
+p.val
+```
+
+With such low p-value we can say that we can reject the null hypothesis and  Mayor's support has changed.
+
+Now let's do the same with prop.test command and see what happens
+
+```{r proptest  }
+prop.test(c(p2hat*n2,p1hat*n1),c(n1,n2),alternative="two.sided")
+```
+the result matches
+
+#### There were two polls taken on popularity of ruling political party Awami League(AL). In December 2010, sample size was 3140 and support for AL  was 73%. In December 2014, another poll was taken where sample size was 3426 and support for AL decreased to 52%. Try to find a confidence interval measuring by how much AL's true support decreased by.
+0.178,0.233
+0.187,0.233
+0.287,0.292
+none of the above
+
+##### Answer
+0.187,0.233
+
+##### Solution
+see detailed explanation in the previous question
+```{r cal  }
+p1hat=0.73
+p2hat=0.52
+n1=3140
+n2=3426
+crit.val=abs(qnorm(.025))
+dhat = p1hat-p2hat
+var_dhat = p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2
+sd_dhat_a = sqrt(var_dhat)
+sd_dhat_b = sqrt(p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2)
+sd_dhat=sd_dhat_a
+```
+The a and b version of sd was calculated to just cross check whether it is okay
+
+```{r ul  }
+ul <- dhat + crit.val*sd_dhat
+ll <- dhat - crit.val*sd_dhat
+conf.int <- c(ll,ul)
+conf.int
+```
+So the AL's true support decreased by between ul and ll
+We can also do the same using different packages
+
+```{r usp  }
+library(PropCIs)
+diffscoreci(p1hat*n1,n1,p2hat*n2,n2,conf.level=0.95)
+```
+Okay great it matches with manual calculation
+
+
+#### There were two polls taken on popularity of ruling political party Awami League(AL). In December 2010, sample size was 3140 and support for AL  was 73%. In December 2014, another poll was taken where sample size was 3426 and support for AL decreased to 52%. Now test the hypothesis that AL support actually decreased.
+
+##### Answer
+
+##### Solution
+see detailed explanation in the previous question
+```{r cal  }
+p1hat=0.73
+p2hat=0.52
+n1=3140
+n2=3426
+crit.val=abs(qnorm(.025))
+dhat = p2hat-p1hat
+var_dhat = p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2
+sd_dhat_a = sqrt(var_dhat)
+sd_dhat_b = sqrt(p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2)
+sd_dhat=sd_dhat_a
+```
+The a and b version of sd was calculated to just cross check whether it is okay
+
+```{r ul  }
+ul <- dhat + crit.val*sd_dhat
+ll <- dhat - crit.val*sd_dhat
+conf.int <- c(ll,ul)
+conf.int
+```
+So the AL's true support decreased by between ul and ll
+We can also do the same using different packages
+
+```{r usp  }
+library(PropCIs)
+diffscoreci(p1hat*n1,n1,p2hat*n2,n2,conf.level=0.95)
+```
+Okay great it matches with manual calculation
+
+```{r usp2}
+d <- 0
+test.stat <- (dhat-d)/sd_dhat
+pnorm(test.stat)
+```
+p-value is extremely small so we reject the null hypothesis of equality of the proportions
+now let's test this by the prop.test
+
+```{r chu  }
+prop.test(c(p2hat*n2,p1hat*n1),c(n1,n2),alternative="less")
+```
+
+####  There were two polls taken to gauge support for President Obama in USA. In the first poll in August 2012, sample size was 1210 with 58% support for Obama. In the second poll in October 2012, sample size was 783 with 42% for President Obama. How much did his true support decerease by?
+The support increased by an amount which between 11% and 20%
+The support remained unchanged
+The support dececreasd by an amount which between 11% and 20%
+none of the above
+
+##### Answer
+The support dececreasd by an amount which between 11% and 20%
+
+##### Solution
+see detailed explanation in the previous question
+```{r cal  }
+p1hat=0.58
+p2hat=0.42
+n1=1210
+n2=783
+crit.val=abs(qnorm(.025))
+dhat = p1hat-p2hat
+var_dhat = p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2
+sd_dhat_a = sqrt(var_dhat)
+sd_dhat_b = sqrt(p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2)
+sd_dhat=sd_dhat_a
+```
+The a and b version of sd was calculated to just cross check whether it is okay
+
+```{r ul  }
+ul <- dhat + crit.val*sd_dhat
+ll <- dhat - crit.val*sd_dhat
+conf.int <- c(ll,ul)
+conf.int
+```
+So the Obama's true support decreased by between ul and ll
+We can also do the same using different packages
+
+```{r usp  }
+library(PropCIs)
+diffscoreci(p1hat*n1,n1,p2hat*n2,n2,conf.level=0.95)
+```
+Okay great it matches with manual calculation
+
+
+
+####  There were two polls taken to gauge support for President Obama in USA. In the first poll in August 2012, sample size was 1210 with 58% support for Obama. In the second poll in October 2012, sample size was 783 with 42% for President Obama. Let's test the hypothesis that support for Obama remained unchanged. What do you find?
+We find that we can not reject the hypothesis that support for Obama remained unchanged
+We find that we can  not make any decision regarding the null hypothesis
+We find that we can reject the hypothesis that support for Obama remained unchanged
+none of the above
+
+##### Answer
+We find that we can reject the hypothesis that support for Obama remained unchanged
+
+##### Solution
+Note: this is a two -tailed test
+see detailed explanation in the previous question
+```{r cal  }
+p1hat=0.58
+p2hat=0.42
+n1=1210
+n2=783
+crit.val=abs(qnorm(.025))
+dhat = p1hat-p2hat
+var_dhat = p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2
+
+sd_dhat_b = sqrt(p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2)
+sd_dhat=sd_dhat_a
+```
+The a and b version of sd was calculated to just cross check whether it is okay
+
+```{r ul  }
+ul <- dhat + crit.val*sd_dhat
+ll <- dhat - crit.val*sd_dhat
+conf.int <- c(ll,ul)
+conf.int
+```
+So the Obama's true support decreased by between ul and ll
+We can also do the same using different packages
+
+```{r usp  }
+library(PropCIs)
+diffscoreci(p1hat*n1,n1,p2hat*n2,n2,conf.level=0.95)
+```
+Okay great it matches with manual calculation
+
+Now let's calculate the  t-statistics
+
+```{r sts  }
+d <- 0  # under null hypothesis
+t.stat <- (dhat - d)/sd_dhat
+p.val <- 1- pnorm(t.stat)
+p.val
+```
+
+With such low p-value we can say that we can reject the null hypothesis and  Mayor's support has actually decreased.
+
+Now let's do the same with prop.test command and see what happens
+
+```{r proptest  }
+prop.test(c(p2hat*n2,p1hat*n1),c(n1,n2),alternative="less")
+```
+
+####  There were two polls taken to gauge support for President Obama in USA. In the first poll in August 2012, sample size was 1010 with 52% support for Obama. In the second poll in October 2012, sample size was 563 with 48% for President Obama. How much did his true support decerease by?
+
+
+##### Answer
+
+
+##### Solution
+see detailed explanation in the previous question
+```{r cal  }
+p1hat=0.52
+p2hat=0.48
+n1=1010
+n2=563
+crit.val=abs(qnorm(.025))
+dhat = p1hat-p2hat
+var_dhat = p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2
+sd_dhat_a = sqrt(var_dhat)
+sd_dhat_b = sqrt(p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2)
+sd_dhat=sd_dhat_a
+```
+The a and b version of sd was calculated to just cross check whether it is okay
+
+```{r ul  }
+ul <- dhat + crit.val*sd_dhat
+ll <- dhat - crit.val*sd_dhat
+conf.int <- c(ll,ul)
+conf.int
+```
+So the Obama's true support decreased by between ul and ll
+We can also do the same using different packages
+
+```{r usp  }
+library(PropCIs)
+diffscoreci(p1hat*n1,n1,p2hat*n2,n2,conf.level=0.95)
+```
+Okay great it matches with manual calculation
+
+
+
+####  There were two polls taken to gauge support for President Obama in USA. In the first poll in August 2012, sample size was 1010 with 52% support for Obama. In the second poll in October 2012, sample size was 563 with 48% for President Obama. How much did his true support decerease by?
+
+
+##### Answer
+
+
+##### Solution
+see detailed explanation in the previous question
+```{r cal  }
+p1hat=0.52
+p2hat=0.48
+n1=1010
+n2=563
+crit.val=abs(qnorm(.025))
+dhat = p1hat-p2hat
+var_dhat = p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2
+sd_dhat_a = sqrt(var_dhat)
+sd_dhat_b = sqrt(p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2)
+sd_dhat=sd_dhat_a
+```
+The a and b version of sd was calculated to just cross check whether it is okay
+
+```{r ul  }
+ul <- dhat + crit.val*sd_dhat
+ll <- dhat - crit.val*sd_dhat
+conf.int <- c(ll,ul)
+conf.int
+```
+So the Obama's true support decreased by between ul and ll
+We can also do the same using different packages
+
+```{r usp  }
+library(PropCIs)
+diffscoreci(p1hat*n1,n1,p2hat*n2,n2,conf.level=0.95)
+```
+Okay great it matches with manual calculation
+
+Now let's calculate the  t-statistics
+
+```{r sts  }
+d <- 0  # under null hypothesis
+t.stat <- (dhat - d)/sd_dhat
+p.val <- 2*pnorm(t.stat,lower.tail=FALSE)
+p.val
+```
+With such high p-value we can say that we can not reject the null hypothesis that support for Obama has remained unchanged. 
+
+Remember, in the confidence interval we have found that, the value ranges from minus(-) to plus(+). so from confidence interval it was quite uncertain whether it remained unchanged or it changed. But from hypothesis testing we got the confirmation.
+
+
+#### Let's deal with the skeleton data once again. We  test whether there is any difference in the mean of estimated age across  the gender. Our conclusion will be one of the following:
+there is evidence of difference in the mean of estiamted age across gender
+there is NO evidence of difference in the mean of estiamted age across gender
+there is uncertain evidence and therefore nothing can be concluded
+none of the above
+
+##### Answer
+
+
+##### Solution
+```{r }
+load("./Resources/Data/ske.RData")
+t.test(DGEstimate ~ Sex , data=ske)
+```
+Since p-value is low we reject null hypothesis of no difference in the mean of Estimated age across genders. another alternative representation is:
+
+```{r alt  }
+t.test(ske$DGEstimate[ske$Sex==1],ske$DGEstimate[ske$Sex==2])
+```
+We find that it ends up with the same thing.
+
+let's try manual calculation, we will actually do that later
+
+#### Let's consider the life expectancy data. Is the difference in mean life expectancy of the two regions: East Asia and Pacific and South Asia, statistically significant? 
+Yes
+No
+Uncertain
+
+##### Answer
+No
+
+##### Solution
+
+```{r htci  }
+load("./Resources/Data/le_region.RData")
+names(le) <- c("country","le","region")
+life.exp.reg <- le
+save(life.exp.reg, file="./Resources/Data/life_exp_reg.RData")
+```
+Now let's do the hypothesis testing
+
+```{r ht  }
+t.test(life.exp.reg$le[life.exp.reg$region=="EAP"],life.exp.reg$le[life.exp.reg$region=="SAs"])
+```
+p-value stands at 9.2% that means it is statistically significant
+
+#### Let's consider the life expectancy data.  What is the confidence interval for population difference in mean life expectancy for the two regions: East Asia and Pacific and South Asia? 
+-1.261, 13.323
+-1.216, 13.323
+-1.216, 31.323
+none of the above
+
+##### Answer
+-1.216, 13.323
+
+##### Solution
+```{r htci  }
+load("./Resources/Data/le_region.RData")
+names(le) <- c("country","le","region")
+life.exp.reg <- le
+save(life.exp.reg, file="./Resources/Data/life_exp_reg.RData")
+```
+
+Now let's do the hypothesis testing
+
+```{r ht  }
+t.test(life.exp.reg$le[life.exp.reg$region=="EAP"],life.exp.reg$le[life.exp.reg$region=="SAs"])
+```
+
+
+#### Let's consider the life expectancy data.   Does hypothesis testing and confidence interval in the above two questions reinforce each other?
+Yes
+No
+Uncertain
+
+##### Answer
+Yes
+
+##### Solution
+
+#### 
+
+
+##### Answer
+
+
+##### Solution
+#### 
+
+
+##### Answer
+
+
+##### Solution
+#### 
+
+
+##### Answer
+
+
+##### Solution
+#### 
+
+
+##### Answer
+
+
+##### Solution
+#### 
+
+
+##### Answer
+
+
+##### Solution
+#### 
+
+
+##### Answer
+
+
+##### Solution
+#### 
+
+
+##### Answer
+
+
+##### Solution
+
+
+### TEST 15 (Week 6): (In-class quiz-4) Probable questions
+\documentclass[12pt,answers]{exam}
+\pagestyle{headandfoot}
+\firstpageheader{Fundamentals of Data Science}{\textbf{In-class Quiz 5}}{\today{}}
+\begin{document}
+\pointsinrightmargin  
+\boxedpoints  
+
+\begin{questions}
+%1
+\question[2]
+Suppose Grameen foundation initiates a study where they would like to find what
+percentage of microcredit borrowers are actually from Grameen Bank. In that
+regard, they have interviewed 1,204 households in Bangladesh. What is the size
+of population in this study? 
+
+\begin{oneparchoices}    
+    \choice 1,064
+    \choice 1,204
+    \choice 1,046
+    \CorrectChoice none of the above
+\end{oneparchoices}    
+
+
+\question[2]
+In the above mentioned Grameen foundation study, suppose they found that 423 households are
+borrowers from Grameen Bank. What is the sample proportion of grameen bank borrowers?
+
+\begin{oneparchoices}    
+    \choice 53.1 
+    \choice 35.7
+    \CorrectChoice 35.1
+    \choice none of the above
+\end{oneparchoices}    
+
+
+\question[2]
+In the above mentioned study, what is the estimated standard deviation? 
+
+\begin{oneparchoices}    
+    \CorrectChoice 0.0137
+    \choice  0.0237
+    \choice  0.137
+    \choice none of the above
+\end{oneparchoices}    
+
+\begin{solution}
+Answer: Estimate of sample variance is p*(1-p)/n. Since population proportion is
+unknown,we can replace it with sample proportion. In that case it is
+sqrt(0.35*(1-0.35))/1204)=0.0137
+\end{solution}
+
+
+\question[2]
+Suppose, in the above mentioned study, the researchers wants to test the
+hypothesis that grameen bank borrowers are 60 percent  of the total clients. 
+Does your estimation of sample standard deviation changes with this information?
+If it changes, then what is the new value of sample standard deviation?
+
+\begin{oneparchoices}    
+    \choice 0.141
+    \CorrectChoice  0.0141
+    \choice 0.0114
+    \choice none of the above
+\end{oneparchoices}    
+
+\begin{solution}
+Answer: Yes, it does, because now the population proportion changes to the value of
+population proportion under null hypothesis. Therefore, sample standard
+deviation is now sqrt(0.60*(1-0.60))/1204)=0.0141.
+\end{solution}
+
+
+\question[2]
+Suppose, in the above mentioned study, the researchers wants to test the
+hypothesis that grameen bank borrowers are 60 percent  of the total clients. The
+alternative hypothesis is that grameen bank borrowers are less than 60 percent
+of the total clients. What will be  the test statistics in this setting? 
+
+\begin{oneparchoices}    
+    \choice -17.37
+    \CorrectChoice  -17.73
+    \choice -18.73
+    \choice none of the above
+\end{oneparchoices}    
+
+\begin{solution}
+Answer: The test statistics t=  (0.35-0.60)/0.0141= -17.73. 
+\end{solution}
+
+\question[2]
+What will be the corresponding p-value in the setting of the above mentioned study? 
+\begin{oneparchoices}    
+    \choice  extremely large
+    \CorrectChoice  extremely low 
+    \choice moderately large
+    \choice none of the above
+\end{oneparchoices}    
+
+\begin{solution}
+Answer: The test statistics t=  (0.35-0.60)/0.0141= -17.73. To find the p-value
+in this case, we issue the following command pnorm(-17.73), which comes up as an
+extremely low value. Therefore, we reject the null hypothesis. 
+\end{solution}
+
+\question[2]
+How do you interprete the p-value in the setting of the above mentioned study? 
+\begin{oneparchoices}    
+    \choice an extremely large value of p-value indicates we can not reject the null hypothesis
+    \CorrectChoice an extremely small value of p-value indicates we strongly reject the null hypothesis
+    \choice an extremely small value of p-value indicates we do not reject the null hypothesis
+    \choice none of the above
+\end{oneparchoices}    
+
+
+\question[2]
+What will be your conclusion regarding the hypothesis? 
+
+
+\question[2]
+
+What will be your conclusion regarding proportion of Grameen bank borrowers?
+
+\begin{oneparchoices}    
+    \choice True proportion of Grameen Bank borrowers is equal to to 60 percent of total borrowers 
+    \choice True proportion of Grameen Bank borrowers is not equal  to 60 percent of total borrowers 
+    \choice True proportion of Grameen Bank borrowers is less than 60 percent of total borrowers 
+    \choice Both a and c
+    \CorrectChoice Both b and c
+    \choice none of the above
+\end{oneparchoices}    
+
+\question[2]
+Suppose now the alternative hypothesis changes to  grameen bank borrowers can be greater than 60
+percent or less than  60 percent  of the total clients. How does this change affects your conclusion regarding
+proportion of Grameen bank borrowers? 
+
+\begin{oneparchoices}    
+    \choice 
+    \choice 
+    \CorrectChoice 
+    \choice 
+\end{oneparchoices}    
+
+\question[2]
+If in a test, type I error increases, it will also decrease the type II error. True or false?
+\begin{oneparchoices}    
+    \CorrectChoice 
+True
+    \choice 
+False
+\end{oneparchoices}    
+
+
+
+\question[2]
+
+ The higher the power of a test, the more sensitive it is in detecting a false null hypothesis. True or false?
+\begin{oneparchoices}    
+    \CorrectChoice 
+True
+    \choice 
+False
+\end{oneparchoices}    
+
+
+
+\question[2]
+Which of the following can increase the power of a test?
+\begin{oneparchoices}    
+    \choice 
+setting the null value significantly different than alternative value
+    \choice 
+increasing the sample size
+    \choice 
+increasing the type I error
+    \CorrectChoice 
+all of the above
+    \choice 
+both a and b
+    \choice 
+none of the above
+    \choice 
+both a an c
+\end{oneparchoices}    
+
+
+\question[2]
+Which of the following is true? 
+
+\begin{oneparchoices}    
+    \choice 
+The significance level is  typically denoted by alpha. 
+    \choice 
+The significance level gives a cut off for how small is small for a p value. 
+    \choice 
+The p value is  the smallest level of significance at which the data are statistically significant 
+    \CorrectChoice 
+all of the above
+\end{oneparchoices}    
+
+\question[2]
+In the face lift example, the researchers are testing whether after the surgery there is perceived changes in ages of the recipient of surgery. If  the p-value of the test is very low which of the following conclusions you can draw?
+
+\begin{oneparchoices}    
+    \CorrectChoice  
+Given the null hypothesis of no changes in perceived age, we find that probability of coming up with sample statistics that we got is very low. Therefore, we reject the null hypothesis.
+    \choice 
+Given the null hypothesis of no changes in perceived age, we find that probability of coming up with sample statistics that we got is very high. Therefore, we can not reject the null hypothesis.
+    \choice 
+Given the null hypothesis of no changes in perceived age, we find that probability of coming up with sample statistics that we got is neither high nor low. Therefore, we can not conclude about what we should do regarding  the null hypothesis.
+    \choice none of the above
+\end{oneparchoices}    
+none of the above
+
+\question[2] 
+Suppose the manufacturer claims that the mean lifetime of a light bulb is more than 10,000 hours. Assume actual mean light bulb lifetime is 9,950 hours and the population standard deviation is 120 hours. At .05 significance level, what is the probability of having type II error for a sample size of 30 light bulb? 
+
+
+\begin{solution}
+H$_$0: mu>=10000
+H$_$a: mu<10000
+
+
+<<>>=
+n=30
+mu=10000
+xbar=9950
+sigma=120
+
+sd.mean=sigma/sqrt(30)
+
+test.stat=(xbar-mu)/sd.mean
+p.value=pnorm(test.stat)
+@
+
+
+0.01123944
+
+ so we can reject the null
+
+ but how about power of the test
+
+ to find that let's first calculate the cut-off point at 5% 
+
+<<>>=
+qnorm(.05,mean=10000,sd=sd.mean)
+@
+ it is 9964
+
+we assume that alternative is true that is mu is less than 10000, then what is
+ the hypothesized value. It is what we get from sample.
+
+H$_$0: mu=9950
+H$_$a: mu>9950
+
+
+<<>>=
+n=30
+mu=9950
+xbar=9964 # from qnorm() above
+sigma=120
+sd.mean=sigma/sqrt(n)
+test.stat=(xbar-mu)/sd.mean
+
+p.value=pnorm(test.stat)
+@
+
+\end{solution}
+
+\question[2]
+Consider the human body temperature data. What do you conclude about the hypothesis claiming the average body temperature to be exactly 37 degree Celsius? 
+
+We do not find sufficient evidence against the hypothesis, therefore could not reject it. 
+We found sufficient evidence against the hypothesis, therefore we rejected it. 
+We are uncertain about what should be done in this case.
+none of the above
+
+##### Answer
+
+We found sufficient evidence against the hypothesis, therefore we rejected it. 
+
+
+\begin{solution}
+
+<<>>=
+human.temp <- read.table("./Resources/Data/Data$_$TempData.txt")
+names(human.temp) <- "temp"
+save(human.temp,file="./Resources/Data/human$_$temp.RData")
+@
+
+Now let's use the t.test function
+
+<<>>=
+temp.test <- t.test(human.temp$temp,mu=37)
+names(temp.test)
+temp.test$p.value
+temp.test$conf.int`
+@
+\end{solution}
+
+\begin{oneparchoices}    
+    \choice 
+    \choice 
+    \CorrectChoice 
+    \choice 
+\end{oneparchoices}    
+
+\question[2]
+
+\begin{oneparchoices}    
+    \choice 
+    \choice 
+    \CorrectChoice 
+    \choice 
+\end{oneparchoices}    
+
+\question[2]
+
+\begin{oneparchoices}    
+    \choice 
+    \choice 
+    \CorrectChoice 
+    \choice 
+\end{oneparchoices}    
+
+\question[2]
+
+\begin{oneparchoices}    
+    \choice 
+    \choice 
+    \CorrectChoice 
+    \choice 
+\end{oneparchoices}    
+
+\question[2]
+
+\begin{oneparchoices}    
+    \choice 
+    \choice 
+    \CorrectChoice 
+    \choice 
+\end{oneparchoices}    
+
+\question[2]
+
+\begin{oneparchoices}    
+    \choice 
+    \choice 
+    \CorrectChoice 
+    \choice 
+\end{oneparchoices}    
+
+
+
+
+\end{questions}
+\end{document}
+
+
+### TEST 15 (Week 6): (In-class quiz -4) Misc probable questions 
+
+\question[2]
+ In the above mentioned opinion survey, suppose the alternative hypotheses
+is as follows: true probability of people supporting the mayor is more than 50\%. Then which of the following is the  likely null hypothesis?
+
+
+\begin{oneparchoices}    
+    \choice 
+the true probability  of people supporting the mayor is  less than 50\% 
+    \choice 
+the true probability  of people supporting the mayor is  more than 50\% 
+    \choice 
+the true probability  of people supporting the mayor is  equal to  50\% 
+    \CorrectChoice 
+both a and c
+    \choice 
+both b anc c
+    \choice 
+none of the above
+\end{oneparchoices}    
+
+
+\question[2]
+ The video lecture mentions a news published in the Toronto Star on an
+opinion survey regarding Mayor Rob Ford's spending cuts. In the above mentioned
+opinion survey, suppose the sample size is 2487 and the percentage supporting
+Mayor Rob stands at 46\%. Null hypotheses is as follows: true probability of
+people supporting the mayor is not more than 50\%. Then what is the value of test statistics?
+
+
+\begin{oneparchoices}    
+    \choice 
+-2.54
+    \choice 
+-5.24
+    \choice 
+5.24
+    \choice 
+-5.42
+\CorrectChoice none of the above
+\end{oneparchoices}    
+
+
+
+\question[2]
+In the survey settings as described in the previous question, what is the
+p-value?
+\begin{oneparchoices}    
+    \CorrectChoice 
+0.000
+    \choice 
+0.001
+    \choice 
+0.002
+    \choice 
+0.050
+    \choice 
+none of the above
+\end{oneparchoices}    
+
+
+\question[2]
+In the above survey settings, suppose you have come up with a p-value of
+extremely small, say smaller than 1\%. Which of the following will be a possible conclusion from such small p-value? 
+
+\begin{oneparchoices}    
+    \choice 
+ null hypothesis is rejected that is true probability of people supporting the
+mayor is not equal to 50\%
+   \choice 
+ null hypothesis is not rejected that is true probability of people supporting
+the mayor is actually equal to 50\%   
+    \choice 
+null hypothesis is not rejected that is true probability of people supporting
+the mayor is not equal to 50\%
+    \choice 
+null hypothesis is rejected that is true probability of people supporting the
+mayor is more than 50\%
+    \choice 
+all of the above
+    \choice 
+both a and b
+    \choice 
+both a and c
+\CorrectChoice 
+both a and d
+    \choice 
+none of the above
+\end{oneparchoices}    
+
+
+\question[2]
+
+\begin{oneparchoices}    
+    \choice 
+    \choice 
+    \CorrectChoice 
+    \choice 
+\end{oneparchoices}    
+
+
+
+
+
+#### Consider the face lift example. Suppose our null hypothesis is that there is no perceived changes in age. In that case what would be the value of test statistics?
+7.171
+2.434
+0.381
+18.85
+none of the above
+
+##### Answer
+18.85
+
+##### Explanation
+```{r ts  }
+load("./Resources/Data/age_change.RData")
+n <- 60 
+x_bar <- mean(csd$age.change)
+sd  <- sd(csd$age.change)
+var_xbar <- sd^2/n 
+sd_xbar  <- sqrt(var_xbar)
+# now set the value of p under null hypothesis
+mu <- 0
+test.stat <-(x_bar-mu)/sd_xbar
+test.stat
+```
+
+\question[2]
+
+\begin{oneparchoices}    
+    \choice 
+    \choice 
+    \CorrectChoice 
+    \choice 
+\end{oneparchoices}    
+
+#### Consider the face lift example. Suppose our null hypothesis is that there is no perceived changes in age. In that case what would be the value of p-value?
+0.000
+0.001
+0.002
+0.095
+none of the above
+
+##### Answer
+0.000
+
+
+
+##### Explanation
+```{r pv  }
+test.stat <- 18.856 # test statistics calculated earlier
+pt(18.856,df=59,lower.tail=FALSE)
+```
+\question[2]
+
+\begin{oneparchoices}    
+    \choice 
+    \choice 
+    \CorrectChoice 
+    \choice 
+\end{oneparchoices}    
+
+
+
+
+
+
+##### Explanation
+by definition
+
+\question[2]
+
+\begin{oneparchoices}    
+    \choice 
+    \choice 
+    \CorrectChoice 
+    \choice 
+\end{oneparchoices}    
+
+
+
+
+
+#### A test is said to have high power if it does not reject the null when it is true. True or false?
+True
+False
+
+##### Answer
+False
+
+
+##### Explanation
+by definition
+
+
+#### A test is said to have high power if it rejects the null when it is false. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Explanation
+by definition
+
+\question[2]
+
+\begin{oneparchoices}    
+    \choice 
+    \choice 
+    \CorrectChoice 
+    \choice 
+\end{oneparchoices}    
+
+\end{questions}
+\end{document}
+
+### TEST 17 (Week 7):(assignment 10,part 1) Probable questions
+
+#### Video 1
+
+#### Dependent variable and response variable refers to the same type of variable. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Solution
+See video
+
+#### Which of the following is true? 
+In regression, we want to predict the value of dependent variable
+In regression, we want to understand the determinants of dependent variable
+In regression, independent, explanatory or predictor variable refers to same thing
+all of the above
+none of the above
+
+##### Answer
+all of the above
+
+##### Solution
+by definition
+
+####  Which of the following might be correct representation of a regression line?
+y+b_0 = b_1x
+x=b_0 + b_1y
+y=b_0 + b_1x
+none of the above
+
+##### Answer
+y=b_0 + b_1x
+
+##### Solution
+by definition
+
+
+####  The regression line is found by minimizing the distance between actual value of dependenct variable and the value on the regression line.
+True
+False
+
+##### Answer
+True
+
+##### Solution
+by definition
+
+#### The distance between the actual value of dependent variable and the value on the regression line is called 
+squares of sum
+sum of squares
+sum and squares
+none of the above
+
+##### Answer
+sum of squares
+
+##### Solution
+by definition
+
+#### In linear regression, the value of the coefficients are found by 
+minimizing the sum of squares of residuals
+setting partial derivative of sum of squares of residuals equal to zero
+minimizing the error in measuring y from the regression line
+all of the above
+none of the above
+
+##### Answer
+all of the above
+
+##### Solution
+be definition
+
+####  The line of best fit is found by values of coefficients which minimizes the sum of squares. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Solution
+
+#### Let's consider the skeleton data (Data_SkeletonData2.txt) where y=Estimated-Actual age and x=BMI. Which of the following command represents the correct command in R to find results of regression of life expectancy on GDP per capita?
+lm(gdppc ~ le, data=life.gdp.hiv)
+le ~ gdppc, data=life.gdp.hiv
+lm(le ~ gdppc, data=life.gdp.hiv)
+none of the above
+
+##### Answer
+lm(le ~ gdppc, data=life.gdp.hiv)
+
+##### Solution
+See R videos
+
+
+#### Let's consider the skeleton data (Data_SkeletonData2.txt) where y=Estimated-Actual age and x=BMI. What is the value of intercept coefficient?  
++23.3
+-23.3
+-32.3
+none of the above
+
+##### Answer
+-23.3
+
+##### Solution
+```{r lm  }
+ske2 <- read.table("./Resources/Data/Data_SkeletonData2.txt",header=TRUE)
+save(ske2,file="./Resources/Data/ske2.RData")
+reg.res <- summary(lm(DGDifference ~ BMIquant, data=ske2))
+reg.res
+```
+
+
+#### Let's consider the skeleton data (Data_SkeletonData2.txt) where y=Estimated-Actual age and x=BMI. What is the value of slope coefficient?  
++0.41
+-0.41
++0.14
+none of the above
+
+##### Answer
++0.41
+
+##### Solution
+```{r lm  }
+load("./Resources/Data/ske2.RData")
+lm(DGDifference ~ BMIquant, data=ske2)
+```
+
+#### Let's consider the skeleton data (Data_SkeletonData2.txt) where y=Estimated-Actual age and x=BMI. How do you interpret the value of slope coefficient?
+If BMI increases by 1 unit then the difference between Estimated and actual age increases by 0.41 years.
+If the difference between Estimated and actual age increases by 1 year, BMI increases by 0.41 unit.
+If the difference between Estimated and actual age increases by 0.43 year, BMI increases by 1 unit.
+none of the above
+
+##### Answer
+If BMI increases by 1 unit then the difference between Estimated and actual age increases by 0.41 years.
+
+##### Solution
+By defintion
+
+#### Which of the following is true about intercept coefficient?
+the value of intercept coefficient does not always have meaningful interpretation
+the value of intercept coefficient  always have meaningful interpretation
+it is the amount by which the regression line has to be shifted to have the best fit of data
+all of the above
+both a and b
+both a and c
+both b and c
+none of the above
+
+##### Answer
+both a and c
+
+##### Solution
+by def
+
+#### Running a regression of Estimated age difference on BMI gives us the same set of coefficients as running a regression of BMI on estimated age difference. True or false?
+True
+False
+
+##### Answer
+False
+
+##### Solution
+By def
+
+#### Which of the following is true about regression?
+Regression is not symmetric
+Regression is not the same as correlation
+both of the above
+none of the above
+
+
+##### Answer
+both of the above
+
+##### Solution
+by def
+
+#### Use the life expectancy data. Draw a scatterplot between Life expectancy and GDP per capita. Which of the following observations are valid about this scatterplot?
+There is a linear relationship between life expectancy and GDP per capita
+There is a non-linear relationship between life expectancy and GDP per capita
+There is a positive association between the two variables
+all of the above
+both a and b
+both a and c
+both b and c
+
+##### Answer
+both b and c
+
+##### Solution
+see video
+
+
+#### Use the life expectancy data. Run a regression line where life expectancy is the dependent variable and GDP per capita is the explanatory variable. What is the value of slope coefficient and how do you interpret it?
+0.45, for each thousand dollar increase in GDP per capita, life expectancy of a country is supposed to rise by 0.45 years
+0.00045, for each thousand dollar increase in GDP per capita, life expectancy of a country is supposed to rise by 0.45 years
+0.045, for each thousand dollar increase in GDP per capita, life expectancy of a country is supposed to rise by 0.45 years
+none of the above
+
+##### Answer
+0.00045, for each thousand dollar increase in GDP per capita, life expectancy of a country is supposed to rise by 0.45 years
+
+
+##### Solution
+```{r le  }
+life.exp.tab <- read.table("./Resources/Data/Data_LifeExpTable.txt")
+names(life.exp.tab) <- c("country", "le")
+save(life.exp.tab, file="./Resources/Data/life_exp_tab.RData")
+load("./Resources/Data/life_exp_reg.RData")
+life.gdp.hiv <- read.table("./Resources/Data/Data_LifeGDPhiv.txt")
+names(life.gdp.hiv) <- c("country","le","gdppc","hiv")
+save(life.gdp.hiv, file="./Resources/Data/life_gdp_hiv.RData")
+life.gdp.hiv %>% 
+    ggplot(aes(gdppc,le)) + geom_point()
+lm(le ~ gdppc, data=life.gdp.hiv)
+```
+
+#### Video 2
+
+#### Use the life expectancy data. Run a regression line where life expectancy is the dependent variable and GDP per capita is the explanatory variable. What is the value of intercept coefficient and how do you interpret it? 
+63.3, it measures  the expected life expectancy in years when GDP per capita is zero
+36.3, it measures  the expected life expectancy in years when GDP per capita is zero
+63.3, it measures  the association between life expectancy and GDP per capita 
+none of the above
+
+##### Answer
+63.3, it measures  the expected life expectancy in years when GDP per capita is zero
+
+##### Solution
+```{r le  }
+load("./Resources/Data/life_gdp_hiv.RData")
+life.gdp.hiv %>% 
+    ggplot(aes(gdppc,le)) + geom_point()
+lm(le ~ gdppc, data=life.gdp.hiv)
+```
+
+#### Use the life expectancy data. Run a regression line where life expectancy is the dependent variable and GDP per capita is the explanatory variable. Is the interpretation of intercept coefficient in the above question meaningful?
+Yes
+No
+
+##### Answer
+No
+
+##### Solution
+by def
+
+#### If the value of x_i is equal to average value of x, then what will be the value of y_i according to regression line? What does that imply?
+average value of y and it would mean that both the average value of x and y are above the regression line
+any value of y and it would mean that both the average value of x and y are on the regression line
+average value of y and it would mean that both the average value of x and y are on the regression line
+none of the above
+
+
+##### Answer
+average value of y and it would mean that both the average value of x and y are on the regression line
+
+
+##### Solution
+see video 2
+
+####  In any regression line, the points xbar and ybar is on the regression line. True or False?
+True
+False
+
+##### Answer
+True
+
+##### Solution
+See video 2
+
+
+#### In any regression, the slope coefficient can be denoted by a measure of correlation between the variables multiplied by the ratio of standard deviation of the variables. True or False?
+True
+False
+
+##### Answer
+True
+
+##### Solution
+see video 2
+
+#### In any regression, the intercept coefficient can be derived by deducting average value of x multiplied by slope coefficient from average value of y. True or False?
+True
+False
+
+##### Answer
+True
+
+##### Solution
+see video 2
+
+#### Residual in a regression line can be found by deducting the predicted value from the actual value. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Solution
+By definition
+
+#### Mean value of residual can not greater than zero. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Solution
+By definition
+
+#### Which of the following statements is true?
+The regression multiplies the variance by (1-R^2)
+The regression line reduces or removes a fraction R^2 of the variance of Y
+The regression line explains a fraction R^2 of the variation
+all of the above
+none of the above
+
+##### Answer
+all of the above
+
+##### Solution
+By definition
+
+#### R^2 is called the coefficient of determination. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Solution
+By definition
+
+#### Which of the following is true about R^2?
+If R^2=0, then independent variables are unable to explain any variation in dependent variable
+If R^2=1, then independent variables are able to explain all the variation in dependent variable
+Usually the value of R^2 is somewhere between 0 and 1
+all of the above
+none of the above
+
+##### Answer
+all of the above
+
+##### Solution
+By definition
+
+#### In the skeleton data, which of the following is the value of R^2 when we run a regression with Estimated age difference on BMI?
+0.4033
+0.0168
+0.0186
+none of the above
+
+##### Answer
+0.0186
+
+##### Solution
+```{r bmi  }
+load("./Resources/Data/ske2.RData")
+reg.res <- summary(lm(DGDifference ~ BMIquant, data=ske2))
+reg.res$r.squared
+```
+
+
+#### In the skeletion data, how do we explain the value of R^2 in above mentioned regression?
+1.68% variation in BMI is explained by Estimated age difference
+.186% variation in Estimated age difference is explained by BMI
+40.3% variation in Estimated age difference is explained by BMI
+1.86% variation in Estimated age difference is explained by BMI
+none of the above
+
+##### Answer
+1.86% variation in Estimated age difference is explained by BMI
+
+##### Solution
+by definition
+
+#### In the life expectancy  data, which of the following is the value of R^2 when we run a regression of life of expectancy on GDP per capita?
+0.4033
+0.0168
+0.0186
+none of the above
+
+##### Answer
+0.4033
+
+##### Solution
+```{r bmi  }
+load("./Resources/Data/life_gdp_hiv.RData")
+reg.res <- summary(lm(le ~ gdppc, data=life.gdp.hiv))
+reg.res$r.squared
+```
+
+
+#### In the life expectancy data, how do we explain the value of R^2 in above mentioned regression?
+4.03% variation in life expectancy across countries is explained by GDP per capita
+0.43% variation in  GDP per capita across countries is explained by  life expectancy
+40.3% variation in life expectancy across countries is explained by GDP per capita
+1.68% variation in life expectancy across countries is explained by GDP per capita
+none of the above
+
+##### Answer
+40.3% variation in life expectancy across countries is explained by GDP per capita
+
+##### Solution
+see above question solution
+
+#### 
+
+
+##### Answer
+
+
+##### Solution
+
+#### 
+
+
+##### Answer
+
+
+##### Solution
+
+#### 
+
+
+##### Answer
+
+
+##### Solution
+
+#### 
+
+
+##### Answer
+
+
+##### Solution
+
+#### 
+
+
+##### Answer
+
+
+##### Solution
+
+#### 
+
+
+##### Answer
+
+
+##### Solution
+
+#### 
+
+
+##### Answer
+
+
+##### Solution
+
+#### 
+
+
+##### Answer
+
+
+##### Solution
+
+#### 
+
+
+##### Answer
+
+
+##### Solution
+
+
 
 ## -------------------------
 
