@@ -5078,751 +5078,356 @@ none of the above
 ##### Solution
 see above question solution
 
-#### 
+### Video 3
 
+### TEST 18 (Week 7):(assignment 10,part 2) Probable questions
 
-##### Answer
-
-
-##### Solution
-
-#### 
-
+####  Regression inference deals with the fact that there might be some theoretical world value for regression coefficients. True or false?
+True
+False
 
 ##### Answer
-
-
-##### Solution
-
-#### 
-
-
-##### Answer
-
-
-##### Solution
-
-#### 
-
-
-##### Answer
-
-
-##### Solution
-
-#### 
-
-
-##### Answer
-
-
-##### Solution
-
-#### 
-
-
-##### Answer
-
-
-##### Solution
-
-#### 
-
-
-##### Answer
-
-
-##### Solution
-
-#### 
-
-
-##### Answer
-
-
-##### Solution
-
-#### 
-
-
-##### Answer
-
-
-##### Solution
-
-
-
-## -------------------------
-
-## -------------------------
-
-
-**************************************
-********* IDSR ************************
-**********************************
-
-
-
-# IDSR
-
-## IDSR_R1
-
-### The command to create a vector named x  of following numbers: 4,3,7,NA, 8, 9 is      
-
-`x <- 4 3 7 NA 8 9
-x <- c(4 3 7 NA 8 9)
-x <- c{4, 3,NA, 7, 8, 9}
-x <- c(4, 3, 7,NA, 8, 9)
-none of the above
-all of the above `
-
-### Average of the vector x mentioned in question 1 is  
-
-choose from the follwoing
-
-### Consider the following elements in a vector named gender:   male, female, female, NA, male, female. We want to find the number of females. To find that we will use __________ command and will find ___________ females. 
-
-
-### Suppose we want to find average of elements in x vector which corresponds only to males in vector gender. We will use __________ command and find the average is equal to  __________. 
-
-
-### Create a new vector named "gender2" where "male" and "female" will be relabeled to "man" and "woman" from "gender" vector.  We will use the following command: 
-
-### Create a vector named "quiz1"  with following numbers: 3,3,7,NA, 8, 9. Create another vector named "quiz2"  with following numbers: 8,3,10,4, 3, 7. Now create the following elements in a vector named "gender":   male, female, female, NA, male, female.  Now create a data frame named "quiz_grade" with the following command:
-
-   `quiz_grade <- dataframe(gender,quiz1,quiz2)
-    quiz_grade <- data.frame(gender,quiz1,quiz2)
-    quiz_grade <- data.frame(c(gender,quiz1,quiz2))
-    quiz_grade <- data.frame(quiz1,gender, quiz2)
-    all of the above
-    none of the abvoe`
-
-### Let's say we created quiz_grade data frame in the above question with the variables in the following order:
-gender,quiz1, quiz2. We can use the following command to find all the values of quiz2:
-
-quiz_grade[,3]
-quiz_grade[,"quiz2"]
-quiz_grade`$`quiz2
-none of the above
-all of the above
-
-
-
-### We can use the following command to find 2nd, 3rd and 6th element from "quiz1" variable of data frame "quiz_grade". 
-
-quiz_grade[2,3,6,2]
-quiz_grade[c(2,3,6),2]
-quiz_grade[c(2,3,6),"2"]
-quiz_grade`$`quiz1[c(2,3,6)]
-all of the above
-none of the above
-
--------------------------------------------------
-
-### Do you think by issuing the  command - `mean(quiz_grade$quiz1)`, we can find the average of score from quiz 1?  
-
-YES
-NO
-
-### Suppose you want to create a new data frame from "quiz_grade" and name it "quiz_male". In this data frame, there will only quiz2 variable and scores of male participants. Which of the following command will work?  
-
-quiz_grade[gender==male,quiz2]
-quiz_grade[quiz_grade$gender=="male","quiz2"]
-quiz_grade[gender=="male","quiz2"]
-quiz_grade[gender=="male",3]
-all of the above
-none of the above
-
-
-### Suppose you want to create a new data frame from "quiz_grade" and name it "quiz_sub". In this data frame, there will be 2nd, 3rd and 6th element from quiz 1 scores. Which of the following commands will work?  
-
-
-quiz_grade[c(2,3,6),"quiz1"]
-quiz_grade[c(2,3,6),quiz1]
-quiz_grade[(2,3,6),"quiz1"]
-quiz_grade[(2,3,6),2]
-all of the above
-none of the above
-
-
-
-### What would be the easiest way to create average of  four vectors q1-q4 all together in page 57 of "R for Stata Users"?
-
-create a matrix named "mymatrix"  with vectors q1-q4 and then use the command "mean(mymatrix)" 
-create a data frame named "mydf"  with vectors q1-q4 and then use the command "mean(df)" 
-create a vector named "myvector"  with vectors q1-q4 and then use the command "mean(myvector)" 
-all of the above
-none of the above
-
-
-### What would be the easiest way to create average of  quiz 1 and quiz 2 scores  all together? 
-
-create a matrix named "mymatrix"  with vectors quiz 1 and quiz 2 and then use the command "mean(mymatrix)" 
-create a data frame named "mydf"  with vectors quiz 1 and quiz 2 and then use the command "mean(df)" 
-create a vector named "myvector"  with vectors   quiz 1 and quiz 2 and then use the command "mean(myvector,na.rm=TRUE)" 
-create a matrix named "mymatrix"  with vectors quiz 1 and quiz 2 and then use the command "mean(mymatrix, na.rm=TRUE)" 
-all of the above
-none of the above
-
-
-
-### What would be the easiest way to create a frequency distribution
-of all the numbers in four vectors q1-q4 in page 57 of "R for Stata Users"?
-
-
-### What would be the easiest way to create a frequency distribution
-of all the numbers in quiz1 and quiz2 scores ?
-
-### Let's try to create a frequency distribution of all the numbers in quiz1 and quiz2  scores and find the score which comes about with highest frequency. To achieve that, we will use ??? command and end up with ???
-
-table(mymatrix), 4, 3  ; mymatrix is defined in the previous question
-table(mydf), 4, 3  ; mydf is defined in the previous question
-table(myvector), 3, 4  ; myvector is defined in the previous question
-table(mymatrix), 3, 4  ; mymatrix is defined in the previous question
-all of the above
-none of the above
-
-
-
-### How to find pairwise correlation of four vectors q1-q4  in page 57 of "R for Stata Users"? 
-
-### Lets say we have q1-q4 vectors in mymatrix object. What is the quickest way to find the dimension of this object? Note: Dimension means number of rows and columns.
-
-### In the above mymatrix, create a subset of matrix which consist of  2nd,5th and 8th observations with q2 and q4 vectors.  Matrix is essentially a long vector. 
-
-TRUE
-FALSE
-
-### Data frame is also a list but with certain restrictions. 
-
-TRUE
-FALSE
-
-### List is a very flexible data structure with any type of object can be  stored. 
-TRUE
-FALSE
-
-## EXAMS
-
-### Exam 2
-1.  Use the excel worksheet titled time_series_BB_1972-2015.xls and go to the
-worksheet titled "country-wise workers' remittances". Based on that worksheet
-please answer the following questions:
-(a) Draw a line chart of  remittances of  from fiscal year 1987-88 to
-  2014-15. (5)
-(b) Name the top five countries from which Bangladesh earned highest remittances
-  in 2014-15.(5)
-(c) Find the total remittances of all other countries into a single number and call it
-  "Others". (Basically for 2014-15, you should end up with a two column data frame where
-  there will be six rows. First five rows will be countries with corresponding
-  remittance values and the last row will be categorized as "Others".)(5)
-(d) Now draw a properly labeled pie chart of remittances from six countries(Top 5 and "Others"). (5)
-
-2. Draw a colored bar diagram of "Exports of goods and services (% of GDP)"
-from WDI database for the following countries: Bangladesh, India, Pakistan and
-Sri Lanka. To answer this question properly you will have to complete
-the following steps:
-(a) Convert the country names into ISO codes. (2)
-(b) Automatically import the indicator code and save it into an object. (2)
-(c) Process the imported data for drawing diagram. (3)
-(d) Draw a properly labeled colored bar diagram. (3)
-(e) Bonus points for matching the bars with corresponding country color. (2) 
-(f) Bonus points for converting the vertical bar diagram into horizontal bar
-  diagram. (3)
-## IDSR_R2: Udaticity - Exploratory data analysis
-
-### Lecture_1_notes
-don't just understand
-where did they go?
-
-
-### Lecture_2_notes
-
-#### What was the name of R package used by Corey Nissan?
-
-#### How many tweets per day the system flag?
-
-#### What did you find the most interesting about the article?
-
-#### In RStudio, let's identify different windows by the following setup:
-1- R scripts/Files
-2- Environment/History
-3- Console
-4- Files/Plots/Packages/Help
-
-Which of the following is correct?
-
-?- Save as R script
-?- Review the log of commands entered
-?- Read help documentation
-?- Clear the workspace
-?- Run a bunch of commands from a file
-?- Look at a plot
-?- See a list of objects in memory
-?- Read the results from function or calculation
-
-#### Download and import the stateData.csv into R.  How many states and how many regions are there?
-
-#### Which state is the largest in terms of state area? 
-
-#### Which state is the smallest in terms of state area?
-
-#### Which state has the highest population?
-
-#### Which state has the lowest population?
-
-#### Which state has the highest average income?
-
-#### Which state has the lowest average income?
-
-#### Which state is performing the best in terms of literacy?
-
-#### Which state is performing the worst in terms of literacy?
-
-#### Which state has the highest life expectancy?
-
-#### Which state has the lowest life expectancy?
-
-#### Which state is the most crime-prone?
-
-#### Which state is the least crime-prone?
-
-#### Which state has the highest percentage of population who are high school graduate?
-
-#### Which state has the lowest percentage of population who are high school graduate?
-
-#### In region 2, which state is the largest in terms of state area?
-[To answer these region specific question, you will create a subset of data using the bracket notation or subset function. Then from the new subset data frame, you can find the answer to this question] 
-
-#### In region 4, which state  has the highest life expectancy?
-
-#### Which region has the highest average income? 
-[To find region specific information, it is best to use the aggregate function, please check online]
-
-#### Which region has the lowest average income? 
-
-#### Which region is the largest in terms of total state area?
-
-#### Which region is the smallest in terms of total state area?
-
-#### Which region has the highest life expectancy?
-
-#### Which region has the lowest life expectancy?
-
-#### Which region has the lowest life expectancy?
-
-#### Which region is on the average the most crime prone?
-
-#### Which region is on the average the least crime prone?
-
-#### Which region, on the average, has the highest percentage of population who are high school graduate?
-
-#### Which region, on the average, has the lowest percentage of population who are high school graduate?
-
-#### You will use the following command to show the 5th observation of population variable using the bracket notation:
-
-#### You will use the following command to show the 5th observation of population variable using the `$` notation:
-
-#### What is the main advantage of Rmd files?
-
-#### In Rmd files, the codes written in R are called `____`.
-
-#### Create a Rmd file and corresponding PDF file including the following contents: 
-- The very first code chunk will import the stateData.csv and then save it as RData file.
-- Now write a few words describing what are the few analysis you are planning to do 
-- Now create a data.frame which describes top five states in terms of life exepectanc
-- describe the data frame. 
-- Now create a bar chart of top five states in terms on income.
-
-
-
-### demistifying.R 
-
-#### The arrow-like '<-' symbol is the assignment operator in R, similar to the equal sign '=' in other programming languages. TRUE or FALSE? 
-
-#### The c() is a `_______` function that combines `_________` 
-
-#### In the demistifying.R file, in the "udacious" vector, replace YOUR_NAME with your actual name. How many elements are there now in "udacious"?
-
-by using count function, I find it is 8
-by using length function, I find it is 9
-
-#### Suppose I have vector named "numbers" which contains 1 to 10 numbers.  Now I would like to add 13, 14 and 17 to "numbers" vector and name it "nums_new". Remember it does not matter at which order the numbers are in the new vector "nums_new".  Which R code(s) should we use?
-numbers + 13 14 17
-c(numbers 13 14 17)
-c(13,numbers,14,17)
-c(c(13,14,17),numbers)
-c(13,14,17,numbers)
-
-#### I can issue the command `_______` to find how many characters are there in the following phrase "I love Bangladesh". The number of characgters in this command is `_______`.  
-
-
-####  The number of charaters in the third and seventh element of "udacious" vector is respectively
-7 and 9
-5 and 10
-
-#### Let's say you saved the number of characters in "udacious" vector in a new vector named "characs". Now if you issue the following command characs==11, you expect to get `____` TRUE and `____` FALSE values.
-
-#### Now if we issue the command `udacious[characs==11]`, we will get `____` names and each will have `___` characters. Each of them will correspond to `____` value of the vectors produced by `characs==11` command.
-
-#### mtcars data set was extracted from 1974 Motor Trend USA Magazine. True or False?  
-
-#### mtcars data set deals with how many automobiles?
-
-#### How many features of cars are considered in mtcars data set?
-
-#### To find names of the variables in mtcars data set, the following command will be issued:
-
-#### To find the structure of a data frame, the following command will be issued
-
-#### To find number of observations and number of columns in mtcars dataset, we issue the following command:
-
-#### To change the row.names of mtcars dataset to an index number, such as, 1,2,3.......... , we can issue the following command: 
-
-#### If you want to see the first 8 observations of mtcars dataset, you will issue the following command:
-
-#### If you want to see the last 12 observations of mtcars dataset, you will issue the following command:
-
-#### Suppose you want to find specifically 3rd, 15th and 17th observation of mtcars. You will issue the following command:
-
-#### To find first 10 observation of mpg variable in mtcars dataset, we will issue the following command:
-
-#### To find last 10 observation of mpg variable in mtcars dataset, we will issue the following command:
-
-####  Which car has the highest miles per gallon (mpg)?
-
-#### Which car has the lowes miles per gallon (mpg)?
-
-#### How many cars in the dataset has 8 cylinders?
-
-#### What is the average miles per gallon of all the cars in mtcars data set?
-
-#### According to data scientist Sean Taylor, good data science comes from fancy techniques not the question in hand. True or False?
-
-
-### Assignment 1
-
-##### According to data scientist Sean Taylor, good data science comes from fancy techniques not from the question in hand. True or False? Explain. 
-Its False, because at the heart of good data science, there should be question(s) which is of interest to someone. 
- 
-#### mtcars data set was extracted from 1974 Motor Trend USA Magazine. True or False?  Explain.
 True
 
-#### mtcars data set deals with how many automobiles? How many features of cars are considered? 
-32 cars and 11 features
+##### Solution
+See Video
 
-#### To find names of the variables in mtcars data set, which command will be used?
-names(mtcars)
+#### In theoretical world there is the true value of regression slope coefficient $\beta_1$. In the data world, we have the corresponding value $b_1$. Which of the following is a valid question that can be raised about these two values?
+Is theoretical value and data world value of slope coefficents are the same?
+How much uncertainty are there in the observed data world value?
+Can we form a confidence interval for theoretical value of slope coefficients?
+Can we perform hypothesis testing regarding the true value of regression slope coefficient?
+All of the above
+None of the above
 
-#### If you want to see the first 8 observations of mtcars dataset, which command you will use?
-head(mtcars,8)
+##### Answer
+All of the above
 
-#### If you want to see the last 12 observations of mtcars dataset, which command you will use?
-tail(mtcars,12)
+##### Solution
+See video 3
 
-#### Suppose you want to find specifically 3rd, 15th and 17th observation of mtcars. You will issue the following command `___________`. 
+####  How do you define the standard error of $b_1$?
+It is equivalent to the standard deviation of the population regression slope coefficient.
+It is equivalent to the standard deviation of sampling distribution of sample regression slope coefficient.
+It is equivalent to the estimated standard deviation of sampling distribution of sample regression slope coefficient.
+All of the above
+None of the above
 
-mtcars[c(3,15,17),]
+##### Answer
+It is equivalent to the estimated standard deviation of sampling distribution of sample regression slope coefficient.
 
-#### To find first 10 observation of mpg variable in mtcars dataset, which command will be used?
+##### Solution
+See video 3
 
-`head(mtcars$mpg,10)`
 
-####  Which car has the highest miles per gallon (mpg)?
-mtcars[mtcars$mpg==max(mtcars$mpg),]
-Toyota corolla
+####  If we deduct true population slope coefficient from sample slope coefficient and divide it by the standard error of sample regression coefficient, we get a 
+t-statistics with n-1 degree of freedom
+t-statistics with 1 degree of freedom
+t-statistics with 2 degree of freedom
+t-statistics with n-2 degree of freedom
+None of the above
 
-#### Which car has the lowest weight(wt)?
-mtcars[mtcars$wt==min(mtcars$wt),]
-Lotus Europa
+##### Answer
+t-statistics with n-2 degree of freedom
 
-#### How many cars in the dataset has 8 cylinders?
-`table(mtcars$cyl)`  its 14
+##### Solution
+By definition
 
-#### What is the average miles per gallon of all the cars in mtcars data set?
-`mean(mtcars$mpg)`  20.1
+#### Let's consider the skeleton example. Regress the estimated age difference onto BMI of the skeletons. What would be the residual sum of squares?
+78113.8
+79615.0
+1483.2
+None of the above
 
-#### Download and import the `stateData.csv` into R.  How many states and how many regions are there?
-There are 50 states and 12 region
+##### Answer
+78131.76
 
-#### Which state is the largest in terms of state area? 
+##### Solution
 
-`statesInfo$state.full[statesInfo$state.area==max(statesInfo$state.area)]`
-Alaska
+```{r rss  }
+load("./Resources/Data/ske2.RData")
+ske2.reg <- lm(DGDifference ~ BMIquant, data=ske2)
+RSS <- sum(ske2.reg$residuals^2)
+RSS
+```
+There is other alternative way to also find the same thing
 
-#### Which state has the highest population?
-
-`statesInfo$state.full[statesInfo$population==max(statesInfo$population)]`
-California
-
-#### In region 2, which state is the largest in terms of state area?
-[To answer these region specific question, you will create a subset of data using the bracket notation or subset function. Then from the new subset data frame, you can find the answer to this question] 
-
-`reg2 <-  statesInfo[statesInfo$state.region==2 ,]`
-`reg2$state.full[reg2$state.area==max(reg2$state.area)]`
-Texas
-
-#### In region 4, which state  has the highest life expectancy?
-
-`reg4 <-  statesInfo[statesInfo$state.region==4 ,]`
-`reg4$state.full[reg4$life.exp==max(reg4$life.exp)]`
-Hawaii
-
-#### Which region has the highest  income on the average? 
-[To find region specific information, it is the best to use the aggregate function, please check online]
-`aggregate(income~state.region, data=statesInfo, mean)`
-region 4
-
-#### In the demistifying.R file, in the "udacious" vector, replace YOUR_NAME with your actual name. How many elements are there now in "udacious"?
-
-by using length function, I find it is 9
-
-#### Suppose I have vector named "numbers" which contains 1 to 10 numbers.  Now I would like to add 13, 14 and 17 to "numbers" vector and name it "nums_new". Remember it does not matter at which order the numbers are in the new vector "nums_new".  Which R code(s) should we use?
-
-`numbers <- 1:10
-nums_new <- c(numbers,c(13,14,17))`
-
-#### I can issue the command `_______` to find how many characters are there in the following phrase "I love Bangladesh". The number of characters in this command is `_______`.  
-nchar("I love Bangladesh") and 17
-
-### Inclass Quiz 1 
-
-### In-class quiz 1
-
-#### Download the data collected from a survey of reddit users and import into R. How many obserations and varialbes are there?
-```{r reddit  }
-reddit  <- read.csv("./Resources/Data/reddit.csv")
-save(reddit, file="./Resources/Data/reddit.RData")
-dim(reddit)
+```{r al  }
+ sum((ske2$DGDifference- ske2.reg$fitted.values)^2)
 ```
 
-- 32574 observations and 14 variables
-- 14 observations and 32574 variables
-- 32754 observations and 14 variables
-- none of the above
+You can find the above mentioned fitted values in the following manner:
+
+```{r fv  }
+fit.val <- ske2.reg$coefficients[1] + ske2.reg$coefficients[2]*ske2$BMIquant
+```
 
 
-####  Among the reddit users, in terms of employment.status, highest number of users are found in `________` category.
-- students
-- Employed full time
-- Not employed and not looking for work
-- Not employed but looking for work
-- Retired
-
-#### To find reddit users in different employment status category, we will have to issue the following command:
-- table(employment.status)
-- table(reddit$employment.status)
-- table{reddit$employment.status}
-- none of the above
-
-#### How many of the reddit users have childern?
-
-- 5047
-- 5074
-- 27488
-- none of the above
-
-#### To make ordered factors, we can issue the following command:
-
-- ordered()
-- factor()
-- both of the above
-- none of the above
-
-#### How many levels of education are there among the reddit users?
-- 5
-- 6
-- 7
-- none of the above
-- all of the above
-
-#### Write down the code required to make the education variable an ordered factor in the following order:
-"Trade or Vocational degree"  "Some high school"  "High school graduate or equivalent"  "Some college" 
-"Bachelor's degree"  "Graduate or professional degree" "Associate degree"
-
-
-#### Download and import the `stateData.csv` into R.  How many states and how many regions are there?
-
-
-#### Which state has the lowest population?
-
-
-#### In region 3, which state  has the highest life expectancy?
-
-### Assignment 2 probables
-
-#### What are the possible outliers there can be ? 
-- Bad data about a non-extreme case
-- Bad data about an extreme case
-- Good data about an extreme case
-- All of the above 
-- None of the above
-
-#### In the section "Quiz: Moira's outlier", Moira faced which of the following kind of outlier?
- - Bad data about a non-extreme case
-- Bad data about an extreme case
-- Good data about an extreme case
-- All of the above 
-- None of the above
-
-#### Exploratory data analysis is about 
-- finding surprises in the data
-- understanding the variables that are most central to the analysis
-- learning about features of data that might lead to unexpected results
-- all of the above
-- none of the above
-
-#### Pseudo Facebook user data has 
-- 9,900 observations and 15 variables
-- 15 observations and 99,000 variables
-- 15 variables and 99,000 observations
-- None of the above
-
-#### In Lesson 3, the instructors mainly used `qplot()` function from `ggplot2` package. But I would encourage you to use always the `ggplot()` function. In that spirit, which of the following will be the right command to generate the bar diagram in page 3 of `Lecture 3 Notes`? 
--  ggplot(data=pfb,aes(x=dob_day))+geom_bar()
-
-#### In the above diagram, what are  the  noticeable attributes regarding the size of the bars?
-- All the dates are not given
-- Day 1 in a month has the tallest bar
-- Day 31 in a month has the smallest bar
-- None of the above
-
-#### In the above diagram, to have ticks label in all the days of a month on the x-axis, following command will have to be added:
-- scale_y_continuous(breaks=1:31)
-- scale_x_continuous(breaks=1:31)
-- scale_x_continuous(labels=1:31)
-- none of the above
-
-#### What is the possible explanation in the above diagram for Day 1 in a month having the tallest bar?
-- January 1 is the default date for those persons who do not set any day on their own
-- Due to privacy concern, some people might set fake birthday and choose the default which is January 1
-- Both of the above
-- None of the above
-
-
-#### What is the possible explanation in the above diagram for Day 31 in a month having the smallest bar?
-- January 31 is the default date for those persons who do not set any day on their own
-- Due to privacy concern, some people might set fake birthday and choose the default which is January 31
-- Not all the months have day 31 
-- Both of the above
-- None of the above
-
-#### Now to have the same diagram for all the months in a calendar year, which of the following commands has to be executed? 
-- ggplot(data=pfb,aes(x=dob_month))+geom_bar()+ facet_wrap(~dob_day)
-- ggplot(data=pfb,aes(x=dob_day))+geom_bar()+ facet_wrap(dob_day~dob_month)
-- ggplot(data=pfb,aes(x=dob_day))+geom_bar()+ facet_wrap(~dob_month)
-- none of the above
-
-####  What  would be the command to find how many males or females are there in the data set?
-`table(pfb$gender)`
-
-### Assignment 2 (Part 1) (final google form)
-See the google form repository
-https://goo.gl/8ZwR5K
-
-### Assignment 2 (part 2) probables
-
-#### How many males are there in pseudo Facebook data?
-
-#### How many females are there in pseudo Facebook data?
-58574
-40245
-58547
-40254[right answer]
-none of the above
-
-#### Which command can be used to find summary statistics of friend count by gender?
-
-`by(pfb$friend_count,pfb$gender, summary)`
-`by(pfb$gender,pfb$friend_count, summary)`
-`table(pfb$friend_count,pfb$gender, summary)`
+#### Let's consider the skeleton example. Regress the estimated age difference onto BMI of the skeletons. What would be the total sum of squares?
+78113.8
+79615.0
+1483.2
 None of the above
 
+##### Answer
+79615.0
 
-#### Which command can be used to find average friend count by gender?
+##### Solution
 
-`by(pfb$friend_count,pfb$gender, mean)`
+```{r rss  }
+load("./Resources/Data/ske2.RData")
+ske2.reg <- lm(DGDifference ~ BMIquant, data=ske2)
+TSS <- sum((ske2$DGDifference-mean(ske2$DGDifference))^2)
+TSS
+```
 
-#### Which command can be used to find median friend count by gender?
-
-`by(pfb$friend_count,pfb$gender, median)`
-
-#### What is the difference between the median friend count for women and men?
-52
-22
-32
+#### Let's consider the skeleton example. Regress the estimated age difference onto BMI of the skeletons. What would be the estimated sum of squares (ESS)?
+78113.8
+79615.0
 None of the above
 
-#### What do you find about the relationship between mean and median in the case of friend count?
-Mean is higher than median
-Median is higher than mean
-Mean is equal to median
+##### Answer
+1483.2
+
+##### Solution
+
+```{r rss  }
+load("./Resources/Data/ske2.RData")
+ske2.reg <- lm(DGDifference ~ BMIquant, data=ske2)
+ESS <- sum((ske2.reg$fitted.values-mean(ske2$DGDifference))^2)
+ESS
+```
+
+#### Let's consider the skeleton example. Regress the estimated age difference onto BMI of the skeletons. We find that TSS is exactly equal to ESS and RSS in this regression. True or false?
+78113.76
+78131.76
+78131.67
 None of the above
 
-#### In general, what it usually implies if mean of a variable is much higher than median?
-Presence of unusually large values
-Presence of unusually small values
-Any of the above 
+##### Answer
+78131.76
+
+##### Solution
+
+```{r rss  }
+load("./Resources/Data/ske2.RData")
+ske2.reg <- lm(DGDifference ~ BMIquant, data=ske2)
+TSS <- sum((ske2$DGDifference-mean(ske2$DGDifference))^2)
+```
+
+####  Let's consider the skeleton example. Regress the estimated age difference onto BMI of the skeletons. Which of the following will be the value of standard error of slope coefficient?
+0.148
+0.184
+0.418
 None of the above
 
-#### Which of the following is a more robust statistics compared to other statistics?
-Mean
-Median
-Standard deviation
-Variance
-None of the above
+##### Answer
+0.148
 
-#### What is the value of 3rd quartile of friend count variable and what does it imply?
-206 and it means that 75% of the users have friend count of 206 or less
-206 and it means that 25% of the users have friend count of 206 or more
-Both of the above two
-206 and it means that 75% of the users have friend count of 206 
-None of the above
+##### Solution
+
+```{r ci  }
+n <- dim(ske2)[1]
+xssr  <- sum((ske2$BMIquant - mean(ske2$BMIquant))^2)
+var_b1 <- RSS/((n-2) * xssr)
+se_b1  <- round(sqrt(var_b1),3)
+```
 
 
-#### Draw a bar diagram of friend count variable. What is strange about this diagram?
 
-#### Which of the following command you can use to make the bar diagram look nicer?
 
-#### To change the bin width in a bar diagram, which of the following you will use?
-
-#### Suppose you want to the change the sequence of ticks in x-axis of any ggplot diagram. Which of the following command you will use?
-In addition to required ggplot command, I will use `scale_x_continuous(breaks=-----)` function
-In addition to required ggplot command, I will use `scale_x_discrete(breaks=-----)` function
+####  Let's consider the skeleton example. Regress the estimated age difference onto BMI of the skeletons. Which of the following will be the critical value of t-statistics in the case of forming 95% confidence interval for true slope coefficient of the regression?
+-1.97
++1.97
 Both of the above
 None of the above
 
-#### Suppose you want to draw several ggplot diagram based on the categories of a factor or categorical variable. Which of the following functions has to be added to standard ggplot2 commands?
+##### Answer
+Both of the above
 
-#### 'Tenure' variable in the data set measures how long the users are using Facebook. Around how many years or less 75% of the users are using Facebook?
+##### Solution
 
-#### Let's plot a histogram of 'Tenure' variable with boundary in black and green bars. Which of the following command will be useful?  
+```{r ci  }
+n <- dim(ske2)[1]
+rt <- 2
+t.crit <- qt(0.025,n-rt)
+t.crit
+```
 
-#### If there is extreme outliers in a variable of a data set, what are the ways to transform the variable so that the effect of outliers are greatly reduced?
-log transformation
-square root transformation
-both of the above
-none of the above
 
-#### The difference between mean and median of friend count variable is `____________`. When that variable goes through log transformation the difference boils down to `________`.
-114,.089
-.089,114
-114,.098
+
+####  Let's consider the skeleton example. Regress the estimated age difference onto BMI of the skeletons. What would be the 95% confidence interval for the slope coefficient of this regression?
+0.15, 0.75
+0.13, 0.73
+0.12, 0.70
 None of the above
 
+##### Answer
+0.12, 0.70
 
-### Assignment 3  (final google form)
-answer 1 : 40254
-answer 2 : `by(pfb$friend_count,pfb$gender, summary)`
-answer 3: 22
-answer 4: mean is higher than median
-answer 5: Presence of unusually large values 
-answer 6: Median
-answer 7: Both of the above two
-answer 8: Both of the above two
-answer 9: Both of the above 
-answer 10: 114,.098
+##### Solution
 
-### Inclass Quiz 2 
+```{r ci  }
+b1 <- ske2.reg$coefficient[2]
+ul <- b1 + abs(t.crit)*se_b1
+ll <- b1 - abs(t.crit)*se_b1
+CI.95 <- c(ll,ul)
+round(CI.95,2)
+```
 
+####  Let's consider the skeleton example. Regress the estimated age difference onto BMI of the skeletons. Suppose we want to test whether in the theoretical world the BMI is related to estimated difference in age. The null hypothesis in this case will be
+intercept coefficient = 0
+slope coefficient =0
+slope coefficient is not equal to zero
+slope coefficient is greater than zero
+none of the above
+
+##### Answer
+slope coefficient =0
+
+##### Solution
+By definition
+
+
+#### Let's consider the skeleton example. Regress the estimated age difference onto BMI of the skeletons. Suppose we want to test whether in the theoretical world the BMI is related to estimated difference in age. The value of test statistics will be
+2.77
+7.22
+1.97
+none of the above
+
+##### Answer
+2.77
+
+##### Solution
+```{r tt}
+beta1 <- 0
+b1 <- round(ske2.reg$coefficients[2],2)
+t.stat <- (b1-beta1)/se_b1
+t.stat <- round(t.stat,3)
+t.stat
+```
+
+#### Let's consider the skeleton example. Regress the estimated age difference onto BMI of the skeletons. Suppose we want to test whether in the theoretical world the BMI is related to estimated difference in age. Do you find evidence that in support of the relationship?
+Yes
+No
+Uncertain
+
+##### Answer
+Yes
+
+##### Solution
+```{r pval  }
+1-pt(t.stat,df=n-rt)
+```
+The p-value is quite low, so we reject the null hypothesis of no relationship and decide that BMI and estimated age difference is related
+
+
+#### Suppose the relationship between dependent and explanatory is not linear. In that case a linear regression will not be able to capture the true relationship between these variables. True or false?
+True
+False
+Uncertain
+
+##### Answer
+True
+
+##### Solution
+See video 3
+
+
+####  Even if we find evidence of linear relationship among variables, it might not reflect the true nature of the relationship. True or false?
+True
+False
+
+
+##### Answer
+True
+
+##### Solution
+See video 3
+
+
+####  Linear regression is quite robust to outliers. True or false?
+True
+False
+
+##### Answer
+False
+
+##### Solution
+See video 3
+
+
+#### Due to certain limitations of linear regression, it is always a good idea to draw graphs, charts to have an idea on true relationshop between the variables. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Solution
+See video 3
+
+#### 
+
+
+##### Answer
+
+
+##### Solution
+#### 
+
+
+##### Answer
+
+
+##### Solution
+#### 
+
+
+##### Answer
+
+
+##### Solution
+#### 
+
+
+##### Answer
+
+
+##### Solution
+#### 
+
+
+##### Answer
+
+
+##### Solution
+#### 
+
+
+##### Answer
+
+
+##### Solution
+#### 
+
+
+##### Answer
+
+
+##### Solution
+#### 
+
+
+##### Answer
+
+
+##### Solution
+#### 
+
+
+##### Answer
+
+
+##### Solution
 
