@@ -1,0 +1,5490 @@
+# FDSR
+
+## week1-lec1-introduction
+
+- what is the difference between statistics and a statistic?
+- what is the difference between descriptive statistics and inferential
+  statistics?
+- what is a statistic? how context plays a role in calculating a statistic
+- what is statistics and what is the goal of statistics? 
+
+## week1-lec2-five-number-summary
+
+- Please find the five-point summary of the following numbers (odd numbers):
+- mention the R commands used to find the five-point summary
+- Instead if you were asked just to find the median of those numbers which
+  command you would have used? 
+- what is the advantage of boxplot over the five point summary? 
+- now do the same for a bunch of numbers where the total number is even
+- Explain how did you calculate quartiles when total number is odd
+- Explain how did you calculate quartiles when total number is even
+
+## week1-lec3-the-center-of-data
+
+- what is the difference between a regular boxplot and modified boxplot?
+- what is IQR? how do you calculate IQR?
+- how do you calculate the lower and higher inner fences?
+- what would be definition of a robust statistic?
+- Among mean, IQR, standard deviation and median, which is(are) robust
+  statistic?
+- what is trimmed mean? how do you calculate a trimmed mean?
+- for the following numbers, calculate the trimmed mean manually 
+- then compare it with the designated trim function. Do they match? 
+- Evaluate the following statement: trimmed mean is a more robust statistic than
+  median
+- Import the Red Bulls salary data into R. then calculate five point summary and
+  draw the boxplot
+- Is there anything unusual about the data? Describe.
+- What would you suggest about the data to get more meaningful five-point
+  summary? 
+- Compare the median,mean,IQR in original data set and trimmed data set. 
+
+## week1-lec4-spread-of-data
+
+- what is the limitation of range and IQR as a measure of spread of data?
+- how do we calculate standard deviaton? you don't have to write any formula.
+  just write down in plain words the basic idea.
+- what is degree of freedom?  what role does degree of freedom plays in finding
+  variance?
+- why variance or standard deviaton is a better measure of spread than range and
+  IQR?
+- From the NY bulls salary data, calculate the variance and standard deviation.
+- Manually calculate the mean and standard deviation and compare it with from
+  the designated functions in R. 
+- From the NY bulls salary data, evaluate the statement that variance and
+  standard deviation both are robust statistics.
+
+## week1-lec5-shape-of-data
+
+- why a histogram is useful?
+- What is the the difference between unimodal and bimodal distribution? what is
+  the implication of this difference?
+- Boxplot misses an important feature in the case of bimodal distribution.
+  Evaluate the statement. 
+- In the case of LE data, find the histogram and answer the following:
+- is it unimodal?
+- is it left-skewed, right-skewed or symmetric?
+- Let's say following is the five point summary of student's grade in a class. Are the grades symmetric or skewed? Explain your answer. 
+- In the case of skeleton data, find the histogram and answer the following:
+- is it unimodal?
+- is it left-skewed, right-skewed or symmetric?
+- In the case of NY bulls data, find the histogram and answer the following:
+- is it unimodal?
+- is it left-skewed, right-skewed or symmetric?
+- in the case of NY bulls data, check out whether empirical rule works or not
+- in the case of LE data, check out whether empirical rule works or not
+- in the case of skeleton data, check out whether empirical rule works or not
+- in left-skewed data, what would be the relationship between mode, mean and
+  median? explain your answer.
+- in right-skewed data, what would be the relationship between mode, mean and
+  median? explain your answer.
+
+## week1-lec6-categorical-vars
+
+- which are the categorical variables in LE data set?
+- which are the categorical variables in skeleton data set?
+- which are the categorical variables in NY Bulls data set?
+- What are the ways to describe categorical variables?
+- Find a bar chart for a categorical variable in LE data set.
+- Find a bar chart for a categorical variable in skeleton data set.
+- Find a bar chart for a categorical variable in NY bulls data set set.
+
+## week1-lec7-some-features-of-data
+- how do you define observational units. Cite example from LE, NY bulls,
+  skeleton data.
+- how do you define a variable. Cite example from LE, NY bulls,
+- Evaluate the statement - you can find summary statistics for ordinal variables
+- what is the difference between ordinal variable and categorical variable?
+- what is the difference between ordinal variable and numerical variable? 
+- Evaluate the statement: outliers can be discarded from the data to have
+  meaningful data analysis.
+- Evaluate the statement: missing values can be discarded from the data to have
+  meaningful data analysis. 
+
+## week2
+
+### How do experiments help a researcher with his/her research outcome?
+Experiments help to establish causal conclusion
+does vaccine helped to cause fewer infections?
+does new teaching method helped to cause more effective learning?
+
+### What is the definition of response variable?
+The outcome of interest measured on each subject participating in the study. 
+
+### What is the definition of predictor variable?
+A variable that we think will help to explain the value of response variable.
+
+### What is the key difference between observational study and experiments?
+In an experiment, the researcher can manipulate the value of predictor variable.
+
+### How a factor is defined? What are levels?
+A categorial explanatory variable in an experiment is called factor. the values of factor is called its levels.
+
+### How do you define treatment?
+Paticular combination of values for factors is called treatment. The combination comes into play when there are multiple explanatory variables: for example vaccine and amount of dose. dose: strong and weak. vaccine:yes or no. so there are already four groups. 
+
+### How do you define experimental unit?
+The smallest unit on which an experiment is implemented. 
+
+### Why do we care about extraneous factors?
+Extraneous factors are not part of current but might affect the outcome variable. So we will have to be careful so that the effect of these factors are removed.
+
+### How can we tackle the effect of extraneous factors when those factors are known to researcher?
+
+## Rest of weeks
+I have switched to the following TESTS sections for the rest of the weeks questions
+
+## TESTS
+
+### WEEK 1: Summarizing Data
+
+### Test 1
+
+#### Find the five-point summary of following numbers: 26,91, 56,84,46,78, 67,87,72
+Now use the Life expectancy(LE) data and find the five point summary of life expectancy. How do you interpret the values of median, 1st quartile and third quartile?
+What is the difference between a regular boxplot and modified boxplot? Write down the R commands to find the both in the case of LE data. 
+What would be definition of a robust statistic?
+Among mean, IQR, standard deviation and median, which is(are) robust statistic? Why? 
+Now import the Red Bulls Soccer player's salary data into R and answer the following questions:
+Calculate Range, IQR, mean, median, standard deviation of player's salary from original data.  Now calculate Range, IQR, mean, median, standard deviation of player's salary from trimmed data. 
+Which statistics you found to be robust? Does it match with your answer in question no. 5?
+Now import the skeleton data and answer the following questions:
+Find the histogram of estimated age at death.
+Is estimated age at death variable, symmetric, left-skewed or right-skewed?
+What is the relationship between mode, median and mean? What is the implication of that relationship?
+
+### WEEK 2: Relationship between variables
+
+### Test 2
+Import the Skeleton data into R and write down required the R commands
+Is there any difference between modified and regular boxplot in DGdifference variable? 
+(right down the commands and then answer. Answer will be in comments in your script file with # in front)
+Calculate range, mean, median, IQR and SD of DGDifference variable.
+(save those values in a separate named vector)
+Calculate range, mean, median, IQR and SD of 10% trimmed data of DGDifference.
+Combine those statistics in a data frame and create a variable showing
+percentage difference. (you will need to use data.frame() function in the following form: data.frame(orig,trim).   To find percentage changes, create a variable
+`pch=round(((orig-trim)/orig)*100,1)`
+
+### WEEK 3: Probability theory
+
+### Test 3
+
+[To get full marks, don't just put the number, describe it detail how you arrived at the number including the R code you used to produce desired result. For the outputs, you can simply copy paste into the answer box of your google form]
+
+#### What is joint distribution? Find the joint distribution between Sex and BMI variables in the skeleton data set. 
+```{r }
+bmi.sex <- table(ske$BMI, ske$Sex)
+bmi.sex
+```
+we also get the result from CrossTable command from gmodels package. 
+
+```{r gm  }
+ CrossTable(ske$BMI, ske$Sex,prop.r=F,prop.c=F,prop.t=F,prop.chisq=F)
+```
+
+#### From the skeleton dataset, find the number of overweight male individuals.
+From the above joint distribution, we find that there are 59 such individuals.
+
+#### How do you define marginal distribution? Find the marginal distribution of Sex and BMI variables from their joint distribution. 
+
+Marginal distribution of BMI
+```{r md  }
+margin.table(bmi.sex,1)
+```
+we can also find the same from the CrossTable command which calculates the marginal distribution by default. 
+
+Marginal distribution of sex 
+```{r md  }
+margin.table(bmi.sex,2)
+```
+
+
+#### Find the value of relative frequency of marginal distribution of BMI=overweight from the joint distribution of BMI and Sex variables. 
+
+Relative frequency can be found in the following way:
+```{r rf  }
+prop.table(margin.table(bmi.sex,1))
+```
+In the above we find that it is `.2025`. We can find the same from CrossTable command as above but just truning on prop.r=True.
+```{r rf2  }
+CrossTable(ske$BMI, ske$Sex,prop.r=T,prop.c=F,prop.t=F,prop.chisq=F)
+```
+
+
+#### What is the value of relative frequency of joint distribtuion of a male overweight person? 
+
+```{r mw  }
+prop.table(bmi.sex)
+```
+from the result we find that it is `.1475`. We can find the same from  following code:
+```{r mw2  }
+ CrossTable(ske$BMI, ske$Sex,prop.r=F,prop.c=F,prop.t=T,prop.ch
+isq=F)
+```
+
+
+#### How do you define conditional distribution?  Find the value of conditional distribution of a BMI normal person given that sex of that person is female.
+
+conditional distributions are mainly row/column proportions.we can find these in the following way:
+here is row proportion
+```{r cf  }
+prop.table(bmi.sex,1)
+```
+here is column proportion
+```{r cf1  }
+prop.table(bmi.sex,2)
+```
+in the question, it is asking about in our case column proportion, so condition is sex=female, so we go to second column and find the relevant proportion.
+
+so we find that conditional distribution of a BMI normal given she is female is `0.496`
+
+The above can also be found in the following:
+
+```{r cf2  }
+CrossTable(ske$BMI, ske$Sex,prop.r=F,prop.c=T,prop.t=F,prop.chisq=F)
+```
+
+#### Is sex variable independent of BMI? Explain. 
+For sex variable to be independent of BMI, sex variable has to show the same distribution irrespective of the value of BMI. But we find it varies significantly. Therefore, sex variable is not independent of BMI variable. 
+
+#### What is Simpson's paradox? Explain with example. 
+
+#### Name the methods to select a random sample. Why the sample has to be random in the first place?
+
+#### Suppose you have opened a poll in Facebook to understand how people of Bangladesh think on a certain issue. Do you think the people who will respond to this poll will form a representative sample? Why or why not? What kind of biases this poll may create?
+
+### Test 3 (Google Form)
+
+#### Name the methods to select a random sample. Why the sample has to be random in the first place?
+
+#### Suppose you have opened a poll in Facebook to understand how people of Bangladesh think on a certain issue. Do you think the people who will respond to this poll will form a representative sample? Why or why not? What kind of biases this poll may create?
+
+#### What is joint distribution? Find the joint distribution between Sex and BMI variables in the skeleton data set.
+
+```{r }
+bmi.sex <- table(ske$BMI, ske$Sex)
+bmi.sex
+```
+we also get the result from CrossTable command from gmodels package. 
+
+```{r gm  }
+ CrossTable(ske$BMI, ske$Sex,prop.r=F,prop.c=F,prop.t=F,prop.chisq=F)
+```
+
+
+#### From the skeleton dataset, find the number of overweight male individuals.
+
+
+#### How do you define marginal distribution? Find the marginal distribution of Sex and BMI variables from their joint distribution
+
+#### Find the value of relative frequency of marginal distribution of BMI=overweight from the joint distribution of BMI and Sex variables.
+
+#### What is the value of relative frequency of joint distribution of a male overweight person?
+
+
+#### How do you define conditional distribution? Find the value of conditional distribution of a BMI normal person given that sex of that person is female.
+
+#### Is sex variable independent of BMI variable? Explain.
+
+#### What is Simpson's paradox? Explain with example.
+
+
+### Test 4 (Probable question)
+
+#### If experiments can establish causal relationship that why not every study is based on experiments?
+- experiments are quite expensive
+- `experiments are sometimes not ethical`
+- `experiments are sometimes not practical`
+- all of the above
+- none of the above
+
+#### What is the key difference between observational study and experiments?
+- `In an experiment, the researcher can manipulate the value of predictor variable.`
+- Observational study is more reliable than experimental study design.
+- In an experiment, the researcher can manipulate the value of response variable.
+- All of the above
+- None of the above
+
+#### In an experimental design, we care about extraneous factors because
+- these factors affect the predictor variable
+- these factors affect the response variable
+- we are not sure about the effect of these variables
+- none of the above
+
+#### How can we tackle the effect of extraneous factors when those factors are known to researcher?
+- `We can hold these extraneous factors constant`
+- `We can create blocks of experimental units of same types and apply treatments to these individual blocks`
+- We can completely ignore those extraneous factors
+- None of the above
+
+
+#### How can we tackle the effect of extraneous factors when those factors are unknown to researcher?
+- We can hold these extraneous factors constant
+- We can create blocks of experimental units of same types and apply treatments to these individual blocks
+- We can completely ignore those extraneous factors
+- `We can randomly assign experimental units to different treatment groups`
+- None of the above
+
+#### A control group will never receive any kind of treatment.
+- True
+- `False`
+
+#### Following is a possible data collection method:
+- Anecdotes
+- Observational studies
+- Experiments
+- `All of the above`
+- None of the above
+
+#### We may find that those who drink more coffee actually have a shorter life span. One of the reason is that those who drink more coffee are usually heavy smokers and as a result they die early. Smoking habit in this case is an example of 
+- common response variable
+- `confounding variable`
+- `lurking variable`
+- all of the above
+- none of the above
+
+#### A lurking variable can be 
+- a confounding variable
+- a variable of common response
+- both of the above
+- none of the above
+
+#### Controlling for lurking variable is difficult part in any statistical analysis.
+- True
+- False
+
+#### If a sample is not representative that it will produce biased statistics.
+- True
+- False
+
+
+#### A statistic is a value that describes the theorectical world or the population we are interested in.
+- True
+- False
+
+#### A parameter is a value that describes the theorectical world or the population we are interested in.
+- True
+- False
+
+
+#### A statistic is a value calculated from our observed data.
+- True
+- False
+
+#### A statistic is a value calculated from our observed data.
+
+- True
+- False
+
+#### Following are examples of methods to collect a random sample:
+- Simple random sample
+- Startified sampling
+- Cluster sampling
+- All of the above
+- None of the above
+
+#### Volunteer sampling is an example of random sampling
+- True
+- False
+
+### Test 4 (in-class quiz-1) 
+
+`/home/rushad/Dropbox/Courses/R-Training/ROUND2/FUNDA_STATS/Exams/FDSR_2017_01_quiz4.tex`
+
+
+### Test 5 (assignment 4:part 1) Probable questions
+this test will be based on week 4 videos
+
+#### We need probability theory to 
+concentrate on real world data analysis
+make connections between real world and theoretical world
+to just understand what is happening in theory
+all of the above
+none of the above
+
+#### In a coin-toss experiment, the probability of coming up with head is always 0.5 but in theory the probability of head can be anything between 0 and 1. True or false? 
+True
+False
+
+#### Think about an experiment of tossing soft drinks cap. Let's assume the top of the cap is silver colored and the bottom is white. Then in the theoretical world, the probability of coming up with cap is 40 percent. True or False?
+True
+False
+Uncertain
+
+#### Suppose in a coin-toss experiment, we toss a coin twice. Let's denote H as the event of coming up with Head and in the case of Tail its T.  Then which of the following statements is true?
+Possible outcomes are HH,HT,TH and TT and the probability of each outcome is 0.25
+Possible outcomes are HH,HT,TH and TT and the probability of each outcome will vary depending on the outcome
+Possible outcomes are HH and TT and the probability of each outcome is 0.50
+None of the above
+
+#### Suppose in a coin-toss experiment, we toss a coin twice. Let's denote H as the event of coming up with Head and in the case of Tail its T. What is the probability of coming up with two heads?
+0.00
+0.25
+0.50
+0.75
+1.00
+none of the above
+
+#### Suppose in a coin-toss experiment, we toss a coin twice. Let's denote H as the event of coming up with Head and in the case of Tail its T.  What is the probaility of coming up with at least one head?
+0.00
+0.25
+0.50
+0.75
+1.00
+none of the above
+
+#### Suppose in a coin-toss experiment, we toss a coin twice. Let's denote H as the event of coming up with Head and in the case of Tail its T.  What is the probability of NOT coming up with two tails?
+0.00
+0.25
+0.50
+0.75
+1.00
+none of the above
+
+#### Suppose in a coin-toss experiment, we toss a coin twice. Let's denote H as the event of coming up with Head and in the case of Tail its T. What is the probability of coming up with any of the possibilities? 
+0.00
+0.25
+0.50
+0.75
+1.00
+none of the above
+
+#### Let's x stand for number of heads in an experiment. Then the possible values for x will be as follows
+0,2,1
+0,1,2
+2,1,0
+all of the above
+none of the above
+
+#### Suppose in a coin-toss experiment, we toss a coin twice. Let's denote H as the event of coming up with Head and in the case of Tail its T.  Then the sample space of this experiment includes the following outcomes:
+HH,HT,TH and TT 
+HH and TT
+HT and TH
+none of the above
+
+#### An event can be defined as
+something not in the  sample space
+subset of sample space
+both of the above
+none of the above
+
+#### What is the probability of entire sample space from an experiment?
+0.00
+0.25
+0.50
+0.75
+1.00
+none of the above
+
+#### Let's say the A= the event of coming up with at least one head in an experiment of tossing a coin twice. Then the complement of P(A) will be
+0.00
+0.25
+0.50
+0.75
+1.00
+none of the above
+
+#### Let's say the B= the event of coming up with two heads  in an experiment of tossing a coin twice. Then the complement of P(B) will be
+0.00
+0.25
+0.50
+0.75
+1.00
+none of the above
+
+#### One of the possible interpretation of probability is that
+We have a probability model/theory which says that probability of head or tail in single coin toss is 0.5. 
+If we have repeated the coin toss experiment lots of times, then the fraction of times the head will come up is 0.5. 
+according to my opinion probability of head is 0.5
+all of the above
+None of the above
+
+### Test 5 (assignment 4:part 1) (Google Doc) 
+https://goo.gl/2a8se5
+
+
+### Test 6 (assignment 4:part 2) Probable questions
+
+####  Suppose a coin toss experiment was described as Binomial(2,1/2) distribution. It means
+A coin was tossed twice and probability of success or coming up with head is 1/2
+A coin was tossed once and probability of success or coming up with head is 1/2
+A coin was tossed twice and probability of success or coming up with head is 2
+None of the above
+
+#### Which of the following will be an example of Binomial(2,1/2) distribution?
+The distribution of number of heads in an experiment of flipping a coin twice.
+The distribution of number of heads in an experiment of flipping two coins.
+both of the above
+none of the above
+
+#### Let's say we we flip two coins and count the number of heads and call it Y. The probability distribution of Y can be termed as
+Binomial(2,1/2)
+Binomial(1/2,2)
+Bernoulli(1,1/2)
+All of the above
+None of the above
+
+#### Bernoulli distribution is a special case of Binomial distribution. True or False?
+
+#### Which of the following will be true about  Bernoulli distribution?
+Bernoulli distribution is a special case of binomial distribution. 
+In Bernoulli distribution, an experiment is done only once.
+In Bernoulli distribtuion, a random variable can have only one value.
+All of the above
+None of the above
+
+#### Let's now think about an experiment where 5 coins are being tossed. Let's count the number of heads as Y random variable. What is the probability of coming up with 2 Heads? (To solve this problem, it will be wise to use the binomial distribution formula which was not given in the video but you can find it in any standard statistics textbook or just search online)
+0.2125
+0.1562
+0.3215
+None of the above
+
+##### solution
+
+first one is direct R solution using 
+```{r sol  }
+dbinom(2,5,0.5)
+```
+now if the question was 2 heads or less, then we would be talking about cumulative distribution 
+```{r cd  }
+pbinom(2,5,0.5)
+```
+we can find it using direct formula
+
+```{r df  }
+choose(5,2)*(0.5)^2*(1-0.5)^3
+```
+we find that the above gives the exact result as the above dbinom in the above
+
+
+#### Suppose Bangladesh has 30 percent chance of winning a match against Austraila. In a 5-match one-day series, what is the probability of Bangladesh winning the series 3-2 against Australia? 
+0.1323
+0.1233
+0.2131
+None of the above
+
+##### Solution
+
+```{r ba  }
+dbinom(3,5,0.3)
+```
+
+
+#### If you roll a die, on the average, what number you expect to come up with? 
+2
+3
+3.5
+4
+None of the above
+
+##### solution
+this is not a binomial distribution. this is because for a binomial distribution, in any experiment only two outcomes will be possible. but when rolling a die, six outcomes are possible. therefore probabilies can come out as binomial distribution. here the this will be found by the expected value formula. 
+
+E(value from roll of a die) = sum of all possible values multiplies by corresponding probabilities
+
+```{r ev  }
+sum(1:6*1/6)
+```
+which is equivalent to 3.5
+
+
+
+#### In an experiment involving flipping two coins, what is the average number of heads we expect to come up with?
+0
+1
+2
+None of the above
+
+##### solution
+here we have to first catalog the possible values of head and then their corresponding probabilities
+let's denote, y as the variable which records number of heads in each flip of two coins, therefore only two possible values. 
+
+y=0,1,2
+p=0.25,0.5,0.25
+
+```{r sols  }
+y  <- c(0,1,2)
+p  <- c(0.25,0.5,0.25)
+ as.character(y %*% p)
+```
+so in the above we find that E(y) is equal to 1. It means that on the average, we may expect 1 head from such coin flipping experiment.
+
+#### The variable counting number of heads in a coin toss experiment can be considered as a Bernoulli distribution. True or false?
+
+##### solution
+True. This is because Bernoulli distribution is a special case of Binomial distribution. Bernoulli distribution where experiment is done only once where as binomial experiments are repeated many times. 
+
+#### The mean or expected value of  number of heads in a single coin toss is 
+
+##### solution
+```{r ep  }
+E_y=0*0.5 + 1*0.5
+```
+
+#### The variance  of  number of heads in a single coin toss is 
+
+`var(y)= (y-E(y))*P(y)`
+
+```{r vary  }
+(0 - 0.5)^2 * 0.5  +  (1 - 0.5)^2 * 0.5
+```
+
+
+#### In an experiment involving flipping two coins, what will be the variance of number of heads?
+0
+0.5
+1
+1.5
+none of the above
+
+
+
+### Test 7 (assignment 5): Probable questions
+
+#### The mean or expected value of a random variable satisfies the nice property of begin linear. True or false?
+
+##### Solution: True
+
+#### Let's say X is sum of two other independent random variables Y and Z. Then expected value of X is equivalent to :
+E(Y) + E(Z)
+E(X) + E(Y)
+E(X) + E(Z)
+None of the above
+
+##### Solution
+E(Y) + E(Z)
+
+#### Let's say X is sum of two other independent random variables Y and Z. Then variance of X is equivalent to :
+Var(Y) + Var(Z)
+Var(Y) + Var(X)
+Var(X) + Var(Z)
+Var(Y) + Var(Z)- 2Cov(Y,Z)
+None of the above
+
+##### Solution
+Var(Y) + Var(Z)
+
+#### Let's say X is sum of two other independent random variables aY and bZ. Then variance of X is equivalent to :
+aVar(Y) + bVar(Z)
+a^2Var(Y) + b^2Var(Z)
+a^2Var(Y) + b^2Var(Z) - 2Cov(Y,Z)
+None of the above
+
+##### Solution
+a^2Var(Y) + b^2Var(Z)
+
+#### Discrete random variable can be defined as a variable 
+whose values can be expressed as list
+whose values are infinite
+whose values are uncountable
+all of the above
+none of the above
+
+#### Continuous random variable can be defined as a variable
+whose values can be infinite
+whose valuse can be uncountable
+whose values can take any value between any interval
+all of the above
+none of the above
+
+##### Solution
+all of the above
+
+
+#### The distribution symbolized as X~Uniform[0,1]  stands for
+uniform probability distribution between the interval of 0 and 1
+normally distributed uniform probability distribution between the interval of 0 and 1
+uniformly distributed normal  probability distribution between the interval of 0 and 1
+all of the above
+none of the above
+
+##### Solution
+uniform distribution between the interval of 0 and 1
+
+#### A uniform probability distribution between the interval of 0 and 1 can be considered as
+we have a random quantity which is equally likely to be between 0 and 1
+we have a random quantity probability of which will be exactly equal to 1
+we have a random quantity probability of which will be exactly equal to 0
+None of the above
+
+##### Solution
+we have a random quantity which is equally likely to be between 0 and 1
+
+#### Suppose we have a uniform probability distribution between the interval of 0 and 1. The probability a value equal or less than half(1/2) is
+
+1/3
+1/2
+1/4
+None of the above
+
+##### Solution
+1/2
+
+
+#### Suppose we have a uniform probability distribution between the interval of 0 and 1. The probability a value equal or less than one third (1/3) is
+
+1/3
+1/2
+1/4
+None of the above
+
+##### Solution
+1/3
+
+
+
+
+#### Suppose we have a uniform probability distribution between the interval of 0 and 1. The probability a value equal or less than half(1/2) is
+
+1/3
+1/2
+1/4
+None of the above
+
+##### Solution
+1/2
+
+
+#### Suppose we have a uniform probability distribution between the interval of 0 and 1. The probability a value is equal to 1/3 is
+0
+1/2
+1/3
+none of the above
+all of the above
+
+##### Solution
+0
+this is because P(1/3) = P(1/3) - P(1/3) =0. The difference between CDF of the same number is zero. 
+
+
+
+
+#### Suppose we have a uniform probability distribution between the interval of 0 and 1. The probability between 1/3 and 1/2 will be
+
+1/6
+-1/6
+5/6
+None of the above
+
+##### Solution
+1/6
+
+#### The density function of an uniformly distributed variable between the interval 0 and 1 can be defined as a function which takes the value 1  between 0 and 1 but 0 everywhere else. True or false?
+
+
+##### Solution
+True
+
+#### Which of the following is true about density function?
+The density function of an uniformly distributed variable between the interval 0 and 1 can be defined as a function which takes the value 1  between 0 and 1 but 0 everywhere else.
+
+we can talk about probabilities as  being the area underneath the graph of  a density function. 
+both a an b
+none of the above
+
+
+##### Solution
+both a and b
+
+#### Suppose we have a random variable which is uniformly distributed between a 72 and 47. Which of the followings is/are true about this distribution?
+It would have a density which is equal to 
+1 over 25 for all numbers in between 47 
+and 72. 
+The density of any number outside the range between 47 and 72 will be zero
+Total area under the graph is 1
+all of the above
+none of the above
+
+##### Solution
+all of the above
+
+#### Exponential probability distribution is represented by a 
+discrete random variable
+continuous random variable
+discretely continuous random variable
+none of the above
+
+##### Solution
+continuous random variable
+
+#### Following of the which probability distributions is the single most important distribution?
+Uniform
+Normal
+Exponential
+None of the above
+
+##### Solution
+Normal
+
+#### Which of the following is a standard normal distribution?
+a normal distribution which is chracterized by mean 0 and standard deviation 1
+a normal distribution which is chracterized by mean 1 and standard deviation 0
+a uniform distribution which is chracterized by mean 0 and standard deviation 1
+None of the above
+
+##### Solution
+a normal distribution which is chracterized by mean 0 and standard deviation 1
+
+#### If probability distribution of a random variable is denoted as X~N(4,9) then 
+we can say that X is normally distributed with mean 4 and variance 9
+we can say that X is normally distributed with mean 4 and standard deviation 3
+both of the above
+we can say that X is normally distributed with mean 3 and standard deviation 4
+none of the above
+
+##### Solution
+both of the above
+
+
+#### If probability distribution of a random variable is denoted as X~N(4,9) then this distribution can be converted into a standard normal distribution
+by substracting 3 from every value of X and then divided each of those values by 4
+by substracting 4 from every value of X and then divided each of those values by 9
+by substracting 4 from every value of X and then divided each of those values by 3
+None of the above
+
+##### Solution
+by substracting 4 from every value of X and then divided each of those values by 3
+
+#### If probability distribution of a random variable is denoted as X~N(4,9) then mean of this distribution is 
+4
+9
+5
+none of the above
+
+##### Solution
+4
+
+#### If probability distribution of a random variable is denoted as X~N(4,9) then variance of this distribution is 
+4
+9
+5
+none of the above
+
+##### Solution
+9
+
+#### If probability distribution of a random variable is denoted as X~N(4,9) then standard deviation of this distribution is 
+4
+9
+3
+none of the above
+
+##### Solution
+3
+
+#### If we flip a coin twice what are probable fractions of time the heads may appear?
+0,.5,1
+0,1,2
+both of the above
+none of the above
+
+##### Solution
+0,0.5,1
+this is because possibilities are such: HH, HT, TH, TT
+HH refers to fraction of head being 1
+HT or TH means fraction of head being 0.5
+TT means fraction being close to zero
+
+
+#### If we flip a coin twice  and then calculate the probable fractions of time the head may appear. We will find that the following fraction appears most of the time
+0.0
+0.5
+1.0
+None of the above
+
+##### Solution
+0.5
+
+#### If we flip a coin thrice which of the following is a probable fraction of heads appearing in the experiment?
+0.00
+0.33
+0.67
+1.00
+all of the above
+none of the above
+
+##### Solution
+all of the above
+this is becuase when out of three, none is head then fraction is zero, 1 head it is 0.33, 2 heads it is .67
+
+#### If we flip a coin thrice which of the following appears to be right combination of numbers?
+Number of heads=0, fraction of heads 0.00, probability of heads=0.125
+Number of heads=1, fraction of heads 0.33, probability of heads=0.375
+Number of heads=2, fraction of heads 0.67, probability of heads=0.375
+Number of heads=3, fraction of heads 1.00, probability of heads=0.125
+all of the above
+none of the above
+
+##### Solution
+all of the above
+
+#### When we roll three dice and look at the average of three numbers that appear on the three dice, which of the following is valid observations?
+The most likely averages, when you roll three  dice, are all, between about 3 and 4.
+It is  possible we might get an  average closer to 2 or to 5 
+It's not  very likely you'll get an average near 1  or 6. 
+all of the above
+
+##### Solution
+
+
+#### Which of the following will be the correct defintion of law of large numbers?
+If you run an experiment large number of times, experimental probability will match the theoretical probability
+Non matter how many times you run an experiment, experimental probability will always match the theortical probability
+The higher the number of times you run an experiment, the closer the average from experiment will get closer to the theoretical expected value. 
+both a and c
+both b and c
+none of the above
+
+#### Suppose you tossed a coin five times. You ended up with 4 heads and one tail. Therefore, experimental proportion of head is 0.2. But theoretically it should be 0.5. The reason is 
+experimental proportion will always be different than theoretical proportion.
+if we toss the coin more than five times we will see a larger degree of difference between experimental proportion of head and theoretical proportion.
+the experiment was not repeated enough time so that Law of Large Numbers could kick in.
+none of the above
+
+##### Solution
+the experiment was not repeated enough time so that Law of Large Numbers could kick in.
+
+#### Suppose I roll a die and end of with number 5. But theoretically the expected value is 3.5. It implies that
+there is something wrong with the die
+I am expected something which is impossible since there can't be sides on the die with 3.5
+we are expecting to match with theoretical value just after one experiment which will not work due to law of large numbers
+none of the above
+
+#### Suppose we roll two dice and take the average of numbers that comes up. We expect to see most of those average of numbers are close to 3 and 4. True or False? 
+
+##### Solution
+True
+
+
+#### As number of experiments increases, the average values coming out of the experiments will move closer to becoming a normal distribution. According to which of the following law the previous statement is true?
+law of large numbers
+central limit theorem
+both of the above
+none of the above
+
+##### Solution
+central limit theorem
+
+#### As the number of experiments increases, the variance of the distribution of average values coming out those values comming out of experiments 
+gets smaller
+gets higher
+remains unchanged
+none of the higher
+
+#### According to empirical rule of data, `_______` of the data are within `________` standard deviation of the mean.
+68%,one
+68%,two
+95%,three
+none of the above
+all of the above
+
+
+#### The empirical rule mainly follows from normal distribution and normal distribution appears due to central limit theorem. True or false?
+True
+False
+
+### Test 8 (In-class quiz 2) Probable questions
+
+#### What is the expected value of the numbers that appear from the roll of a die?
+
+#### What is the variance of the numbers that appear from the roll of a die?
+
+#### What is the expected value of the number of heads that may appear in a two coin toss experiment?
+
+#### What is the variance of the number of heads that may appear in a two coin toss experiment?
+
+#### Think about an experiment of tossing soft drinks cap. Let's assume the top of the cap is silver colored and the bottom is white. Then in the theoretical world, the probability of coming up with cap is 40 percent. True or False?
+True
+False
+Uncertain
+
+#### Suppose in a coin-toss experiment, we toss a coin twice. Let's denote H as the event of coming up with Head and in the case of Tail its T.  Then which of the following statements is true?
+Possible outcomes are HH,HT,TH and TT and the probability of each outcome is 0.25
+Possible outcomes are HH,HT,TH and TT and the probability of each outcome will vary depending on the outcome
+Possible outcomes are HH and TT and the probability of each outcome is 0.50
+None of the above
+
+#### Suppose in a coin-toss experiment, we toss a coin twice. Let's denote H as the event of coming up with Head and in the case of Tail its T. What is the probability of coming up with two heads?
+0.00
+0.25
+0.50
+0.75
+1.00
+none of the above
+
+#### Suppose in a coin-toss experiment, we toss a coin twice. Let's denote H as the event of coming up with Head and in the case of Tail its T.  What is the probaility of coming up with at least one head?
+0.00
+0.25
+0.50
+0.75
+1.00
+none of the above
+
+#### An event can be defined as
+something not in the  sample space
+subset of sample space
+both of the above
+none of the above
+
+#### What is the probability of entire sample space from an experiment?
+0.00
+0.25
+0.50
+0.75
+1.00
+none of the above
+
+#### Let's say we we flip two coins and count the number of heads and call it Y. The probability distribution of Y can be termed as
+Binomial(2,1/2)
+Binomial(1/2,2)
+Bernoulli(1,1/2)
+All of the above
+None of the above
+
+
+
+
+=================================================================================
+=======  INTRODUCTION TO DATA SCIENCE WITH R ====================================
+=================================================================================
+
+
+
+#### Suppose Bangladesh has 70 percent chance of winning a match against New Zealand. In a 5-match one-day series, what is the probability of Bangladesh winning the series 4-1 against New Zeal 
+0.1323
+0.1233
+0.2131
+None of the above
+
+##### Solution
+
+```{r ba  }
+dbinom(3,5,0.3)
+```
+
+#### Discrete random variable can be defined as a variable 
+whose values can be expressed as list
+whose values are infinite
+whose values are uncountable
+all of the above
+none of the above
+
+#### Continuous random variable can be defined as a variable
+whose values can be infinite
+whose valuse can be uncountable
+whose values can take any value between any interval
+all of the above
+none of the above
+
+##### Solution
+all of the above
+
+
+#### A uniform probability distribution between the interval of 0 and 1 can be considered as
+we have a random quantity which is equally likely to be between 0 and 1
+we have a random quantity probability of which will be exactly equal to 1
+we have a random quantity probability of which will be exactly equal to 0
+None of the above
+
+##### Solution
+we have a random quantity which is equally likely to be between 0 and 1
+
+
+#### If we flip a coin twice what are probable fractions of time the heads may appear?
+0,.5,1
+0,1,2
+both of the above
+none of the above
+
+##### Solution
+0,0.5,1
+this is because possibilities are such: HH, HT, TH, TT
+HH refers to fraction of head being 1
+HT or TH means fraction of head being 0.5
+TT means fraction being close to zero
+
+
+#### When we roll three dice and look at the average of three numbers that appear on the three dice, which of the following is valid observations?
+The most likely averages, when you roll three  dice, are all, between about 3 and 4.
+It is  possible we might get an  average closer to 2 or to 5 
+It's not  very likely you'll get an average near 1  or 6. 
+all of the above
+
+##### Solution
+all of the above
+
+
+#### Suppose you tossed a coin five times. You ended up with 4 heads and one tail. Therefore, experimental proportion of head is 0.2. But theoretically it should be 0.5. The reason is 
+experimental proportion will always be different than theoretical proportion.
+if we toss the coin more than five times we will see a larger degree of difference between experimental proportion of head and theoretical proportion.
+the experiment was not repeated enough time so that Law of Large Numbers could kick in.
+none of the above
+
+##### Solution
+the experiment was not repeated enough time so that Law of Large Numbers could kick in.
+
+
+#### As number of experiments increases, the average values coming out of the experiments will move closer to becoming a normal distribution. According to which of the following law the previous statement is true?
+law of large numbers
+central limit theorem
+both of the above
+none of the above
+
+##### Solution
+central limit theorem
+
+### Test 8 (in-class quiz-2)  Actual test
+`/home/rushad/Dropbox/Courses/R-Training/ROUND2/FUNDA_STATS/Exams/FDSR_2017_01_in-class-quiz2.tex`
+
+### Test 9 (assignment 6): Probabile questions
+
+#### We have paramaters in the  theoretical world, which are features of the models or the population and typically, we  know the values of the parameters. True or False?
+True
+False
+
+##### Solution
+False
+
+#### Consider an experiment of 10 coin flips. The probability of coming up with exactly 5 tails is `________`. The probability of coming up with no tails is `__________`. 
+0.246,0.001
+0.001,0.246
+both of the above
+none of the above
+
+
+##### Solution
+0.246,0.001
+
+#### Consider the case of an experiment of 10 coin flips and calculating proportion of heads. Let's denote this proportion of heads as X. The probability distribution of X can be defined as:
+Bernoulli(10,1/2)
+Binomial(10,1/2)
+Bernoulli(10,1/4)
+Binomial(10,1/4)
+none of the above
+
+##### Solution
+Binomial(10,1/2)
+
+#### Consider the case of an experiment of 10 coin flips and calculating proportion of heads. Let's denote this proportion of heads as X. Find the mean  of probability distribution of X, P(X).
+0.5
+5.0
+10.0
+none of the above
+
+
+##### Solution
+Theoretical mean= E(x)=np=10*0.5=5
+```{r sp  }
+pv <- c()
+for(i in 0:10) {
+    j=i+1
+pv[j] <- dbinom(i,10,0.5)
+}
+
+
+mean.pv <- as.numeric(pv %*% 0:10)
+
+sqr.pv <- c()
+
+for(i in 0:10){
+    j=i+1
+sqr.pv[j] <- (i- mean.pv)^2
+}
+var.pv  <- as.numeric(sqr.pv %*% pv)
+```
+In the above we find that as expected expected value as calculated by `mean.pv` is `r mean.pv` which is equal to the population parameter 5. Because in the population, we expect 5 heads to appear out of 10 flips. Now we can express this finding both as proportion or means. For example when we express it as proportion we say instead of 0.50 is the proportion of times head will appear. When we consider mean, we just find the average of the all the possible values appearing in the coin toss. Values are number of heads appearing. These are from 0 to 10. The expected value or mean of these numbers which are binomially distributed is what we have found in `mean.pv`. This is the population parameter.
+
+In the following, we just do the above but for proportions:
+
+```{r spr  }
+pv <- c()
+props <- c()
+for(i in 0:10) {
+    j=i+1
+props[j] <- i/10
+pv[j] <- dbinom(i,10,0.5)
+}
+prop.pv <- pv %*% props
+```
+
+Now the thing is that  this population parameter/long run average should be equal to the mean of the sampling distribution of sample means. That has been established by the applet mentioned above. 
+
+
+#### Consider the case of an experiment of 10 coin flips and calculating proportion of heads. Let's denote this proportion of heads as X. Find the variance of probability distribution of X, P(X).
+0.5
+2.5
+10
+none of the above
+
+##### Solution
+Please check the code in the above code chunk titled sp where both mean and variance has been calculated. Formula for mean is $np$ where $n$ is the number of trials and $p$ is the probability of success. Formula for mean and variance are given below:
+$$E(x)=np=10*0.5=5$$
+$$ Var (x) = np(1-p)=10*0.5*0.5=2.5$$
+
+
+#### In the last video of Week 3 lectures, at some point Rossman/Chance Applet Collection of simulating coin toss was demonstrated. How many repitions of the experiment were made?
+500
+1000
+1500
+2000
+
+##### Solution
+1000
+
+#### In the last video of Week 3 lectures, at some point Rossman/Chance Applet Collection of simulating coin toss was demonstrated. How many number of times 5 appeared in that experiment? 
+0
+1
+6
+224
+255
+none of the above
+
+##### Solution
+255
+
+#### In the last video of Week 3 lectures, at some point Rossman/Chance Applet Collection of simulating coin toss was demonstrated. How many number of times 0 appeared in that experiment? 
+0
+1
+6
+224
+255
+none of the above
+
+##### Solution
+0
+
+
+#### In the last video of Week 3 lectures, at some point Rossman/Chance Applet Collection of simulating coin toss was demonstrated. How many number of times 10 appeared in that experiment? 
+0
+1
+6
+224
+255
+none of the above
+
+##### Solution
+6
+
+
+#### In the last video of Week 3 lectures, at some point Rossman/Chance Applet Collection of simulating coin toss was demonstrated. Which number appeared the highest number of times?
+4
+5
+6
+7
+none of the above
+
+##### Solution
+5
+
+#### We use hats statistics to indicate sample statistics from data. True or False?
+True
+False
+
+##### Solution
+True
+
+#### Sampling variability is the variability  we expect to see in a statistic that  we are using to estimate a theoretical world parameter.
+True
+False
+
+##### Solution
+True
+
+
+### WEEK 4: Confidence Interval
+
+### Test 10 (Week4) (assignment 7:Part 1): Probable questions
+
+#### Sampling distribution can be defined as probability distribution for a statistic  that we can calculate from some data, such as possibly a proportion or a mean. True or False? 
+True
+False
+
+##### Solution
+True
+
+#### In statistical inference we mainly want to know about 
+theoretical world which may have scientific models along with corresponding statistical models
+real world which may have scientific models along with corresponding statistical models
+both of the above
+none of the above
+
+##### Solution
+theoretical world which may have scientific models along with corresponding statistical models
+
+#### In the case of flipping coin experiment, what is the scientific/theoretical model?
+Head and tails are equally likely to happen
+Number of heads or tails is binomially distributed
+Flip the coins and collect number of heads
+both of the above
+none of the above
+
+##### Solution
+Head and tails are equally likely to happen
+
+
+#### In the case of flipping coin experiment, what is the statistical model?
+Head and tails are equally likely to happen
+Number of heads or tails is binomially distributed
+Flip the coins and collect number of heads
+both of the above
+none of the above
+
+##### Solution
+Number of heads or tails is binomially distributed
+
+#### In the case of flipping coin experiment, what is the sample?
+Head and tails are equally likely to happen
+Number of heads or tails is binomially distributed
+Flip the coins and collect number of heads
+both of the above
+none of the above
+
+##### Solution
+Flip the coins and collect number of heads
+
+#### In a coin toss experiment, which of the following is likely?
+We'd expect to get 50% heads or a proportion of .5.
+But 60% heads, as Jeff got in 10 flips, is reasonably likely. 
+No heads or only 10% heads, or the other extreme, 90% or 100% heads, is quite  unlikely. 
+all of the above
+none of the above
+
+##### Solution
+all of the above
+
+#### In a Beer cap flipping example, suppose you came up with 6 reds(top of the cap) out of 10 flips. Therefore is 60% is a reasonable estimate of the population proportion of red side of Beer cap where both the side of cap is equally likely to appear?
+True
+False
+
+##### Solution
+True
+
+##### Explanation
+We need to find the probability distribution of reds, that is numbers `0,1,2,.............,10` and the corresponding probabilites from `dbinom(6,10,0.5)`. Then we will find that coming up with 6 heads has quite high probability.
+
+#### In a Beer cap flipping example, suppose you came up with 6 reds(top of the cap) out of 10 flips. Therefore is 60% is a reasonable estimate of the population proportion of red side of Beer cap where both the side of cap when the probability of red side is as low as 20%?
+True
+False
+
+##### Solution
+True
+
+##### Explanation
+We need to find the probability distribution of reds, that is numbers `0,1,2,.............,10` and the corresponding probabilites from `dbinom(6,10,0.2)`. Then we will find that coming up with 6 heads has still reasonable.
+
+#### Suppose someone flipped the beer cap for 1000 times and came up with red side 583 times. Does this mean that exactly 58.3% of the time the red side will appear in the theoretical world?
+True
+False
+
+##### Solution
+False
+
+#### Suppose someone flipped the beer cap for 1000 times and came up with red side 583 times. What is the underlying scientific or theoretical model here? 
+Red side is likely to come up half of the time
+Red side is likely to come up most of the time
+Red side is likely to come up only 20% of the time
+all of the above
+it is not possible to say 
+
+##### Solution
+it is not possible to say 
+
+#### Suppose someone flipped the beer cap for 1000 times and came up with red side 583 times. What is the underlying statistical model?
+binomial(1000,.583)
+binomial(1000, $\theta$) where $\theta$ is unknown probability
+all of the above
+none of the above
+
+##### Solution
+binomil(1000, $\theta$) where $\theta$ is unknown probability
+
+
+#### Suppose a survey is undertaken by a leading newspaper in Bangladesh to understand public opinion regarding next year's national election. Around 1500 adult persons (18+) were interviewed in the survey. What is the population in this survey?
+All the 18+ adults in Bangladesh
+1500 adults in the sample
+Most of the adult in Bangladesh
+All the person of all ages in Bangladesh
+none of the above
+
+##### Solution
+All the 18+ adults in Bangladesh
+
+#### Suppose a survey is undertaken by a leading newspaper in Bangladesh to understand public opinion regarding next year's national election results. Around 1500 adult persons (18+) were interviewed in the survey. What is the possible population parameter?
+Proportion of people supporting different political parties in whole Bangaldesh
+Proportion of 18+ adults in Bangladesh supporting different political parties in whole Bangaldesh
+Proportion of people supporting different political parties in the sample
+none of the above
+
+
+##### Solution
+Proportion of 18+ adults in Bangladesh supporting different political parties in whole Bangaldesh
+
+
+#### In the first video of Week 4, a study on cosmetic surgical procedure is mentioned. Which of the following is the research question in that study? 
+How much younger a patient might look after a cosmetic surgical procedure?
+How much older a patient might look after a cosmetic surgical procedure?
+How much is the cost of a cosmetic surgical procedure?
+None of the above?
+
+##### Solution
+How much younger a patient might look after a cosmetic surgical procedure?
+
+#### In the first video of Week 4, a study on cosmetic surgical procedure is mentioned.Which of the following correcting mentions the sample size?
+10
+20
+50
+none of the above
+
+##### Solution
+none of the above
+
+##### Explanation
+Actual answer is 60 patients but that is not in the answers
+
+####  In the first video of Week 4, a study on cosmetic surgical procedure is mentioned. What is part of the sample statistics in that study?
+Average of ages from the patients' photo mentioned by 10 persons after the surgery.
+Average of ages from the patients' photo mentioned by 10 persons before the surgery.
+Average of ages of the 60 persons in the sample.
+none of the above
+
+##### Solution
+Average of ages from the patients' photo mentioned by 10 persons after the surgery.
+
+####  Confidence interval can be defined as a method
+for giving a range of plausible values  for  theoretical parameters, given the  information we have in our data from the  real world. 
+for giving a range of plausible values  for  sample statistics, given the  information we have in our data from the  real world. 
+both of the above
+none of the above
+
+##### Solution
+for giving a range of plausible values  for  theoretical parameters, given the  information we have in our data from the  real world. 
+
+####  The process of confidence interval will produce reliable results only when which of the following conditions will be met?
+Randomization
+Independence 
+both of the above
+none of the above
+
+##### Solution
+both of the above
+
+### Test 10: Google Assignment (part 1)
+`https://goo.gl/forms/oDCTjqCqV7h3MLE52`
+
+
+### Test 11 (Week4) (assignment 7:Part 2): Probabble questions
+
+#### Video 1
+
+#### Suppose you do a 10 flip coin toss experiment and count the number of heads. You designate the number of heads as X, a random variable. In the population, we expect head to come up as exactly half of the time, therefore, the probability of X in the population is 0.5.  The mean and variance of X is respectively 
+5 and 2.5
+0.5 and 0.025
+5 and 25
+none of the above
+
+##### Solution
+5 and 2.5
+
+##### Explanation
+For a count of head, mean is np and variance is np(1-p)
+
+
+#### Suppose you do a 10 flip coin toss experiment and calculate the proportion of heads. You designate the proportion of heads as phat, a random variable. In the population, we expect head to come up as exactly half of the time, therefore, the value of p in the population is 0.5.  The mean and variance of phat is respectively 
+5 and 2.5
+.5 and 0.025
+5 and 25
+none of the above
+
+##### Solution
+0.5 and 0.025 
+
+##### Explanation
+For a proportion, mean is p and variance is p(1-p)/n
+
+#### Suppose someone flipped the beer coin for 1000 times and came up with red side 583 times. Suppose we calculate the proportion of reds as phat where phat=583/1000=0.583. This phat is 
+approximately normally distributed with mean p and variance p(1-p)/n
+approximately binmially distributed with mean p and variance p(1-p)/n
+approximately normally distributed with mean np and variance np(1-p)
+none of the above
+
+##### Solution
+approximately normally distributed with mean p and variance p(1-p)/n
+
+#### Suppose someone flipped the beer coin for 1000 times and came up with red side 583 times. Suppose we calculate the proportion of reds as phat where phat=583/1000=0.583. This phat is normally distributed because of
+law of large numbers
+central limit theorem
+both of the above
+none of the above
+
+#### Solution
+central limit theorem
+
+#### Which of the following statements are valid for standard normal distribution?
+Any normal distribution can be transformed into standard normal distribution
+To convert to standard normal distribution, all you need to know is the mean and variance of a normal distribution
+The probabability value under standard normal distribution is known
+all of the above
+none of the above
+
+##### Solution
+all of the above
+
+##### Explanation
+all the statements are valid regarding standard normal distribution
+
+#### In a standard normal distribution, the area under the values -1.96 and +1.96 is 
+0.25
+0.50
+0.95
+1.00
+none of the above
+
+##### Solution
+0.95
+
+##### Explanation
+according to the definition of standard normal distribution
+
+#### In a standard normal distribution, 95% of the values are between -1.96 and +1.96. True or false?
+True
+False
+
+##### Solution
+True
+
+##### Explanation
+according to the definition of standard normal distribution
+
+#### The probability that  a variable which has approximately a  standard normal distribution will be more than absolute value of  1.96 is approximately equal to 5%. True or false?
+True
+False
+
+##### Solution
+True
+
+##### Explanation
+according to the definition of standard normal distribution
+
+#### Suppose someone flipped the beer coin for 1000 times and came up with red side 583 times. Suppose we calculate the proportion of reds as phat where phat=583/1000=0.583. p is the population proportion of reds. Which of the following statements are true?
+phat is normally distributed with mean p and variance p(1-p)/n
+(phat-p)/sqrt(p(1-p)/n) is normally distributed with mean 0 and variance 1
+phat is normall distributed with mean 0 and variance 1
+both a and b
+both b and c
+none of the above
+
+##### Solution
+both a and b
+
+##### Explanation
+according to definition
+
+#### Suppose someone flipped the beer coin for 1000 times and came up with red side 583 times. Suppose we calculate the proportion of reds as phat where phat=583/1000=0.583. p is the population proportion of reds. Which of the following will be a 95% confidence interval for p? [Consider phat as an estimator of p]
+[55.2%,61.3%]
+[55.7%,60.9%]
+[54.3%,62.3%]
+none of the above
+
+##### Solution
+[55.2%,61.3%]
+
+##### Explanation (manual)
+
+```{r cic  }
+# number of success
+x <- 583
+# number of trials
+n <- 1000
+phat <- x/n
+# phat as an estimator of p
+p <- phat
+var.phat <- p*(1-p)/n
+sd.phat <- sqrt(var.phat)
+crit.val.left <- qnorm(.025) 
+crit.val.right <- qnorm(.975) 
+# but we take the abs value
+# lower limit of the confidence interval
+ll.95 <- phat -  abs(crit.val.left)*sd.phat 
+ul.95 <- phat +  abs(crit.val.left)*sd.phat 
+
+
+# 90% confidence interval
+crit.val.left <- qnorm(.05) 
+crit.val.right <- qnorm(.95) 
+# but we take the abs value
+# lower limit of the confidence interval
+ll.90 <- phat -  abs(crit.val.left)*sd.phat 
+ul.90 <- phat +  abs(crit.val.left)*sd.phat 
+
+# 99% confidence interval
+crit.val.left <- qnorm(.005) 
+crit.val.right <- qnorm(.995) 
+# but we take the abs value
+# lower limit of the confidence interval
+ll.99 <- phat -  abs(crit.val.left)*sd.phat 
+ul.99 <- phat +  abs(crit.val.left)*sd.phat 
+
+
+```
+
+##### Explanation (using package)
+first use the binom.test from base function
+```{r exup  }
+test.result <- binom.test(583,1000,p=0.5,conf.level=0.95, alternative="two.sided")
+names(test.result)
+```
+We find that above produces quite a bit of results
+
+```{r val  }
+test.result$statistic
+test.result$parameter
+test.result$p.value
+test.result$conf.int
+test.result$estimate
+test.result$null.value
+test.result$alternative
+test.result$method
+test.result$data.name
+```
+
+We can also use BinomCI package from DescTools package
+
+```{r dt  }
+DescTools::BinomCI(583,1000,conf.level=0.95)
+```
+It also can find CI for both success and failure in one step
+
+```{r dt2  }
+DescTools::BinomCI(c(583,417),1000,conf.level=0.95)
+```
+Then propCI package can also do the same
+
+```{r pc  }
+PropCIs::exactci(583,1000,conf.level=0.95)
+```
+
+
+
+#### Suppose someone flipped the beer coin for 1000 times and came up with red side 583 times. Suppose we calculate the proportion of reds as phat where phat=583/1000=0.583. p is the population proportion of reds. Which of the following will be a 90% confidence interval for p? [Consider phat as an estimator of p]
+[55.2%,61.3%]
+[55.7%,60.9%]
+[54.3%,62.3%]
+none of the above
+
+
+##### Solution
+[55.7%,60.9%]
+
+##### Explanation
+See above
+
+#### Suppose someone flipped the beer coin for 1000 times and came up with red side 583 times. Suppose we calculate the proportion of reds as phat where phat=583/1000=0.583. p is the population proportion of reds. Which of the following will be a 99% confidence interval for p? [Consider phat as an estimator of p]
+[55.2%,61.3%]
+[55.7%,60.9%]
+[54.3%,62.3%]
+none of the above
+
+##### Solution
+[54.3%,62.3%]
+
+##### Explanation
+See above
+
+#### Suppose someone flipped the beer coin for 1000 times and came up with red side 583 times. Suppose we calculate the proportion of reds as phat where phat=583/1000=0.583. p is the population proportion of reds. Which of the following will be a 95% confidence interval for p? [Consider 1/2 as an estimator of p]
+[55.2%,61.4%]
+[56.3%,60.3%]
+[54.7%,61.9%]
+none of the above
+
+##### Solution
+[55.7%,60.8%]
+
+##### Explanation
+
+```{r cic  }
+# number of success
+x <- 583
+# number of trials
+n <- 1000
+phat <- x/n
+# phat as an estimator of p
+p <- 1/2 
+var.phat <- p*(1-p)/n
+sd.phat <- sqrt(var.phat)
+crit.val.left <- qnorm(.025) 
+crit.val.right <- qnorm(.975) 
+# but we take the abs value
+# lower limit of the confidence interval
+ll.95 <- phat -  abs(crit.val.left)*sd.phat 
+ul.95 <- phat +  abs(crit.val.left)*sd.phat 
+
+# 90% confidence interval
+crit.val.left <- qnorm(.05) 
+crit.val.right <- qnorm(.95) 
+# but we take the abs value
+# lower limit of the confidence interval
+ll.90 <- phat -  abs(crit.val.left)*sd.phat 
+ul.90 <- phat +  abs(crit.val.left)*sd.phat 
+
+# 99% confidence interval
+crit.val.left <- qnorm(.005) 
+crit.val.right <- qnorm(.995) 
+# but we take the abs value
+# lower limit of the confidence interval
+ll.99 <- phat -  abs(crit.val.left)*sd.phat 
+ul.99 <- phat +  abs(crit.val.left)*sd.phat 
+
+```
+
+#### Suppose someone flipped the beer coin for 1000 times and came up with red side 583 times. Suppose we calculate the proportion of reds as phat where phat=583/1000=0.583. p is the population proportion of reds. We found that a 90 percent confidence interval of p is [56.3%,60.3%]. This implies 
+we are 95% certain that population proportion of reds falls into the above mentioned range. 
+we are 95% certain that sample proportion of reds falls into the above mentioned range. 
+there are 5% chance that population proportion of reds will not fall into the above mentioned range.
+both a and b
+both a and c
+both b anc c
+none of the above
+
+##### Solution
+both a and c
+
+##### Explanation
+according to definition
+
+
+#### To deal with the problem of unknown population proportion we may
+use the sample proportion as a rough estimate of population proportion
+use 1/2 a rough estimate of population proportion
+both of the above
+none of the above
+
+##### Solution
+both of the above
+
+##### Explanation
+As per lecture video
+
+#### Suppose someone flipped the beer coin for 1000 times and came up with red side 583 times. Suppose we calculate the proportion of reds as phat where phat=583/1000=0.583. p is the population proportion of reds. What would be the margin of error in a 95% confidence interval assuming p=1/2?
+3.1%
+4.1%
+5.1%
+none of the above
+
+##### Solution
+3.1%
+
+##### Explanation
+```{r moe  }
+# number of success
+x <- 583
+# number of trials
+n <- 1000
+phat <- x/n
+# phat as an estimator of p
+p <- 1/2 
+var.phat <- p*(1-p)/n
+sd.phat <- sqrt(var.phat)
+crit.val.left <- qnorm(.025) 
+crit.val.right <- qnorm(.975) 
+# but we take the abs value
+# lower limit of the confidence interval
+ margin.error <-  abs(crit.val.left)*sd.phat 
+
+```
+
+#### Which of the following statements regarding the relationship begind confidence interval and precision of estimates is true?
+The higher the confidence interval the lower the precision of estimates
+The lower the confidence interval, the higher the precision of estimates
+The lower the confidence interval, the lower the precision of estimates
+The lower the confidence interval the higher the precision of estimates
+none of the above
+
+
+##### Solution
+The higher the confidence interval the lower the precision of estimates
+
+##### Explanation
+self-explanatory
+
+
+#### Video 3: Sample size
+
+#### Which of the following statement is true about determining sample size in a study?
+When planning any study, determining sample size is an extremely important consideration.
+If the sample size is too large we're unnecessarily wasting time and resources 
+if our sample size is too small we won't have precise enough estimates in order to be able to make meaningful conclusion. 
+all of the above
+none of the above
+
+#### The video lecture mentions a news published in the Toronto Star on an opinion survey regarding Mayor Rob Ford's spending cuts. What was the sample size in that survey?
+1064
+1046
+1036
+none of the above
+
+#### The video lecture mentions a news published in the Toronto Star on an opinion survey regarding Mayor Rob Ford's spending cuts. What was the result of the survey? 
+
+#### The video lecture mentions a news published in the Toronto Star on an opinion survey regarding Mayor Rob Ford's spending cuts. In the survey, margin or error was 3\%.  If the margin of error was increased  to 4\%, what would have been the sample size?
+
+
+##### Answer
+584
+728
+1200
+3000
+none of the above
+
+
+##### Explanation
+
+```{r exp  }
+n <- "sample.size"
+phat <- .42
+crit.value.05 <- 1.96
+variance <-phat*(1-phat)/n
+standard.error  <- sqrt(variance)
+margin.error <- crit.value.05*standard.error
+margin.error  <- 0.04
+n <- phat*(1-phat)*crit.value.05^2/margin.error^2
+
+```
+
+#### The video lecture mentions a news published in the Toronto Star on an opinion survey regarding Mayor Rob Ford's spending cuts. In the survey, margin of error was 3\% with  95\% confidence interval. If confidence interval has been decreased to 90\% what would be the required sample size (in nearest whole number)? 
+
+```{r rss  }
+n <- "sample.size"
+phat <- .42
+crit.value.10 <- 1.64
+variance <-phat*(1-phat)/n
+standard.error  <- sqrt(variance)
+margin.error <- crit.value.05*standard.error
+margin.error  <- 0.03
+n <- phat*(1-phat)*crit.value.10^2/margin.error^2
+```
+
+
+### WEEK 5: Hypothesis Testing
+
+### TEST 12 (Week 5) (assignment 8, part 1): probabile questions
+
+#### Video 1
+
+#### In the theoretical world, we have  some models, statistical, and scientific  that can be used to describe the real world. True or False? 
+True
+False
+
+##### Answer
+True
+
+##### Explanation
+See lecture transcript 1
+
+####  Statistical tests are used to answer specific questions about the values of our population or theoretical parameters. True or false?
+
+##### Answer
+True
+
+##### Explanation
+See lecture transcript 1
+
+
+
+#### Which of the following is a legitimate question in a statistical test?
+If we observe something in our real world  data, could it just be due to chance? 
+If we observe something in our real world  data, could it telling us something stronger about our theoretical world? 
+both of the above
+none of the above
+
+
+##### Answer
+both of the above
+
+
+##### Explanation
+See lecture transcript 1
+
+
+#### Let's try to remind ourselves about observations regarding life expectancy data from week 1. The box plots show that life expectancies  in almost all countries in East Asia and  the Pacific region are higher than life expectancies in almost every country in Sub-Saharan Africa. Which of the following is a legitimate observation in this contexts?
+Could this difference happen just by chance? 
+Could this difference  happen just because of the  natural variability that there is in the  measurements of life expectancy from country to country? 
+both of the above
+none of the above
+
+##### Answer
+both of the above
+
+
+##### Explanation
+See lecture transcript 1
+
+
+
+#### In hypothesis testing, we are investigating whether our real world data support what we are assuming or hypothesizing about the theoretical world. True or false?
+True
+False
+
+##### Answer
+True
+
+
+##### Explanation
+See lecture transcript 1
+
+
+#### In statistical testing, if we find something that is contrary to our original assumpiton then we have a statistically significant result. True or false?
+True
+False
+
+##### Answer
+True
+
+
+##### Explanation
+See lecture transcript 1
+
+
+#### In statistical testing, we need to determine whether these data have a reasonable chance of occurring or whether they are giving us evidence that our theoretical world model might not be correct. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Explanation
+See lecture transcript 1
+
+#### Video 2
+
+#### A statistical test is a little bit like a proof by contradiction in mathematics. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Explanation
+See video 2 transcript 
+
+
+#### In statistics we have to deal with the  natural variability that is associated with our data. That natural variability mainly originates from sampling variability. True or False? 
+True 
+False
+
+##### Answer
+True
+
+##### Explanation
+See video 2 transcript 
+
+
+#### Statistical tests are often called  hypothesis tests or tests of significance. True or false?
+
+##### Answer
+True
+
+##### Explanation
+See video 2 transcript 
+
+
+#### The first step of a statistical test is to formulate a hypotheses to test, and  specify an alternative to that hypotheses. True or false? 
+True
+False
+
+##### Answer
+True
+
+##### Explanation
+See video 2 transcript 
+
+
+#### If we use court case as an analogy to statistical test, then presumption of innocence in a court case is equivalent to null hypothesis in a statistical test. True or false?
+
+##### Answer
+True
+
+##### Explanation
+See video 2 transcript 
+
+
+
+#### Which of the following is true about  null hypothesis? 
+Null hypothesis is typically written as H subscript 0, called H-naught
+Null hypothesis is called null because it may assume nothing is happening
+Null hypothesis is called null because it may assume status quo is maintained
+Null hypothesis is called null because it may assume there is no relationship
+Null hypothesis is called null because it may assume there is no difference
+all of the above
+some of the above
+none of the above
+
+##### Answer
+all of the above
+
+##### Explanation
+See video 2 transcript 
+
+
+#### Which of the following is true about alternative hypothesis?
+Sometimes the alternative hypothesis is called the research hypothesis, because it's what the research wants to show 
+The alternative hypothesis is written as  an H, with a subscript, a lower or  upper case a. 
+Some people like to write it as H, with a subscript  1, in contrast to H of 0 for the null hypothesis. 
+Alternative hypothesis  may assume that status quo is maintained
+Like the prosecutor who wants us to conclude that the defendant is guilty, we  typically want to prove that this researcher alternative hypothesis is true. 
+all of the above
+some of the above
+none of the above
+
+
+##### Answer
+some of the above
+
+
+##### Explanation
+Alternative hypothesis  may assume that status quo is maintained - this option is wrong, that is why some of the above is chosen
+
+
+
+#### In the case of facial plastic surgery example, the null hypothesis assumes that  mean perceived change in price is equal to `_____`. 
+
+0.0
+0.5
+1.0
+2.0
+none of the above
+
+
+##### Answer
+0.0
+
+
+##### Explanation
+according to the definition
+
+#### In the case of facial plastic surgery example, we are interested only whether the mean perceived change in age is positive. This is an example of alternative hypothesis where the test itself is an
+one-sided test
+two-sided test
+both of the above 
+none of the above
+
+##### Answer
+one-sided test
+
+##### Explanation
+See video 2 transcript 
+
+
+
+#### In the case of facial plastic surgery example, we are interested whether the mean perceived change in age is different that zero. This is an example of alternative hypothesis where the test itself is an
+one-sided test
+two-sided test
+both of the above 
+none of the above
+
+##### Answer
+two-sided test
+
+##### Explanation
+See video 2 transcript 
+
+
+
+#### In our beer cap experiment if we're interested in  probability of getting reds is 0.50, we will  be interested in whether the chance of getting reds is as greater than a half or if it's less than a half. This is an example of 
+one-tailed test
+two-tailed test
+both of the above
+none of the above
+
+
+##### Answer
+two-tailed test
+
+
+##### Explanation
+by definition
+
+
+#### Which of the followings are true about statistical tests? 
+In most situations, two-tailed tests are appropriate 
+Whenever in doubt, use two-tailed tests
+both of the above
+none of the above
+
+##### Answer
+both of the above
+
+##### Explanation
+by definition
+
+
+#### The second step in statistical test is to put together evidence in the form of test statistics. True or false?
+True
+False
+
+##### Answer
+True
+
+
+##### Explanation
+by defintion
+
+
+
+#### Which of the following is true about test statistic?
+In order to make the data useful, we have to summarize into a statistic called the test statistic. 
+Like you need statistic, the test statistic is a numerical summary of the data.
+What differentiates a test statistic from just any statistic, is that it is formulated assuming that the null hypothesis holds. 
+all of the above
+none of the above
+
+##### Answer
+all of the above
+
+##### Explanation
+see video 2 transcript
+
+
+#### This is important to remember in  statistical testing, we make an  assumption, H_0, our null hypothesis. We then work, as if it is true. Is this statement true or false?
+True
+False
+
+##### Answer
+True
+
+##### Explanation
+by definition
+
+
+
+#### In a court case, once the evidence has been collected and summarized for the judge and jury, they have responsibility of careful deliberation. They need to decide if the evidence is overwhelming enough to reject the presumption of innocence, beyond a reasonable doubt. In statistics, the tool for deliberation is a P-value.Do you agree with this analogy of p-value with legal procedure? 
+Yes
+No
+
+##### Answer
+Yes
+
+##### Explanation
+see video 2 transcript
+
+
+#### Which of the following is true about p-value?
+A p-value transforms a test statistic into a probabilistic scale. 
+It is a number between 0 and 1, that quantifies how strong the evidence is against the null hypothesis. 
+It is a numerical summary of data
+both a and b
+both a and c
+none of the above
+
+##### Answer
+both a and b
+
+##### Explanation
+see video 2 transcript
+
+#### If the null hypothesis is really true, how likely would it be to observe a test statistic, or summary of our data of this magnitude or even larger? The numerical answer to this question is
+test statistic
+p-value
+both of the above
+none of the above
+
+##### Answer
+p-value
+
+##### Explanation
+by definition
+
+
+#### The smaller the P-value, the more unlikely it is that we observe our data, assuming the null hypothesis is true. 
+True
+False
+
+##### Answer
+True
+
+
+##### Explanation
+by definition
+
+
+#### The smaller the p-value, the stronger the evidence we have against the null hypothesis. 
+True
+False
+
+##### Answer
+True
+
+##### Explanation
+by definiton
+
+
+#### A p-value is a measurement of how likely it is that the null hypothesis is true. 
+True
+False
+
+##### Answer
+False
+
+
+##### Explanation
+The null hypothesis either is true or isn't true. We may not know which it is, but we can't put a probability value on it, because it's not random. What a P-value does tell you, is how likely the observed data would be, if an null hypothesis were true. 
+
+
+#### p-value is  a measure of the strength of the evidence against the null hypothesis, and  the smaller the p-value, the stronger the evidence. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Explanation
+See transcript of video 2
+
+
+
+
+#### In statistics, not strong enough evidence against the null hypothesis means the p-value was not small, and we conclude that our data are consistent with the null hypothesis. True or false? 
+True
+False
+
+##### Answer
+True
+
+
+
+##### Explanation
+by definition
+
+
+
+#### Statistically significant result is found when we reject the null hypothesis. True or false?
+True 
+False
+
+
+##### Answer
+True
+
+
+##### Explanation
+By defintion
+
+#### In skeleton data set we are testing whether the population mean of age is 50
+
+##### Answer
+
+##### Solution
+
+```{r sol  }
+load("./Resources/Data/ske.RData")
+#H_0=50
+#H_a >= 50
+mu=50
+n=dim(ske)[1]
+xbar=mean(ske$Age)
+variance=var(ske$Age)
+s=sd(ske$Age)
+var.mean=variance/n
+se.mean=sqrt(var.mean)
+se.mean=s/sqrt(n)
+test.stat=(xbar-50)/se.mean
+p.value=pt(test.stat,df=n-1,lower.tail=FALSE)
+
+```
+we can do the above testing using packages just as we did in the case of confidence interval
+
+now just using t.test from base package
+```{r conf.int  }
+test.result <- t.test(ske$Age,conf.level=0.95,mu=50)
+```
+
+```{r val  }
+test.result$statistic
+test.result$parameter
+test.result$p.value
+test.result$conf.int
+test.result$estimate
+test.result$null.value
+test.result$alternative
+test.result$method
+test.result$data.name
+```
+
+now using MeanCI from DescTools package
+
+```{r mc  }
+MeanCI(ske$Age,conf.level=0.95)
+```
+So the above is just giving confidence interval no test results
+
+In the same manner Rmisc gives confidence interval
+
+```{r rm  }
+CI(ske$Age,ci=0.95)
+```
+
+But it seems that t.test is the only thing to find p-values directly which is a bit strange 
+
+
+
+calculation of power of a test. 
+
+```{r pt  }
+mu=52
+n=dim(ske)[1]
+sample.evi= qnorm(.05,mean=mu,sd=se.mean,lower.tail=FALSE)
+# the above sample evidence is the critical value of original distribution at certain (usually 5) percent level of significance. 
+variance=var(ske$Age)
+s=sd(ske$Age)
+var.mean=variance/n
+se.mean=sqrt(var.mean)
+se.mean=s/sqrt(n)
+test.stat=(sample.evi-mu)/se.mean
+p.value=pnorm(test.stat)
+```
+in the above what I have done is that used the critical value in the original test as some sort of sample evidence. The objective is  trying to  set the alternative hypothesis as the null hypothesisis. In the origininal situation alternative hypothesis was mu is greater than 50. But greater than 50 is many values. Which value we will choose then? We will choose 52 which is the sample average. Now based on what eveidence we will decided whether we will reject the null or not? 
+the evidence comes in the form of critical value of original test which is 51
+what does it mean? the critical value from the original test says that the value as or more extreme than that will result in rejection of null hypothesis.
+
+we are asking, what is probability of coming up with a value beyond which we reject a true null hypothesis in the original test is if we assume the alternative is greater than 50 in orginal test and equal to 52 in the new test. 
+
+rejecting null in original test = accepting hull in new test = accepting alternative in original test
+
+new situation: accepting the null (mu is greater than 50, i.e equal to 52)
+equaivalent to 
+original situation: rejecting the null (mu is not equal to 50, in fabor of alternative greater than 50)
+
+new situation: p- value
+the lowest level of significance at which the null could be rejected
+the probability of type I error
+
+new situation : the probability of rejecting null when null is true (p-value of new situation)
+equivalent to 
+original situation: the probability of accepting null when null is false (type II error in original situation)
+therefore to find the probability of type II error in original test, we calculate the p-value in the new test. 
+then we deduct the p-value from 1 (1- p.value) and then we get the power of the test.
+
+
+
+
+
+
+#### Which of the following is true regarding the values of p-value?
+If we get a p-value less than .001, that can be considered strong evidence against the null hypothesis. 
+Larger than that, but less than .01 is still pretty good evidence against a null hypothesis, and after that it starts to get a little bit gray. 
+Between .01 and .05 is considered small enough evidence to say the null hypothesis is not true, in many situations. 
+all of the above
+none of the above
+
+
+##### Answer
+all of the above
+
+##### Explanation
+
+
+#### Depending on the context of the problem, you might be willing to accept a larger or a smaller P-value. True or false? 
+True
+False
+
+##### Answer
+True
+
+
+##### Explanation
+by definition
+
+
+#### If concluding that you have a statistically significant result is going to incur a lot of expense, or possible discomfort for people, then you'll want a smaller P-value.
+True
+False
+
+
+##### Answer
+True
+
+
+##### Explanation
+by definition
+
+
+### TEST 12 (Week 5): Google form (Online assignment 6, part 1)
+https://goo.gl/forms/wFV2kIJ5tDuPlwah1
+
+### TEST 12 (Week 5) (assignment 8, part 2): probable questions
+
+#### The video lecture mentions a news published in the Toronto Star on an opinion survey regarding Mayor Rob Ford's spending cuts. What was the sample size in that survey?
+1064
+1046
+1036
+none of the above
+
+##### Answer
+1046
+
+##### Explanation
+See week 5 video 3 transcript
+
+#### The video lecture mentions a news published in the Toronto Star on an opinion survey regarding Mayor Rob Ford's spending cuts. In the above mentioned opinion survey,what was the percetange of support for Mayor?
+32%
+42%
+52%
+none of the above
+
+##### Answer
+42%
+
+##### Explanation
+See week 5 video 3 transcript
+
+
+#### The video lecture mentions a news published in the Toronto Star on an opinion survey regarding Mayor Rob Ford's spending cuts. In the above mentioned opinion survey,which could be one of the possible null hypothesis?
+the true probability  of people supporting the mayor is  less than 50% 
+the true probability  of people supporting the mayor is  equal to 50% 
+the true probability  of people supporting the mayor is  greater than 50% 
+all of the above
+none of the above
+
+##### Answer
+all of the above
+
+##### Explanation
+Sounds like all of them are possible
+
+
+#### In the above mentioned opinion survey,which could be one of the possible alternative hypothesis?
+the true probability  of people supporting the mayor is  less than 50% 
+the true probability  of people supporting the mayor is  equal to 50% 
+the true probability  of people supporting the mayor is  greater than 50% 
+all of the above
+none of the above
+
+##### Answer
+all of the above
+
+##### Explanation
+Sounds like all of them are possible
+
+
+#### In the above mentioned opinion survey, suppose the alternative hypotheses is as follows: true probability of people supporting the mayor is less than 50%. Then which of the following is the  likely null hypothesis?
+the true probability  of people supporting the mayor is  less than 50% 
+the true probability  of people supporting the mayor is  more than 50% 
+the true probability  of people supporting the mayor is  equal to  50% 
+both a and c
+both b anc c
+none of the above
+
+
+##### Answer
+both b anc c
+
+##### Explanation
+by definition
+
+
+#### In the above mentioned opinion survey, suppose the alternative hypotheses is as follows: true probability of people supporting the mayor is more than 50%. Then which of the following is the  likely null hypothesis?
+the true probability  of people supporting the mayor is  less than 50% 
+the true probability  of people supporting the mayor is  more than 50% 
+the true probability  of people supporting the mayor is  equal to  50% 
+both a and c
+both b anc c
+none of the above
+
+
+##### Answer
+both a and c
+
+##### Explanation
+by definition
+
+
+#### The video lecture mentions a news published in the Toronto Star on an opinion survey regarding Mayor Rob Ford's spending cuts. In the above mentioned opinion survey, suppose the null hypotheses is as follows: true probability of people supporting the mayor is equal to 50%. Then what is the value of test statistics?
+-2.54
+-5.24
+5.24
+-5.42
+none of the above
+
+##### Answer
+-5.24
+
+##### Explanation
+```{r ts  }
+phat  <- 0.42 # from the survey
+p <- phat # substitute population unknown var with sample variance
+n  <- 1046 # from survey
+var <- p*(1-p)/n
+sd  <- sqrt(var)
+# now set the value of p under null hypothesis
+p_0 <- 0.5
+test.stat <-(phat-p_0)/sd 
+```
+
+
+#### To compute a p-value, we want to compute the probability of observing a value that is extreme or more extreme under the null hypothesis. True or false? 
+True
+False
+
+##### Answer
+True
+
+##### Explanation
+by definition
+
+#### In the above mentioned opinion survey, suppose the null hypotheses is as follows: true probability of people supporting the mayor is equal to 50%. What is the p-value of test statistics in this case?
+0.000
+0.001
+0.002
+0.050
+none of the above
+
+##### Answer
+0.000
+
+##### Explanation
+```{r pval  }
+pnorm(-5.24)
+```
+you might have noticed that -5.24 is the value of test statistics calculated in the previous question. all the p-value is doing here find the probability of a value as extreme or more extreme than the value we got here. another interpretation of null hypothesis is that the lowest level of significance at which the null could be rejected.
+
+#### The video lecture mentions a news published in the Toronto Star on an
+opinion survey regarding Mayor Rob Ford's spending cuts. In the above mentioned
+opinion survey, suppose the sample size is 2,487 and the percentage supporting
+Mayor Rob stands at 46\%. Null hypotheses is as follows: true probability of
+people supporting the mayor is not more than 50\%. Then what is the value of test statistics?
+-2.54
+-5.24
+5.24
+-4.00
+-5.42
+none of the above
+
+##### Answer
+-4.00
+
+##### Explanation
+```{r ts2  }
+phat  <- 0.46 # from the survey
+p <- phat # substitute population unknown var with sample variance
+n  <- 2487 # from survey
+var <- p*(1-p)/n
+sd  <- sqrt(var)
+# now set the value of p under null hypothesis
+p_0 <- 0.5
+test.stat <-(phat-p_0)/sd 
+```
+
+#### In the survey settings as described in the previous question, what is the p-value?
+0.000
+0.001
+0.002
+0.050
+none of the above
+
+##### Answer
+0.000
+
+##### Solution
+```{r pn1  }
+options(scipen=999)
+pnorm(-4.00)
+```
+
+
+
+
+
+#### In the above mentioned opinion survey, suppose the null hypotheses is as follows: true probability of people supporting the mayor is equal to 50%. Suppose you have come up with a p-value of extremely small, say smaller than 1%. Which of the following will be a possible conclusion from such small p-value? 
+null hypothesis is rejected that is true probability of people supporting the mayor is not equal to 50%
+null hypothesis is not rejected that is true probability of people supporting the mayor is actually equal to 50%
+null hypothesis is not rejected that is true probability of people supporting the mayor is not equal to 50%
+null hypothesis is rejected that is true probability of people supporting the mayor is less than 50%
+all of the above
+both a and b
+both a and c
+both a and d
+none of the above
+
+##### Answer
+both a and d
+
+##### Explanation
+The sample would only find 42% support is so small that we can reject the null hypothesis and we can say that no its not true that the mayor's support is 50% it's indeed true that its less than 50%. 
+
+
+#### In the above mentioned opinion survey, suppose the null hypotheses is as follows: true probability of people supporting the mayor is equal to 50%. Suppose you have come up with a p-value of extremely small value, say smaller than 1%. From this extremely small value you reached the conclusion that   the sample would only find 42% support is so small that we can reject the null hypothesis and conclude that its not true that the mayor's support is 50%, rather it's indeed true that its less than 50%. Do you agree with the conclusion drawn from the above statement? 
+Yes
+No
+
+
+##### Answer
+Yes
+
+##### Explanation
+According to the definition of p-value
+
+#### In the above mentioned opinion survey, suppose the alternative hypotheses is as follows: true probability of people supporting the mayor is less than 38%. Then which of the following is the most likely null hypothesis?
+the true probability  of people supporting the mayor is  more than 38% 
+the true probability  of people supporting the mayor is  less than 50% 
+the true probability  of people supporting the mayor is  equal to  38% 
+both a and c
+both b anc c
+none of the above
+
+##### Answer
+both a anc c
+
+##### Explanation
+by definition
+
+
+#### The video lecture mentions a news published in the Toronto Star on an opinion survey regarding Mayor Rob Ford's spending cuts. In the above mentioned opinion survey, suppose the null hypotheses is as follows: true probability of people supporting the mayor is equal to 40%. Then what is the value of test statistics?
+-2.04
+1.31
+-1.31
+5.24
+none of the above
+
+##### Answer
+1.31
+
+##### Explanation
+```{r ts  }
+phat  <- 0.42 # from the survey
+p <- 0.4 # substitute population unknown var with sample variance
+n  <- 1046 # from survey
+var <- p*(1-p)/n
+sd  <- sqrt(var)
+# now set the value of p under null hypothesis
+p_0 <- 0.40
+test.stat <-(phat-p_0)/sd 
+test.stat
+```
+
+#### The video lecture mentions a news published in the Toronto Star on an opinion survey regarding Mayor Rob Ford's spending cuts. In the above mentioned opinion survey, suppose the null hypotheses is as follows: true probability of people supporting the mayor is equal to 40%. What is the p-value of test statistics in this case?
+0.000
+0.001
+0.002
+0.095
+none of the above
+
+##### Answer
+0.000
+
+##### Explanation
+```{r pval  }
+pnorm(1.31,lower.tail=FALSE)
+```
+you might have noticed that 1.31 is the value of test statistics calculated in the previous question. all the p-value is doing here find the probability of a value as extreme or more extreme than the value we got here. another interpretation of null hypothesis is that the lowest level of significance at which the null could be rejected.
+
+#### In the above mentioned opinion survey, suppose the null hypotheses is as follows: true probability of people supporting the mayor is equal to 40%. Suppose you have come up with a p-value of reasonably large value. Which of the following will be a possible conclusion from such large p-value? 
+null hypothesis is rejected that is true probability of people supporting the mayor is not equal to 40%
+null hypothesis is not rejected that is true probability of people supporting the mayor is actually equal to 40%
+null hypothesis is not rejected that is true probability of people supporting the mayor is not equal to 40%
+null hypothesis is rejected that is true probability of people supporting the mayor is less than 40%
+all of the above
+both a and b
+both a and c
+both a and d
+none of the above
+
+##### Answer
+null hypothesis is not rejected that is true probability of people supporting the mayor is actually equal to 40%
+
+##### Explanation
+Probability that the sample would only find 42% support when true support is 40% is reasonably large. That means that we can not reject the null hypothesis and we can say that   mayor's support is 40.
+
+
+####  Let's go back to the experiment of tossing beer cap. Suppose we assume that the null hypothesis is probability of coming up with the red side is 50%.  Now a thousand times the beer cap is flipped and we got 576 red out of that 1000 flips. What is the value of test statistics here?
+
+##### Answer
+1.86
+-1.86
+4.86
+-4.86
+none of the above
+
+
+##### Explanation
+```{r ts  }
+n <- 1000
+reds <- 576
+phat  <- reds/n # from the survey
+p <- phat # substitute population unknown var with sample variance
+var <- p*(1-p)/n
+sd  <- sqrt(var)
+# now set the value of p under null hypothesis
+p_0 <- 0.50
+test.stat <-(phat-p_0)/sd 
+test.stat
+```
+
+#### Let's go back to the experiment of tossing beer cap. Suppose we assume that the null hypothesis is probability of coming up with the red side is 50%.  Now a thousand times the beer cap is flipped and we got 576 red out of that 1000 flips. What is the value of p-value here?
+0.000
+0.001
+0.002
+0.095
+none of the above
+
+##### Answer
+0.000
+
+##### Explanation
+```{r bcp  }
+pnorm(4.86,lower.tail=FALSE)
+```
+Since this is a two-tailed test, it can be considered as , 4.86 as the absolute value
+
+#### Let's go back to the experiment of tossing beer cap. Suppose we assume that the null hypothesis is probability of coming up with the red side is 50%.  Now a thousand times the beer cap is flipped and we got 576 red out of that 1000 flips. After that test, suppose we came up with an extremely low p-value. What we will conclude from that test?
+null hypothesis is rejected that is true probability of coming up with red side of beer cap is not equal to 50%
+null hypothesis is not rejected that is true probability of coming up with red side of beer cap is actually 50%
+null hypothesis is not rejected that is true probability of coming up with red side of beer cap is not actually 50%
+all of the above
+both a and b
+both a and c
+both a and d
+none of the above
+
+##### Answer
+null hypothesis is rejected that is true probability of coming up with red side of beer cap is not equal to 50%
+
+##### Explanation
+by definition
+
+#### Consider the face lift example. Use the data provided and we find that number of observations is `_____`.
+40
+60
+80
+none of the above
+
+##### Answer
+60
+
+##### Explanation
+see video
+
+#### Consider the face lift example. Use the data provided and we find that average perceived change in years  is `_____`.
+1.77 years
+7.17 years
+6.17 years
+none of the above
+
+##### Answer
+7.17 years
+
+##### Explanation
+```{r csd  }
+load("./Resources/Data/age_change.RData")
+mean(csd$age.change)
+```
+
+#### Consider the face lift example. Use the data provided and we find that standard deviation of  perceived change in years  is `_____`.
+2.948
+7.176
+2.498
+none of the above
+
+##### Answer
+2.948
+
+##### Explanation
+```{r csd  }
+load("./Resources/Data/age_change.RData")
+sd(csd$age.change)
+```
+
+#### Consider the face lift example. Suppose our null hypothesis is that there is no perceived changes in age. In that case what would be the value of test statistics?
+7.171
+2.434
+0.381
+18.85
+none of the above
+
+##### Answer
+18.85
+
+##### Explanatio
+```{r ts  }
+load("./Resources/Data/age_change.RData")
+n <- 60 
+x_bar <- mean(csd$age.change)
+sd  <- sd(csd$age.change)
+var_xbar <- sd^2/n 
+sd_xbar  <- sqrt(var_xbar)
+# now set the value of p under null hypothesis
+mu <- 0
+test.stat <-(x_bar-mu)/sd_xbar
+test.stat
+```
+
+
+#### Consider the face lift example. Suppose our null hypothesis is that there is no perceived changes in age. In that case what would be the critical value of t-distribution at 5% level of significance with one-sided test?
+1.761
+-1.671
+2.100
+-2.001
+none of the above
+
+##### Answer
+-1.671
+
+##### Explanation
+```{r fle  }
+qt(.05,df=59)
+```
+
+#### Consider the face lift example. Suppose our null hypothesis is that there is no perceived changes in age. In that case what would be the absolute value of critical value of t-distribution at 5% level of significance with two-sided test?
+1.761
+-1.671
+2.001
+-2.001
+none of the above
+
+##### Answer
+2.001
+
+##### Explanation
+```{r fle  }
+qt(.025,df=59)
+```
+
+
+#### Consider the face lift example. Suppose our null hypothesis is that there is no perceived changes in age. In that case what would be the value of p-value?
+0.000
+0.001
+0.002
+0.095
+none of the above
+
+##### Answer
+0.000
+
+
+
+##### Explanation
+```{r pv  }
+test.stat <- 18.856 # test statistics calculated earlier
+pt(18.856,df=59,lower.tail=FALSE)
+```
+
+
+
+#### In the above question, given the p-value which of the following conclusions you can draw?
+Given the null hypothesis of no changes in perceived age, we find that probability of coming up with sample statistics that we got is very low. Therefore, we reject the null hypothesis.
+Given the null hypothesis of no changes in perceived age, we find that probability of coming up with sample statistics that we got is very high. Therefore, we can not reject the null hypothesis.
+Given the null hypothesis of no changes in perceived age, we find that probability of coming up with sample statistics that we got is neither high nor low. Therefore, we can not conclude about what we should do regarding  the null hypothesis.
+none of the above
+
+
+##### Answer
+Given the null hypothesis of no changes in perceived age, we find that probability of coming up with sample statistics that we got is very low. Therefore, we reject the null hypothesis.
+
+
+##### Explanation
+by definition
+
+#### A test is said to have high power if it does not reject the null when it is true. True or false?
+True
+False
+
+##### Answer
+False
+
+
+##### Explanation
+by definition
+
+
+#### A test is said to have high power if it rejects the null when it is false. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Explanation
+by definition
+
+
+#### Which of the following is true? 
+The significance level gives a cut off for how small is small for a p value. 
+The significance level is  typically denoted by alpha. 
+The p value is  the smallest level of significance at which the data are statistically significant 
+all of the above
+both a and b
+both b and c
+none of the above
+
+##### Answer
+all of the above
+
+##### Explanation
+By definition
+
+
+#### The higher the power of a test, the more sensitive it is in detecting a false null hypothesis. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Explanation
+By definition
+
+
+#### Which of the following can increase the power of a test?
+setting the null value significantly different than alternative value
+increasing the sample size
+increasing the type I error
+all of the above
+both a and b
+both a an c
+none of the above
+
+##### Answer
+all of the above
+
+
+##### Explanation
+by definition
+
+
+#### If in a test, type I error increases, it will also increase the type II error. True or false?
+True
+False
+
+##### Answer
+False
+
+##### Explanation
+if type I error increases, then the probability of rejecting null when it is true increases. that means we will reject null more than previously. Therefore we will accept less null when it is false. So Type II error which is the probability of accepting null when it is false decreases. Therefore, the power which is 1 - type II error increases.
+
+#### If in a test, type I error increases, it will also decrease the type II error. True or false?
+True
+False
+
+##### Answer
+False
+
+##### Explanation
+if type I error increases, then the probability of rejecting null when it is true increases. that means we will reject null more than previously. Therefore we will accept less null when it is false. So Type II error which is the probability of accepting null when it is false decreases. Therefore, the power which is 1 - type II error increases.
+
+#### If in a test, type II error increases, it will also increase the power of a test.
+True
+False
+
+##### Answer
+False
+
+##### Explanation
+if type I error increases, then the probability of rejecting null when it is true increases. that means we will reject null more than previously. Therefore we will accept less null when it is false. So Type II error which is the probability of accepting null when it is false decreases. Therefore, the power which is 1 - type II error increases.
+
+
+
+### TEST 12 (Week 5): Google form (Online assignment 6, part 2)
+
+####
+
+
+
+##### Answer
+
+
+
+##### Explanation
+
+
+### TEST 13 (Week 5): (In-class quiz-3) Probable questions
+\documentclass[12pt,answers]{exam}
+\pagestyle{headandfoot}
+\firstpageheader{Fundamentals of Data Science}{\textbf{In-class Quiz 6}}{\today{}}
+\begin{document}
+\pointsinrightmargin  
+\boxedpoints  
+
+\begin{questions}
+\question[3]
+Suppose Grameen foundation initiates a study where they would like to find what
+percentage of microcredit borrowers are actually from Grameen Bank. In that
+regard, they have interviewed 1,204 households in Bangladesh. What is the size
+of population in this study? Suppose they found that 423 households are
+borrowers from Grameen Bank. What is the sample proportion of grameen bank
+borrowers?
+\begin{solution}
+Answer: Size of the population is unknown. 
+Answer: 35.1\% 
+\end{solution}
+
+\question[3]
+In the above mentioned study, what is the estimated standard deviation? 
+Suppose, in the above mentioned study, the researchers wants to test the
+hypothesis that grameen bank borrowers are 60 percent  of the total clients. 
+Does your estimation of sample standard deviation changes with this information?
+If it changes, then what is the new value of sample standard deviation?
+
+\begin{solution}
+Answer: Estimate of sample variance is p*(1-p)/n. Since population proportion is
+unknown,we can replace it with sample proportion. In that case it is
+sqrt(0.35*(1-0.35))/1204)=0.0137
+
+Answer: Yes, it does, because now the population proportion changes to the value of
+population proportion under null hypothesis. Therefore, sample standard
+deviation is now sqrt(0.60*(1-0.60))/1204)=0.0141.
+
+\end{solution}
+
+\question[3]
+Suppose, in the above mentioned study, the researchers wants to test the
+hypothesis that grameen bank borrowers are 60 percent  of the total clients. The
+alternative hypothesis is that grameen bank borrowers are less than 60 percent
+of the total clients. What will be  the test statistics in this setting? 
+What will be the corresponding p-value? How do you interprete the p-value? 
+What will be your conclusion regarding the hypothesis? 
+What will be your conclusion regarding proportion of Grameen bank borrowers?
+Suppose now the
+alternative hypothesis changes to  grameen bank borrowers can be greater than 60
+percent or less than  60 percent 
+of the total clients. How does this change affects your conclusion regarding
+proportio of Grameen bank borrowers? 
+
+\begin{solution}
+Answer: The test statistics t=  (0.35-0.60)/0.0141= -17.73. To find the p-value
+in this case, we issue the following command pnorm(-17.73), which comes up as an
+extremely low value. Therefore, we reject the null hypothesis. 
+\end{solution}
+
+
+\question[3]
+How do you interpret the relationship betweenn p-value and level of
+significance?
+
+
+\begin{solution}
+Suppose the value of true proportion under null hypothesis is 0.60. You observed
+0.65.  Do you reject the null? The thing is  that at what magnitude of
+difference will you reject the null? is the difference 0.05 large enough? That
+question is answered by level of significance. When we set alpha=0.05, we are
+setting a cut-off point. We are saying hey look if you reject the null and if it
+is indeed true than the probability of making error is 5\%. That is the
+probability of rejecting a true null is only 5 percent. 95 percent of the time
+if you remain correct than it is fine. 
+
+Now the question is what is the value corresponding to that 95 percent. In one
+tailed test, in lower tail, it is -1.645. Then I came up with a a value of
+t-statistics of 
+-1.050. Now what is the probability of coming up with a value of test statistics
+which is as or more extreme as this value? It must be the cumulative probability
+up to that point. This value is larger than the cut-off point of 5\%. That means if we
+now reject the null, the probability of making error is now definitely more than
+5\%. So we are really not okay with it.
+
+Why not okay with it? Here is another explanation. Under the true null
+hypothesis, the value of test statistics, or the standardized value is 0. The
+question is how far from the 0 we will accept? Well, if it is abs(-1.645)  and larger distance
+from 0, then we say, hey, the sample evidence suggest that the difference
+between  observed evidence and hypotheisized  value  is so large that we
+gotta reject the null. If null is indeed true then the probability of making
+error is only 5 percent. We are okay with it. 
+
+When level of significance is 5\% and p-value is 2\% what does that mean? It
+means that the lowest level of significance at which the null could be rejected
+is 2 percent. It talks about the strength of rejection. It says the probability
+of coming up with a sample as or more extreme is only 2\% given the hypothesized
+population value. Therefore we can reject the null.
+
+Also if at 5\% alpha we reject the null, when p-value is 2\% it means we will
+reject the null even if the level of significance was 4\%, or 3\%. But at 1\%,
+we can no longer reject null. so 2\% is the lowest level of significance at
+which the null could be rejected. But what is the highest level of signficance
+at which the null could be rejected? Well, it is given by alpha that is 5\%. 
+
+When p-value is .02, then it means that the probability of coming up with a
+sample as or more extreme is only 2\%. It is also saying that if we now reject a
+true null hypothesis, the probability of this thing happening is only 2\%. Is
+this fine? Yes, sure it is. This is because, we already decided that even if we
+made such error 5\% of the time we are okay with it. 
+
+
+\end{solution}
+
+\question[3]
+What is the power of the test?
+\begin{solution}
+Answer:
+Power of test is the probability of rejecting null when it is false. Therefore,
+power calculation is done under alternative hypothesis. The method to calculate
+power is as follows. Suppose you are testing a hypothesis. You just find the
+cut-off point at which the null could be rejecting. Say, at 5\% level of
+significance the cut-off point is 15. Remember, it is not the value of z or t
+statistics. It is the value from the actual distribution. Now we assume the
+alternative is true. Then we calculate the value of z  or t-stat with 15 (the
+cut-off point) as the
+current sample value, the population value is the value under alternative
+hypothesis, that is the value we got from sample. Now we calculate the t-stat.
+Power is the 1- p.value from this study. 
+\end{solution}
+
+
+\question[3]
+Suppose the manufacturer claims that the mean lifetime of a light bulb is more than 10,000 hours. Assume actual mean light bulb lifetime is 9,950 hours and the population standard deviation is 120 hours. At .05 significance level, what is the probability of having type II error for a sample size of 30 light bulb? 
+
+
+\begin{solution}
+H$_$0: mu>=10000
+H$_$a: mu<10000
+
+
+<<>>=
+n=30
+mu=10000
+xbar=9950
+sigma=120
+
+sd.mean=sigma/sqrt(30)
+
+test.stat=(xbar-mu)/sd.mean
+p.value=pnorm(test.stat)
+@
+
+
+0.01123944
+
+ so we can reject the null
+
+ but how about power of the test
+
+ to find that let's first calculate the cut-off point at 5% 
+
+<<>>=
+qnorm(.05,mean=10000,sd=sd.mean)
+@
+ it is 9964
+
+we assume that alternative is true that is mu is less than 10000, then what is
+ the hypothesized value. It is what we get from sample.
+
+H$_$0: mu=9950
+H$_$a: mu>9950
+
+
+<<>>=
+n=30
+mu=9950
+xbar=9964 # from qnorm() above
+sigma=120
+sd.mean=sigma/sqrt(n)
+test.stat=(xbar-mu)/sd.mean
+
+p.value=pnorm(test.stat)
+@
+
+\end{solution}
+
+\end{questions}
+\end{document}
+
+
+
+### WEEK 6: Matched pairs, comparing means/proportions
+
+### TEST 14 (Week 6) (assignment 9, part 1): probable questions
+
+#### video 1
+
+#### There is no connection between hypothesis testing and confidence intervals. True or False?
+True
+False
+
+##### Answer
+True
+
+##### Explanation
+see video 1
+
+
+#### Two-sided confidence intervals and two-sided hypothesis testings are related. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Explanation
+see video 1
+
+#### Consider the beer cap experiment where after 1000 flips 576 times red side comes up. Suppose you want to test the hypothesis that probabiity of coming up with red side is exactly half against that it is greater than half. What will be your conclusion? s
+We can not find sufficient evidence against the hypothesis that probability of coming up with red side is exactly half
+We find sufficient evidence for  the hypothesis that probability of coming up with red side is greater than half
+We can not find sufficient evidence to conclude anything
+None of the above
+
+##### Answer
+We find sufficient evidence for  the hypothesis that probability of coming up with red side is greater than half
+
+##### Solution
+
+```{r bt  }
+test.result <- binom.test(576,1000,p=0.5,alternative="greater", conf.level=0.95)
+names(test.result)
+options(scipen=999)
+test.result$p.value
+```
+We find that p-value is extremely small. Therefore we reject the null hypothesis.
+
+#### Consider the beer cap experiment where after 1000 flips 576 times red side comes up. Suppose you want to test the hypothesis that probability of coming up with red side is exactly half against that it is not equal to half. What will be your conclusion? 
+We can not find sufficient evidence against the hypothesis that probability of coming up with red side is exactly half
+We can  find sufficient evidence against the hypothesis that probability of coming up with red side is exactly half
+We find sufficient evidence for  the hypothesis that probability of coming up with red side is greater than half
+We can not find sufficient evidence to conclude anything
+None of the above
+
+##### Answer
+We find sufficient evidence for  the hypothesis that probability of coming up with red side is greater than half
+
+##### Solution
+
+```{r bt  }
+test.result <- binom.test(576,1000,p=0.5,alternative="two.sided", conf.level=0.95)
+test.result$p.value
+test.result$conf.int
+```
+We find that p-value is extremely small. Therefore we reject the null hypothesis. At the same time, we also find that 95% confidence interval does not contain the null hypothesis value of 1/2 or 0.5. 
+
+#### Consider the beer cap experiment where after 2000 flips 931 times red side comes up. Suppose you want to test the hypothesis that probability of coming up with red side is exactly half against that it is not equal to half. What is the confidence interval for population parameter? Does your conclusion from hypothesis testing matches with the confidence interval ? 
+
+Confidence interval is 0.545, 0.607 and our conclusion from hypothesis testing does not matche with confidence interval
+Confidence interval is 0.443, 0.488 and our conclusion from hypothesis testing matches with confidence interval
+Confidence interval is 0.343, 0.848 and our conclusion from hypothesis testing matches with confidence interval
+none of the above
+
+##### Answer
+Confidence interval is 0.443, 0.488
+
+##### Solution
+
+```{r bt  }
+test.result <- binom.test(931,2000,p=0.5,alternative="two.sided", conf.level=0.95)
+test.result$p.value
+test.result$conf.int
+```
+We find that p-value is extremely small. Therefore we reject the null hypothesis. At the same time, we also find that 95% confidence interval does not contain the null hypothesis value of 1/2 or 0.5. 
+
+#### Consider the human body temperature data. What do you conclude about the hypothesis claiming the average body temperature to be exactly 37 degree Celsius? 
+
+We do not find sufficient evidence against the hypothesis, therefore could not reject it. 
+We found sufficient evidence against the hypothesis, therefore we rejected it. 
+We are uncertain about what should be done in this case.
+none of the above
+
+##### Answer
+We found sufficient evidence against the hypothesis, therefore we rejected it. 
+
+
+##### Solution
+
+```{r body temp  }
+human.temp <- read.table("./Resources/Data/Data_TempData.txt")
+names(human.temp) <- "temp"
+save(human.temp,file="./Resources/Data/human_temp.RData")
+```
+Now let's use the t.test function
+
+```{r ttest  }
+temp.test <- t.test(human.temp$temp,mu=37)
+#names(temp.test)
+temp.test$p.value
+temp.test$conf.int
+```
+
+
+#### Consider the human body temperature data. What is the confidence interval for average human body temperature?
+
+36.734, 36.876
+37.634, 38.676
+all of the above
+none of the above
+
+##### Answer
+36.734 36.876
+
+##### Solution
+
+```{r body temp  }
+human.temp <- read.table("./Resources/Data/Data_TempData.txt")
+names(human.temp) <- "temp"
+save(human.temp,file="./Resources/Data/human_temp.RData")
+```
+Now let's use the t.test function
+
+```{r ttest  }
+temp.test <- t.test(human.temp$temp,mu=37)
+names(temp.test)
+temp.test$p.value
+temp.test$conf.int
+```
+
+#### Video 2
+
+#### Consider the skeleton data. Which of the following is true about Di Gangi method of estimating age of the skeletons?
+It underestimates the age of around 75% of skeletons by 5 or more years
+On the average, it underestimates the age of  skeletons by 14 years
+The maximum underestimation stands at 60 years
+All of the above
+None of the above
+
+##### Answer
+All of the above
+
+##### Solution
+See video 2
+
+#### Consider the skeleton data. Which of the following is true about Suchey-Brooks method of estimating age of the skeletons?
+It underestimates the age of around 50% of skeletons by 6 or more years
+On the average, it underestimates the age of  skeletons by 7 years
+The maximum underestimation stands at 36 years
+All of the above
+None of the above
+
+##### Answer
+All of the above
+
+##### Solution
+See video 2
+
+#### Suppose we plot a side-by-side boxplot of Di Ganji and Suchey-Brooks method of estimating age of skeleton, that is the difference between actual age and estimated age. What is the main problem with this side-by-side boxplot?
+Boxplot is not drawn from the same skeletons for each measure
+Boxplot is not drawn from matched pairs
+all of the above
+none of the above
+
+##### Answer
+all of the above
+
+##### Solution
+See video 2
+
+#### In matched pairs, two conditions are compared between the same or two very similar observational or experimental units. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Solution
+See video 2
+
+#### Which of the following is an example of matched pairs?
+Two age estimates using different methods on the same skeleton
+Pre- and post-test scores on the same person
+Measurement in pairs at the same time or place
+all of the above
+none of the above
+
+##### Answer
+all of the above
+
+##### Solution
+
+
+#### Suppose we are trying to compare two different sales outlet of a footwear commpany. We are comparing the sales revenue of these two outlets in the same week. This is an example of matched pairs. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Solution
+See video 2
+
+#### In an experimental design using matched pairs, it is important 
+to randomize which experimental unit in the pairs gets which treatment
+to randomize the treatment order if both treatments are being compared on the same experimental unit
+both of the above
+none of the above
+
+##### Answer
+both of the above
+
+##### Solution
+see video 2
+
+
+#### Using matched pairs allows the researcher to control for the variables that differ among independent observational or experimental units. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Solution
+See video 2
+
+#### Which of the following is the main benefit of using matched pairs?
+The variation in the comparisons does not include the variation among observational or experimental units.
+Using matched pairs results in greater precision in the estimate of the difference between the treatments or conditions being compared.
+All of the above
+None of the above
+
+##### Answer
+All of the above
+
+##### Solution
+See video 2
+
+#### Matched pairs are independent observations. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Solution
+See video 2
+
+
+
+#### Suppose we are calculating the differences of error in age estimation between Suchey-Brooks and Di Gangi methods using the data set titled "Data%2FSkeletonsMatchedPairsData.txt".  The number of valid observations available are:
+400
+398
+399
+none of the above
+
+##### Answer
+398
+
+##### Solution
+
+```{r diff  }
+ske.match <- read.table("./Resources/Data/Data%2FSkeletonsMatchedPairsData.txt",header=TRUE)
+sum(!is.na(ske.match$Difference))
+```
+
+
+#### If we draw a box-plot of the difference in Di Gangi and Suchey-Brooks method, which of the following we will observe?
+Median line is drawn between 0 and 10
+Upper whisker is close to 30
+There are outliers in the observations
+all of the above
+none of the above
+
+
+##### Answer
+all of the above
+
+##### Solution
+
+```{r bp  }
+boxplot(ske.match$Difference)
+```
+
+
+#### If we draw a histogram of the difference in Di Gangi and Suchey-Brooks method, which of the following we will observe?
+The histogram is centered around some value between 0 and 10
+The histogram is quite symmetric
+both of the above
+none of the above
+
+##### Answer
+both of the above
+
+##### Solution
+```{r hist  }
+hist(ske.match$Difference)
+```
+
+
+#### Suppose we are trying to test whether there is any difference in the age estimate of Suchey-Brooks method and Di Gangi method. First we try to find 95% confidence interval for the average difference in these two methods. Which of the following will the correct confidence interval?
+7.565,9.743
+5.765,7.944
+5.675,7.494
+none of the above
+
+
+##### Answer
+5.765,7.944
+
+##### Solution
+```{r sb  }
+t.test(ske.match$Difference)
+```
+
+
+#### Suppose we are trying to test whether there is any difference in the age estimate of Suchey-Brooks method and Di Gangi method. What will be the p-value from this test and what will be the corresponding conclusion?
+The p-value is extremely small and as a result we find reasonable evidence that there are some difference in the age estimate
+The p-value is extremely small and as a result we find reasonable evidence that there are no difference in the age estimate
+The p-value is extremely large and as a result we find reasonable evidence that there are no difference in the age estimate
+none of the above
+
+##### Answer
+The p-value is extremely small and as a result we find reasonable evidence that there are some difference in the age estimate
+
+##### Solution
+```{r sb2  }
+t.test(ske.match$Difference)
+```
+
+#### In the matched pairs, the observations are not independent but the difference in error estimates between Di Gangi and Suchey-Brooks method is independent. This is because
+Pairs are independent
+Observations are independent
+Sekeletons are independent
+none of the above
+
+##### Answer
+Sekeletons are independent
+
+##### Solution
+See video 2
+
+### TEST 14 (Week 6) (assignment 9, part 2): probable questions
+
+#### Video 3
+
+#### There were two polls taken on Mayor Rob Ford. In June 2011, sample size was 1050 and support for the Mayor was 57%. In September 2011, another poll was taken where sample size was 1046 and support for Mayor decreased to 42%. Try to find a confidence interval measuring by how much his true support decreased by.
+
+0.128,0.192
+0.180,0.129
+0.108,0.192
+none of the above
+
+##### Answer
+0.108,0.192
+
+##### Solution
+Let's say true support in June 2011 was p1 and in Sep 2011 it is p2. therefore the true difference is p1-p2.
+now we  call it d=p1-p2. So we will have to deal with the theoretical sampling distribution of d. what we have is dhat and there can be many dhat like that. we know that z=(dhat-d)/sd(dhat) follows standard normal distribution. 
+P(-z_alpha/2 < z < z_alpha/2) =.95
+P(-1.96 < (dhat-d)/sddhat) < 1.96) =.95
+P(-1.96*sd(dhat)< (dhat-d) < 1.96*sd(dhat)) =.95
+P(dhat-1.96*sd(dhat)< d < dhat+1.96*sd(dhat)) =.95
+dhat`+_`1.96*sd(dhat)
+
+now dhat is pretty simple, dhat= phat-p
+to find sd(dhat) we will have to first find var(dhat)
+var(dhat) = var(p1hat-p2hat)
+= var(p1hat)+var(p2hat)
+= p1(1-p1)/n1 + p2(1-p2)/n2
+since p1 and p2 is unknown we replace those by p1hat and p2hat
+var(dhat) = phat1*(1-phat1)/n1 + phat2*(1-phat2)/n2
+sd(dhat) = sqrt(p1(1-p1)/n1 + p2(1-p2)/n2)
+since p1 and p2 is unknown we replace those by p1hat and p2hat
+sd(dhat) = sqrt(p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2)
+
+```{r cal  }
+p1hat=0.57
+p2hat=0.42
+n1=1050
+n2=1046
+crit.val=abs(qnorm(.025))
+dhat = p1hat-p2hat
+var_dhat = p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2
+sd_dhat_a = sqrt(var_dhat)
+sd_dhat_b = sqrt(p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2)
+sd_dhat=sd_dhat_a
+```
+The a and b version of sd was calculated to just cross check whether it is okay
+
+```{r ul  }
+ul <- dhat + crit.val*sd_dhat
+ll <- dhat - crit.val*sd_dhat
+conf.int <- c(ll,ul)
+conf.int
+```
+So the Mayor's true support decreased by between ul and ll
+We can also do the same using different packages
+
+```{r usp  }
+library(PropCIs)
+diffscoreci(p1hat*n1,n1,p2hat*n2,n2,conf.level=0.95)
+```
+Okay great it matches with manual calculation
+
+
+#### There were two polls taken on Mayor Rob Ford. In June 2011, sample size was 1050 and support for the Mayor was 57%. In September 2011, another poll was taken where sample size was 1046 and support for Mayor decreased to 42%. Let's check whether support for Mayor has actually decreased.
+
+
+##### Answer
+
+##### Solution
+In this case we actually have a null hypothesis which assumed no change in support,meaning d= p2 - p1 =0 against the alternative that d<0, that is actually one sided test
+Here we will have to do a hypothesis testing
+```{r cal  }
+p1hat=0.57
+p2hat=0.42
+n1=1050
+n2=1046
+crit.val=abs(qnorm(.025))
+dhat = p2hat-p1hat
+var_dhat = p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2
+sd_dhat_a = sqrt(var_dhat)
+sd_dhat_b = sqrt(p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2)
+sd_dhat=sd_dhat_a
+```
+Now let's calculate the  t-statistics
+
+```{r sts  }
+d <- 0  # under null hypothesis
+t.stat <- (dhat - d)/sd_dhat
+p.val <- pnorm(t.stat)
+p.val
+```
+
+With such low p-value we can say that we can reject the null hypothesis and  Mayor's support has actually decreased.
+
+Now let's do the same with prop.test command and see what happens
+
+```{r proptest  }
+prop.test(c(p2hat*n2,p1hat*n1),c(n1,n2),alternative="less")
+```
+the result matches
+
+#### There were two polls taken on Mayor Rob Ford. In June 2011, sample size was 1050 and support for the Mayor was 57%. In September 2011, another poll was taken where sample size was 1046 and support for Mayor decreased to 42%. Let's check whether support for Mayor has changed.(Instructor's note: this is a two-tailed test compared to previous one which was one-tailed test). Which of the following actually happened?
+
+Yes the proportion of people supporting Mayor has changed and support decreased
+Yes the proportion of people supporting Mayor has changed and support increased
+No the proportion of people supporting Mayor has not changed and support remained unchanged
+none of the above
+
+##### Answer
+Yes the proportion of people supporting Mayor has changed and support decreased
+
+##### Solution
+In this case we actually have a null hypothesis which assumed no change in support,meaning d= p2 - p1 =0 against the alternative that d!=0, that is actually one sided test
+Here we will have to do a hypothesis testing
+```{r cal  }
+p1hat=0.57
+p2hat=0.42
+n1=1050
+n2=1046
+crit.val=abs(qnorm(.025))
+dhat = p2hat-p1hat
+var_dhat = p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2
+sd_dhat_a = sqrt(var_dhat)
+sd_dhat_b = sqrt(p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2)
+sd_dhat=sd_dhat_a
+```
+Now let's calculate the  t-statistics
+
+```{r sts  }
+d <- 0  # under null hypothesis
+t.stat <- (dhat - d)/sd_dhat
+p.val <- 2* pnorm(t.stat)
+p.val
+```
+
+With such low p-value we can say that we can reject the null hypothesis and  Mayor's support has changed.
+
+Now let's do the same with prop.test command and see what happens
+
+```{r proptest  }
+prop.test(c(p2hat*n2,p1hat*n1),c(n1,n2),alternative="two.sided")
+```
+the result matches
+
+#### There were two polls taken on popularity of ruling political party Awami League(AL). In December 2010, sample size was 3140 and support for AL  was 73%. In December 2014, another poll was taken where sample size was 3426 and support for AL decreased to 52%. Try to find a confidence interval measuring by how much AL's true support decreased by.
+0.178,0.233
+0.187,0.233
+0.287,0.292
+none of the above
+
+##### Answer
+0.187,0.233
+
+##### Solution
+see detailed explanation in the previous question
+```{r cal  }
+p1hat=0.73
+p2hat=0.52
+n1=3140
+n2=3426
+crit.val=abs(qnorm(.025))
+dhat = p1hat-p2hat
+var_dhat = p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2
+sd_dhat_a = sqrt(var_dhat)
+sd_dhat_b = sqrt(p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2)
+sd_dhat=sd_dhat_a
+```
+The a and b version of sd was calculated to just cross check whether it is okay
+
+```{r ul  }
+ul <- dhat + crit.val*sd_dhat
+ll <- dhat - crit.val*sd_dhat
+conf.int <- c(ll,ul)
+conf.int
+```
+So the AL's true support decreased by between ul and ll
+We can also do the same using different packages
+
+```{r usp  }
+library(PropCIs)
+diffscoreci(p1hat*n1,n1,p2hat*n2,n2,conf.level=0.95)
+```
+Okay great it matches with manual calculation
+
+
+#### There were two polls taken on popularity of ruling political party Awami League(AL). In December 2010, sample size was 3140 and support for AL  was 73%. In December 2014, another poll was taken where sample size was 3426 and support for AL decreased to 52%. Now test the hypothesis that AL support actually decreased.
+
+##### Answer
+
+##### Solution
+see detailed explanation in the previous question
+```{r cal  }
+p1hat=0.73
+p2hat=0.52
+n1=3140
+n2=3426
+crit.val=abs(qnorm(.025))
+dhat = p2hat-p1hat
+var_dhat = p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2
+sd_dhat_a = sqrt(var_dhat)
+sd_dhat_b = sqrt(p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2)
+sd_dhat=sd_dhat_a
+```
+The a and b version of sd was calculated to just cross check whether it is okay
+
+```{r ul  }
+ul <- dhat + crit.val*sd_dhat
+ll <- dhat - crit.val*sd_dhat
+conf.int <- c(ll,ul)
+conf.int
+```
+So the AL's true support decreased by between ul and ll
+We can also do the same using different packages
+
+```{r usp  }
+library(PropCIs)
+diffscoreci(p1hat*n1,n1,p2hat*n2,n2,conf.level=0.95)
+```
+Okay great it matches with manual calculation
+
+```{r usp2}
+d <- 0
+test.stat <- (dhat-d)/sd_dhat
+pnorm(test.stat)
+```
+p-value is extremely small so we reject the null hypothesis of equality of the proportions
+now let's test this by the prop.test
+
+```{r chu  }
+prop.test(c(p2hat*n2,p1hat*n1),c(n1,n2),alternative="less")
+```
+
+####  There were two polls taken to gauge support for President Obama in USA. In the first poll in August 2012, sample size was 1210 with 58% support for Obama. In the second poll in October 2012, sample size was 783 with 42% for President Obama. How much did his true support decerease by?
+The support increased by an amount which between 11% and 20%
+The support remained unchanged
+The support dececreasd by an amount which between 11% and 20%
+none of the above
+
+##### Answer
+The support dececreasd by an amount which between 11% and 20%
+
+##### Solution
+see detailed explanation in the previous question
+```{r cal  }
+p1hat=0.58
+p2hat=0.42
+n1=1210
+n2=783
+crit.val=abs(qnorm(.025))
+dhat = p1hat-p2hat
+var_dhat = p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2
+sd_dhat_a = sqrt(var_dhat)
+sd_dhat_b = sqrt(p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2)
+sd_dhat=sd_dhat_a
+```
+The a and b version of sd was calculated to just cross check whether it is okay
+
+```{r ul  }
+ul <- dhat + crit.val*sd_dhat
+ll <- dhat - crit.val*sd_dhat
+conf.int <- c(ll,ul)
+conf.int
+```
+So the Obama's true support decreased by between ul and ll
+We can also do the same using different packages
+
+```{r usp  }
+library(PropCIs)
+diffscoreci(p1hat*n1,n1,p2hat*n2,n2,conf.level=0.95)
+```
+Okay great it matches with manual calculation
+
+
+
+####  There were two polls taken to gauge support for President Obama in USA. In the first poll in August 2012, sample size was 1210 with 58% support for Obama. In the second poll in October 2012, sample size was 783 with 42% for President Obama. Let's test the hypothesis that support for Obama remained unchanged. What do you find?
+We find that we can not reject the hypothesis that support for Obama remained unchanged
+We find that we can  not make any decision regarding the null hypothesis
+We find that we can reject the hypothesis that support for Obama remained unchanged
+none of the above
+
+##### Answer
+We find that we can reject the hypothesis that support for Obama remained unchanged
+
+##### Solution
+Note: this is a two -tailed test
+see detailed explanation in the previous question
+```{r cal  }
+p1hat=0.58
+p2hat=0.42
+n1=1210
+n2=783
+crit.val=abs(qnorm(.025))
+dhat = p1hat-p2hat
+var_dhat = p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2
+
+sd_dhat_b = sqrt(p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2)
+sd_dhat=sd_dhat_a
+```
+The a and b version of sd was calculated to just cross check whether it is okay
+
+```{r ul  }
+ul <- dhat + crit.val*sd_dhat
+ll <- dhat - crit.val*sd_dhat
+conf.int <- c(ll,ul)
+conf.int
+```
+So the Obama's true support decreased by between ul and ll
+We can also do the same using different packages
+
+```{r usp  }
+library(PropCIs)
+diffscoreci(p1hat*n1,n1,p2hat*n2,n2,conf.level=0.95)
+```
+Okay great it matches with manual calculation
+
+Now let's calculate the  t-statistics
+
+```{r sts  }
+d <- 0  # under null hypothesis
+t.stat <- (dhat - d)/sd_dhat
+p.val <- 1- pnorm(t.stat)
+p.val
+```
+
+With such low p-value we can say that we can reject the null hypothesis and  Mayor's support has actually decreased.
+
+Now let's do the same with prop.test command and see what happens
+
+```{r proptest  }
+prop.test(c(p2hat*n2,p1hat*n1),c(n1,n2),alternative="less")
+```
+
+####  There were two polls taken to gauge support for President Obama in USA. In the first poll in August 2012, sample size was 1010 with 52% support for Obama. In the second poll in October 2012, sample size was 563 with 48% for President Obama. How much did his true support decerease by?
+
+
+##### Answer
+
+
+##### Solution
+see detailed explanation in the previous question
+```{r cal  }
+p1hat=0.52
+p2hat=0.48
+n1=1010
+n2=563
+crit.val=abs(qnorm(.025))
+dhat = p1hat-p2hat
+var_dhat = p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2
+sd_dhat_a = sqrt(var_dhat)
+sd_dhat_b = sqrt(p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2)
+sd_dhat=sd_dhat_a
+```
+The a and b version of sd was calculated to just cross check whether it is okay
+
+```{r ul  }
+ul <- dhat + crit.val*sd_dhat
+ll <- dhat - crit.val*sd_dhat
+conf.int <- c(ll,ul)
+conf.int
+```
+So the Obama's true support decreased by between ul and ll
+We can also do the same using different packages
+
+```{r usp  }
+library(PropCIs)
+diffscoreci(p1hat*n1,n1,p2hat*n2,n2,conf.level=0.95)
+```
+Okay great it matches with manual calculation
+
+
+
+####  There were two polls taken to gauge support for President Obama in USA. In the first poll in August 2012, sample size was 1010 with 52% support for Obama. In the second poll in October 2012, sample size was 563 with 48% for President Obama. How much did his true support decerease by?
+
+
+##### Answer
+
+
+##### Solution
+see detailed explanation in the previous question
+```{r cal  }
+p1hat=0.52
+p2hat=0.48
+n1=1010
+n2=563
+crit.val=abs(qnorm(.025))
+dhat = p1hat-p2hat
+var_dhat = p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2
+sd_dhat_a = sqrt(var_dhat)
+sd_dhat_b = sqrt(p1hat*(1-p1hat)/n1 + p2hat*(1-p2hat)/n2)
+sd_dhat=sd_dhat_a
+```
+The a and b version of sd was calculated to just cross check whether it is okay
+
+```{r ul  }
+ul <- dhat + crit.val*sd_dhat
+ll <- dhat - crit.val*sd_dhat
+conf.int <- c(ll,ul)
+conf.int
+```
+So the Obama's true support decreased by between ul and ll
+We can also do the same using different packages
+
+```{r usp  }
+library(PropCIs)
+diffscoreci(p1hat*n1,n1,p2hat*n2,n2,conf.level=0.95)
+```
+Okay great it matches with manual calculation
+
+Now let's calculate the  t-statistics
+
+```{r sts  }
+d <- 0  # under null hypothesis
+t.stat <- (dhat - d)/sd_dhat
+p.val <- 2*pnorm(t.stat,lower.tail=FALSE)
+p.val
+```
+With such high p-value we can say that we can not reject the null hypothesis that support for Obama has remained unchanged. 
+
+Remember, in the confidence interval we have found that, the value ranges from minus(-) to plus(+). so from confidence interval it was quite uncertain whether it remained unchanged or it changed. But from hypothesis testing we got the confirmation.
+
+
+#### Let's deal with the skeleton data once again. We  test whether there is any difference in the mean of estimated age across  the gender. Our conclusion will be one of the following:
+there is evidence of difference in the mean of estiamted age across gender
+there is NO evidence of difference in the mean of estiamted age across gender
+there is uncertain evidence and therefore nothing can be concluded
+none of the above
+
+##### Answer
+
+
+##### Solution
+```{r }
+load("./Resources/Data/ske.RData")
+t.test(DGEstimate ~ Sex , data=ske)
+```
+Since p-value is low we reject null hypothesis of no difference in the mean of Estimated age across genders. another alternative representation is:
+
+```{r alt  }
+t.test(ske$DGEstimate[ske$Sex==1],ske$DGEstimate[ske$Sex==2])
+```
+We find that it ends up with the same thing.
+
+let's try manual calculation, we will actually do that later
+
+#### Let's consider the life expectancy data. Is the difference in mean life expectancy of the two regions: East Asia and Pacific and South Asia, statistically significant? 
+Yes
+No
+Uncertain
+
+##### Answer
+No
+
+##### Solution
+
+```{r htci  }
+load("./Resources/Data/le_region.RData")
+names(le) <- c("country","le","region")
+life.exp.reg <- le
+save(life.exp.reg, file="./Resources/Data/life_exp_reg.RData")
+```
+Now let's do the hypothesis testing
+
+```{r ht  }
+t.test(life.exp.reg$le[life.exp.reg$region=="EAP"],life.exp.reg$le[life.exp.reg$region=="SAs"])
+```
+p-value stands at 9.2% that means it is statistically significant
+
+#### Let's consider the life expectancy data.  What is the confidence interval for population difference in mean life expectancy for the two regions: East Asia and Pacific and South Asia? 
+-1.261, 13.323
+-1.216, 13.323
+-1.216, 31.323
+none of the above
+
+##### Answer
+-1.216, 13.323
+
+##### Solution
+```{r htci  }
+load("./Resources/Data/le_region.RData")
+names(le) <- c("country","le","region")
+life.exp.reg <- le
+save(life.exp.reg, file="./Resources/Data/life_exp_reg.RData")
+```
+
+Now let's do the hypothesis testing
+
+```{r ht  }
+t.test(life.exp.reg$le[life.exp.reg$region=="EAP"],life.exp.reg$le[life.exp.reg$region=="SAs"])
+```
+
+
+#### Let's consider the life expectancy data.   Does hypothesis testing and confidence interval in the above two questions reinforce each other?
+Yes
+No
+Uncertain
+
+##### Answer
+Yes
+
+##### Solution
+
+#### 
+
+
+##### Answer
+
+
+##### Solution
+#### 
+
+
+##### Answer
+
+
+##### Solution
+#### 
+
+
+##### Answer
+
+
+##### Solution
+#### 
+
+
+##### Answer
+
+
+##### Solution
+#### 
+
+
+##### Answer
+
+
+##### Solution
+#### 
+
+
+##### Answer
+
+
+##### Solution
+#### 
+
+
+##### Answer
+
+
+##### Solution
+
+
+### TEST 15 (Week 6): (In-class quiz-4) Probable questions
+\documentclass[12pt,answers]{exam}
+\pagestyle{headandfoot}
+\firstpageheader{Fundamentals of Data Science}{\textbf{In-class Quiz 5}}{\today{}}
+\begin{document}
+\pointsinrightmargin  
+\boxedpoints  
+
+\begin{questions}
+%1
+\question[2]
+Suppose Grameen foundation initiates a study where they would like to find what
+percentage of microcredit borrowers are actually from Grameen Bank. In that
+regard, they have interviewed 1,204 households in Bangladesh. What is the size
+of population in this study? 
+
+\begin{oneparchoices}    
+    \choice 1,064
+    \choice 1,204
+    \choice 1,046
+    \CorrectChoice none of the above
+\end{oneparchoices}    
+
+
+\question[2]
+In the above mentioned Grameen foundation study, suppose they found that 423 households are
+borrowers from Grameen Bank. What is the sample proportion of grameen bank borrowers?
+
+\begin{oneparchoices}    
+    \choice 53.1 
+    \choice 35.7
+    \CorrectChoice 35.1
+    \choice none of the above
+\end{oneparchoices}    
+
+
+\question[2]
+In the above mentioned study, what is the estimated standard deviation? 
+
+\begin{oneparchoices}    
+    \CorrectChoice 0.0137
+    \choice  0.0237
+    \choice  0.137
+    \choice none of the above
+\end{oneparchoices}    
+
+\begin{solution}
+Answer: Estimate of sample variance is p*(1-p)/n. Since population proportion is
+unknown,we can replace it with sample proportion. In that case it is
+sqrt(0.35*(1-0.35))/1204)=0.0137
+\end{solution}
+
+
+\question[2]
+Suppose, in the above mentioned study, the researchers wants to test the
+hypothesis that grameen bank borrowers are 60 percent  of the total clients. 
+Does your estimation of sample standard deviation changes with this information?
+If it changes, then what is the new value of sample standard deviation?
+
+\begin{oneparchoices}    
+    \choice 0.141
+    \CorrectChoice  0.0141
+    \choice 0.0114
+    \choice none of the above
+\end{oneparchoices}    
+
+\begin{solution}
+Answer: Yes, it does, because now the population proportion changes to the value of
+population proportion under null hypothesis. Therefore, sample standard
+deviation is now sqrt(0.60*(1-0.60))/1204)=0.0141.
+\end{solution}
+
+
+\question[2]
+Suppose, in the above mentioned study, the researchers wants to test the
+hypothesis that grameen bank borrowers are 60 percent  of the total clients. The
+alternative hypothesis is that grameen bank borrowers are less than 60 percent
+of the total clients. What will be  the test statistics in this setting? 
+
+\begin{oneparchoices}    
+    \choice -17.37
+    \CorrectChoice  -17.73
+    \choice -18.73
+    \choice none of the above
+\end{oneparchoices}    
+
+\begin{solution}
+Answer: The test statistics t=  (0.35-0.60)/0.0141= -17.73. 
+\end{solution}
+
+\question[2]
+What will be the corresponding p-value in the setting of the above mentioned study? 
+\begin{oneparchoices}    
+    \choice  extremely large
+    \CorrectChoice  extremely low 
+    \choice moderately large
+    \choice none of the above
+\end{oneparchoices}    
+
+\begin{solution}
+Answer: The test statistics t=  (0.35-0.60)/0.0141= -17.73. To find the p-value
+in this case, we issue the following command pnorm(-17.73), which comes up as an
+extremely low value. Therefore, we reject the null hypothesis. 
+\end{solution}
+
+\question[2]
+How do you interprete the p-value in the setting of the above mentioned study? 
+\begin{oneparchoices}    
+    \choice an extremely large value of p-value indicates we can not reject the null hypothesis
+    \CorrectChoice an extremely small value of p-value indicates we strongly reject the null hypothesis
+    \choice an extremely small value of p-value indicates we do not reject the null hypothesis
+    \choice none of the above
+\end{oneparchoices}    
+
+
+\question[2]
+What will be your conclusion regarding the hypothesis? 
+
+
+\question[2]
+
+What will be your conclusion regarding proportion of Grameen bank borrowers?
+
+\begin{oneparchoices}    
+    \choice True proportion of Grameen Bank borrowers is equal to to 60 percent of total borrowers 
+    \choice True proportion of Grameen Bank borrowers is not equal  to 60 percent of total borrowers 
+    \choice True proportion of Grameen Bank borrowers is less than 60 percent of total borrowers 
+    \choice Both a and c
+    \CorrectChoice Both b and c
+    \choice none of the above
+\end{oneparchoices}    
+
+\question[2]
+Suppose now the alternative hypothesis changes to  grameen bank borrowers can be greater than 60
+percent or less than  60 percent  of the total clients. How does this change affects your conclusion regarding
+proportion of Grameen bank borrowers? 
+
+\begin{oneparchoices}    
+    \choice 
+    \choice 
+    \CorrectChoice 
+    \choice 
+\end{oneparchoices}    
+
+\question[2]
+If in a test, type I error increases, it will also decrease the type II error. True or false?
+\begin{oneparchoices}    
+    \CorrectChoice 
+True
+    \choice 
+False
+\end{oneparchoices}    
+
+
+
+\question[2]
+
+ The higher the power of a test, the more sensitive it is in detecting a false null hypothesis. True or false?
+\begin{oneparchoices}    
+    \CorrectChoice 
+True
+    \choice 
+False
+\end{oneparchoices}    
+
+
+
+\question[2]
+Which of the following can increase the power of a test?
+\begin{oneparchoices}    
+    \choice 
+setting the null value significantly different than alternative value
+    \choice 
+increasing the sample size
+    \choice 
+increasing the type I error
+    \CorrectChoice 
+all of the above
+    \choice 
+both a and b
+    \choice 
+none of the above
+    \choice 
+both a an c
+\end{oneparchoices}    
+
+
+\question[2]
+Which of the following is true? 
+
+\begin{oneparchoices}    
+    \choice 
+The significance level is  typically denoted by alpha. 
+    \choice 
+The significance level gives a cut off for how small is small for a p value. 
+    \choice 
+The p value is  the smallest level of significance at which the data are statistically significant 
+    \CorrectChoice 
+all of the above
+\end{oneparchoices}    
+
+\question[2]
+In the face lift example, the researchers are testing whether after the surgery there is perceived changes in ages of the recipient of surgery. If  the p-value of the test is very low which of the following conclusions you can draw?
+
+\begin{oneparchoices}    
+    \CorrectChoice  
+Given the null hypothesis of no changes in perceived age, we find that probability of coming up with sample statistics that we got is very low. Therefore, we reject the null hypothesis.
+    \choice 
+Given the null hypothesis of no changes in perceived age, we find that probability of coming up with sample statistics that we got is very high. Therefore, we can not reject the null hypothesis.
+    \choice 
+Given the null hypothesis of no changes in perceived age, we find that probability of coming up with sample statistics that we got is neither high nor low. Therefore, we can not conclude about what we should do regarding  the null hypothesis.
+    \choice none of the above
+\end{oneparchoices}    
+none of the above
+
+\question[2] 
+Suppose the manufacturer claims that the mean lifetime of a light bulb is more than 10,000 hours. Assume actual mean light bulb lifetime is 9,950 hours and the population standard deviation is 120 hours. At .05 significance level, what is the probability of having type II error for a sample size of 30 light bulb? 
+
+
+\begin{solution}
+H$_$0: mu>=10000
+H$_$a: mu<10000
+
+
+<<>>=
+n=30
+mu=10000
+xbar=9950
+sigma=120
+
+sd.mean=sigma/sqrt(30)
+
+test.stat=(xbar-mu)/sd.mean
+p.value=pnorm(test.stat)
+@
+
+
+0.01123944
+
+ so we can reject the null
+
+ but how about power of the test
+
+ to find that let's first calculate the cut-off point at 5% 
+
+<<>>=
+qnorm(.05,mean=10000,sd=sd.mean)
+@
+ it is 9964
+
+we assume that alternative is true that is mu is less than 10000, then what is
+ the hypothesized value. It is what we get from sample.
+
+H$_$0: mu=9950
+H$_$a: mu>9950
+
+
+<<>>=
+n=30
+mu=9950
+xbar=9964 # from qnorm() above
+sigma=120
+sd.mean=sigma/sqrt(n)
+test.stat=(xbar-mu)/sd.mean
+
+p.value=pnorm(test.stat)
+@
+
+\end{solution}
+
+\question[2]
+Consider the human body temperature data. What do you conclude about the hypothesis claiming the average body temperature to be exactly 37 degree Celsius? 
+
+We do not find sufficient evidence against the hypothesis, therefore could not reject it. 
+We found sufficient evidence against the hypothesis, therefore we rejected it. 
+We are uncertain about what should be done in this case.
+none of the above
+
+##### Answer
+
+We found sufficient evidence against the hypothesis, therefore we rejected it. 
+
+
+\begin{solution}
+
+<<>>=
+human.temp <- read.table("./Resources/Data/Data$_$TempData.txt")
+names(human.temp) <- "temp"
+save(human.temp,file="./Resources/Data/human$_$temp.RData")
+@
+
+Now let's use the t.test function
+
+<<>>=
+temp.test <- t.test(human.temp$temp,mu=37)
+names(temp.test)
+temp.test$p.value
+temp.test$conf.int`
+@
+\end{solution}
+
+\begin{oneparchoices}    
+    \choice 
+    \choice 
+    \CorrectChoice 
+    \choice 
+\end{oneparchoices}    
+
+\question[2]
+
+\begin{oneparchoices}    
+    \choice 
+    \choice 
+    \CorrectChoice 
+    \choice 
+\end{oneparchoices}    
+
+\question[2]
+
+\begin{oneparchoices}    
+    \choice 
+    \choice 
+    \CorrectChoice 
+    \choice 
+\end{oneparchoices}    
+
+\question[2]
+
+\begin{oneparchoices}    
+    \choice 
+    \choice 
+    \CorrectChoice 
+    \choice 
+\end{oneparchoices}    
+
+\question[2]
+
+\begin{oneparchoices}    
+    \choice 
+    \choice 
+    \CorrectChoice 
+    \choice 
+\end{oneparchoices}    
+
+\question[2]
+
+\begin{oneparchoices}    
+    \choice 
+    \choice 
+    \CorrectChoice 
+    \choice 
+\end{oneparchoices}    
+
+
+
+
+\end{questions}
+\end{document}
+
+
+### TEST 15 (Week 6): (In-class quiz -4) Misc probable questions 
+
+\question[2]
+ In the above mentioned opinion survey, suppose the alternative hypotheses
+is as follows: true probability of people supporting the mayor is more than 50\%. Then which of the following is the  likely null hypothesis?
+
+
+\begin{oneparchoices}    
+    \choice 
+the true probability  of people supporting the mayor is  less than 50\% 
+    \choice 
+the true probability  of people supporting the mayor is  more than 50\% 
+    \choice 
+the true probability  of people supporting the mayor is  equal to  50\% 
+    \CorrectChoice 
+both a and c
+    \choice 
+both b anc c
+    \choice 
+none of the above
+\end{oneparchoices}    
+
+
+\question[2]
+ The video lecture mentions a news published in the Toronto Star on an
+opinion survey regarding Mayor Rob Ford's spending cuts. In the above mentioned
+opinion survey, suppose the sample size is 2487 and the percentage supporting
+Mayor Rob stands at 46\%. Null hypotheses is as follows: true probability of
+people supporting the mayor is not more than 50\%. Then what is the value of test statistics?
+
+
+\begin{oneparchoices}    
+    \choice 
+-2.54
+    \choice 
+-5.24
+    \choice 
+5.24
+    \choice 
+-5.42
+\CorrectChoice none of the above
+\end{oneparchoices}    
+
+
+
+\question[2]
+In the survey settings as described in the previous question, what is the
+p-value?
+\begin{oneparchoices}    
+    \CorrectChoice 
+0.000
+    \choice 
+0.001
+    \choice 
+0.002
+    \choice 
+0.050
+    \choice 
+none of the above
+\end{oneparchoices}    
+
+
+\question[2]
+In the above survey settings, suppose you have come up with a p-value of
+extremely small, say smaller than 1\%. Which of the following will be a possible conclusion from such small p-value? 
+
+\begin{oneparchoices}    
+    \choice 
+ null hypothesis is rejected that is true probability of people supporting the
+mayor is not equal to 50\%
+   \choice 
+ null hypothesis is not rejected that is true probability of people supporting
+the mayor is actually equal to 50\%   
+    \choice 
+null hypothesis is not rejected that is true probability of people supporting
+the mayor is not equal to 50\%
+    \choice 
+null hypothesis is rejected that is true probability of people supporting the
+mayor is more than 50\%
+    \choice 
+all of the above
+    \choice 
+both a and b
+    \choice 
+both a and c
+\CorrectChoice 
+both a and d
+    \choice 
+none of the above
+\end{oneparchoices}    
+
+
+\question[2]
+
+\begin{oneparchoices}    
+    \choice 
+    \choice 
+    \CorrectChoice 
+    \choice 
+\end{oneparchoices}    
+
+
+
+
+
+#### Consider the face lift example. Suppose our null hypothesis is that there is no perceived changes in age. In that case what would be the value of test statistics?
+7.171
+2.434
+0.381
+18.85
+none of the above
+
+##### Answer
+18.85
+
+##### Explanation
+```{r ts  }
+load("./Resources/Data/age_change.RData")
+n <- 60 
+x_bar <- mean(csd$age.change)
+sd  <- sd(csd$age.change)
+var_xbar <- sd^2/n 
+sd_xbar  <- sqrt(var_xbar)
+# now set the value of p under null hypothesis
+mu <- 0
+test.stat <-(x_bar-mu)/sd_xbar
+test.stat
+```
+
+\question[2]
+
+\begin{oneparchoices}    
+    \choice 
+    \choice 
+    \CorrectChoice 
+    \choice 
+\end{oneparchoices}    
+
+#### Consider the face lift example. Suppose our null hypothesis is that there is no perceived changes in age. In that case what would be the value of p-value?
+0.000
+0.001
+0.002
+0.095
+none of the above
+
+##### Answer
+0.000
+
+
+
+##### Explanation
+```{r pv  }
+test.stat <- 18.856 # test statistics calculated earlier
+pt(18.856,df=59,lower.tail=FALSE)
+```
+\question[2]
+
+\begin{oneparchoices}    
+    \choice 
+    \choice 
+    \CorrectChoice 
+    \choice 
+\end{oneparchoices}    
+
+
+
+
+
+
+##### Explanation
+by definition
+
+\question[2]
+
+\begin{oneparchoices}    
+    \choice 
+    \choice 
+    \CorrectChoice 
+    \choice 
+\end{oneparchoices}    
+
+
+
+
+
+#### A test is said to have high power if it does not reject the null when it is true. True or false?
+True
+False
+
+##### Answer
+False
+
+
+##### Explanation
+by definition
+
+
+#### A test is said to have high power if it rejects the null when it is false. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Explanation
+by definition
+
+\question[2]
+
+\begin{oneparchoices}    
+    \choice 
+    \choice 
+    \CorrectChoice 
+    \choice 
+\end{oneparchoices}    
+
+\end{questions}
+\end{document}
+
+### TEST 17 (Week 7):(assignment 10,part 1) Probable questions
+
+#### Video 1
+
+#### Dependent variable and response variable refers to the same type of variable. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Solution
+See video
+
+#### Which of the following is true? 
+In regression, we want to predict the value of dependent variable
+In regression, we want to understand the determinants of dependent variable
+In regression, independent, explanatory or predictor variable refers to same thing
+all of the above
+none of the above
+
+##### Answer
+all of the above
+
+##### Solution
+by definition
+
+####  Which of the following might be correct representation of a regression line?
+y+b_0 = b_1x
+x=b_0 + b_1y
+y=b_0 + b_1x
+none of the above
+
+##### Answer
+y=b_0 + b_1x
+
+##### Solution
+by definition
+
+
+####  The regression line is found by minimizing the distance between actual value of dependenct variable and the value on the regression line.
+True
+False
+
+##### Answer
+True
+
+##### Solution
+by definition
+
+#### The distance between the actual value of dependent variable and the value on the regression line is called 
+squares of sum
+sum of squares
+sum and squares
+none of the above
+
+##### Answer
+sum of squares
+
+##### Solution
+by definition
+
+#### In linear regression, the value of the coefficients are found by 
+minimizing the sum of squares of residuals
+setting partial derivative of sum of squares of residuals equal to zero
+minimizing the error in measuring y from the regression line
+all of the above
+none of the above
+
+##### Answer
+all of the above
+
+##### Solution
+be definition
+
+####  The line of best fit is found by values of coefficients which minimizes the sum of squares. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Solution
+
+#### Let's consider the skeleton data (Data_SkeletonData2.txt) where y=Estimated-Actual age and x=BMI. Which of the following command represents the correct command in R to find results of regression of life expectancy on GDP per capita?
+lm(gdppc ~ le, data=life.gdp.hiv)
+le ~ gdppc, data=life.gdp.hiv
+lm(le ~ gdppc, data=life.gdp.hiv)
+none of the above
+
+##### Answer
+lm(le ~ gdppc, data=life.gdp.hiv)
+
+##### Solution
+See R videos
+
+
+#### Let's consider the skeleton data (Data_SkeletonData2.txt) where y=Estimated-Actual age and x=BMI. What is the value of intercept coefficient?  
++23.3
+-23.3
+-32.3
+none of the above
+
+##### Answer
+-23.3
+
+##### Solution
+```{r lm  }
+ske2 <- read.table("./Resources/Data/Data_SkeletonData2.txt",header=TRUE)
+save(ske2,file="./Resources/Data/ske2.RData")
+reg.res <- summary(lm(DGDifference ~ BMIquant, data=ske2))
+reg.res
+```
+
+
+#### Let's consider the skeleton data (Data_SkeletonData2.txt) where y=Estimated-Actual age and x=BMI. What is the value of slope coefficient?  
++0.41
+-0.41
++0.14
+none of the above
+
+##### Answer
++0.41
+
+##### Solution
+```{r lm  }
+load("./Resources/Data/ske2.RData")
+lm(DGDifference ~ BMIquant, data=ske2)
+```
+
+#### Let's consider the skeleton data (Data_SkeletonData2.txt) where y=Estimated-Actual age and x=BMI. How do you interpret the value of slope coefficient?
+If BMI increases by 1 unit then the difference between Estimated and actual age increases by 0.41 years.
+If the difference between Estimated and actual age increases by 1 year, BMI increases by 0.41 unit.
+If the difference between Estimated and actual age increases by 0.43 year, BMI increases by 1 unit.
+none of the above
+
+##### Answer
+If BMI increases by 1 unit then the difference between Estimated and actual age increases by 0.41 years.
+
+##### Solution
+By defintion
+
+#### Which of the following is true about intercept coefficient?
+the value of intercept coefficient does not always have meaningful interpretation
+the value of intercept coefficient  always have meaningful interpretation
+it is the amount by which the regression line has to be shifted to have the best fit of data
+all of the above
+both a and b
+both a and c
+both b and c
+none of the above
+
+##### Answer
+both a and c
+
+##### Solution
+by def
+
+#### Running a regression of Estimated age difference on BMI gives us the same set of coefficients as running a regression of BMI on estimated age difference. True or false?
+True
+False
+
+##### Answer
+False
+
+##### Solution
+By def
+
+#### Which of the following is true about regression?
+Regression is not symmetric
+Regression is not the same as correlation
+both of the above
+none of the above
+
+
+##### Answer
+both of the above
+
+##### Solution
+by def
+
+#### Use the life expectancy data. Draw a scatterplot between Life expectancy and GDP per capita. Which of the following observations are valid about this scatterplot?
+There is a linear relationship between life expectancy and GDP per capita
+There is a non-linear relationship between life expectancy and GDP per capita
+There is a positive association between the two variables
+all of the above
+both a and b
+both a and c
+both b and c
+
+##### Answer
+both b and c
+
+##### Solution
+see video
+
+
+#### Use the life expectancy data. Run a regression line where life expectancy is the dependent variable and GDP per capita is the explanatory variable. What is the value of slope coefficient and how do you interpret it?
+0.45, for each thousand dollar increase in GDP per capita, life expectancy of a country is supposed to rise by 0.45 years
+0.00045, for each thousand dollar increase in GDP per capita, life expectancy of a country is supposed to rise by 0.45 years
+0.045, for each thousand dollar increase in GDP per capita, life expectancy of a country is supposed to rise by 0.45 years
+none of the above
+
+##### Answer
+0.00045, for each thousand dollar increase in GDP per capita, life expectancy of a country is supposed to rise by 0.45 years
+
+
+##### Solution
+```{r le  }
+life.exp.tab <- read.table("./Resources/Data/Data_LifeExpTable.txt")
+names(life.exp.tab) <- c("country", "le")
+save(life.exp.tab, file="./Resources/Data/life_exp_tab.RData")
+load("./Resources/Data/life_exp_reg.RData")
+life.gdp.hiv <- read.table("./Resources/Data/Data_LifeGDPhiv.txt")
+names(life.gdp.hiv) <- c("country","le","gdppc","hiv")
+save(life.gdp.hiv, file="./Resources/Data/life_gdp_hiv.RData")
+life.gdp.hiv %>% 
+    ggplot(aes(gdppc,le)) + geom_point()
+lm(le ~ gdppc, data=life.gdp.hiv)
+```
+
+#### Video 2
+
+#### Use the life expectancy data. Run a regression line where life expectancy is the dependent variable and GDP per capita is the explanatory variable. What is the value of intercept coefficient and how do you interpret it? 
+63.3, it measures  the expected life expectancy in years when GDP per capita is zero
+36.3, it measures  the expected life expectancy in years when GDP per capita is zero
+63.3, it measures  the association between life expectancy and GDP per capita 
+none of the above
+
+##### Answer
+63.3, it measures  the expected life expectancy in years when GDP per capita is zero
+
+##### Solution
+```{r le  }
+load("./Resources/Data/life_gdp_hiv.RData")
+life.gdp.hiv %>% 
+    ggplot(aes(gdppc,le)) + geom_point()
+lm(le ~ gdppc, data=life.gdp.hiv)
+```
+
+#### Use the life expectancy data. Run a regression line where life expectancy is the dependent variable and GDP per capita is the explanatory variable. Is the interpretation of intercept coefficient in the above question meaningful?
+Yes
+No
+
+##### Answer
+No
+
+##### Solution
+by def
+
+#### If the value of x_i is equal to average value of x, then what will be the value of y_i according to regression line? What does that imply?
+average value of y and it would mean that both the average value of x and y are above the regression line
+any value of y and it would mean that both the average value of x and y are on the regression line
+average value of y and it would mean that both the average value of x and y are on the regression line
+none of the above
+
+
+##### Answer
+average value of y and it would mean that both the average value of x and y are on the regression line
+
+
+##### Solution
+see video 2
+
+####  In any regression line, the points xbar and ybar is on the regression line. True or False?
+True
+False
+
+##### Answer
+True
+
+##### Solution
+See video 2
+
+
+#### In any regression, the slope coefficient can be denoted by a measure of correlation between the variables multiplied by the ratio of standard deviation of the variables. True or False?
+True
+False
+
+##### Answer
+True
+
+##### Solution
+see video 2
+
+#### In any regression, the intercept coefficient can be derived by deducting average value of x multiplied by slope coefficient from average value of y. True or False?
+True
+False
+
+##### Answer
+True
+
+##### Solution
+see video 2
+
+#### Residual in a regression line can be found by deducting the predicted value from the actual value. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Solution
+By definition
+
+#### Mean value of residual can not greater than zero. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Solution
+By definition
+
+#### Which of the following statements is true?
+The regression multiplies the variance by (1-R^2)
+The regression line reduces or removes a fraction R^2 of the variance of Y
+The regression line explains a fraction R^2 of the variation
+all of the above
+none of the above
+
+##### Answer
+all of the above
+
+##### Solution
+By definition
+
+#### R^2 is called the coefficient of determination. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Solution
+By definition
+
+#### Which of the following is true about R^2?
+If R^2=0, then independent variables are unable to explain any variation in dependent variable
+If R^2=1, then independent variables are able to explain all the variation in dependent variable
+Usually the value of R^2 is somewhere between 0 and 1
+all of the above
+none of the above
+
+##### Answer
+all of the above
+
+##### Solution
+By definition
+
+#### In the skeleton data, which of the following is the value of R^2 when we run a regression with Estimated age difference on BMI?
+0.4033
+0.0168
+0.0186
+none of the above
+
+##### Answer
+0.0186
+
+##### Solution
+```{r bmi  }
+load("./Resources/Data/ske2.RData")
+reg.res <- summary(lm(DGDifference ~ BMIquant, data=ske2))
+reg.res$r.squared
+```
+
+
+#### In the skeletion data, how do we explain the value of R^2 in above mentioned regression?
+1.68% variation in BMI is explained by Estimated age difference
+.186% variation in Estimated age difference is explained by BMI
+40.3% variation in Estimated age difference is explained by BMI
+1.86% variation in Estimated age difference is explained by BMI
+none of the above
+
+##### Answer
+1.86% variation in Estimated age difference is explained by BMI
+
+##### Solution
+by definition
+
+#### In the life expectancy  data, which of the following is the value of R^2 when we run a regression of life of expectancy on GDP per capita?
+0.4033
+0.0168
+0.0186
+none of the above
+
+##### Answer
+0.4033
+
+##### Solution
+```{r bmi  }
+load("./Resources/Data/life_gdp_hiv.RData")
+reg.res <- summary(lm(le ~ gdppc, data=life.gdp.hiv))
+reg.res$r.squared
+```
+
+
+#### In the life expectancy data, how do we explain the value of R^2 in above mentioned regression?
+4.03% variation in life expectancy across countries is explained by GDP per capita
+0.43% variation in  GDP per capita across countries is explained by  life expectancy
+40.3% variation in life expectancy across countries is explained by GDP per capita
+1.68% variation in life expectancy across countries is explained by GDP per capita
+none of the above
+
+##### Answer
+40.3% variation in life expectancy across countries is explained by GDP per capita
+
+##### Solution
+see above question solution
+
+### Video 3
+
+### TEST 18 (Week 7):(assignment 10,part 2) Probable questions
+
+####  Regression inference deals with the fact that there might be some theoretical world value for regression coefficients. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Solution
+See Video
+
+#### In theoretical world there is the true value of regression slope coefficient $\beta_1$. In the data world, we have the corresponding value $b_1$. Which of the following is a valid question that can be raised about these two values?
+Is theoretical value and data world value of slope coefficents are the same?
+How much uncertainty are there in the observed data world value?
+Can we form a confidence interval for theoretical value of slope coefficients?
+Can we perform hypothesis testing regarding the true value of regression slope coefficient?
+All of the above
+None of the above
+
+##### Answer
+All of the above
+
+##### Solution
+See video 3
+
+####  How do you define the standard error of $b_1$?
+It is equivalent to the standard deviation of the population regression slope coefficient.
+It is equivalent to the standard deviation of sampling distribution of sample regression slope coefficient.
+It is equivalent to the estimated standard deviation of sampling distribution of sample regression slope coefficient.
+All of the above
+None of the above
+
+##### Answer
+It is equivalent to the estimated standard deviation of sampling distribution of sample regression slope coefficient.
+
+##### Solution
+See video 3
+
+
+####  If we deduct true population slope coefficient from sample slope coefficient and divide it by the standard error of sample regression coefficient, we get a 
+t-statistics with n-1 degree of freedom
+t-statistics with 1 degree of freedom
+t-statistics with 2 degree of freedom
+t-statistics with n-2 degree of freedom
+None of the above
+
+##### Answer
+t-statistics with n-2 degree of freedom
+
+##### Solution
+By definition
+
+#### Let's consider the skeleton example. Regress the estimated age difference onto BMI of the skeletons. What would be the residual sum of squares?
+78113.8
+79615.0
+1483.2
+None of the above
+
+##### Answer
+78131.76
+
+##### Solution
+
+```{r rss  }
+load("./Resources/Data/ske2.RData")
+ske2.reg <- lm(DGDifference ~ BMIquant, data=ske2)
+RSS <- sum(ske2.reg$residuals^2)
+RSS
+```
+There is other alternative way to also find the same thing
+
+```{r al  }
+ sum((ske2$DGDifference- ske2.reg$fitted.values)^2)
+```
+
+You can find the above mentioned fitted values in the following manner:
+
+```{r fv  }
+fit.val <- ske2.reg$coefficients[1] + ske2.reg$coefficients[2]*ske2$BMIquant
+```
+
+
+#### Let's consider the skeleton example. Regress the estimated age difference onto BMI of the skeletons. What would be the total sum of squares?
+78113.8
+79615.0
+1483.2
+None of the above
+
+##### Answer
+79615.0
+
+##### Solution
+
+```{r rss  }
+load("./Resources/Data/ske2.RData")
+ske2.reg <- lm(DGDifference ~ BMIquant, data=ske2)
+TSS <- sum((ske2$DGDifference-mean(ske2$DGDifference))^2)
+TSS
+```
+
+#### Let's consider the skeleton example. Regress the estimated age difference onto BMI of the skeletons. What would be the estimated sum of squares (ESS)?
+78113.8
+79615.0
+None of the above
+
+##### Answer
+1483.2
+
+##### Solution
+
+```{r rss  }
+load("./Resources/Data/ske2.RData")
+ske2.reg <- lm(DGDifference ~ BMIquant, data=ske2)
+ESS <- sum((ske2.reg$fitted.values-mean(ske2$DGDifference))^2)
+ESS
+```
+
+#### Let's consider the skeleton example. Regress the estimated age difference onto BMI of the skeletons. We find that TSS is exactly equal to ESS and RSS in this regression. True or false?
+78113.76
+78131.76
+78131.67
+None of the above
+
+##### Answer
+78131.76
+
+##### Solution
+
+```{r rss  }
+load("./Resources/Data/ske2.RData")
+ske2.reg <- lm(DGDifference ~ BMIquant, data=ske2)
+TSS <- sum((ske2$DGDifference-mean(ske2$DGDifference))^2)
+```
+
+####  Let's consider the skeleton example. Regress the estimated age difference onto BMI of the skeletons. Which of the following will be the value of standard error of slope coefficient?
+0.148
+0.184
+0.418
+None of the above
+
+##### Answer
+0.148
+
+##### Solution
+
+```{r ci  }
+n <- dim(ske2)[1]
+xssr  <- sum((ske2$BMIquant - mean(ske2$BMIquant))^2)
+var_b1 <- RSS/((n-2) * xssr)
+se_b1  <- round(sqrt(var_b1),3)
+```
+
+
+
+
+####  Let's consider the skeleton example. Regress the estimated age difference onto BMI of the skeletons. Which of the following will be the critical value of t-statistics in the case of forming 95% confidence interval for true slope coefficient of the regression?
+-1.97
++1.97
+Both of the above
+None of the above
+
+##### Answer
+Both of the above
+
+##### Solution
+
+```{r ci  }
+n <- dim(ske2)[1]
+rt <- 2
+t.crit <- qt(0.025,n-rt)
+t.crit
+```
+
+
+
+####  Let's consider the skeleton example. Regress the estimated age difference onto BMI of the skeletons. What would be the 95% confidence interval for the slope coefficient of this regression?
+0.15, 0.75
+0.13, 0.73
+0.12, 0.70
+None of the above
+
+##### Answer
+0.12, 0.70
+
+##### Solution
+
+```{r ci  }
+b1 <- ske2.reg$coefficient[2]
+ul <- b1 + abs(t.crit)*se_b1
+ll <- b1 - abs(t.crit)*se_b1
+CI.95 <- c(ll,ul)
+round(CI.95,2)
+```
+
+####  Let's consider the skeleton example. Regress the estimated age difference onto BMI of the skeletons. Suppose we want to test whether in the theoretical world the BMI is related to estimated difference in age. The null hypothesis in this case will be
+intercept coefficient = 0
+slope coefficient =0
+slope coefficient is not equal to zero
+slope coefficient is greater than zero
+none of the above
+
+##### Answer
+slope coefficient =0
+
+##### Solution
+By definition
+
+
+#### Let's consider the skeleton example. Regress the estimated age difference onto BMI of the skeletons. Suppose we want to test whether in the theoretical world the BMI is related to estimated difference in age. The value of test statistics will be
+2.77
+7.22
+1.97
+none of the above
+
+##### Answer
+2.77
+
+##### Solution
+```{r tt}
+beta1 <- 0
+b1 <- round(ske2.reg$coefficients[2],2)
+t.stat <- (b1-beta1)/se_b1
+t.stat <- round(t.stat,3)
+t.stat
+```
+
+#### Let's consider the skeleton example. Regress the estimated age difference onto BMI of the skeletons. Suppose we want to test whether in the theoretical world the BMI is related to estimated difference in age. Do you find evidence that in support of the relationship?
+Yes
+No
+Uncertain
+
+##### Answer
+Yes
+
+##### Solution
+```{r pval  }
+1-pt(t.stat,df=n-rt)
+```
+The p-value is quite low, so we reject the null hypothesis of no relationship and decide that BMI and estimated age difference is related
+
+
+#### Suppose the relationship between dependent and explanatory is not linear. In that case a linear regression will not be able to capture the true relationship between these variables. True or false?
+True
+False
+Uncertain
+
+##### Answer
+True
+
+##### Solution
+See video 3
+
+
+####  Even if we find evidence of linear relationship among variables, it might not reflect the true nature of the relationship. True or false?
+True
+False
+
+
+##### Answer
+True
+
+##### Solution
+See video 3
+
+
+####  Linear regression is quite robust to outliers. True or false?
+True
+False
+
+##### Answer
+False
+
+##### Solution
+See video 3
+
+
+#### Due to certain limitations of linear regression, it is always a good idea to draw graphs, charts to have an idea on true relationshop between the variables. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Solution
+See video 3
+
+#### Video 4
+
+#### Suppose we run a regression and then we plot the residuals against the explanatory variable. If we do not find any apparent relationship between residual and explanatory variable, then our linear regression may reflect the true relatioship between the variables. True or false?
+True
+False
+
+##### Answer
+True
+
+##### Solution
+See video 4
+
+
+#### If we find no apparent relationship between residuals and explanatory variable then it will imply
+after taking out the regression component from the dependent variable, the rest of the effect is random in nature
+after taking out the regression component from the dependent variable, the rest of the effect is not random in nature
+both of the above
+none of the above
+
+
+##### Answer
+after taking out the regression component from the dependent variable, the rest of the effect is random in nature
+
+##### Solution
+by definition
+
+#### If residual is systematically related to movements in explanatory variable then the current linear regression may not accurately describe the true nature of the relationship. True or False?
+True
+False
+
+##### Answer
+True
+
+##### Solution
+See video 4
+
+#### Consider the data in Data_LifeGDPhiv.txt  file. Draw a scatterplot between GDP per capita and Life expectancy of different countries and then fit a regression line through it. In such graph, which of the following will be a valid observation?
+the  linear regression line  accurately descriobes relationship between life expectancy and GDP per capita
+the  linear regression line  can not fully descriobes relationship between life expectancy and GDP per capita
+the  linear regression line  can not at all descriobe relationship between life expectancy and GDP per capita
+none of the above
+
+##### Answer
+the  linear regression line  can not fully descriobes relationship between life expectancy and GDP per capita
+
+##### Solution
+```{r rr}
+load("./Resources/Data/life_gdp_hiv.RData")
+
+life.gdp.hiv %>% 
+    ggplot(aes(gdppc,le)) +
+         geom_point() +
+	 geom_smooth(method="lm",se=FALSE) +
+	 xlim(0,50000)+
+	 ylim(45,85)
+	 
+```
+
+
+####  Now let's plot the residual of the above regression against GDP per capita and fit a regression line. Which of the following is a valid obersvation regarding this plot?
+Poor countries, that is those countries with low GDP per capita are below the regression line
+Rich countries, that is those countries with high GDP per capita are below the regression line
+Middle income countries  are above the regression line
+Residuals are not entirely random, there is some specific pattern present.
+All of the above
+None of the above
+
+##### Answer
+All of the above
+
+##### Solution
+
+```{r resid  }
+le.reg <- lm(le ~ gdppc, data=life.gdp.hiv)
+res.x <- data.frame(gdppc=life.gdp.hiv$gdppc, resids=le.reg$residuals)
+ggplot(data=res.x,aes(x=gdppc,resids)) +
+      geom_point() + 
+      geom_smooth(method="lm",se=FALSE) + 
+	 xlim(0,50000) 
+
+```
+
+
+#### Consider the data in Data_LifeGDPhiv.txt  file. Run a regression between GDP per capita and Life expectancy of different countries(dependent variable). What is the value of R-square in this case?
+0.403
+0.304
+0.430
+none of the above
+
+##### Answer
+0.403
+
+##### Solution
+
+```{r sol  }
+summary(le.reg)$r.squared
+```
+
+
+#### 
+
+
+##### Answer
+
+
+##### Solution
+#### 
+
+
+##### Answer
+
+
+##### Solution
+#### 
+
+
+##### Answer
+
+
+##### Solution
+
