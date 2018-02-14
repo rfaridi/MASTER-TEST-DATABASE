@@ -141,19 +141,153 @@ I have switched to the following TESTS sections for the rest of the weeks questi
 ### Test 1
 
 #### Find the five-point summary of following numbers: 26,91, 56,84,46,78, 67,87,72
-Now use the Life expectancy(LE) data and find the five point summary of life expectancy. How do you interpret the values of median, 1st quartile and third quartile?
-What is the difference between a regular boxplot and modified boxplot? Write down the R commands to find the both in the case of LE data. 
-What would be definition of a robust statistic?
-Among mean, IQR, standard deviation and median, which is(are) robust statistic? Why? 
-Now import the Red Bulls Soccer player's salary data into R and answer the following questions:
-Calculate Range, IQR, mean, median, standard deviation of player's salary from original data.  Now calculate Range, IQR, mean, median, standard deviation of player's salary from trimmed data. 
-Which statistics you found to be robust? Does it match with your answer in question no. 5?
-Now import the skeleton data and answer the following questions:
-Find the histogram of estimated age at death.
-Is estimated age at death variable, symmetric, left-skewed or right-skewed?
-What is the relationship between mode, median and mean? What is the implication of that relationship?
+
+#### Now use the Life expectancy(LE) data and find the five point summary of life expectancy. How do you interpret the values of median, 1st quartile and third quartile?
+
+#### What is the difference between a regular boxplot and modified boxplot? Write down the R commands to find the both in the case of LE data. 
+
+#### What would be definition of a robust statistic?
+
+#### Among mean, IQR, standard deviation and median, which is(are) robust statistic? Why? 
+
+#### Now import the Red Bulls Soccer player's salary data into R and answer the following questions:
+
+#### Calculate Range, IQR, mean, median, standard deviation of player's salary from original data.  Now calculate Range, IQR, mean, median, standard deviation of player's salary from trimmed data. 
+
+#### Which statistics you found to be robust? Does it match with your answer in question no. 5?
+
+#### Now import the skeleton data and answer the following questions:
+
+#### Find the histogram of estimated age at death.
+
+#### Is estimated age at death variable, symmetric, left-skewed or right-skewed?
+
+#### What is the relationship between mode, median and mean? What is the implication of that relationship?
+
+### Assignment 1: probable questions
+
+#### Which of the following will be will be mean of following numbers 26,91, 56,84,46,78, 67,87,72 and what will be the corresponding R code?
+67.4, average(26,91, 56,84,46,78, 67,87,72)
+64.7, mean(26,91,56,84,46,78, 67,87,72)
+67.4, mean(nums) where nums is a numeric vector composed of 26,91, 56,84,46,78, 67,87,72
+all of the above
+a or c
+b or c
+none of the above
+
+##### Answer
+b or c
+
+##### Explanation
+```{r mm  }
+nums <- c(26,91, 56,84,46,78, 67,87,72)
+mean(nums)
+```
+
+#### Which of the following will be will be mean of following numbers 26,91, 56,84,46,78,NA,67,87,72 and what will be the corresponding R code?
+67.4, average(26,91, 56,84,46,78,NA,67,87,72)
+64.7, mean(26,91,56,84,46,78, NA, 67,87,72)
+67.4, mean(nums,na.rm=t) where nums is a numeric vector composed of 26,91, 56,84,46,78,NA,67,87,72
+all of the above
+none of the above
+
+##### Answer
+c
+
+##### Explanation
+```{r mm  }
+nums <- c(26,91, 56,84,46,78,NA, 67,87,72)
+mean(nums,na.rm=T)
+```
+
+#### Now use the Life expectancy(LE) data and find the five point summary of life expectancy. How do you interpret the value of median? 
+50% of the countries have life expectancy lower or equal to 73.2
+50% of the countries have life expectancy higher or equal to 73.2
+most  of the countries have life expectancy lower or equal to 73.2
+both a and b
+all of the above
+none of the above
+
+##### Answer
+both a and b
+
+##### Explanation
+
+let's load the data first
+
+```{r ll  }
+load("./Resources/Data/life_exp_reg.RData")
+```
+now let's find the five point summary
+
+```{r fps  }
+summary(life.exp.reg$le)
+```
+or we can also issue the following command
+
+```{r med  }
+median(life.exp.reg$le)
+```
+
+
+#### Now use the Life expectancy(LE) data and find the five point summary of life expectancy. How do you interpret the value of 1st quartile? 
+75% of the countries have life expectancy higher than or equal to 64.6 years
+25% of the countries have life expectancy less than or equal to 76.6 years
+25% of the countries have life expectancy less than or equal to 64.6 years
+both a and b
+both a and c
+none of the above
+
+##### Answer
+both a and c
+
+##### Explanation
+We have already see in the above how to find five point summary and first quartile. An alternative way to find five point summary might be:
+```{r quart  }
+quantile(life.exp.reg$le,0.25)
+```
+
+
+
+#### Now use the Life expectancy(LE) data and find the five point summary of life expectancy. How do you interpret the value of third quartile?
+25% of the countries have life expectancy less than or equal to 76.6 years
+25% of the countries have life expectancy higher than or equal to 76.6 years
+75% of the countries have life expectancy less than or equal to 76.6 years
+both a and b
+both b and c
+none of the above
+
+##### Answer
+both b and c
+
+##### Explanation
+We have already see in the above how to find five point summary and first quartile. An alternative way to find five point summary might be:
+```{r quart  }
+quantile(life.exp.reg$le,0.75)
+```
+
+#### Suppose life.exp measures the life expectancy of all the countries in the world. The command boxplot(life.exp) will create a modified boxplot. True or False?
+True
+False
+
+##### Answer
+True
+
+##### Explanation
+when range is not specificed, then it uses default value of 1.5. It means that inter quartile range is multiplied by 1.5 to find the value of upper and lower whiskers. in the following i use the life expectancy data to show the difference between modified and regular boxplot.
+
+```{r ss  }
+par(mfrow=c(1,2))
+bp.umod <- boxplot(life.exp.reg$le,range=0)
+bp.mod <- boxplot(life.exp.reg$le)
+bp.umod
+bp.mod
+```
+here we do not see much of a difference
+
 
 ### WEEK 2: Relationship between variables
+
 
 ### Test 2
 Import the Skeleton data into R and write down required the R commands
@@ -4549,10 +4683,6 @@ none of the above
     \choice 
 \end{oneparchoices}    
 
-
-
-
-
 #### Consider the face lift example. Suppose our null hypothesis is that there is no perceived changes in age. In that case what would be the value of test statistics?
 7.171
 2.434
@@ -4667,7 +4797,7 @@ by definition
 \end{questions}
 \end{document}
 
-### TEST 17 (Week 7):(assignment 10,part 1) Probable questions
+### TEST 16 (Week 7):(assignment 10,part 1) Probable questions
 
 #### Video 1
 
@@ -5078,9 +5208,9 @@ none of the above
 ##### Solution
 see above question solution
 
-### Video 3
+#### Video 3
 
-### TEST 18 (Week 7):(assignment 10,part 2) Probable questions
+### TEST 17 (Week 7):(assignment 10,part 2) Probable questions
 
 ####  Regression inference deals with the fact that there might be some theoretical world value for regression coefficients. True or false?
 True
@@ -5092,7 +5222,7 @@ True
 ##### Solution
 See Video
 
-#### In theoretical world there is the true value of regression slope coefficient $\beta_1$. In the data world, we have the corresponding value $b_1$. Which of the following is a valid question that can be raised about these two values?
+#### In theoretical world there is the true value of regression slope coefficient . In the data world, we have the corresponding value calculated from sample data. Which of the following is a valid question that can be raised about these two values?
 Is theoretical value and data world value of slope coefficents are the same?
 How much uncertainty are there in the observed data world value?
 Can we form a confidence interval for theoretical value of slope coefficients?
@@ -5120,7 +5250,7 @@ It is equivalent to the estimated standard deviation of sampling distribution of
 See video 3
 
 
-####  If we deduct true population slope coefficient from sample slope coefficient and divide it by the standard error of sample regression coefficient, we get a 
+####  If we deduct true population slope coefficient from sample slope coefficient and divide it by the standard error of sample slope coefficient, we get a 
 t-statistics with n-1 degree of freedom
 t-statistics with 1 degree of freedom
 t-statistics with 2 degree of freedom
@@ -5184,6 +5314,7 @@ TSS
 #### Let's consider the skeleton example. Regress the estimated age difference onto BMI of the skeletons. What would be the estimated sum of squares (ESS)?
 78113.8
 79615.0
+1483.2
 None of the above
 
 ##### Answer
@@ -5199,13 +5330,12 @@ ESS
 ```
 
 #### Let's consider the skeleton example. Regress the estimated age difference onto BMI of the skeletons. We find that TSS is exactly equal to ESS and RSS in this regression. True or false?
-78113.76
-78131.76
-78131.67
-None of the above
+True
+False
+Uncertain
 
 ##### Answer
-78131.76
+True
 
 ##### Solution
 
@@ -5337,6 +5467,7 @@ See video 3
 ####  Even if we find evidence of linear relationship among variables, it might not reflect the true nature of the relationship. True or false?
 True
 False
+Uncertain
 
 
 ##### Answer
@@ -5349,6 +5480,7 @@ See video 3
 ####  Linear regression is quite robust to outliers. True or false?
 True
 False
+Uncertain
 
 ##### Answer
 False
@@ -5372,6 +5504,7 @@ See video 3
 #### Suppose we run a regression and then we plot the residuals against the explanatory variable. If we do not find any apparent relationship between residual and explanatory variable, then our linear regression may reflect the true relatioship between the variables. True or false?
 True
 False
+Uncertain
 
 ##### Answer
 True
@@ -5404,9 +5537,9 @@ True
 See video 4
 
 #### Consider the data in Data_LifeGDPhiv.txt  file. Draw a scatterplot between GDP per capita and Life expectancy of different countries and then fit a regression line through it. In such graph, which of the following will be a valid observation?
-the  linear regression line  accurately descriobes relationship between life expectancy and GDP per capita
-the  linear regression line  can not fully descriobes relationship between life expectancy and GDP per capita
-the  linear regression line  can not at all descriobe relationship between life expectancy and GDP per capita
+the  linear regression line  accurately describes relationship between life expectancy and GDP per capita
+the  linear regression line  can not fully describes relationship between life expectancy and GDP per capita
+the  linear regression line  can not at all describe relationship between life expectancy and GDP per capita
 none of the above
 
 ##### Answer
@@ -5426,7 +5559,7 @@ life.gdp.hiv %>%
 ```
 
 
-####  Now let's plot the residual of the above regression against GDP per capita and fit a regression line. Which of the following is a valid obersvation regarding this plot?
+#### Now let's plot the residual of the above regression against GDP per capita and fit a regression line. Which of the following is a valid obersvation regarding this plot?
 Poor countries, that is those countries with low GDP per capita are below the regression line
 Rich countries, that is those countries with high GDP per capita are below the regression line
 Middle income countries  are above the regression line
@@ -5465,6 +5598,94 @@ none of the above
 summary(le.reg)$r.squared
 ```
 
+#### Consider the data in Data_LifeGDPhiv.txt  file. Non-linearity in the data when we plot life expectancy against GDP per capita can be mitigated by taking log of GDP per capita variable. True or False? 
+True
+False
+
+##### Answer
+True
+
+##### Solution
+See video
+
+#### Compare the standard deviation of life expectancy and GDP per capita variable. Which is one higher? 
+GDPPC has higher standard deviation
+Life expectancy has higher standard deviation
+Not possible to determine standard deviation
+None fo the above
+
+##### Answer
+GDPPC has higher standard deviation
+
+
+##### Solution
+```{r log  }
+sd(life.gdp.hiv$le)
+sd(life.gdp.hiv$gdppc)
+```
+
+
+#### How does standard deviation play a role in determining on which variable we should apply log transformation?
+Usually log transformation is applied to  those variables which have high standard deviation
+Usually log transformation is applied to those variables which have low standard deviation
+Usually standard deviation does not play any role in determining log transformation
+None of the above
+
+##### Answer
+Usually log transformation is applied to  those variables which have high standard deviation
+
+##### Solution
+By definition
+
+#### Consider the data in Data_LifeGDPhiv.txt  file. If we now run a scatterplot of life expectancy against log of GDP per capita, what do you observe?
+The relationship between these two variables has become more non-linear
+The relationship between these two variables has become more linear
+The relationship between these two variables has not been affected at all
+None of the above
+
+##### Answer
+The relationship between these two variables has become more linear
+
+##### Solution
+
+```{r sp  }
+life.gdp.hiv$lgp <- log(life.gdp.hiv$gdppc)
+ggplot(life.gdp.hiv, aes(x=lgp, y=le)) + 
+		geom_point()
+```
+The scaterplot looks more linear now
+
+
+#### Consider the data in Data_LifeGDPhiv.txt  file. Run a regression between  GDP per capita and Life expectancy of different countries(dependent variable). What is the value of R-square in this case?
+0.403
+0.657
+0.430
+none of the above
+
+##### Answer
+0.403
+
+##### Solution
+
+```{r sol  }
+summary(le.reg)$r.squared
+```
+
+#### Consider the data in Data_LifeGDPhiv.txt  file. Run a regression between log of GDP per capita and Life expectancy of different countries(dependent variable). What is the value of R-squared in this case?
+0.403
+0.657
+0.430
+none of the above
+
+##### Answer
+0.403
+
+##### Solution
+
+```{r sol  }
+lle.reg <- lm(le ~ lgp, data=life.gdp.hiv)
+summary(lle.reg)$r.squared
+```
 
 #### 
 
@@ -5473,18 +5694,5 @@ summary(le.reg)$r.squared
 
 
 ##### Solution
-#### 
 
-
-##### Answer
-
-
-##### Solution
-#### 
-
-
-##### Answer
-
-
-##### Solution
-
+### TEST 18 (Week 8): (Inclass-quiz -5) Probable questions 
